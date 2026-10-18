@@ -83,14 +83,16 @@
             display: none !important;
         }
 
-        /* 1. Background Grid Pattern Overlay */
+        /* 1. Background Grid Pattern Overlay (Square Mesh Grid Lines) */
         .bg-grid-pattern {
             position: fixed;
             inset: 0;
             pointer-events: none;
             z-index: 0;
-            background-image: radial-gradient(rgba(16, 185, 129, 0.15) 1.25px, transparent 1.25px);
-            background-size: 24px 24px;
+            background-size: 36px 36px;
+            background-image: 
+                linear-gradient(to right, rgba(16, 185, 129, 0.14) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(16, 185, 129, 0.14) 1px, transparent 1px);
         }
 
         /* 2. Floating Bengali Glyphs Layer */
