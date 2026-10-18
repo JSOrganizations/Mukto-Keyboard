@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Use — Banglish Keyboard</title>
+    <title>Terms of Use — Mukto Keyboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -68,15 +68,15 @@
             flex-shrink: 0;
         }
         .nav-brand-img {
-            height: 28px;
-            width: auto;
-            aspect-ratio: 3 / 2;
-            object-fit: contain;
-            background: #ffffff;
-            border-radius: 7px;
-            padding: 2px 4px;
-            box-shadow: 0 2px 10px rgba(16, 185, 129, 0.35);
+            width: 32px;
+            height: 32px;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
             transition: transform 0.2s ease;
+            display: block;
         }
         .nav-brand:hover .nav-brand-img {
             transform: scale(1.05);
@@ -140,11 +140,11 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            background: #ffffff;
-            border-radius: 22px;
-            padding: 8px 14px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45), 0 0 25px rgba(16, 185, 129, 0.35);
-            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 26px;
+            padding: 0;
+            overflow: hidden;
+            box-shadow: 0 14px 36px rgba(0, 0, 0, 0.5), 0 0 28px rgba(16, 185, 129, 0.35);
+            border: 2px solid rgba(255, 255, 255, 0.28);
             position: relative;
             transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
@@ -152,11 +152,12 @@
             transform: translateY(-3px) scale(1.03);
         }
         .hero-logo-img {
-            width: clamp(90px, 24vw, 120px);
-            height: auto;
-            aspect-ratio: 3 / 2;
-            object-fit: contain;
+            width: clamp(92px, 22vw, 116px);
+            height: clamp(92px, 22vw, 116px);
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
             display: block;
+            border-radius: 24px;
         }
         .hero-badge {
             display:inline-flex; align-items:center; gap:8px;
@@ -402,17 +403,17 @@
             .contact-item { padding:12px 14px; }
             .site-nav { padding: 8px 12px; gap: 6px; }
             .nav-brand { font-size: 0.94rem; gap: 6px; }
-            .nav-brand-img { height: 24px; }
+            .nav-brand-img { width: 26px; height: 26px; border-radius: 6px; }
             .nav-links { gap: 4px; }
             .nav-link { font-size: 11.5px; padding: 5px 8px; }
             .hero-logo-box { margin-bottom: 16px; }
-            .hero-logo-img { width: clamp(96px, 26vw, 118px); }
+            .hero-logo-img { width: clamp(80px, 22vw, 98px); height: clamp(80px, 22vw, 98px); border-radius: 20px; }
         }
 
         @media (max-width:360px) {
             .site-nav { padding: 7px 8px; }
             .nav-brand { font-size: 0.86rem; gap: 5px; }
-            .nav-brand-img { height: 22px; }
+            .nav-brand-img { width: 22px; height: 22px; border-radius: 5px; }
             .nav-link { font-size: 10.5px; padding: 4px 6px; }
         }
     </style>
@@ -421,9 +422,9 @@
 
 <!-- Top Navigation -->
 <nav class="site-nav">
-    <a href="#" class="nav-brand">
-        <img src="assets/logo.png" alt="Banglish Keyboard Logo" class="nav-brand-img">
-        <span>Banglish Keyboard</span>
+    <a href="index.html" class="nav-brand">
+        <img src="assets/logo.png" alt="Mukto Keyboard Logo" class="nav-brand-img">
+        <span>Mukto Keyboard</span>
     </a>
     <div class="nav-links">
         <a href="privacy-policy.html" class="nav-link">
@@ -443,23 +444,23 @@
 <div class="hero">
     <div class="hero-logo-box">
         <div class="hero-logo-card">
-            <img src="assets/logo.png" alt="Banglish Keyboard" class="hero-logo-img">
+            <img src="assets/logo.png" alt="Mukto Keyboard" class="hero-logo-img">
         </div>
     </div>
 
     <div>
-        <div class="hero-badge lang-en">Banglish Keyboard &middot; User Agreement</div>
-        <div class="hero-badge lang-bn">বাংলিশ কিবোর্ড &middot; ব্যবহারের আইনি শর্তাবলি</div>
-        <div class="hero-badge lang-bl">Banglish Keyboard &middot; Byaboharer Aiyni Shorthaboli</div>
+        <div class="hero-badge lang-en">Mukto Keyboard &middot; User Agreement</div>
+        <div class="hero-badge lang-bn">মুক্ত কিবোর্ড &middot; ব্যবহারের আইনি শর্তাবলি</div>
+        <div class="hero-badge lang-bl">Mukto Keyboard &middot; Byaboharer Aiyni Shorthaboli</div>
     </div>
 
     <h1 class="lang-en">Terms of <span>Use</span></h1>
     <h1 class="lang-bn">ব্যবহারের <span>শর্তাবলি</span></h1>
     <h1 class="lang-bl">Byaboharer <span>Shorthaboli</span></h1>
 
-    <p class="hero-sub lang-en">Banglish Keyboard by JS Organization — Legal rules, license, and guidelines governing the use of this application.</p>
-    <p class="hero-sub lang-bn">JS Organization-এর বাংলিশ কিবোর্ড — অ্যাপ্লিকেশনটি ব্যবহারের নিয়মাবলি, লাইসেন্স এবং আইনি শর্তাবলি।</p>
-    <p class="hero-sub lang-bl">JS Organization-er Banglish Keyboard — App ti byabohar korar niyam, license ebong aiyni guidelines.</p>
+    <p class="hero-sub lang-en">Mukto Keyboard by JS Organization — Legal rules, license, and guidelines governing the use of this application.</p>
+    <p class="hero-sub lang-bn">JS Organization-এর মুক্ত কিবোর্ড — অ্যাপ্লিকেশনটি ব্যবহারের নিয়মাবলি, লাইসেন্স এবং আইনি শর্তাবলি।</p>
+    <p class="hero-sub lang-bl">JS Organization-er Mukto Keyboard — App ti byabohar korar niyam, license ebong aiyni guidelines.</p>
 
     <!-- 3-Way Language Switcher (Default: English) -->
     <div class="lang-switcher-wrap">
@@ -534,9 +535,9 @@
             </div>
         </div>
         <div class="section-body">
-            <p class="lang-en">By downloading, installing, enabling, or using <strong>Banglish Keyboard</strong> (the "App"), you agree to be bound by these Terms of Use ("Terms"). If you do not agree to these Terms, please do not use the Application.</p>
-            <p class="lang-bn"><strong>Banglish Keyboard</strong> ("অ্যাপ") ডাউনলোড, ইনস্টল, সক্রিয় বা ব্যবহার করার মাধ্যমে আপনি এই ব্যবহারের শর্তাবলি ("শর্তাবলি") মেনে নিতে সম্মতি দিচ্ছেন। আপনি যদি এই শর্তাবলিতে সম্মত না হন, তবে অনুগ্রহ করে অ্যাপটি ব্যবহার করবেন না।</p>
-            <p class="lang-bl"><strong>Banglish Keyboard</strong> ("App") download, install, enable ba byabohar korar maddhome apni ei Terms of Use ("Terms") mene nite shommoti jannachhen. Apni jodi ei sharthaboli te shommot na hon, tahole onugroho kore app ti byabohar korben na.</p>
+            <p class="lang-en">By downloading, installing, enabling, or using <strong>Mukto Keyboard</strong> (the "App"), you agree to be bound by these Terms of Use ("Terms"). If you do not agree to these Terms, please do not use the Application.</p>
+            <p class="lang-bn"><strong>মুক্ত কিবোর্ড</strong> ("অ্যাপ") ডাউনলোড, ইনস্টল, সক্রিয় বা ব্যবহার করার মাধ্যমে আপনি এই ব্যবহারের শর্তাবলি ("শর্তাবলি") মেনে নিতে সম্মতি দিচ্ছেন। আপনি যদি এই শর্তাবলিতে সম্মত না হন, তবে অনুগ্রহ করে অ্যাপটি ব্যবহার করবেন না।</p>
+            <p class="lang-bl"><strong>Mukto Keyboard</strong> ("App") download, install, enable ba byabohar korar maddhome apni ei Terms of Use ("Terms") mene nite shommoti jannachhen. Apni jodi ei sharthaboli te shommot na hon, tahole onugroho kore app ti byabohar korben na.</p>
         </div>
     </div>
 
@@ -551,9 +552,9 @@
             </div>
         </div>
         <div class="section-body">
-            <p class="lang-en">We grant you a personal, non-exclusive, non-transferable, revocable license to use Banglish Keyboard on your personal Android devices strictly for personal and non-commercial communication purposes.</p>
-            <p class="lang-bn">আপনার ব্যক্তিগত ডিভাইসে ব্যক্তিগত ও অবাণিজ্যিক উদ্দেশ্যে Banglish Keyboard ব্যবহারের জন্য আপনাকে একটি অ-হস্তান্তরযোগ্য, সীমিত এবং প্রত্যাহারযোগ্য লাইসেন্স প্রদান করা হচ্ছে।</p>
-            <p class="lang-bl">Apnar personal Android device e byaktigoto o non-commercial messaging er jonno Banglish Keyboard byabohar korte apnake ekta personal, non-transferable, revocable license deya hoyeche.</p>
+            <p class="lang-en">We grant you a personal, non-exclusive, non-transferable, revocable license to use Mukto Keyboard on your personal Android devices strictly for personal and non-commercial communication purposes.</p>
+            <p class="lang-bn">আপনার ব্যক্তিগত ডিভাইসে ব্যক্তিগত ও অবাণিজ্যিক উদ্দেশ্যে মুক্ত কিবোর্ড ব্যবহারের জন্য আপনাকে একটি অ-হস্তান্তরযোগ্য, সীমিত এবং প্রত্যাহারযোগ্য লাইসেন্স প্রদান করা হচ্ছে।</p>
+            <p class="lang-bl">Apnar personal Android device e byaktigoto o non-commercial messaging er jonno Mukto Keyboard byabohar korte apnake ekta personal, non-transferable, revocable license deya hoyeche.</p>
 
             <h3 class="lang-en">Restrictions</h3>
             <h3 class="lang-bn">ব্যবহারের বিধিনিষেধ</h3>
@@ -587,9 +588,9 @@
             </div>
         </div>
         <div class="section-body">
-            <p class="lang-en">You retain full responsibility for the words, texts, credentials, or content you input, send, or publish using Banglish Keyboard. You agree to use the keyboard in accordance with applicable laws and respect the privacy and security of your own device.</p>
-            <p class="lang-bn">বাংলিশ কিবোর্ড ব্যবহার করে আপনি যেসব লেখা, মেসেজ বা তথ্য আদান-প্রদান করবেন, তার সম্পূর্ণ দায়দায়িত্ব একান্তই আপনার। দেশের প্রচলিত আইন মেনে চলা এবং নিজের ডিভাইসের নিরাপত্তা বজায় রাখা আপনার দায়িত্ব।</p>
-            <p class="lang-bl">Banglish Keyboard byabohar kore apni je shob lekha, message ba content pathaben ba share korben, tar shompurno day-dayitto ekanto-i apnar. Desher aain mene chola ebong nijer device er security bojay rakha apnar dayitto.</p>
+            <p class="lang-en">You retain full responsibility for the words, texts, credentials, or content you input, send, or publish using Mukto Keyboard. You agree to use the keyboard in accordance with applicable laws and respect the privacy and security of your own device.</p>
+            <p class="lang-bn">মুক্ত কিবোর্ড ব্যবহার করে আপনি যেসব লেখা, মেসেজ বা তথ্য আদান-প্রদান করবেন, তার সম্পূর্ণ দায়দায়িত্ব একান্তই আপনার। দেশের প্রচলিত আইন মেনে চলা এবং নিজের ডিভাইসের নিরাপত্তা বজায় রাখা আপনার দায়িত্ব।</p>
+            <p class="lang-bl">Mukto Keyboard byabohar kore apni je shob lekha, message ba content pathaben ba share korben, tar shompurno day-dayitto ekanto-i apnar. Desher aain mene chola ebong nijer device er security bojay rakha apnar dayitto.</p>
         </div>
     </div>
 
@@ -604,9 +605,9 @@
             </div>
         </div>
         <div class="section-body">
-            <p class="lang-en">Our handling of user data is governed by our <a href="privacy-policy.html" style="color:var(--accent); font-weight:600; text-decoration:underline;">Privacy Policy</a>. Banglish Keyboard maintains a strict zero-keylogging policy. All word suggestions, custom vocabulary, and clipboard histories remain securely within your local device memory.</p>
+            <p class="lang-en">Our handling of user data is governed by our <a href="privacy-policy.html" style="color:var(--accent); font-weight:600; text-decoration:underline;">Privacy Policy</a>. Mukto Keyboard maintains a strict zero-keylogging policy. All word suggestions, custom vocabulary, and clipboard histories remain securely within your local device memory.</p>
             <p class="lang-bn">আপনার তথ্যের নিরাপত্তা আমাদের <a href="privacy-policy.html" style="color:var(--accent); font-weight:600; text-decoration:underline;">গোপনীয়তা নীতি</a> অনুযায়ী পরিচালিত। কিবোর্ডে কোনো কি-লগিং নেই; আপনার শব্দ সাজেশন ও ক্লিপবোর্ড ডেটা শুধুমাত্র আপনার নিজস্ব ফোনে সুরক্ষিত থাকে।</p>
-            <p class="lang-bl">Apnar tothyer shurokkha aamader <a href="privacy-policy.html" style="color:var(--accent); font-weight:600; text-decoration:underline;">Privacy Policy</a> onujayi porichalito hoy. Banglish Keyboard e kono keylogging nei; apnar shob word suggestion ebong clipboard data shudhumatro apnar phone er local storage ei shurokkhito thake.</p>
+            <p class="lang-bl">Apnar tothyer shurokkha aamader <a href="privacy-policy.html" style="color:var(--accent); font-weight:600; text-decoration:underline;">Privacy Policy</a> onujayi porichalito hoy. Mukto Keyboard e kono keylogging nei; apnar shob word suggestion ebong clipboard data shudhumatro apnar phone er local storage ei shurokkhito thake.</p>
         </div>
     </div>
 
@@ -621,9 +622,9 @@
             </div>
         </div>
         <div class="section-body">
-            <p class="lang-en">All trademarks, logos, phonetic rule mappings, code, design, and software components of Banglish Keyboard belong exclusively to <strong>Md Mobassher Ahmed Sowrov</strong> and <strong>JS Organization</strong>. All rights not expressly granted are reserved.</p>
-            <p class="lang-bn">বাংলিশ কিবোর্ডের নাম, লোগো, কোড, ফোনেটিক নিয়মাবলি এবং ডিজাইন <strong>Md Mobassher Ahmed Sowrov</strong> এবং <strong>JS Organization</strong>-এর একান্ত মেধা সম্পত্তি। সমস্ত অধিকার সংরক্ষিত।</p>
-            <p class="lang-bl">Banglish Keyboard er name, logo, phonetic rule mappings, code, design ebong shob software component <strong>Md Mobassher Ahmed Sowrov</strong> ebong <strong>JS Organization</strong> er ekanto medha shompotti. Shob copyright shurokkhito.</p>
+            <p class="lang-en">All trademarks, logos, phonetic rule mappings, code, design, and software components of Mukto Keyboard belong exclusively to <strong>Md Mobassher Ahmed Sowrov</strong> and <strong>JS Organization</strong>. All rights not expressly granted are reserved.</p>
+            <p class="lang-bn">মুক্ত কিবোর্ডের নাম, লোগো, কোড, ফোনেটিক নিয়মাবলি এবং ডিজাইন <strong>Md Mobassher Ahmed Sowrov</strong> এবং <strong>JS Organization</strong>-এর একান্ত মেধা সম্পত্তি। সমস্ত অধিকার সংরক্ষিত।</p>
+            <p class="lang-bl">Mukto Keyboard er name, logo, phonetic rule mappings, code, design ebong shob software component <strong>Md Mobassher Ahmed Sowrov</strong> ebong <strong>JS Organization</strong> er ekanto medha shompotti. Shob copyright shurokkhito.</p>
         </div>
     </div>
 
@@ -641,9 +642,9 @@
             <div class="callout warning">
                 <i class="fa-solid fa-triangle-exclamation"></i>
                 <div>
-                    <div class="lang-en"><strong>Provided "AS IS":</strong> Banglish Keyboard is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind. While we strive for seamless performance, we do not warrant that typing predictions, voice transcriptions, or machine translations will be error-free at all times.</div>
+                    <div class="lang-en"><strong>Provided "AS IS":</strong> Mukto Keyboard is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind. While we strive for seamless performance, we do not warrant that typing predictions, voice transcriptions, or machine translations will be error-free at all times.</div>
                     <div class="lang-bn"><strong>"AS IS" ভিত্তিতে সেবা:</strong> অ্যাপটি কোনো প্রকার প্রত্যক্ষ বা পরোক্ষ ওয়ারেন্টি ছাড়াই বর্তমান অবস্থায় ("AS IS") ব্যবহারকারীদের জন্য উন্মুক্ত করা হয়েছে। শব্দ সাজেশন, ভয়েস রেকগনিশন বা মেশিন অনুবাদ শতভাগ নিখুঁত হওয়ার কোনো পরম নিশ্চয়তা দেওয়া হয় না।</div>
-                    <div class="lang-bl"><strong>"AS IS" Bhittite Sheba:</strong> Banglish Keyboard kono prokar warranty charai bortoman obosthay ("AS IS") ebong "AS AVAILABLE" bhittite deya hoyeche. Typing suggestion, voice recognition ba machine translation shob shomoy 100% bhulhin hobe tar kono absolute nishchoyota deya hoy na.</div>
+                    <div class="lang-bl"><strong>"AS IS" Bhittite Sheba:</strong> Mukto Keyboard kono prokar warranty charai bortoman obosthay ("AS IS") ebong "AS AVAILABLE" bhittite deya hoyeche. Typing suggestion, voice recognition ba machine translation shob shomoy 100% bhulhin hobe tar kono absolute nishchoyota deya hoy na.</div>
                 </div>
             </div>
         </div>
@@ -724,7 +725,7 @@
 
             <div class="contact-item" style="cursor:default;">
                 <div class="contact-label"><i class="fa-solid fa-box"></i> Package ID</div>
-                <div class="contact-value" style="color:rgba(255,255,255,.6); font-family:monospace; font-size:12px;">com.banglish.keyboard</div>
+                <div class="contact-value" style="color:rgba(255,255,255,.6); font-family:monospace; font-size:12px;">com.mukto.keyboard</div>
             </div>
         </div>
     </div>

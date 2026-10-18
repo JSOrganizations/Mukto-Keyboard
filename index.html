@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mukto Keyboard — Fast, Smart &amp; 100% Private Bengali Typing</title>
+    <meta name="description" content="Mukto Keyboard by JS Organization — Zero keylogging, on-device intelligence, instant translation, and fast phonetic typing for Android.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --ink: #07150e;
+            --ink-light: #2d4538;
+            --ink-muted: #5e7a6b;
+            --surface: #ffffff;
+            --surface-2: #f4f9f6;
+            --surface-3: #e8f4ed;
+            --accent: #027544;
+            --accent-mint: #10b981;
+            --accent-glow: rgba(16, 185, 129, 0.16);
+            --warn-bg: #fffbeb;
+            --border: #d4e7dc;
+            --border-strong: #b2d5c1;
+            --radius: 16px;
+            --radius-sm: 8px;
+            --radius-lg: 24px;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--surface-2);
+            color: var(--ink);
+            font-size: 16px;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* Multi-language Visibility */
+        body:not(.lang-en) .lang-en,
+        body:not(.lang-bn) .lang-bn,
+        body:not(.lang-bl) .lang-bl {
+            display: none !important;
+        }
+
+        /* Top Navigation Bar */
+        .site-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(7, 21, 14, 0.94);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 10px clamp(12px, 4vw, 36px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1.08rem;
+            text-decoration: none;
+            letter-spacing: -0.01em;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .nav-brand-img {
+            width: 32px;
+            height: 32px;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
+            transition: transform 0.2s ease;
+            display: block;
+        }
+        .nav-brand:hover .nav-brand-img {
+            transform: scale(1.05);
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-shrink: 0;
+        }
+        .nav-link {
+            color: rgba(255, 255, 255, 0.75);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            padding: 6px 12px;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            border: 1px solid transparent;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #ffffff;
+            background: rgba(16, 185, 129, 0.18);
+            border-color: rgba(16, 185, 129, 0.35);
+        }
+        .nav-btn-download {
+            background: linear-gradient(135deg, #10b981 0%, #027544 100%);
+            color: #ffffff !important;
+            font-weight: 600;
+            border-radius: 100px;
+            padding: 6px 16px;
+            font-size: 12.5px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 2px 12px rgba(16, 185, 129, 0.35);
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+        .nav-btn-download:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 18px rgba(16, 185, 129, 0.5);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(180deg, #07150e 0%, #0c2419 60%, #07150e 100%);
+            position: relative;
+            overflow: hidden;
+            padding: clamp(48px, 8vw, 84px) clamp(16px, 5vw, 40px) clamp(44px, 7vw, 76px);
+            text-align: center;
+        }
+        .hero::before {
+            content: '';
+            position: absolute; inset: 0;
+            background:
+                radial-gradient(ellipse 65% 70% at 20% 35%, rgba(2, 117, 68, 0.35) 0%, transparent 70%),
+                radial-gradient(ellipse 55% 60% at 80% 30%, rgba(16, 185, 129, 0.25) 0%, transparent 70%),
+                radial-gradient(circle at 50% 90%, rgba(16, 185, 129, 0.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .hero-logo-box {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 22px;
+            position: relative;
+        }
+        .hero-logo-box::before {
+            content: '';
+            position: absolute;
+            inset: -14px -18px;
+            background: radial-gradient(ellipse at center, rgba(16, 185, 129, 0.38) 0%, rgba(2, 117, 68, 0.15) 50%, transparent 75%);
+            border-radius: 30px;
+            filter: blur(14px);
+            pointer-events: none;
+        }
+        .hero-logo-card {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 26px;
+            padding: 0;
+            overflow: hidden;
+            box-shadow: 0 14px 36px rgba(0, 0, 0, 0.5), 0 0 28px rgba(16, 185, 129, 0.35);
+            border: 2px solid rgba(255, 255, 255, 0.28);
+            position: relative;
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .hero-logo-card:hover {
+            transform: translateY(-3px) scale(1.03);
+        }
+        .hero-logo-img {
+            width: clamp(92px, 22vw, 116px);
+            height: clamp(92px, 22vw, 116px);
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            display: block;
+            border-radius: 24px;
+        }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 100px; padding: 6px 16px;
+            font-size: clamp(10.5px, 2.5vw, 12px); font-weight: 500;
+            letter-spacing: .08em; text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.9); margin-bottom: 20px; position: relative;
+        }
+        .hero-badge::before {
+            content: ''; width: 7px; height: 7px; border-radius: 50%;
+            background: #10b981; box-shadow: 0 0 8px #10b981; flex-shrink: 0;
+            animation: pulseDot 2s infinite ease-in-out;
+        }
+        @keyframes pulseDot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.85); }
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(2.2rem, 7vw, 3.8rem); font-weight: 700; color: #fff;
+            letter-spacing: -.02em; line-height: 1.15; position: relative; margin-bottom: 14px;
+        }
+        .hero h1 span {
+            background: linear-gradient(135deg, #3ddc84, #10b981);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .hero-sub {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: clamp(14px, 3vw, 16.5px);
+            position: relative; max-width: 680px; margin: 0 auto;
+            line-height: 1.65;
+        }
+
+        /* 3-Language Toggle Button Pill */
+        .lang-switcher-wrap {
+            display: inline-flex;
+            background: rgba(2, 117, 68, 0.35);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+            border-radius: 100px;
+            padding: 3px;
+            margin: 22px 0 16px;
+            position: relative;
+            gap: 3px;
+        }
+        .lang-btn {
+            border: none;
+            background: transparent;
+            color: rgba(255, 255, 255, 0.75);
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 6px 16px;
+            border-radius: 100px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .lang-btn.active {
+            background: #10b981;
+            color: #07150e;
+            box-shadow: 0 2px 10px rgba(16, 185, 129, 0.4);
+        }
+        .lang-btn:hover:not(.active) {
+            color: #ffffff;
+        }
+
+        /* Hero CTA Buttons */
+        .hero-ctas {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 24px;
+            position: relative;
+        }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #10b981 0%, #027544 100%);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 13px 26px;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 15px;
+            box-shadow: 0 6px 24px rgba(16, 185, 129, 0.4);
+            transition: all 0.25s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.55);
+            background: linear-gradient(135deg, #18c78d 0%, #038a50 100%);
+        }
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.08);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 13px 26px;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(8px);
+            transition: all 0.25s ease;
+        }
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+            border-color: rgba(255, 255, 255, 0.35);
+        }
+
+        /* Live Typing Ticker Bar */
+        .typing-ticker-wrap {
+            max-width: 580px;
+            margin: 32px auto 0;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            border-radius: 100px;
+            padding: 10px 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 14px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        .ticker-label {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            background: #10b981;
+            color: #07150e;
+            padding: 3px 9px;
+            border-radius: 100px;
+            flex-shrink: 0;
+        }
+        .ticker-input {
+            color: rgba(255, 255, 255, 0.6);
+            font-family: monospace;
+        }
+        .ticker-arrow {
+            color: #10b981;
+            font-size: 13px;
+        }
+        .ticker-output {
+            color: #3ddc84;
+            font-weight: 700;
+        }
+        .cursor-blink {
+            display: inline-block;
+            width: 2px;
+            height: 15px;
+            background: #10b981;
+            margin-left: 2px;
+            animation: blink 0.9s infinite;
+            vertical-align: middle;
+        }
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        /* Page Wrapper */
+        .page-wrap {
+            max-width: 1060px;
+            margin: 0 auto;
+            padding: 0 clamp(14px, 4vw, 28px) clamp(50px, 8vw, 90px);
+        }
+
+        /* Section Headings */
+        .section-headline {
+            text-align: center;
+            margin: clamp(48px, 8vw, 76px) 0 clamp(24px, 5vw, 40px);
+        }
+        .section-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            background: var(--surface-3);
+            border: 1px solid var(--border);
+            padding: 5px 14px;
+            border-radius: 100px;
+            margin-bottom: 12px;
+        }
+        .section-headline h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(1.8rem, 5vw, 2.7rem);
+            color: var(--ink);
+            font-weight: 700;
+            line-height: 1.25;
+            letter-spacing: -.02em;
+        }
+        .section-headline p {
+            color: var(--ink-muted);
+            font-size: clamp(14px, 3vw, 16px);
+            max-width: 620px;
+            margin: 10px auto 0;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(100%, 310px), 1fr));
+            gap: clamp(14px, 3vw, 24px);
+            margin-bottom: 50px;
+        }
+        .feature-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: clamp(20px, 4vw, 30px);
+            box-shadow: 0 4px 18px rgba(7, 21, 14, 0.04);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+            position: relative;
+        }
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(7, 21, 14, 0.08);
+            border-color: var(--accent-mint);
+        }
+        .feature-icon-box {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: var(--surface-3);
+            border: 1px solid var(--border-strong);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: var(--accent);
+            margin-bottom: 16px;
+        }
+        .feature-card h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.25rem;
+            color: var(--ink);
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        .feature-card p {
+            color: var(--ink-light);
+            font-size: 14.5px;
+            line-height: 1.6;
+        }
+
+        /* Privacy & Comparison Section */
+        .comparison-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: clamp(20px, 4vw, 36px);
+            box-shadow: 0 6px 24px rgba(7, 21, 14, 0.05);
+            margin-bottom: 50px;
+            overflow-x: auto;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            text-align: left;
+        }
+        .comparison-table th {
+            padding: 14px 16px;
+            border-bottom: 2px solid var(--border);
+            font-family: 'Playfair Display', serif;
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--ink);
+        }
+        .comparison-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--surface-3);
+            color: var(--ink-light);
+        }
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        .status-yes {
+            color: #027544;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .status-no {
+            color: #b91c1c;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Download Section */
+        .download-box {
+            background: linear-gradient(135deg, #07150e 0%, #0d2a1c 100%);
+            border-radius: var(--radius-lg);
+            padding: clamp(32px, 6vw, 56px) clamp(20px, 5vw, 44px);
+            color: #ffffff;
+            text-align: center;
+            box-shadow: 0 16px 40px rgba(7, 21, 14, 0.25);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+        .download-box::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.25) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .download-box h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            font-weight: 700;
+            margin-bottom: 12px;
+            position: relative;
+        }
+        .download-box p {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: clamp(14px, 3vw, 16px);
+            max-width: 600px;
+            margin: 0 auto 28px;
+            position: relative;
+        }
+        .download-buttons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 14px;
+            position: relative;
+        }
+        .dl-btn {
+            background: #ffffff;
+            color: #07150e;
+            text-decoration: none;
+            padding: 12px 26px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 14.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+            transition: all 0.2s ease;
+        }
+        .dl-btn:hover {
+            transform: translateY(-2px);
+            background: #e8f4ed;
+            box-shadow: 0 6px 24px rgba(16, 185, 129, 0.4);
+        }
+        .dl-btn.secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .dl-btn.secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(16, 185, 129, 0.4);
+        }
+
+        /* Toast notification */
+        .toast-msg {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #07150e;
+            color: #3ddc84;
+            border: 1px solid #10b981;
+            padding: 10px 22px;
+            border-radius: 100px;
+            font-size: 13.5px;
+            font-weight: 600;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+            z-index: 2000;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+        .toast-msg.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: clamp(24px, 4vw, 36px) 20px;
+            font-size: clamp(11.5px, 2.5vw, 13px);
+            color: var(--ink-muted);
+            border-top: 1px solid var(--border);
+            max-width: 1060px;
+            margin: 0 auto;
+        }
+        .footer-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+        .footer-link {
+            color: var(--ink-light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 13px;
+            transition: color 0.2s;
+        }
+        .footer-link:hover {
+            color: var(--accent);
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #027544;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(2, 117, 68, 0.4);
+            cursor: pointer;
+            border: none;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.25s ease;
+            z-index: 999;
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            background: #025e37;
+        }
+
+        /* Mobile Responsive Adjustments */
+        @media (max-width: 680px) {
+            .nav-btn-download { display: none; }
+        }
+
+        @media (max-width: 480px) {
+            .site-nav { padding: 8px 12px; gap: 6px; }
+            .nav-brand { font-size: 0.94rem; gap: 6px; }
+            .nav-brand-img { width: 26px; height: 26px; border-radius: 6px; }
+            .nav-links { gap: 4px; }
+            .nav-link { font-size: 11px; padding: 5px 7px; }
+            .hero-logo-box { margin-bottom: 16px; }
+            .hero-logo-img { width: clamp(80px, 22vw, 98px); height: clamp(80px, 22vw, 98px); border-radius: 20px; }
+        }
+
+        @media (max-width: 360px) {
+            .site-nav { padding: 7px 8px; }
+            .nav-brand { font-size: 0.86rem; gap: 5px; }
+            .nav-brand-img { width: 22px; height: 22px; border-radius: 5px; }
+            .nav-link { font-size: 10px; padding: 4px 5px; }
+        }
+    </style>
+</head>
+<body class="lang-en">
+
+<!-- Top Navigation -->
+<nav class="site-nav">
+    <a href="#" class="nav-brand">
+        <img src="assets/logo.png" alt="Mukto Keyboard Logo" class="nav-brand-img">
+        <span>Mukto Keyboard</span>
+    </a>
+    <div class="nav-links">
+        <a href="#features" class="nav-link">
+            <span class="lang-en">Features</span>
+            <span class="lang-bn">ফিচার্স</span>
+            <span class="lang-bl">Features</span>
+        </a>
+        <a href="privacy-policy.html" class="nav-link">
+            <span class="lang-en">Privacy</span>
+            <span class="lang-bn">প্রাইভেসি</span>
+            <span class="lang-bl">Privacy</span>
+        </a>
+        <a href="terms-of-use.html" class="nav-link">
+            <span class="lang-en">Terms</span>
+            <span class="lang-bn">শর্তাবলি</span>
+            <span class="lang-bl">Terms</span>
+        </a>
+        <a href="#download" class="nav-btn-download">
+            <i class="fa-solid fa-download"></i>
+            <span class="lang-en">Get App</span>
+            <span class="lang-bn">ডাউনলোড</span>
+            <span class="lang-bl">Get App</span>
+        </a>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero">
+    <div class="hero-logo-box">
+        <div class="hero-logo-card">
+            <img src="assets/logo.png" alt="Mukto Keyboard" class="hero-logo-img">
+        </div>
+    </div>
+
+    <div>
+        <div class="hero-badge lang-en">Mukto Keyboard &middot; 100% Private &amp; Secure</div>
+        <div class="hero-badge lang-bn">মুক্ত কিবোর্ড &middot; ১০০% প্রাইভেসি সুরক্ষিত</div>
+        <div class="hero-badge lang-bl">Mukto Keyboard &middot; 100% Safe &amp; Private</div>
+    </div>
+
+    <h1 class="lang-en">Next-Gen Bengali Typing, <span>Perfected.</span></h1>
+    <h1 class="lang-bn">মুক্ত কিবোর্ড — <span>স্মার্ট, দ্রুত ও নিখুঁত টাইপিং।</span></h1>
+    <h1 class="lang-bl">Mukto Keyboard — Fast &amp; Smart <span>Typing!</span></h1>
+
+    <p class="hero-sub lang-en">Type English letters to write pure Bengali instantly. Powered by on-device local intelligence, zero keylogging, built-in translation, and complete privacy.</p>
+    <p class="hero-sub lang-bn">সহজে ইংরেজি হরফে লিখেই বাংলায় দ্রুত রূপান্তর করুন। ডিভাইসে লোকাল প্রসেসিং, কোনো কি-লগিং নেই, ইন-কিবোর্ড অনুবাদ এবং শতভাগ ডেটা সুরক্ষা।</p>
+    <p class="hero-sub lang-bl">English e likhlei shundor Bangla hobe! On-device local processing, instant translation ebong full safe typing.</p>
+
+    <!-- 3-Way Language Switcher -->
+    <div class="lang-switcher-wrap">
+        <button id="btnEn" class="lang-btn active" onclick="setLanguage('en')">English</button>
+        <button id="btnBn" class="lang-btn" onclick="setLanguage('bn')">বাংলা</button>
+        <button id="btnBl" class="lang-btn" onclick="setLanguage('bl')">Banglish</button>
+    </div>
+
+    <!-- Hero CTA Buttons -->
+    <div class="hero-ctas">
+        <a href="#download" class="btn-primary">
+            <i class="fa-brands fa-android"></i>
+            <span class="lang-en">Download APK</span>
+            <span class="lang-bn">এপিকে ডাউনলোড</span>
+            <span class="lang-bl">Download APK</span>
+        </a>
+        <a href="#features" class="btn-secondary">
+            <i class="fa-solid fa-bolt"></i>
+            <span class="lang-en">Explore Features</span>
+            <span class="lang-bn">ফিচার্স দেখুন</span>
+            <span class="lang-bl">Features Dekhun</span>
+        </a>
+    </div>
+
+    <!-- Live Animated Typing Ticker -->
+    <div class="typing-ticker-wrap">
+        <span class="ticker-label">Live Transliterate</span>
+        <span class="ticker-input" id="tickerInput">ami bhalo achi</span>
+        <span class="ticker-arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
+        <span class="ticker-output" id="tickerOutput">আমি ভালো আছি</span>
+        <span class="cursor-blink"></span>
+    </div>
+</header>
+
+<div class="page-wrap">
+
+    <!-- Feature Showcase -->
+    <section id="features" class="section-headline">
+        <div class="section-tag">
+            <i class="fa-solid fa-bolt"></i>
+            <span class="lang-en">Engineered for Speed</span>
+            <span class="lang-bn">গতি ও পারফরম্যান্স</span>
+            <span class="lang-bl">Speed &amp; Features</span>
+        </div>
+        <h2 class="lang-en">Key Features Designed for You</h2>
+        <h2 class="lang-bn">মুক্ত কিবোর্ডের অনন্য বৈশিষ্ট্যসমূহ</h2>
+        <h2 class="lang-bl">Mukto Keyboard er Main Features</h2>
+        <p class="lang-en">Everything you need for an intuitive, secure, and delightful typing experience on Android.</p>
+        <p class="lang-bn">সহজ, সুন্দর ও সম্পূর্ণ নিরাপদ টাইপিং অভিজ্ঞতার জন্য প্রয়োজনীয় সব সুবিধা এক অ্যাপে।</p>
+        <p class="lang-bl">Shundor, fast ebong full secure typing er shob features ek jaygay.</p>
+    </section>
+
+    <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+            <div class="feature-icon-box"><i class="fa-solid fa-bolt-lightning"></i></div>
+            <h3 class="lang-en">Smart Phonetic Engine</h3>
+            <h3 class="lang-bn">বুদ্ধিমান ফোনেটিক ইঞ্জিন</h3>
+            <h3 class="lang-bl">Smart Phonetic Engine</h3>
+            <p class="lang-en">Effortlessly convert Romanized English characters into pristine Bengali script with real-time word suggestions and grammatical accuracy.</p>
+            <p class="lang-bn">সহজে ইংরেজিতে টাইপ করলেই মুহূর্তে বিশুদ্ধ বাংলা বানান এবং প্রাসঙ্গিক শব্দ সাজেশন পান। কোনো জটিল নিয়ম ছাড়াই দ্রুত টাইপ করুন।</p>
+            <p class="lang-bl">English letter e type korlei instant accurate Bangla word suggestion paben. Fast ebong easy!</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card">
+            <div class="feature-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3 class="lang-en">Zero Keylogging Guarantee</h3>
+            <h3 class="lang-bn">জিরো কি-লগিং নিশ্চয়তা</h3>
+            <h3 class="lang-bl">Zero Keylogging Guarantee</h3>
+            <p class="lang-en">Strictly offline-first. Your keystrokes, personal chats, and passwords stay strictly on your device. Zero telemetry tracking of your input.</p>
+            <p class="lang-bn">সম্পূর্ণ অফলাইন-ফার্স্ট আর্কিটেকচার। আপনার টাইপ করা কোনো মেসেজ বা পাসওয়ার্ড কোনো দূরবর্তী সার্ভারে জমা বা ট্র্যাক করা হয় না।</p>
+            <p class="lang-bl">Apnar type kora kono keystroke, message ba password server e jay na. 100% on-device private!</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card">
+            <div class="feature-icon-box"><i class="fa-solid fa-language"></i></div>
+            <h3 class="lang-en">In-Keyboard Translation</h3>
+            <h3 class="lang-bn">ইন-কিবোর্ড রিয়েল-টাইম অনুবাদ</h3>
+            <h3 class="lang-bl">In-Keyboard Translation</h3>
+            <p class="lang-en">Translate sentences directly from the keyboard toolbar without leaving your messaging app. Works offline using Google ML Kit models.</p>
+            <p class="lang-bn">অন্য কোনো অ্যাপে না গিয়ে সরাসরি কিবোর্ড টুলবার থেকে যেকোনো বাক্য অনুবাদ করে ফেলুন। গুগল ML Kit-এর মাধ্যমে অফলাইনেও কাজ করে।</p>
+            <p class="lang-bl">Messaging app theke ber na hoye keyboard er toolbar thekei direct instant translation kora jay.</p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card">
+            <div class="feature-icon-box"><i class="fa-solid fa-clipboard-check"></i></div>
+            <h3 class="lang-en">Secure Clipboard Manager</h3>
+            <h3 class="lang-bn">স্মার্ট ক্লিপবোর্ড ম্যানেজার</h3>
+            <h3 class="lang-bl">Smart Clipboard Manager</h3>
+            <p class="lang-en">Store and pin frequently used clips with auto-pruning. Sensitive password fields are automatically bypassed for bulletproof safety.</p>
+            <p class="lang-bn">প্রয়োজনীয় টেক্সট সহজে কপি ও পিন করে রাখুন। পাসওয়ার্ড ফিল্ডের টেক্সট ক্লিপবোর্ডে সংরক্ষণ না হয়ে স্বয়ংক্রিয়ভাবে সুরক্ষিত থাকে।</p>
+            <p class="lang-bl">Important text pin kore rakhun. Password field theke copy kora sensitive data auto-protect thake.</p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-card">
+            <div class="feature-icon-box"><i class="fa-solid fa-microphone-lines"></i></div>
+            <h3 class="lang-en">Voice-to-Text Typing</h3>
+            <h3 class="lang-bn">ভয়েস টাইপিং সুবিধা</h3>
+            <h3 class="lang-bl">Voice Typing</h3>
+            <p class="lang-en">Speak in Bengali or English to type hands-free. Audio is processed instantly and never archived or recorded in the background.</p>
+            <p class="lang-bn">কথা বলেই সরাসরি বাংলায় লিখুন। কোনো অডিও ফাইল সংরক্ষণ করা হয় না; টেক্সট তৈরি হওয়ার সাথে সাথেই অডিও মুছে যায়।</p>
+            <p class="lang-bl">Mukhe bole direct Bangla type korun. Kono audio save ba record hoy na, full safe!</p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="feature-card">
+            <div class="feature-icon-box"><i class="fa-solid fa-palette"></i></div>
+            <h3 class="lang-en">Custom Themes &amp; Haptics</h3>
+            <h3 class="lang-bn">কাস্টম থিম ও ভাইব্রেশন</h3>
+            <h3 class="lang-bl">Custom Themes &amp; Haptics</h3>
+            <p class="lang-en">Personalize keyboard height, key vibration, dark/AMOLED aesthetics, and layout preferences tailored to your typing speed.</p>
+            <p class="lang-bn">পছন্দের ডার্ক থিম, কিবোর্ড সাইজ এবং ভাইব্রেশন তীব্রতা নিজের মতো করে সাজিয়ে নিয়ে উপভোগ করুন সাবলীল টাইপিং।</p>
+            <p class="lang-bl">Nijer pochonder theme, keyboard size ebong vibration settings adjust kore customized typing enjoy korun.</p>
+        </div>
+    </div>
+
+    <!-- Comparison Table -->
+    <div class="comparison-card">
+        <h3 style="font-family:'Playfair Display', serif; font-size:1.4rem; margin-bottom:16px;" class="lang-en">Mukto Keyboard vs Traditional Keyboards</h3>
+        <h3 style="font-family:'Playfair Display', serif; font-size:1.4rem; margin-bottom:16px;" class="lang-bn">অন্যান্য কিবোর্ডের সাথে তুলনা</h3>
+        <h3 style="font-family:'Playfair Display', serif; font-size:1.4rem; margin-bottom:16px;" class="lang-bl">Mukto Keyboard vs Other Keyboards</h3>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>Mukto Keyboard</th>
+                    <th>Typical Keyboards</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Zero Keylogging Guarantee</strong></td>
+                    <td><span class="status-yes"><i class="fa-solid fa-circle-check"></i> 100% Guaranteed</span></td>
+                    <td><span class="status-no"><i class="fa-solid fa-circle-xmark"></i> Cloud Telemetry</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Offline-First Architecture</strong></td>
+                    <td><span class="status-yes"><i class="fa-solid fa-circle-check"></i> Completely Local</span></td>
+                    <td><span class="status-no"><i class="fa-solid fa-circle-xmark"></i> Server Dependent</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Built-in Offline Translation</strong></td>
+                    <td><span class="status-yes"><i class="fa-solid fa-circle-check"></i> Google ML Kit</span></td>
+                    <td><span class="status-no"><i class="fa-solid fa-circle-xmark"></i> App Switching Needed</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Sensitive Clipboard Shield</strong></td>
+                    <td><span class="status-yes"><i class="fa-solid fa-circle-check"></i> Auto Password Shield</span></td>
+                    <td><span class="status-no"><i class="fa-solid fa-circle-xmark"></i> Unprotected</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Ads &amp; Commercial Trackers</strong></td>
+                    <td><span class="status-yes"><i class="fa-solid fa-circle-check"></i> Zero Ads / Zero Trackers</span></td>
+                    <td><span class="status-no"><i class="fa-solid fa-circle-xmark"></i> Ad-Supported</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Download Section -->
+    <section id="download" class="download-box">
+        <h2 class="lang-en">Ready to Experience Pure Typing?</h2>
+        <h2 class="lang-bn">মুক্ত কিবোর্ড ব্যবহারে প্রস্তুত?</h2>
+        <h2 class="lang-bl">Mukto Keyboard Use Korte Ready?</h2>
+        <p class="lang-en">Download Mukto Keyboard APK now and enjoy fast, private, and intuitive Bengali typing on your Android device.</p>
+        <p class="lang-bn">এখনই মুক্ত কিবোর্ড ইনস্টল করে আপনার ফোনে উপভোগ করুন দ্রুত এবং শতভাগ নিরাপদ বাংলা টাইপিং।</p>
+        <p class="lang-bl">Ekhoni Mukto Keyboard install korun ebong safe, fast Bengali typing enjoy korun.</p>
+
+        <div class="download-buttons">
+            <a href="https://github.com/JSOrganizations/Banglish-Keyboard/releases" target="_blank" rel="noopener noreferrer" class="dl-btn">
+                <i class="fa-brands fa-android" style="font-size:20px; color:#027544;"></i>
+                <div style="text-align:left;">
+                    <div style="font-size:10px; text-transform:uppercase; opacity:0.7;">Direct Download</div>
+                    <div>Download APK (Universal)</div>
+                </div>
+            </a>
+            <a href="https://github.com/JSOrganizations/Banglish-Keyboard" target="_blank" rel="noopener noreferrer" class="dl-btn secondary">
+                <i class="fa-brands fa-github" style="font-size:20px;"></i>
+                <div style="text-align:left;">
+                    <div style="font-size:10px; text-transform:uppercase; opacity:0.7;">Source &amp; Releases</div>
+                    <div>GitHub Repository</div>
+                </div>
+            </a>
+        </div>
+
+        <div style="margin-top:20px; font-size:12px; opacity:0.75;">
+            Package: <code>com.mukto.keyboard</code> &middot; Android 8.0+ &middot; Free &amp; Open Ecosystem
+        </div>
+    </section>
+
+</div>
+
+<!-- Toast Message element -->
+<div id="toastMsg" class="toast-msg"><i class="fa-solid fa-check"></i> Copied to clipboard!</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-links">
+        <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
+        <span>&middot;</span>
+        <a href="terms-of-use.html" class="footer-link">Terms of Use</a>
+        <span>&middot;</span>
+        <a href="https://github.com/JSOrganizations" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+        <span>&middot;</span>
+        <a href="https://t.me/JSOrganization" target="_blank" rel="noopener noreferrer" class="footer-link">Telegram</a>
+        <span>&middot;</span>
+        <a href="mailto:jsorganization.official@gmail.com" class="footer-link">Support</a>
+    </div>
+
+    <p>&copy; 2026 <strong>JS Organization</strong> &middot; Developed by <strong>Md Mobassher Ahmed Sowrov</strong>. All rights reserved.</p>
+</footer>
+
+<!-- Back to top button -->
+<button id="backToTopBtn" class="back-to-top" title="Back to top" onclick="scrollToTop()">
+    <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<script>
+    function showToast(msg) {
+        const toast = document.getElementById('toastMsg');
+        toast.innerHTML = `<i class="fa-solid fa-circle-check"></i> ` + msg;
+        toast.classList.add('show');
+        setTimeout(() => {
+            toast.classList.remove('show');
+        }, 2200);
+    }
+
+    function escapeHtml(text) {
+        const div = document.createElement('div');
+        div.innerText = text;
+        return div.innerHTML;
+    }
+
+    // Dynamic Live Ticker Loop
+    const tickerExamples = [
+        { input: "ami bhalo achi", output: "আমি ভালো আছি" },
+        { input: "kemon acho?", output: "কেমন আছো?" },
+        { input: "bangla amader bhasha", output: "বাংলা আমাদের ভাষা" },
+        { input: "dhonnobad shobaike", output: "ধন্যবাদ সবাইকে" },
+        { input: "shobai kemon achen?", output: "সবাই কেমন আছেন?" }
+    ];
+    let tickerIdx = 0;
+    setInterval(() => {
+        tickerIdx = (tickerIdx + 1) % tickerExamples.length;
+        const item = tickerExamples[tickerIdx];
+        const inEl = document.getElementById('tickerInput');
+        const outEl = document.getElementById('tickerOutput');
+        if (inEl && outEl) {
+            inEl.style.opacity = '0';
+            outEl.style.opacity = '0';
+            setTimeout(() => {
+                inEl.innerText = item.input;
+                outEl.innerText = item.output;
+                inEl.style.opacity = '1';
+                outEl.style.opacity = '1';
+            }, 300);
+        }
+    }, 3800);
+
+    // Language switch functionality
+    document.addEventListener("DOMContentLoaded", function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        let lang = urlParams.get('language') || 'en';
+        if (!['en', 'bn', 'bl'].includes(lang)) { lang = 'en'; }
+        setLanguage(lang);
+
+        window.addEventListener('scroll', function() {
+            const btn = document.getElementById('backToTopBtn');
+            if (window.scrollY > 350) {
+                btn.classList.add('visible');
+            } else {
+                btn.classList.remove('visible');
+            }
+        });
+    });
+
+    function setLanguage(lang) {
+        document.body.className = 'lang-' + lang;
+        document.getElementById('btnEn').classList.toggle('active', lang === 'en');
+        document.getElementById('btnBn').classList.toggle('active', lang === 'bn');
+        document.getElementById('btnBl').classList.toggle('active', lang === 'bl');
+
+        const url = new URL(window.location);
+        url.searchParams.set('language', lang);
+        window.history.pushState({}, '', url);
+    }
+
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>
