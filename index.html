@@ -83,16 +83,21 @@
             display: none !important;
         }
 
-        /* 1. Background Grid Pattern Overlay (Square Mesh Grid Lines) */
+        /* 1. Background Grid Pattern Overlay (Square Mesh Grid Lines - Top & Sides Focus) */
         .bg-grid-pattern {
-            position: fixed;
-            inset: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: clamp(650px, 85vh, 920px);
             pointer-events: none;
             z-index: 0;
             background-size: 36px 36px;
             background-image: 
-                linear-gradient(to right, rgba(16, 185, 129, 0.14) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(16, 185, 129, 0.14) 1px, transparent 1px);
+                linear-gradient(to right, rgba(16, 185, 129, 0.15) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(16, 185, 129, 0.15) 1px, transparent 1px);
+            mask-image: radial-gradient(ellipse 95% 580px at 50% 240px, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.35) 26%, rgba(0, 0, 0, 0.9) 56%, black 72%, transparent 96%);
+            -webkit-mask-image: radial-gradient(ellipse 95% 580px at 50% 240px, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.35) 26%, rgba(0, 0, 0, 0.9) 56%, black 72%, transparent 96%);
         }
 
         /* 2. Floating Bengali Glyphs Layer */
@@ -342,6 +347,18 @@
             z-index: 1;
             padding: clamp(48px, 8vw, 84px) clamp(16px, 4vw, 36px) clamp(36px, 6vw, 64px);
             text-align: center;
+        }
+        .hero-center-spotlight {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: clamp(380px, 62vw, 820px);
+            height: clamp(300px, 46vw, 560px);
+            background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.45) 48%, transparent 75%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: -1;
         }
         .hero-pill {
             display: inline-flex;
@@ -1044,6 +1061,7 @@
 
 <!-- Hero Section -->
 <header class="hero">
+    <div class="hero-center-spotlight" aria-hidden="true"></div>
     <div class="hero-logo-box">
         <div class="hero-logo-card">
             <img src="assets/logo.png" alt="Mukto Keyboard" class="hero-logo-img">
