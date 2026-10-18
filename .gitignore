@@ -1,0 +1,7 @@
+# Work directory
+Work/
+
+# OS and Editor files
+.DS_Store
+Thumbs.db
+*.tmp
