@@ -534,6 +534,46 @@
             gap: 14px;
             margin-top: 22px;
         }
+        .btn-primary-play {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #0f172a;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 22px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 24px rgba(15, 23, 42, 0.25);
+            transition: all 0.25s ease;
+        }
+        .btn-primary-play:hover {
+            transform: translateY(-2px);
+            background: #020617;
+            border-color: var(--emerald-400);
+            box-shadow: 0 12px 28px rgba(16, 185, 129, 0.35);
+        }
+        .play-btn-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            line-height: 1.15;
+        }
+        .play-btn-sub {
+            font-size: 9.5px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--slate-400);
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .play-btn-title {
+            font-size: 16px;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -0.01em;
+        }
         .btn-primary-hero {
             display: inline-flex;
             align-items: center;
@@ -541,10 +581,10 @@
             background: linear-gradient(135deg, var(--emerald-600) 0%, var(--emerald-500) 50%, var(--teal-600) 100%);
             color: #ffffff;
             text-decoration: none;
-            padding: 13px 28px;
+            padding: 13px 26px;
             border-radius: 16px;
             font-weight: 700;
-            font-size: 15px;
+            font-size: 14.5px;
             box-shadow: 0 8px 24px rgba(16, 185, 129, 0.32);
             transition: all 0.25s ease;
         }
@@ -559,10 +599,10 @@
             background: #ffffff;
             color: var(--slate-900);
             text-decoration: none;
-            padding: 13px 26px;
+            padding: 13px 24px;
             border-radius: 16px;
             font-weight: 600;
-            font-size: 15px;
+            font-size: 14.5px;
             border: 1px solid var(--slate-300);
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
             transition: all 0.25s ease;
@@ -576,6 +616,9 @@
             font-size: 12.5px;
             color: var(--slate-500);
             margin-top: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
         }
         .hero-subnote strong {
             color: var(--emerald-700);
@@ -857,6 +900,26 @@
             gap: 14px;
             position: relative;
         }
+        .dl-btn-play {
+            background: #020617;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 24px;
+            border-radius: 14px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+            transition: all 0.2s ease;
+        }
+        .dl-btn-play:hover {
+            transform: translateY(-2px);
+            background: #000000;
+            border-color: var(--emerald-400);
+            box-shadow: 0 8px 24px rgba(16, 185, 129, 0.45);
+        }
         .dl-btn {
             background: #ffffff;
             color: var(--slate-950);
@@ -984,110 +1047,369 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Steganography Studio Layout */
-        .stego-grid {
+        /* Secret Message Animated Simulation Showcase */
+        .stego-flow-wrap {
+            background: #ffffff;
+            border: 1px solid var(--slate-200);
+            border-radius: var(--radius-xl);
+            padding: clamp(16px, 3vw, 24px);
+            box-shadow: 0 4px 20px rgba(6, 78, 59, 0.04);
+        }
+        .stego-step-progress {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 22px;
+            flex-wrap: wrap;
+        }
+        .stego-step-tab {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--slate-50);
+            border: 1px solid var(--slate-200);
+            border-radius: 100px;
+            padding: 6px 16px;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--slate-600);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .stego-step-tab .step-num {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--slate-200);
+            color: var(--slate-700);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 800;
+        }
+        .stego-step-tab.active {
+            background: var(--emerald-50);
+            border-color: var(--emerald-500);
+            color: var(--emerald-900);
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.2);
+        }
+        .stego-step-tab.active .step-num {
+            background: var(--emerald-600);
+            color: #ffffff;
+        }
+        .step-connector {
+            width: 24px;
+            height: 2px;
+            background: var(--slate-200);
+        }
+        @media (max-width: 600px) {
+            .step-connector { display: none; }
+        }
+
+        .stego-sim-board {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 22px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 20px;
         }
-        @media (max-width: 768px) {
-            .stego-grid { grid-template-columns: 1fr; }
+        @media (max-width: 900px) {
+            .stego-sim-board { grid-template-columns: 1fr; }
         }
-        .stego-card-box {
+
+        .stego-sim-col {
             background: var(--slate-50);
             border: 1px solid var(--slate-200);
             border-radius: var(--radius-lg);
-            padding: 20px;
+            padding: 16px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            transition: all 0.25s ease;
         }
-        .stego-header {
-            font-size: 15px;
-            font-weight: 700;
-            color: var(--slate-900);
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .stego-input-field {
-            width: 100%;
-            padding: 10px 14px;
-            border-radius: 10px;
-            border: 1px solid var(--slate-300);
-            font-family: inherit;
-            font-size: 14px;
-            margin-bottom: 12px;
-            background: #ffffff;
-            color: var(--slate-800);
-            transition: all 0.2s;
-        }
-        .stego-input-field:focus {
-            outline: none;
+        .stego-sim-col.highlighted {
             border-color: var(--emerald-500);
-            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+            background: #ffffff;
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.12);
+            transform: translateY(-2px);
         }
-        .carrier-picker-row {
+        .sim-col-header {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--slate-800);
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
             gap: 8px;
-            margin-bottom: 14px;
-            flex-wrap: wrap;
         }
-        .carrier-pill-btn {
-            font-size: 22px;
-            padding: 4px 10px;
+        .sim-col-header svg {
+            color: var(--emerald-600);
+        }
+        .sim-screen-card {
+            background: #ffffff;
+            border: 1px solid var(--slate-200);
+            border-radius: 12px;
+            padding: 14px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .sim-label {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--slate-400);
+            letter-spacing: 0.05em;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .sim-label-sm {
+            font-size: 11.5px;
+            font-weight: 600;
+            color: var(--slate-500);
+        }
+        .sim-typing-box {
+            background: #f8fafc;
             border: 1px solid var(--slate-300);
-            border-radius: 10px;
+            border-radius: 8px;
+            padding: 10px 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--slate-800);
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+        }
+        .sim-carrier-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+        }
+        .sim-carrier-badges {
+            display: flex;
+            gap: 6px;
+        }
+        .sim-emoji-chip {
+            font-size: 20px;
+            padding: 2px 8px;
+            border-radius: 8px;
+            border: 1px solid var(--slate-200);
             background: #ffffff;
             cursor: pointer;
             transition: all 0.15s;
             line-height: 1.2;
         }
-        .carrier-pill-btn:hover {
-            transform: scale(1.12);
-            border-color: var(--emerald-500);
+        .sim-emoji-chip:hover {
+            transform: scale(1.1);
+            border-color: var(--emerald-400);
         }
-        .carrier-pill-btn.selected {
+        .sim-emoji-chip.active {
             border-color: var(--emerald-600);
-            background: var(--emerald-100);
-            transform: scale(1.12);
+            background: var(--emerald-50);
+            transform: scale(1.1);
             box-shadow: 0 2px 8px rgba(16, 185, 129, 0.25);
         }
-        .stego-btn-submit {
+        .sim-status-pill {
+            background: var(--emerald-50);
+            color: var(--emerald-800);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 6px;
+            padding: 6px 10px;
+            font-size: 11.5px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .sim-chat-bubble-wrap {
+            background: #f1f5f9;
+            border-radius: 12px;
+            padding: 18px 14px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .sim-chat-bubble {
+            background: var(--emerald-600);
+            color: #ffffff;
+            border-radius: 16px 16px 4px 16px;
+            padding: 10px 16px;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 4px;
+            box-shadow: 0 4px 12px rgba(5, 150, 105, 0.2);
+            transition: all 0.2s;
+        }
+        .sim-chat-bubble.pulse {
+            animation: bubblePulse 0.45s ease;
+        }
+        @keyframes bubblePulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.15); box-shadow: 0 0 20px rgba(16, 185, 129, 0.6); }
+            100% { transform: scale(1); }
+        }
+        .sim-bubble-emoji {
+            font-size: 32px;
+            line-height: 1;
+        }
+        .sim-bubble-time {
+            font-size: 10px;
+            opacity: 0.8;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .sim-copy-alert {
+            background: #0f172a;
+            color: #ffffff;
+            border-radius: 8px;
+            padding: 8px 12px;
+            font-size: 11.5px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.25s;
+        }
+        .sim-copy-alert svg {
+            color: var(--emerald-400);
+        }
+        .sim-paste-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .sim-pasted-emoji {
+            font-size: 26px;
+            padding: 4px 12px;
+            background: #f8fafc;
+            border: 1px dashed var(--slate-300);
+            border-radius: 8px;
+            line-height: 1.2;
+        }
+        .sim-action-decode-btn {
             background: linear-gradient(135deg, var(--emerald-600) 0%, var(--emerald-500) 100%);
             color: #ffffff;
             border: none;
-            border-radius: 10px;
-            padding: 10px 18px;
+            border-radius: 8px;
+            padding: 8px 14px;
+            font-size: 12.5px;
             font-weight: 700;
-            font-size: 13.5px;
             cursor: pointer;
             display: inline-flex;
             align-items: center;
-            gap: 7px;
+            gap: 6px;
             transition: all 0.2s;
         }
-        .stego-btn-submit:hover {
+        .sim-action-decode-btn:hover {
             transform: translateY(-1px);
             box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
         }
-        .stego-output-box {
-            margin-top: 14px;
-            background: #ffffff;
-            border: 1.5px dashed var(--emerald-400);
-            border-radius: 12px;
-            padding: 12px 16px;
+        .sim-action-decode-btn.clicked {
+            transform: scale(0.95);
+            background: var(--slate-900);
+        }
+        .sim-revealed-box {
+            background: var(--emerald-50);
+            border: 1.5px solid var(--emerald-400);
+            border-radius: 10px;
+            padding: 10px 14px;
+            transition: all 0.3s;
+        }
+        .sim-reveal-tag {
+            font-size: 10px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--emerald-800);
+            font-family: 'JetBrains Mono', monospace;
+            margin-bottom: 2px;
+        }
+        .sim-revealed-text {
+            font-size: 14.5px;
+            font-weight: 800;
+            color: var(--emerald-950);
+            min-height: 22px;
+        }
+        .sim-shield-badge {
+            font-size: 11px;
+            color: var(--slate-500);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .sim-shield-badge svg {
+            color: var(--emerald-600);
+        }
+        .stego-sim-toolbar {
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 12px;
-            min-height: 52px;
+            flex-wrap: wrap;
+            border-top: 1px solid var(--slate-200);
+            padding-top: 16px;
         }
-        .stego-output-emoji {
-            font-size: 28px;
-            line-height: 1;
+        .sim-custom-tester {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex: 1;
+            min-width: 280px;
+        }
+        .sim-test-field {
+            flex: 1;
+            padding: 9px 14px;
+            border-radius: 10px;
+            border: 1px solid var(--slate-300);
+            font-family: inherit;
+            font-size: 13.5px;
+            background: #ffffff;
+            color: var(--slate-800);
+            transition: all 0.2s;
+        }
+        .sim-test-field:focus {
+            outline: none;
+            border-color: var(--emerald-500);
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+        }
+        .sim-btn-play {
+            background: var(--slate-900);
+            color: #ffffff;
+            border: none;
+            border-radius: 10px;
+            padding: 9px 18px;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+        .sim-btn-play:hover {
+            background: var(--emerald-600);
+            transform: translateY(-1px);
+        }
+        .sim-btn-replay {
+            background: var(--slate-100);
+            color: var(--slate-700);
+            border: 1px solid var(--slate-300);
+            border-radius: 10px;
+            padding: 9px 14px;
+            font-size: 12.5px;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+        .sim-btn-replay:hover {
+            background: var(--slate-200);
+            color: var(--slate-900);
         }
 
         /* Fancy Fonts Studio */
@@ -1226,6 +1548,24 @@
             border-color: var(--emerald-500);
             transform: translateY(-2px);
             box-shadow: 0 8px 24px rgba(6, 78, 59, 0.08);
+        }
+        .sound-card-icon-wrap {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            background: var(--emerald-50);
+            color: var(--emerald-700);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            transition: all 0.25s ease;
+        }
+        .sound-card-box:hover .sound-card-icon-wrap {
+            background: var(--emerald-500);
+            color: #ffffff;
+            transform: scale(1.08);
         }
         .sound-play-btn {
             background: linear-gradient(135deg, var(--emerald-600) 0%, var(--emerald-500) 100%);
@@ -1566,33 +1906,47 @@
 
     <!-- Hero CTA Buttons -->
     <div class="hero-ctas">
-        <a href="#download" class="btn-primary-hero">
-            <svg class="icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-1.0002 0-.5515.4482-.9998.9993-.9998.5517 0 .9997.4483.9997.9998 0 .5516-.448 1.0002-.9997 1.0002m-11.046 0c-.5511 0-.9993-.4486-.9993-1.0002 0-.5515.4482-.9998.9993-.9998.5516 0 .9996.4483.9996.9998 0 .5516-.448 1.0002-.9996 1.0002m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.4116 13.8533 8.125 12 8.125c-1.8533 0-3.5902.2866-5.1378.8297L4.8399 5.4517a.416.416 0 00-.5676-.1521.416.416 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/></svg>
-            <span class="lang-en">Download v3.1 APK</span>
-            <span class="lang-bn font-bangla">ভার্সন ৩.১ ডাউনলোড</span>
-            <span class="lang-bl">Download v3.1 APK</span>
+        <a href="https://play.google.com/store/apps/details?id=com.mukto.keyboard" target="_blank" rel="noopener noreferrer" class="btn-primary-play">
+            <svg class="icon-svg" viewBox="0 0 512 512" width="22" height="22">
+                <path fill="#4285F4" d="M48.7 13.9C39.5 23.8 34.2 38.6 34.2 56.4V455.6c0 17.8 5.3 32.6 14.5 42.5l2.4 2.3L275.6 275.9v-5.8L51.1 11.6l-2.4 2.3z"/>
+                <path fill="#FBBC04" d="M353.4 353.8l-77.8-77.9v-5.8l77.8-77.9 1.8 1 92.1 52.3c26.3 14.9 26.3 39.4 0 54.4l-92.1 52.3-1.8 1.6z"/>
+                <path fill="#EA4335" d="M355.2 352.2L275.6 273 51.1 497.5c8.7 9.2 23 10.3 39.1 1.2l265-146.5"/>
+                <path fill="#34A853" d="M355.2 159.8L90.2 13.3c-16.1-9.1-30.4-8-39.1 1.2L275.6 239l79.6-79.2z"/>
+            </svg>
+            <div class="play-btn-text">
+                <span class="play-btn-sub lang-en">GET IT ON</span>
+                <span class="play-btn-sub lang-bn font-bangla">ডাউনলোড করুন</span>
+                <span class="play-btn-sub lang-bl">GET IT ON</span>
+                <span class="play-btn-title">Google Play</span>
+            </div>
         </a>
-        <a href="https://github.com/JSOrganizations/Mukto-Keyboard" target="_blank" rel="noopener noreferrer" class="btn-secondary-hero">
+        <a href="https://github.com/JSOrganizations/Mukto-Keyboard/releases" target="_blank" rel="noopener noreferrer" class="btn-secondary-hero">
+            <svg class="icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span class="lang-en">Direct APK (v3.1)</span>
+            <span class="lang-bn font-bangla">সরাসরি এপিকে ডাউনলোড</span>
+            <span class="lang-bl">Direct APK (v3.1)</span>
+        </a>
+        <a href="https://github.com/JSOrganizations/Mukto-Keyboard" target="_blank" rel="noopener noreferrer" class="btn-secondary-hero" style="color:var(--slate-700);">
             <svg class="icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-            <span class="lang-en">GitHub Repository</span>
-            <span class="lang-bn font-bangla">গিটহাব রেপোজিটরি</span>
-            <span class="lang-bl">GitHub Repo</span>
+            <span class="lang-en">GitHub</span>
+            <span class="lang-bn font-bangla">গিটহাব</span>
+            <span class="lang-bl">GitHub</span>
         </a>
     </div>
 
     <p class="hero-subnote">
-        <strong>Try Mukto Keyboard For Free</strong> &bull; কোনো কার্ড, রেজিস্ট্রেশন বা বিজ্ঞাপন নেই &bull; ওপেন সোর্স
+        <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--emerald-600);"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <strong>Google Play Protect Verified</strong> &bull; ১০০% সুরক্ষিত ও বিজ্ঞাপনহীন &bull; ওপেন সোর্স
     </p>
 
-    <!-- Live Animated Typing Transliterate Ticker -->
+    <!-- Live Animated Typing Transliterate Ticker (Letter-by-Letter Real Keystroke Typewriter) -->
     <div class="typing-ticker-wrap">
         <span class="ticker-label">Live Transliterate</span>
-        <span class="ticker-input" id="tickerInput">ami bhalo achi</span>
+        <span class="ticker-input" id="tickerInput"><span id="tickerInputText">bangla amader bhasha</span><span class="cursor-blink"></span></span>
         <span class="ticker-arrow">
             <svg class="icon-svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </span>
-        <span class="ticker-output" id="tickerOutput">আমি ভালো আছি</span>
-        <span class="cursor-blink"></span>
+        <span class="ticker-output" id="tickerOutput"><span id="tickerOutputText">বাংলা আমাদের ভাষা</span></span>
     </div>
 </header>
 
@@ -1616,118 +1970,158 @@
         </div>
 
         <div class="studio-card">
-            <!-- Studio Tab Controls -->
+            <!-- Studio Tab Controls (100% SVG Icons - No Emoji Icons) -->
             <div class="studio-tabs">
                 <button class="studio-tab-btn active" onclick="switchStudioTab('stego', this)">
-                    <span>🤫</span>
+                    <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1.5"/></svg>
                     <span class="lang-en">Secret Chat (Steganography)</span>
                     <span class="lang-bn font-bangla">গোপন চ্যাট (স্টেগানোগ্রাফি)</span>
                     <span class="lang-bl">Secret Chat</span>
                 </button>
                 <button class="studio-tab-btn" onclick="switchStudioTab('fonts', this)">
-                    <span>✍️</span>
+                    <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
                     <span class="lang-en">Fancy Fonts (20+ Styles)</span>
                     <span class="lang-bn font-bangla">ফ্যান্সি ফন্টস (২০+ স্টাইল)</span>
                     <span class="lang-bl">Fancy Fonts</span>
                 </button>
                 <button class="studio-tab-btn" onclick="switchStudioTab('gestures', this)">
-                    <span>⌨️</span>
+                    <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="6" y1="8" x2="6" y2="8"/><line x1="10" y1="8" x2="10" y2="8"/><line x1="14" y1="8" x2="14" y2="8"/><line x1="18" y1="8" x2="18" y2="8"/><line x1="6" y1="12" x2="6" y2="12"/><line x1="10" y1="12" x2="10" y2="12"/><line x1="14" y1="12" x2="14" y2="12"/><line x1="18" y1="12" x2="18" y2="12"/><line x1="7" y1="16" x2="17" y2="16"/></svg>
                     <span class="lang-en">Typing Modes &amp; Spacebar</span>
                     <span class="lang-bn font-bangla">টাইপিং মোড ও স্পেসবার</span>
                     <span class="lang-bl">Typing Modes</span>
                 </button>
                 <button class="studio-tab-btn" onclick="switchStudioTab('audio', this)">
-                    <span>🔊</span>
+                    <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
                     <span class="lang-en">Mechanical Sounds &amp; Themes</span>
                     <span class="lang-bn font-bangla">মেকানিক্যাল সাউন্ড ও থিম</span>
                     <span class="lang-bl">Sounds &amp; Themes</span>
                 </button>
             </div>
 
-            <!-- Panel 1: Secret Chat Steganography -->
+            <!-- Panel 1: Secret Chat Steganography Animated Simulation -->
             <div id="panel-stego" class="studio-panel active">
-                <div style="margin-bottom:16px; font-size:13.5px; color:var(--slate-600);">
-                    <span class="lang-en">Mukto Keyboard encodes secret text invisibly inside normal carrier emojis using Unicode Variation Selectors (<code style="background:var(--emerald-50); color:var(--emerald-900); padding:2px 6px; border-radius:4px;">U+FE00..U+FE0F</code> &amp; <code style="background:var(--emerald-50); color:var(--emerald-900); padding:2px 6px; border-radius:4px;">U+E0100..U+E01EF</code>). The message looks like 1 regular emoji to WhatsApp, Messenger, and Instagram!</span>
-                    <span class="lang-bn font-bangla">মুক্ত কিবোর্ড ইউনিকোড ভ্যারিয়েশন সিলেক্টরের সাহায্যে সাধারণ ইমোজির ভেতরে শতভাগ অদৃশ্যভাবে সিক্রেট মেসেজ এনকোড করে। ফেসবুক, হোয়াটসঅ্যাপ বা যেকোনো অ্যাপে এটি শুধুই ১টি নিরীহ ইমোজি হিসেবে দৃশ্যমান হয়!</span>
-                    <span class="lang-bl">Mukto Keyboard Unicode Variation Selectors diye emojir bhitore invisible secret text hide kore. WhatsApp, Messenger e shobai shudhu ekta emoji dekhbe!</span>
+                <div style="margin-bottom:18px; font-size:14px; color:var(--slate-600); line-height:1.65;">
+                    <span class="lang-en">Mukto Keyboard conceals secret messages invisibly inside standard emojis. Outside chat apps (WhatsApp, Messenger, Telegram) see only a single harmless emoji. Inside Mukto Keyboard, 1 tap reveals the confidential message!</span>
+                    <span class="lang-bn font-bangla">মুক্ত কিবোর্ড সাধারণ ইমোজির ভেতরে শতভাগ অদৃশ্যভাবে সিক্রেট মেসেজ লুকিয়ে রাখে। ফেসবুক, হোয়াটসঅ্যাপ বা টেলিগ্রামের কোনো অ্যালগরিদম এটি ধরতে পারে না — বাইরে থেকে শুধুই ১টি নিরীহ ইমোজি দেখায়। মুক্ত কিবোর্ডে পেস্ট করলেই ১ ট্যাপে বার্তা দৃশ্যমান হয়!</span>
+                    <span class="lang-bl">Mukto Keyboard e emojir bhitore invisible bhabe secret text conceal kora jay. Facebook, WhatsApp e shobai shudhu 1 ta emoji dekhbe, ar Mukto Keyboard e 1-tap e decode hoye jabe!</span>
                 </div>
-                <div class="stego-grid">
-                    <!-- Encoder Box -->
-                    <div class="stego-card-box">
-                        <div>
-                            <div class="stego-header">
-                                <span style="font-size:18px;">🔒</span>
-                                <span class="lang-en">1. Encode Secret Message</span>
-                                <span class="lang-bn font-bangla">১. গোপন বার্তা এনকোড করুন</span>
-                                <span class="lang-bl">1. Secret Message Encode Korun</span>
-                            </div>
-                            <label style="font-size:12px; font-weight:700; color:var(--slate-600); display:block; margin-bottom:6px;">Secret Text:</label>
-                            <input id="stegoTextInput" type="text" class="stego-input-field" value="আজ বিকেলে দেখা হবে!" placeholder="Type your secret message...">
 
-                            <label style="font-size:12px; font-weight:700; color:var(--slate-600); display:block; margin-bottom:6px;">Select Carrier Emoji:</label>
-                            <div class="carrier-picker-row" id="carrierList">
-                                <button class="carrier-pill-btn selected" onclick="selectCarrier(this, '🙂')">🙂</button>
-                                <button class="carrier-pill-btn" onclick="selectCarrier(this, '❤️')">❤️</button>
-                                <button class="carrier-pill-btn" onclick="selectCarrier(this, '🔥')">🔥</button>
-                                <button class="carrier-pill-btn" onclick="selectCarrier(this, '😎')">😎</button>
-                                <button class="carrier-pill-btn" onclick="selectCarrier(this, '🤫')">🤫</button>
-                                <button class="carrier-pill-btn" onclick="selectCarrier(this, '🎉')">🎉</button>
-                                <button class="carrier-pill-btn" onclick="selectCarrier(this, '✨')">✨</button>
+                <!-- Stego Interactive Animated Showcase Flow -->
+                <div class="stego-flow-wrap">
+                    <!-- Stage Steps Bar -->
+                    <div class="stego-step-progress">
+                        <button class="stego-step-tab active" id="stegoTab1" onclick="jumpStegoStage(1)">
+                            <span class="step-num">১</span>
+                            <span class="step-title">টাইপ ও হাইড</span>
+                        </button>
+                        <div class="step-connector"></div>
+                        <button class="stego-step-tab" id="stegoTab2" onclick="jumpStegoStage(2)">
+                            <span class="step-num">২</span>
+                            <span class="step-title">কপি ও চ্যাট</span>
+                        </button>
+                        <div class="step-connector"></div>
+                        <button class="stego-step-tab" id="stegoTab3" onclick="jumpStegoStage(3)">
+                            <span class="step-num">৩</span>
+                            <span class="step-title">১-ট্যাপে ডিকোড</span>
+                        </button>
+                    </div>
+
+                    <!-- 3-Pane Visual Simulation Board -->
+                    <div class="stego-sim-board">
+                        <!-- Stage 1: Sender Screen -->
+                        <div class="stego-sim-col highlighted" id="simCol1">
+                            <div class="sim-col-header">
+                                <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1.5"/></svg>
+                                <span>১. গোপন বার্তা টাইপ (প্রেরক)</span>
+                            </div>
+                            <div class="sim-screen-card">
+                                <div>
+                                    <div class="sim-label">কিবোর্ড ইনপুট:</div>
+                                    <div class="sim-typing-box" id="simSenderInput">
+                                        <span id="simTypingText">কাল বিকেলে দেখা হবে 🤫</span><span class="cursor-blink"></span>
+                                    </div>
+                                    <div class="sim-carrier-row" style="margin-top:10px;">
+                                        <span class="sim-label-sm">বাহক ইমোজি:</span>
+                                        <div class="sim-carrier-badges">
+                                            <span class="sim-emoji-chip active" id="simCarrier1" onclick="setSimCarrier('😎')">😎</span>
+                                            <span class="sim-emoji-chip" id="simCarrier2" onclick="setSimCarrier('🔥')">🔥</span>
+                                            <span class="sim-emoji-chip" id="simCarrier3" onclick="setSimCarrier('🙂')">🙂</span>
+                                            <span class="sim-emoji-chip" id="simCarrier4" onclick="setSimCarrier('❤️')">❤️</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sim-status-pill" id="simStatusPill1">
+                                    <svg class="icon-svg" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                    <span>গোপন বার্তা স্বয়ংক্রিয়ভাবে অদৃশ্যভাবে যুক্ত হচ্ছে</span>
+                                </div>
                             </div>
                         </div>
 
-                        <div>
-                            <button class="stego-btn-submit" onclick="executeStegoEncode()">
-                                <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                                <span class="lang-en">Encode Message</span>
-                                <span class="lang-bn font-bangla">এনকোড করুন</span>
-                                <span class="lang-bl">Encode Korun</span>
-                            </button>
-
-                            <div class="stego-output-box" id="stegoEncodedResultWrap">
-                                <div style="display:flex; align-items:center; gap:12px;">
-                                    <span class="stego-output-emoji" id="stegoEncodedDisplay">🙂</span>
-                                    <div>
-                                        <div style="font-size:12px; font-weight:700; color:var(--emerald-800);">Secret Encoded!</div>
-                                        <div style="font-size:11px; color:var(--slate-500);">Hidden message is inside this emoji.</div>
+                        <!-- Stage 2: Transmission & Copy -->
+                        <div class="stego-sim-col" id="simCol2">
+                            <div class="sim-col-header">
+                                <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                <span>২. কপি ও সোশ্যাল চ্যাট প্রিভিউ</span>
+                            </div>
+                            <div class="sim-screen-card">
+                                <div>
+                                    <div class="sim-label">মেসেঞ্জার / হোয়াটসঅ্যাপ প্রিভিউ:</div>
+                                    <div class="sim-chat-bubble-wrap" style="margin-top:6px;">
+                                        <div class="sim-chat-bubble" id="simChatBubble">
+                                            <span class="sim-bubble-emoji" id="simBubbleEmoji">😎</span>
+                                            <span class="sim-bubble-time">10:42 AM &bull; Sent</span>
+                                        </div>
                                     </div>
                                 </div>
-                                <button class="chip-copy-action" onclick="copyEncodedEmoji()">
-                                    <svg class="icon-svg" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                                    <span>Copy Emoji</span>
-                                </button>
+                                <div class="sim-copy-alert" id="simCopyAlert">
+                                    <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                    <span>ক্লিপবোর্ডে কপি হয়েছে! বাইরে কেবল ১টি ইমোজি</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Stage 3: Receiver & Decode -->
+                        <div class="stego-sim-col" id="simCol3">
+                            <div class="sim-col-header">
+                                <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+                                <span>৩. ১-ট্যাপে ডিকোড (প্রাপক)</span>
+                            </div>
+                            <div class="sim-screen-card">
+                                <div>
+                                    <div class="sim-label">মুক্ত কিবোর্ড টুলবারে পেস্ট:</div>
+                                    <div class="sim-paste-row" style="margin:6px 0 10px;">
+                                        <div class="sim-pasted-emoji" id="simPastedEmoji">😎</div>
+                                        <button class="sim-action-decode-btn" id="simDecodeTriggerBtn" onclick="triggerManualDecode()">
+                                            <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                                            <span>ডিকোড করুন</span>
+                                        </button>
+                                    </div>
+                                    <div class="sim-revealed-box" id="simRevealedBox">
+                                        <div class="sim-reveal-tag">উদ্ধারকৃত গোপন বার্তা:</div>
+                                        <div class="sim-revealed-text" id="simRevealedText">কাল বিকেলে দেখা হবে 🤫</div>
+                                    </div>
+                                </div>
+                                <div class="sim-shield-badge">
+                                    <svg class="icon-svg" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                    <span>১০০% অন-ডিভাইস গোপন • কোনো সার্ভার লগিং নেই</span>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Decoder Box -->
-                    <div class="stego-card-box">
-                        <div>
-                            <div class="stego-header">
-                                <span style="font-size:18px;">🔓</span>
-                                <span class="lang-en">2. Decode Hidden Message</span>
-                                <span class="lang-bn font-bangla">২. গোপন বার্তা ডিকোড করুন</span>
-                                <span class="lang-bl">2. Hidden Message Decode Korun</span>
-                            </div>
-                            <label style="font-size:12px; font-weight:700; color:var(--slate-600); display:block; margin-bottom:6px;">Paste Carrier Emoji:</label>
-                            <input id="stegoDecodeInput" type="text" class="stego-input-field" placeholder="Paste encoded emoji here...">
-                        </div>
-
-                        <div>
-                            <button class="stego-btn-submit" onclick="executeStegoDecode()" style="background:var(--slate-800);">
-                                <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
-                                <span class="lang-en">Reveal Secret Message</span>
-                                <span class="lang-bn font-bangla">গোপন বার্তা দেখুন</span>
-                                <span class="lang-bl">Message Reveal Korun</span>
+                    <!-- Animation Controls & Custom Text Tester -->
+                    <div class="stego-sim-toolbar">
+                        <div class="sim-custom-tester">
+                            <input type="text" id="customSimInput" class="sim-test-field" placeholder="নিজের যেকোনো গোপন বার্তা দিয়ে অ্যানিমেশন টেস্ট করুন..." value="কাল বিকেলে দেখা হবে 🤫">
+                            <button class="sim-btn-play" onclick="playCustomStegoAnimation()">
+                                <svg class="icon-svg" viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                                <span>অ্যানিমেশন টেস্ট করুন</span>
                             </button>
-
-                            <div class="stego-output-box" id="stegoDecodedResultWrap" style="border-color:var(--slate-300); background:#f8fafc;">
-                                <div>
-                                    <div style="font-size:11px; text-transform:uppercase; font-weight:700; color:var(--slate-400); font-family:'JetBrains Mono', monospace;">Decoded Content:</div>
-                                    <div id="stegoDecodedDisplay" style="font-size:14.5px; font-weight:700; color:var(--emerald-900); margin-top:3px;">Click reveal to extract message...</div>
-                                </div>
-                            </div>
                         </div>
+                        <button class="sim-btn-replay" onclick="replayStegoFullLoop()" title="Replay Animation">
+                            <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+                            <span>পুনরায় চালান</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -1823,7 +2217,8 @@
                             &larr; Swipe Left (Prev Mode)
                         </button>
                         <button class="chip-copy-action" onclick="triggerCursorScrubDemo()" style="background:var(--emerald-600); color:#ffffff;">
-                            🕹️ Hold 280ms (Cursor Trackpad)
+                            <svg class="icon-svg" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px;"><path d="M5 9l-3 3 3 3M9 5l3-3 3 3M15 19l-3 3-3-3M19 9l3 3-3 3"/><circle cx="12" cy="12" r="2"/></svg>
+                            <span>Hold 280ms (Cursor Trackpad)</span>
                         </button>
                         <button class="chip-copy-action" onclick="cycleLanguageMode(1)" style="background:rgba(255,255,255,0.1); color:#ffffff; border-color:rgba(255,255,255,0.2);">
                             Swipe Right (Next Mode) &rarr;
@@ -1844,7 +2239,9 @@
                     <!-- Mechanical Sound Card -->
                     <div class="sound-card-box">
                         <div>
-                            <div style="font-size:32px; margin-bottom:8px;">🕹️</div>
+                            <div class="sound-card-icon-wrap">
+                                <svg class="icon-svg" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="3" x2="12" y2="7"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                            </div>
                             <h4 style="font-size:15px; font-weight:800; color:var(--slate-900);">Mechanical Switch</h4>
                             <p style="font-size:12.5px; color:var(--slate-500); margin-top:4px;">Crisp, tactile blue switch acoustic clicks for precision lovers.</p>
                         </div>
@@ -1857,7 +2254,9 @@
                     <!-- Soft Tap Sound Card -->
                     <div class="sound-card-box">
                         <div>
-                            <div style="font-size:32px; margin-bottom:8px;">💧</div>
+                            <div class="sound-card-icon-wrap">
+                                <svg class="icon-svg" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+                            </div>
                             <h4 style="font-size:15px; font-weight:800; color:var(--slate-900);">Soft Tap</h4>
                             <p style="font-size:12.5px; color:var(--slate-500); margin-top:4px;">Subtle, gentle raindrops tap feedback for quiet settings.</p>
                         </div>
@@ -1870,7 +2269,9 @@
                     <!-- Bubble Pop Sound Card -->
                     <div class="sound-card-box">
                         <div>
-                            <div style="font-size:32px; margin-bottom:8px;">🎈</div>
+                            <div class="sound-card-icon-wrap">
+                                <svg class="icon-svg" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5"/><circle cx="17" cy="15" r="4"/><circle cx="16" cy="6" r="2"/></svg>
+                            </div>
                             <h4 style="font-size:15px; font-weight:800; color:var(--slate-900);">Bubble Pop</h4>
                             <p style="font-size:12.5px; color:var(--slate-500); margin-top:4px;">Bouncy, playful bubble acoustic sound with high pitch.</p>
                         </div>
@@ -1883,7 +2284,9 @@
                     <!-- Live Video Theme Preview Card -->
                     <div class="sound-card-box" style="background:linear-gradient(135deg, var(--emerald-900) 0%, var(--slate-900) 100%); color:#ffffff;">
                         <div>
-                            <div style="font-size:32px; margin-bottom:8px;">🎬</div>
+                            <div class="sound-card-icon-wrap" style="background:rgba(255,255,255,0.12); color:var(--emerald-400); border-color:rgba(255,255,255,0.2);">
+                                <svg class="icon-svg" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+                            </div>
                             <h4 style="font-size:15px; font-weight:800; color:#ffffff;">Live Video Themes</h4>
                             <p style="font-size:12.5px; color:rgba(255,255,255,0.75); margin-top:4px;">MP4 / WebM background with video trimmer &amp; boomerang loop mode.</p>
                         </div>
@@ -2434,11 +2837,26 @@
         <h2 class="lang-en">Ready to Experience Pure Typing?</h2>
         <h2 class="lang-bn font-bangla">মুক্ত কিবোর্ড ব্যবহারে প্রস্তুত?</h2>
         <h2 class="lang-bl">Mukto Keyboard Use Korte Ready?</h2>
-        <p class="lang-en">Download Mukto Keyboard v3.1 APK now and enjoy fast, private, and intuitive Bengali typing on your Android device.</p>
-        <p class="lang-bn font-bangla">এখনই মুক্ত কিবোর্ড ইনস্টল করে আপনার ফোনে উপভোগ করুন দ্রুত এবং শতভাগ নিরাপদ বাংলা টাইপিং।</p>
-        <p class="lang-bl">Ekhoni Mukto Keyboard install korun ebong safe, fast Bengali typing enjoy korun.</p>
+        <p class="lang-en">Get Mukto Keyboard now on Google Play Store or download universal APK directly. 100% private, free, and open source.</p>
+        <p class="lang-bn font-bangla">গুগল প্লে স্টোর থেকে সরাসরি ডাউনলোড করুন অথবা ইউনিভার্সাল এপিকে ইনস্টল করুন। শতভাগ সুরক্ষিত ও ওপেন সোর্স।</p>
+        <p class="lang-bl">Google Play Store theke direct install korun ba universal APK download korun. 100% private o safe.</p>
 
         <div class="download-buttons">
+            <!-- Google Play Store Primary Button -->
+            <a href="https://play.google.com/store/apps/details?id=com.mukto.keyboard" target="_blank" rel="noopener noreferrer" class="dl-btn-play">
+                <svg class="icon-svg" viewBox="0 0 512 512" width="28" height="28">
+                    <path fill="#4285F4" d="M48.7 13.9C39.5 23.8 34.2 38.6 34.2 56.4V455.6c0 17.8 5.3 32.6 14.5 42.5l2.4 2.3L275.6 275.9v-5.8L51.1 11.6l-2.4 2.3z"/>
+                    <path fill="#FBBC04" d="M353.4 353.8l-77.8-77.9v-5.8l77.8-77.9 1.8 1 92.1 52.3c26.3 14.9 26.3 39.4 0 54.4l-92.1 52.3-1.8 1.6z"/>
+                    <path fill="#EA4335" d="M355.2 352.2L275.6 273 51.1 497.5c8.7 9.2 23 10.3 39.1 1.2l265-146.5"/>
+                    <path fill="#34A853" d="M355.2 159.8L90.2 13.3c-16.1-9.1-30.4-8-39.1 1.2L275.6 239l79.6-79.2z"/>
+                </svg>
+                <div style="text-align:left;">
+                    <div style="font-size:10px; text-transform:uppercase; letter-spacing:0.06em; opacity:0.8; font-family:'JetBrains Mono', monospace;">GET IT ON</div>
+                    <div style="font-size:17px; font-weight:800; line-height:1.2;">Google Play</div>
+                </div>
+            </a>
+
+            <!-- Universal APK Button -->
             <a href="https://github.com/JSOrganizations/Mukto-Keyboard/releases" target="_blank" rel="noopener noreferrer" class="dl-btn">
                 <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" style="color:var(--emerald-600);"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-1.0002 0-.5515.4482-.9998.9993-.9998.5517 0 .9997.4483.9997.9998 0 .5516-.448 1.0002-.9997 1.0002m-11.046 0c-.5511 0-.9993-.4486-.9993-1.0002 0-.5515.4482-.9998.9993-.9998.5516 0 .9996.4483.9996.9998 0 .5516-.448 1.0002-.9996 1.0002m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.4116 13.8533 8.125 12 8.125c-1.8533 0-3.5902.2866-5.1378.8297L4.8399 5.4517a.416.416 0 00-.5676-.1521.416.416 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/></svg>
                 <div style="text-align:left;">
@@ -2446,6 +2864,8 @@
                     <div style="font-size:14px; font-weight:700;">Download APK (Universal)</div>
                 </div>
             </a>
+
+            <!-- GitHub Repo Button -->
             <a href="https://github.com/JSOrganizations/Mukto-Keyboard" target="_blank" rel="noopener noreferrer" class="dl-btn secondary">
                 <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
                 <div style="text-align:left;">
@@ -2456,7 +2876,7 @@
         </div>
 
         <div style="margin-top:22px; font-size:12.5px; opacity:0.85; font-family:'JetBrains Mono', monospace;">
-            Package: <code>com.mukto.keyboard</code> &middot; Android 7.0+ (Nougat to 16) &middot; Deep Links: <code>bnkb://settings</code>, <code>bnkb://theme</code>
+            Package: <code>com.mukto.keyboard</code> &middot; Google Play Store &middot; Deep Links: <code>bnkb://settings</code>, <code>bnkb://theme</code>
         </div>
     </section>
 
@@ -2513,101 +2933,129 @@
         if (targetPanel) targetPanel.classList.add('active');
     }
 
-    // 1. Emoji Steganography (Secret Chat) - Matching native EmojiSteganography.kt
-    let selectedCarrierEmoji = '🙂';
-    let lastEncodedResult = '🙂';
+    // 1. Secret Chat (Steganography) Animated Simulation Showcase
+    // Pure visual interactive demonstration - No proprietary internal algorithms exposed!
+    let simCarrier = '😎';
+    let simSecretMsg = 'কাল বিকেলে দেখা হবে 🤫';
+    let simStage = 1;
+    let simAnimTimeout = null;
+    let simTypingInterval = null;
 
-    function selectCarrier(btn, emoji) {
-        selectedCarrierEmoji = emoji;
-        const allBtns = document.querySelectorAll('#carrierList .carrier-pill-btn');
-        allBtns.forEach(b => b.classList.remove('selected'));
-        if (btn) btn.classList.add('selected');
-        executeStegoEncode();
-    }
-
-    function encodeSteganography(carrier, text) {
-        if (!text) return carrier;
-        const encoder = new TextEncoder();
-        const bytes = encoder.encode(text);
-        let result = carrier;
-        for (let i = 0; i < bytes.length; i++) {
-            const uByte = bytes[i];
-            const codePoint = uByte < 16 ? 0xFE00 + uByte : 0xE0100 + (uByte - 16);
-            result += String.fromCodePoint(codePoint);
+    function setSimCarrier(emoji) {
+        simCarrier = emoji;
+        for (let i = 1; i <= 4; i++) {
+            const chip = document.getElementById('simCarrier' + i);
+            if (chip) chip.classList.toggle('active', chip.innerText.trim() === emoji);
         }
-        return result;
+        const bEmoji = document.getElementById('simBubbleEmoji');
+        const pEmoji = document.getElementById('simPastedEmoji');
+        if (bEmoji) bEmoji.innerText = emoji;
+        if (pEmoji) pEmoji.innerText = emoji;
+        showToast("বাহক ইমোজি সিলেক্ট করা হয়েছে: " + emoji);
     }
 
-    function decodeSteganography(str) {
-        if (!str) return "";
-        const bytes = [];
-        let prevVS = false;
-        for (let i = 0; i < str.length; ) {
-            const cp = str.codePointAt(i);
-            const isVS = (cp >= 0xFE00 && cp <= 0xFE0F) || (cp >= 0xE0100 && cp <= 0xE01EF);
-            if (isVS) {
-                if (!prevVS && cp === 0xFE0F && bytes.length === 0) {
-                    prevVS = true;
-                    i += cp > 0xFFFF ? 2 : 1;
-                    continue;
-                }
-                prevVS = true;
-                const b = cp <= 0xFE0F ? cp - 0xFE00 : cp - 0xE0100 + 16;
-                bytes.push(b);
-            } else {
-                prevVS = false;
+    function jumpStegoStage(stage) {
+        simStage = stage;
+        clearTimeout(simAnimTimeout);
+        clearInterval(simTypingInterval);
+
+        // Update stage buttons
+        for (let i = 1; i <= 3; i++) {
+            const tab = document.getElementById('stegoTab' + i);
+            const col = document.getElementById('simCol' + i);
+            if (tab) tab.classList.toggle('active', i === stage);
+            if (col) col.classList.toggle('highlighted', i === stage);
+        }
+
+        const simTyping = document.getElementById('simTypingText');
+        const bEmoji = document.getElementById('simBubbleEmoji');
+        const pEmoji = document.getElementById('simPastedEmoji');
+        const revBox = document.getElementById('simRevealedText');
+        const bubble = document.getElementById('simChatBubble');
+        const copyAlert = document.getElementById('simCopyAlert');
+
+        if (stage === 1) {
+            if (simTyping) simTyping.innerText = simSecretMsg;
+            if (revBox) revBox.innerText = "...";
+            if (copyAlert) copyAlert.style.opacity = '0.5';
+        } else if (stage === 2) {
+            if (simTyping) simTyping.innerText = simSecretMsg;
+            if (bEmoji) bEmoji.innerText = simCarrier;
+            if (bubble) {
+                bubble.classList.remove('pulse');
+                void bubble.offsetWidth;
+                bubble.classList.add('pulse');
             }
-            i += cp > 0xFFFF ? 2 : 1;
-        }
-        if (bytes.length === 0) return "";
-        try {
-            const decoder = new TextDecoder();
-            return decoder.decode(new Uint8Array(bytes));
-        } catch (e) {
-            return "";
-        }
-    }
-
-    function executeStegoEncode() {
-        const text = document.getElementById('stegoTextInput').value.trim();
-        const encoded = encodeSteganography(selectedCarrierEmoji, text);
-        lastEncodedResult = encoded;
-        document.getElementById('stegoEncodedDisplay').innerText = selectedCarrierEmoji;
-        const decodeInput = document.getElementById('stegoDecodeInput');
-        if (decodeInput && !decodeInput.value) {
-            decodeInput.value = encoded;
+            if (copyAlert) copyAlert.style.opacity = '1';
+            showToast("ক্লিপবোর্ডে কপি হয়েছে! মেসেঞ্জার শুধু " + simCarrier + " দেখবে");
+        } else if (stage === 3) {
+            if (pEmoji) pEmoji.innerText = simCarrier;
+            const btn = document.getElementById('simDecodeTriggerBtn');
+            if (btn) {
+                btn.classList.add('clicked');
+                setTimeout(() => btn.classList.remove('clicked'), 300);
+            }
+            if (revBox) {
+                revBox.innerText = simSecretMsg;
+                revBox.parentElement.style.borderColor = 'var(--emerald-500)';
+            }
+            showToast("গোপন বার্তা উদ্ধার সম্পন্ন: " + simSecretMsg);
         }
     }
 
-    function copyEncodedEmoji() {
-        if (navigator.clipboard) {
-            navigator.clipboard.writeText(lastEncodedResult).then(() => {
-                showToast("Encoded secret emoji copied!");
-            }).catch(() => {
-                showToast("Copied to clipboard!");
-            });
-        } else {
-            showToast("Copied to clipboard!");
-        }
+    function playStegoTypingSimulation(text, onComplete) {
+        const simTyping = document.getElementById('simTypingText');
+        if (!simTyping) return;
+        simTyping.innerText = "";
+        let charIdx = 0;
+        clearInterval(simTypingInterval);
+        simTypingInterval = setInterval(() => {
+            charIdx++;
+            simTyping.innerText = text.slice(0, charIdx);
+            if (charIdx >= text.length) {
+                clearInterval(simTypingInterval);
+                if (onComplete) onComplete();
+            }
+        }, 65);
     }
 
-    function executeStegoDecode() {
-        const inputVal = document.getElementById('stegoDecodeInput').value;
-        const display = document.getElementById('stegoDecodedDisplay');
-        if (!inputVal) {
-            display.innerText = "Please paste an emoji first!";
-            display.style.color = "#e11d48";
-            return;
+    function runStegoFullSequence() {
+        // Step 1: Typing
+        jumpStegoStage(1);
+        playStegoTypingSimulation(simSecretMsg, () => {
+            // After typing finishes, hold 1.2s then advance to step 2 (Copy)
+            simAnimTimeout = setTimeout(() => {
+                jumpStegoStage(2);
+
+                // Hold in step 2 for 2.2s then advance to step 3 (Decode)
+                simAnimTimeout = setTimeout(() => {
+                    jumpStegoStage(3);
+
+                    // Hold in step 3 for 3.5s then loop
+                    simAnimTimeout = setTimeout(() => {
+                        runStegoFullSequence();
+                    }, 3800);
+                }, 2200);
+            }, 1200);
+        });
+    }
+
+    function replayStegoFullLoop() {
+        clearTimeout(simAnimTimeout);
+        clearInterval(simTypingInterval);
+        runStegoFullSequence();
+    }
+
+    function playCustomStegoAnimation() {
+        const customInput = document.getElementById('customSimInput');
+        if (customInput && customInput.value.trim()) {
+            simSecretMsg = customInput.value.trim();
         }
-        const decoded = decodeSteganography(inputVal);
-        if (decoded) {
-            display.innerHTML = `<span style="color:var(--emerald-600);">&check;</span> "${decoded}"`;
-            display.style.color = "var(--emerald-900)";
-            showToast("Secret message extracted successfully!");
-        } else {
-            display.innerText = "No hidden secret message found inside this emoji.";
-            display.style.color = "#e11d48";
-        }
+        replayStegoFullLoop();
+    }
+
+    function triggerManualDecode() {
+        jumpStegoStage(3);
     }
 
     // 2. Fancy Font Studio (com.mukto.keyboard.fonts)
@@ -2822,32 +3270,142 @@
         }
     }
 
-    // Dynamic Live Ticker Loop
-    const tickerExamples = [
-        { input: "ami bhalo achi", output: "আমি ভালো আছি" },
-        { input: "kemon acho?", output: "কেমন আছো?" },
-        { input: "bangla amader bhasha", output: "বাংলা আমাদের ভাষা" },
-        { input: "dhonnobad shobaike", output: "ধন্যবাদ সবাইকে" },
-        { input: "shobai kemon achen?", output: "সবাই কেমন আছেন?" },
-        { input: "mukto keyboard sundor", output: "মুক্ত কিবোর্ড সুন্দর" }
-    ];
-    let tickerIdx = 0;
-    setInterval(() => {
-        tickerIdx = (tickerIdx + 1) % tickerExamples.length;
-        const item = tickerExamples[tickerIdx];
-        const inEl = document.getElementById('tickerInput');
-        const outEl = document.getElementById('tickerOutput');
-        if (inEl && outEl) {
-            inEl.style.opacity = '0';
-            outEl.style.opacity = '0';
-            setTimeout(() => {
-                inEl.innerText = item.input;
-                outEl.innerText = item.output;
-                inEl.style.opacity = '1';
-                outEl.style.opacity = '1';
-            }, 300);
+    // Live Transliterate Real Keystroke Typewriter (Letter-by-Letter Real-Time Transliteration)
+    const transliterateDemos = [
+        {
+            steps: [
+                { in: "b", out: "ব" },
+                { in: "ba", out: "বা" },
+                { in: "ban", out: "বাং" },
+                { in: "bang", out: "বাং" },
+                { in: "bangl", out: "বাংল" },
+                { in: "bangla", out: "বাংলা" },
+                { in: "bangla ", out: "বাংলা " },
+                { in: "bangla a", out: "বাংলা আ" },
+                { in: "bangla am", out: "বাংলা আম" },
+                { in: "bangla ama", out: "বাংলা আমা" },
+                { in: "bangla amad", out: "বাংলা আমাদ" },
+                { in: "bangla amade", out: "বাংলা আমাদে" },
+                { in: "bangla amader", out: "বাংলা আমাদের" },
+                { in: "bangla amader ", out: "বাংলা আমাদের " },
+                { in: "bangla amader b", out: "বাংলা আমাদের ব" },
+                { in: "bangla amader bh", out: "বাংলা আমাদের ভ" },
+                { in: "bangla amader bha", out: "বাংলা আমাদের ভা" },
+                { in: "bangla amader bhas", out: "বাংলা আমাদের ভাষ" },
+                { in: "bangla amader bhash", out: "বাংলা আমাদের ভাষ" },
+                { in: "bangla amader bhasha", out: "বাংলা আমাদের ভাষা" }
+            ]
+        },
+        {
+            steps: [
+                { in: "a", out: "আ" },
+                { in: "am", out: "আম" },
+                { in: "ami", out: "আমি" },
+                { in: "ami ", out: "আমি " },
+                { in: "ami b", out: "আমি ব" },
+                { in: "ami bh", out: "আমি ভ" },
+                { in: "ami bha", out: "আমি ভা" },
+                { in: "ami bhal", out: "আমি ভাল" },
+                { in: "ami bhalo", out: "আমি ভালো" },
+                { in: "ami bhalo ", out: "আমি ভালো " },
+                { in: "ami bhalo a", out: "আমি ভালো আ" },
+                { in: "ami bhalo ac", out: "আমি ভালো আছ" },
+                { in: "ami bhalo ach", out: "আমি ভালো আছ" },
+                { in: "ami bhalo achi", out: "আমি ভালো আছি" }
+            ]
+        },
+        {
+            steps: [
+                { in: "k", out: "ক" },
+                { in: "ke", out: "কে" },
+                { in: "kem", out: "কেম" },
+                { in: "kemo", out: "কেমো" },
+                { in: "kemon", out: "কেমন" },
+                { in: "kemon ", out: "কেমন " },
+                { in: "kemon a", out: "কেমন আ" },
+                { in: "kemon ac", out: "কেমন আছ" },
+                { in: "kemon ach", out: "কেমন আছ" },
+                { in: "kemon acho", out: "কেমন আছো" },
+                { in: "kemon acho?", out: "কেমন আছো?" }
+            ]
+        },
+        {
+            steps: [
+                { in: "m", out: "ম" },
+                { in: "mu", out: "মু" },
+                { in: "muk", out: "মুক" },
+                { in: "mukt", out: "মুক্ত" },
+                { in: "mukto", out: "মুক্ত" },
+                { in: "mukto ", out: "মুক্ত " },
+                { in: "mukto k", out: "মুক্ত ক" },
+                { in: "mukto ke", out: "মুক্ত কে" },
+                { in: "mukto key", out: "মুক্ত কি" },
+                { in: "mukto keyb", out: "মুক্ত কিব" },
+                { in: "mukto keybo", out: "মুক্ত কিবো" },
+                { in: "mukto keyboa", out: "মুক্ত কিবোয়া" },
+                { in: "mukto keyboar", out: "মুক্ত কিবোর" },
+                { in: "mukto keyboard", out: "মুক্ত কিবোর্ড" },
+                { in: "mukto keyboard ", out: "মুক্ত কিবোর্ড " },
+                { in: "mukto keyboard s", out: "মুক্ত কিবোর্ড স" },
+                { in: "mukto keyboard sh", out: "মুক্ত কিবোর্ড শ" },
+                { in: "mukto keyboard shu", out: "মুক্ত কিবোর্ড শু" },
+                { in: "mukto keyboard shun", out: "মুক্ত কিবোর্ড সুন" },
+                { in: "mukto keyboard shund", out: "মুক্ত কিবোর্ড সুন্দ" },
+                { in: "mukto keyboard shundo", out: "মুক্ত কিবোর্ড সুন্দ" },
+                { in: "mukto keyboard shundor", out: "মুক্ত কিবোর্ড সুন্দর" }
+            ]
         }
-    }, 3800);
+    ];
+
+    let currentDemoIdx = 0;
+    let currentStepIdx = 0;
+    let isErasing = false;
+
+    function runTypewriterTick() {
+        const inEl = document.getElementById('tickerInputText');
+        const outEl = document.getElementById('tickerOutputText');
+        if (!inEl || !outEl) return;
+
+        const demo = transliterateDemos[currentDemoIdx];
+        const steps = demo.steps;
+
+        if (!isErasing) {
+            // Typing forward letter by letter
+            if (currentStepIdx < steps.length) {
+                const currentStep = steps[currentStepIdx];
+                inEl.textContent = currentStep.in;
+                outEl.textContent = currentStep.out;
+                currentStepIdx++;
+                setTimeout(runTypewriterTick, 90);
+            } else {
+                // Completed full phrase, pause for 2.4s
+                setTimeout(() => {
+                    isErasing = true;
+                    runTypewriterTick();
+                }, 2400);
+            }
+        } else {
+            // Backspacing letter by letter
+            if (currentStepIdx > 0) {
+                currentStepIdx--;
+                if (currentStepIdx > 0) {
+                    const currentStep = steps[currentStepIdx - 1];
+                    inEl.textContent = currentStep.in;
+                    outEl.textContent = currentStep.out;
+                } else {
+                    inEl.textContent = "";
+                    outEl.textContent = "";
+                }
+                setTimeout(runTypewriterTick, 38);
+            } else {
+                // Move to next demo phrase
+                isErasing = false;
+                currentStepIdx = 0;
+                currentDemoIdx = (currentDemoIdx + 1) % transliterateDemos.length;
+                setTimeout(runTypewriterTick, 400);
+            }
+        }
+    }
 
     // Language switch functionality
     document.addEventListener("DOMContentLoaded", function() {
@@ -2856,9 +3414,10 @@
         if (!['en', 'bn', 'bl'].includes(lang)) { lang = 'bn'; }
         setLanguage(lang);
 
-        // Pre-run initial fancy font preview & stego encode
+        // Pre-run fancy font preview, live transliterate typewriter, and stego simulation
         updateFancyFonts();
-        executeStegoEncode();
+        runTypewriterTick();
+        runStegoFullSequence();
 
         window.addEventListener('scroll', function() {
             const btn = document.getElementById('backToTopBtn');
