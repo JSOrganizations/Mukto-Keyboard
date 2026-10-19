@@ -1047,359 +1047,438 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Secret Message Animated Simulation Showcase */
-        .stego-flow-wrap {
-            background: #ffffff;
-            border: 1px solid var(--slate-200);
-            border-radius: var(--radius-xl);
-            padding: clamp(16px, 3vw, 24px);
-            box-shadow: 0 4px 20px rgba(6, 78, 59, 0.04);
+        /* Realistic Two-Person Smartphone Chat Interface */
+        .chat-sim-wrapper {
+            max-width: 680px;
+            margin: 0 auto;
         }
-        .stego-step-progress {
+        .chat-phone-frame {
+            background: #0f172a;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            box-shadow: 0 16px 48px rgba(15, 23, 42, 0.4), 0 0 0 1px rgba(16, 185, 129, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .chat-header {
+            background: #1e293b;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 12px 16px;
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 8px;
-            margin-bottom: 22px;
-            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 12px;
         }
-        .stego-step-tab {
-            display: inline-flex;
+        .chat-header-user {
+            display: flex;
             align-items: center;
-            gap: 8px;
-            background: var(--slate-50);
-            border: 1px solid var(--slate-200);
-            border-radius: 100px;
-            padding: 6px 16px;
-            font-size: 13px;
-            font-weight: 700;
-            color: var(--slate-600);
+            gap: 12px;
+        }
+        .chat-btn-back {
+            background: transparent;
+            border: none;
+            color: var(--slate-400);
             cursor: pointer;
-            transition: all 0.2s ease;
-        }
-        .stego-step-tab .step-num {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: var(--slate-200);
-            color: var(--slate-700);
+            padding: 4px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 11px;
-            font-family: 'JetBrains Mono', monospace;
-            font-weight: 800;
+            border-radius: 6px;
+            transition: color 0.15s;
         }
-        .stego-step-tab.active {
-            background: var(--emerald-50);
-            border-color: var(--emerald-500);
-            color: var(--emerald-900);
-            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.2);
-        }
-        .stego-step-tab.active .step-num {
-            background: var(--emerald-600);
+        .chat-btn-back:hover {
             color: #ffffff;
         }
-        .step-connector {
-            width: 24px;
-            height: 2px;
-            background: var(--slate-200);
+        .chat-user-avatar-wrap {
+            position: relative;
+            width: 38px;
+            height: 38px;
         }
-        @media (max-width: 600px) {
-            .step-connector { display: none; }
-        }
-
-        .stego-sim-board {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-            margin-bottom: 20px;
-        }
-        @media (max-width: 900px) {
-            .stego-sim-board { grid-template-columns: 1fr; }
-        }
-
-        .stego-sim-col {
-            background: var(--slate-50);
-            border: 1px solid var(--slate-200);
-            border-radius: var(--radius-lg);
-            padding: 16px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: all 0.25s ease;
-        }
-        .stego-sim-col.highlighted {
-            border-color: var(--emerald-500);
-            background: #ffffff;
-            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.12);
-            transform: translateY(-2px);
-        }
-        .sim-col-header {
-            font-size: 13px;
+        .chat-user-avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+            color: #ffffff;
             font-weight: 700;
-            color: var(--slate-800);
-            margin-bottom: 12px;
+            font-size: 15px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(2, 132, 199, 0.35);
         }
-        .sim-col-header svg {
-            color: var(--emerald-600);
+        .chat-online-dot {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #10b981;
+            border: 2px solid #1e293b;
         }
-        .sim-screen-card {
-            background: #ffffff;
-            border: 1px solid var(--slate-200);
-            border-radius: 12px;
-            padding: 14px;
-            flex: 1;
+        .chat-user-info {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            gap: 10px;
+            line-height: 1.2;
         }
-        .sim-label {
+        .chat-user-name {
+            font-size: 14.5px;
+            font-weight: 700;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .chat-verified-badge {
+            color: #38bdf8;
+            display: inline-flex;
+        }
+        .chat-user-status {
+            font-size: 11px;
+            color: #94a3b8;
+        }
+        .chat-shield-pill {
+            background: rgba(16, 185, 129, 0.12);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: #34d399;
+            padding: 4px 10px;
+            border-radius: 100px;
             font-size: 11px;
             font-weight: 700;
-            text-transform: uppercase;
-            color: var(--slate-400);
-            letter-spacing: 0.05em;
-            font-family: 'JetBrains Mono', monospace;
-        }
-        .sim-label-sm {
-            font-size: 11.5px;
-            font-weight: 600;
-            color: var(--slate-500);
-        }
-        .sim-typing-box {
-            background: #f8fafc;
-            border: 1px solid var(--slate-300);
-            border-radius: 8px;
-            padding: 10px 12px;
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--slate-800);
-            min-height: 44px;
             display: flex;
             align-items: center;
+            gap: 5px;
         }
-        .sim-carrier-row {
+
+        /* Chat Messages Area */
+        .chat-messages-area {
+            background: #090e17;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+            background-size: 20px 20px;
+            padding: 20px 16px;
+            min-height: 310px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .chat-date-pill {
+            align-self: center;
+            background: rgba(255, 255, 255, 0.08);
+            color: #94a3b8;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 12px;
+            border-radius: 100px;
+            letter-spacing: 0.02em;
+        }
+        .chat-msg-row {
+            display: flex;
+            width: 100%;
+        }
+        .chat-msg-row.received {
+            justify-content: flex-start;
+        }
+        .chat-msg-row.sent {
+            justify-content: flex-end;
+        }
+        .chat-msg-row.hidden-initial {
+            display: none;
+            opacity: 0;
+        }
+        .chat-msg-bubble {
+            max-width: 84%;
+            border-radius: 16px;
+            padding: 10px 14px;
+            position: relative;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+            transition: all 0.3s ease;
+        }
+        .chat-msg-row.received .chat-msg-bubble {
+            background: #1e293b;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            color: #f1f5f9;
+            border-top-left-radius: 4px;
+        }
+        .chat-msg-row.sent .chat-msg-bubble {
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+            color: #ffffff;
+            border-top-right-radius: 4px;
+        }
+        .chat-msg-sender {
+            font-size: 11px;
+            font-weight: 700;
+            color: #38bdf8;
+            margin-bottom: 3px;
+        }
+        .chat-msg-text {
+            font-size: 13.5px;
+            line-height: 1.5;
+        }
+        .chat-msg-meta {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 4px;
+            margin-top: 4px;
+        }
+        .chat-msg-time {
+            font-size: 10px;
+            opacity: 0.75;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .chat-read-status {
+            display: inline-flex;
+            color: #6ee7b7;
+        }
+
+        /* Secret Carrier & Decoded Card Inside Sent Bubble */
+        .chat-stego-carrier-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 4px 2px;
+        }
+        .chat-carrier-emoji {
+            font-size: 34px;
+            line-height: 1;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
+        .chat-carrier-tag {
+            font-size: 11.5px;
+            background: rgba(0, 0, 0, 0.25);
+            border-radius: 6px;
+            padding: 4px 8px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        .chat-stego-revealed-layer {
+            background: rgba(6, 78, 59, 0.75);
+            border: 1px solid rgba(52, 211, 153, 0.5);
+            border-radius: 10px;
+            padding: 8px 10px;
+            margin-top: 8px;
+            backdrop-filter: blur(4px);
+            transition: all 0.3s ease;
+        }
+        .chat-decode-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 6px;
+            font-size: 10px;
+            font-weight: 700;
+            color: #6ee7b7;
+            margin-bottom: 4px;
+        }
+        .chat-decode-status {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .chat-decode-badge {
+            background: #047857;
+            color: #ffffff;
+            font-size: 8.5px;
+            padding: 1px 5px;
+            border-radius: 4px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .chat-revealed-content {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.45;
+        }
+
+        /* Typing dots indicator */
+        .chat-typing-bubble {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 10px 14px;
+        }
+        .chat-typing-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #94a3b8;
+            animation: typingBounce 1.4s infinite ease-in-out both;
+        }
+        .chat-typing-dot:nth-child(1) { animation-delay: -0.32s; }
+        .chat-typing-dot:nth-child(2) { animation-delay: -0.16s; }
+        @keyframes typingBounce {
+            0%, 80%, 100% { transform: scale(0); opacity: 0.4; }
+            40% { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes slideInSent {
+            from { opacity: 0; transform: translateY(12px) scale(0.96); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        @keyframes slideInReceived {
+            from { opacity: 0; transform: translateY(12px) scale(0.96); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        @keyframes fadeInRevealed {
+            from { opacity: 0; transform: translateY(-4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Mukto Keyboard Bottom Composer */
+        .chat-composer-section {
+            background: #111827;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 12px 14px;
+            display: flex;
+            flex-direction: column;
             gap: 8px;
         }
-        .sim-carrier-badges {
+        .chat-mukto-toolbar-strip {
             display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .chat-mukto-brand-tag {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-weight: 700;
+            color: #34d399;
+        }
+        .chat-carrier-picker-wrap {
+            display: flex;
+            align-items: center;
             gap: 6px;
         }
-        .sim-emoji-chip {
-            font-size: 20px;
-            padding: 2px 8px;
-            border-radius: 8px;
-            border: 1px solid var(--slate-200);
-            background: #ffffff;
+        .chat-picker-label {
+            font-size: 11px;
+            color: #94a3b8;
+        }
+        .chat-carrier-chips {
+            display: flex;
+            gap: 5px;
+        }
+        .chat-carrier-chip {
+            font-size: 18px;
+            padding: 2px 7px;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: #1f2937;
             cursor: pointer;
             transition: all 0.15s;
             line-height: 1.2;
         }
-        .sim-emoji-chip:hover {
-            transform: scale(1.1);
-            border-color: var(--emerald-400);
+        .chat-carrier-chip:hover {
+            transform: scale(1.15);
+            border-color: #34d399;
         }
-        .sim-emoji-chip.active {
-            border-color: var(--emerald-600);
-            background: var(--emerald-50);
-            transform: scale(1.1);
-            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.25);
+        .chat-carrier-chip.active {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: #10b981;
+            transform: scale(1.15);
+            box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
         }
-        .sim-status-pill {
-            background: var(--emerald-50);
-            color: var(--emerald-800);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-            border-radius: 6px;
-            padding: 6px 10px;
-            font-size: 11.5px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .sim-chat-bubble-wrap {
-            background: #f1f5f9;
-            border-radius: 12px;
-            padding: 18px 14px;
-            display: flex;
-            justify-content: flex-end;
-        }
-        .sim-chat-bubble {
-            background: var(--emerald-600);
-            color: #ffffff;
-            border-radius: 16px 16px 4px 16px;
-            padding: 10px 16px;
-            display: inline-flex;
-            flex-direction: column;
-            align-items: flex-end;
-            gap: 4px;
-            box-shadow: 0 4px 12px rgba(5, 150, 105, 0.2);
-            transition: all 0.2s;
-        }
-        .sim-chat-bubble.pulse {
-            animation: bubblePulse 0.45s ease;
-        }
-        @keyframes bubblePulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.15); box-shadow: 0 0 20px rgba(16, 185, 129, 0.6); }
-            100% { transform: scale(1); }
-        }
-        .sim-bubble-emoji {
-            font-size: 32px;
-            line-height: 1;
-        }
-        .sim-bubble-time {
-            font-size: 10px;
-            opacity: 0.8;
-            font-family: 'JetBrains Mono', monospace;
-        }
-        .sim-copy-alert {
-            background: #0f172a;
-            color: #ffffff;
-            border-radius: 8px;
-            padding: 8px 12px;
-            font-size: 11.5px;
-            font-weight: 600;
+        .chat-input-bar {
             display: flex;
             align-items: center;
             gap: 8px;
-            transition: all 0.25s;
         }
-        .sim-copy-alert svg {
-            color: var(--emerald-400);
-        }
-        .sim-paste-row {
+        .chat-input-box-wrapper {
+            flex: 1;
+            position: relative;
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            gap: 10px;
         }
-        .sim-pasted-emoji {
-            font-size: 26px;
-            padding: 4px 12px;
-            background: #f8fafc;
-            border: 1px dashed var(--slate-300);
-            border-radius: 8px;
-            line-height: 1.2;
+        .chat-real-input {
+            width: 100%;
+            padding: 10px 105px 10px 14px;
+            background: #1f2937;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 12px;
+            color: #f8fafc;
+            font-family: inherit;
+            font-size: 13.5px;
+            transition: all 0.2s;
         }
-        .sim-action-decode-btn {
-            background: linear-gradient(135deg, var(--emerald-600) 0%, var(--emerald-500) 100%);
+        .chat-real-input:focus {
+            outline: none;
+            border-color: #10b981;
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+        }
+        .chat-enc-pill {
+            position: absolute;
+            right: 8px;
+            background: rgba(16, 185, 129, 0.15);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 3px 7px;
+            border-radius: 6px;
+            font-size: 10px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            pointer-events: none;
+        }
+        .chat-send-btn {
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
             color: #ffffff;
             border: none;
-            border-radius: 8px;
-            padding: 8px 14px;
-            font-size: 12.5px;
+            border-radius: 12px;
+            padding: 10px 16px;
+            font-size: 13px;
             font-weight: 700;
             cursor: pointer;
             display: inline-flex;
             align-items: center;
             gap: 6px;
             transition: all 0.2s;
+            flex-shrink: 0;
         }
-        .sim-action-decode-btn:hover {
+        .chat-send-btn:hover {
             transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
+            box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);
         }
-        .sim-action-decode-btn.clicked {
-            transform: scale(0.95);
-            background: var(--slate-900);
+        .chat-send-btn:active {
+            transform: scale(0.96);
         }
-        .sim-revealed-box {
-            background: var(--emerald-50);
-            border: 1.5px solid var(--emerald-400);
-            border-radius: 10px;
-            padding: 10px 14px;
-            transition: all 0.3s;
-        }
-        .sim-reveal-tag {
-            font-size: 10px;
-            text-transform: uppercase;
-            font-weight: 700;
-            color: var(--emerald-800);
-            font-family: 'JetBrains Mono', monospace;
-            margin-bottom: 2px;
-        }
-        .sim-revealed-text {
-            font-size: 14.5px;
-            font-weight: 800;
-            color: var(--emerald-950);
-            min-height: 22px;
-        }
-        .sim-shield-badge {
-            font-size: 11px;
-            color: var(--slate-500);
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .sim-shield-badge svg {
-            color: var(--emerald-600);
-        }
-        .stego-sim-toolbar {
+
+        /* Outside Controls & Perspective Switcher */
+        .chat-sim-controls-bar {
+            margin-top: 14px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 12px;
             flex-wrap: wrap;
-            border-top: 1px solid var(--slate-200);
-            padding-top: 16px;
+            background: #ffffff;
+            border: 1px solid var(--slate-200);
+            border-radius: 14px;
+            padding: 10px 14px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
         }
-        .sim-custom-tester {
+        .chat-perspective-toggle {
             display: flex;
             align-items: center;
-            gap: 8px;
-            flex: 1;
-            min-width: 280px;
+            gap: 10px;
+            flex-wrap: wrap;
         }
-        .sim-test-field {
-            flex: 1;
-            padding: 9px 14px;
-            border-radius: 10px;
-            border: 1px solid var(--slate-300);
-            font-family: inherit;
-            font-size: 13.5px;
-            background: #ffffff;
-            color: var(--slate-800);
-            transition: all 0.2s;
-        }
-        .sim-test-field:focus {
-            outline: none;
-            border-color: var(--emerald-500);
-            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
-        }
-        .sim-btn-play {
-            background: var(--slate-900);
-            color: #ffffff;
-            border: none;
-            border-radius: 10px;
-            padding: 9px 18px;
-            font-size: 13px;
-            font-weight: 700;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
+        .perspective-btn-group {
+            display: flex;
             gap: 6px;
-            transition: all 0.2s;
+            flex-wrap: wrap;
         }
-        .sim-btn-play:hover {
-            background: var(--emerald-600);
-            transform: translateY(-1px);
-        }
-        .sim-btn-replay {
+        .perspective-btn {
             background: var(--slate-100);
             color: var(--slate-700);
-            border: 1px solid var(--slate-300);
-            border-radius: 10px;
-            padding: 9px 14px;
-            font-size: 12.5px;
+            border: 1px solid var(--slate-200);
+            border-radius: 8px;
+            padding: 6px 12px;
+            font-size: 12px;
             font-weight: 600;
             cursor: pointer;
             display: inline-flex;
@@ -1407,9 +1486,32 @@
             gap: 6px;
             transition: all 0.2s;
         }
-        .sim-btn-replay:hover {
+        .perspective-btn.active {
+            background: var(--emerald-50);
+            color: var(--emerald-900);
+            border-color: var(--emerald-500);
+            box-shadow: 0 1px 4px rgba(16, 185, 129, 0.2);
+        }
+        .perspective-btn:hover:not(.active) {
             background: var(--slate-200);
-            color: var(--slate-900);
+        }
+        .chat-replay-btn {
+            background: var(--slate-900);
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            padding: 7px 14px;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+        .chat-replay-btn:hover {
+            background: var(--emerald-600);
+            transform: translateY(-1px);
         }
 
         /* Fancy Fonts Studio */
@@ -1877,23 +1979,33 @@
     <div class="hero-badges-row">
         <span class="pill-feature">
             <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-1.0002 0-.5515.4482-.9998.9993-.9998.5517 0 .9997.4483.9997.9998 0 .5516-.448 1.0002-.9997 1.0002m-11.046 0c-.5511 0-.9993-.4486-.9993-1.0002 0-.5515.4482-.9998.9993-.9998.5516 0 .9996.4483.9996.9998 0 .5516-.448 1.0002-.9996 1.0002m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.4116 13.8533 8.125 12 8.125c-1.8533 0-3.5902.2866-5.1378.8297L4.8399 5.4517a.416.416 0 00-.5676-.1521.416.416 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/></svg>
-            <span>Android 7.0+ (API 24-37)</span>
+            <span class="lang-en">Android 7.0+ (API 24-37)</span>
+            <span class="lang-bn font-bangla">অ্যান্ড্রয়েড ৭.০+ (এপিআই ২৪-৩৭)</span>
+            <span class="lang-bl">Android 7.0+ (API 24-37)</span>
         </span>
         <span class="pill-feature">
             <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span>Zero Keylogging Guarantee</span>
+            <span class="lang-en">Zero Keylogging Guarantee</span>
+            <span class="lang-bn font-bangla">জিরো কি-লগিং ১০০% প্রাইভেট</span>
+            <span class="lang-bl">Zero Keylogging Safe</span>
         </span>
         <span class="pill-feature">
             <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-            <span>Jetpack Compose + M3</span>
+            <span class="lang-en">Jetpack Compose + M3</span>
+            <span class="lang-bn font-bangla">জেটপ্যাক কম্পোজ + এম৩</span>
+            <span class="lang-bl">Jetpack Compose + M3</span>
         </span>
         <span class="pill-feature">
             <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            <span>Google ML Kit On-Device</span>
+            <span class="lang-en">Google ML Kit On-Device</span>
+            <span class="lang-bn font-bangla">গুগল এমএল কিট অফলাইন অনুবাদ</span>
+            <span class="lang-bl">Google ML Kit On-Device</span>
         </span>
         <span class="pill-feature">
             <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-            <span>100% Free &amp; Offline-First</span>
+            <span class="lang-en">100% Free &amp; Offline-First</span>
+            <span class="lang-bn font-bangla">১০০% ফ্রি ও অফলাইন-ফার্স্ট</span>
+            <span class="lang-bl">100% Free &amp; Offline</span>
         </span>
     </div>
 
@@ -1922,9 +2034,9 @@
         </a>
         <a href="https://github.com/JSOrganizations/Mukto-Keyboard/releases" target="_blank" rel="noopener noreferrer" class="btn-secondary-hero">
             <svg class="icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            <span class="lang-en">Direct APK (v3.1)</span>
+            <span class="lang-en">Direct APK</span>
             <span class="lang-bn font-bangla">সরাসরি এপিকে ডাউনলোড</span>
-            <span class="lang-bl">Direct APK (v3.1)</span>
+            <span class="lang-bl">Direct APK</span>
         </a>
         <a href="https://github.com/JSOrganizations/Mukto-Keyboard" target="_blank" rel="noopener noreferrer" class="btn-secondary-hero" style="color:var(--slate-700);">
             <svg class="icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
@@ -1936,12 +2048,18 @@
 
     <p class="hero-subnote">
         <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--emerald-600);"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        <strong>Google Play Protect Verified</strong> &bull; ১০০% সুরক্ষিত ও বিজ্ঞাপনহীন &bull; ওপেন সোর্স
+        <span class="lang-en"><strong>Google Play Protect Verified</strong> &bull; 100% Safe, Ad-Free &amp; Open Source</span>
+        <span class="lang-bn font-bangla"><strong>গুগল প্লে প্রোটেক্ট ভেরিফাইড</strong> &bull; ১০০% সুরক্ষিত ও বিজ্ঞাপনহীন &bull; ওপেন সোর্স</span>
+        <span class="lang-bl"><strong>Google Play Protect Verified</strong> &bull; 100% Safe, Ad-Free &bull; Open Source</span>
     </p>
 
     <!-- Live Animated Typing Transliterate Ticker (Letter-by-Letter Real Keystroke Typewriter) -->
     <div class="typing-ticker-wrap">
-        <span class="ticker-label">Live Transliterate</span>
+        <span class="ticker-label">
+            <span class="lang-en">Live Transliterate</span>
+            <span class="lang-bn font-bangla">লাইভ ফোনেটিক রূপান্তর</span>
+            <span class="lang-bl">Live Transliterate</span>
+        </span>
         <span class="ticker-input" id="tickerInput"><span id="tickerInputText">bangla amader bhasha</span><span class="cursor-blink"></span></span>
         <span class="ticker-arrow">
             <svg class="icon-svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -1998,129 +2116,212 @@
                 </button>
             </div>
 
-            <!-- Panel 1: Secret Chat Steganography Animated Simulation -->
+            <!-- Panel 1: Realistic Two-Person Secret Chat Simulation -->
             <div id="panel-stego" class="studio-panel active">
-                <div style="margin-bottom:18px; font-size:14px; color:var(--slate-600); line-height:1.65;">
+                <div style="margin-bottom:20px; font-size:14px; color:var(--slate-600); line-height:1.65;">
                     <span class="lang-en">Mukto Keyboard conceals secret messages invisibly inside standard emojis. Outside chat apps (WhatsApp, Messenger, Telegram) see only a single harmless emoji. Inside Mukto Keyboard, 1 tap reveals the confidential message!</span>
-                    <span class="lang-bn font-bangla">মুক্ত কিবোর্ড সাধারণ ইমোজির ভেতরে শতভাগ অদৃশ্যভাবে সিক্রেট মেসেজ লুকিয়ে রাখে। ফেসবুক, হোয়াটসঅ্যাপ বা টেলিগ্রামের কোনো অ্যালগরিদম এটি ধরতে পারে না — বাইরে থেকে শুধুই ১টি নিরীহ ইমোজি দেখায়। মুক্ত কিবোর্ডে পেস্ট করলেই ১ ট্যাপে বার্তা দৃশ্যমান হয়!</span>
+                    <span class="lang-bn font-bangla">মুক্ত কিবোর্ড সাধারণ ইমোজির ভেতরে শতভাগ অদৃশ্যভাবে সিক্রেট মেসেজ লুকিয়ে রাখে। বাইরে থেকে ফেসবুক, হোয়াটসঅ্যাপ বা টেলিগ্রামের মেসেজে শুধুই ১টি নিরীহ ইমোজি দেখায়। কিন্তু মুক্ত কিবোর্ড থাকলে ১ ট্যাপেই উদ্ধার হয় ভেতরের আসল গোপন বার্তা!</span>
                     <span class="lang-bl">Mukto Keyboard e emojir bhitore invisible bhabe secret text conceal kora jay. Facebook, WhatsApp e shobai shudhu 1 ta emoji dekhbe, ar Mukto Keyboard e 1-tap e decode hoye jabe!</span>
                 </div>
 
-                <!-- Stego Interactive Animated Showcase Flow -->
-                <div class="stego-flow-wrap">
-                    <!-- Stage Steps Bar -->
-                    <div class="stego-step-progress">
-                        <button class="stego-step-tab active" id="stegoTab1" onclick="jumpStegoStage(1)">
-                            <span class="step-num">১</span>
-                            <span class="step-title">টাইপ ও হাইড</span>
-                        </button>
-                        <div class="step-connector"></div>
-                        <button class="stego-step-tab" id="stegoTab2" onclick="jumpStegoStage(2)">
-                            <span class="step-num">২</span>
-                            <span class="step-title">কপি ও চ্যাট</span>
-                        </button>
-                        <div class="step-connector"></div>
-                        <button class="stego-step-tab" id="stegoTab3" onclick="jumpStegoStage(3)">
-                            <span class="step-num">৩</span>
-                            <span class="step-title">১-ট্যাপে ডিকোড</span>
-                        </button>
-                    </div>
-
-                    <!-- 3-Pane Visual Simulation Board -->
-                    <div class="stego-sim-board">
-                        <!-- Stage 1: Sender Screen -->
-                        <div class="stego-sim-col highlighted" id="simCol1">
-                            <div class="sim-col-header">
-                                <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1.5"/></svg>
-                                <span>১. গোপন বার্তা টাইপ (প্রেরক)</span>
-                            </div>
-                            <div class="sim-screen-card">
-                                <div>
-                                    <div class="sim-label">কিবোর্ড ইনপুট:</div>
-                                    <div class="sim-typing-box" id="simSenderInput">
-                                        <span id="simTypingText">কাল বিকেলে দেখা হবে 🤫</span><span class="cursor-blink"></span>
+                <!-- Realistic Two-Person Smartphone Chat Frame -->
+                <div class="chat-sim-wrapper">
+                    <div class="chat-phone-frame">
+                        <!-- Chat App Header -->
+                        <div class="chat-header">
+                            <div class="chat-header-user">
+                                <button class="chat-btn-back" title="Back" aria-label="Back">
+                                    <svg class="icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                                </button>
+                                <div class="chat-user-avatar-wrap">
+                                    <div class="chat-user-avatar">
+                                        <span>রা</span>
                                     </div>
-                                    <div class="sim-carrier-row" style="margin-top:10px;">
-                                        <span class="sim-label-sm">বাহক ইমোজি:</span>
-                                        <div class="sim-carrier-badges">
-                                            <span class="sim-emoji-chip active" id="simCarrier1" onclick="setSimCarrier('😎')">😎</span>
-                                            <span class="sim-emoji-chip" id="simCarrier2" onclick="setSimCarrier('🔥')">🔥</span>
-                                            <span class="sim-emoji-chip" id="simCarrier3" onclick="setSimCarrier('🙂')">🙂</span>
-                                            <span class="sim-emoji-chip" id="simCarrier4" onclick="setSimCarrier('❤️')">❤️</span>
+                                    <span class="chat-online-dot"></span>
+                                </div>
+                                <div class="chat-user-info">
+                                    <div class="chat-user-name">
+                                        <span>রাকিব আহমেদ</span>
+                                        <span class="chat-verified-badge" title="Verified Contact">
+                                            <svg class="icon-svg" viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                        </span>
+                                    </div>
+                                    <div class="chat-user-status">
+                                        <span class="lang-en">Online &bull; Secret Chat Mode</span>
+                                        <span class="lang-bn font-bangla">অনলাইন &bull; অ্যান্ড-টু-অ্যান্ড গোপন বার্তা</span>
+                                        <span class="lang-bl">Online &bull; Secret Chat</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat-header-actions">
+                                <div class="chat-shield-pill" title="100% Private">
+                                    <svg class="icon-svg" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                    <span class="lang-en">Private</span>
+                                    <span class="lang-bn font-bangla">সিক্রেট</span>
+                                    <span class="lang-bl">Private</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Chat Messages Timeline -->
+                        <div class="chat-messages-area" id="chatMessagesArea">
+                            <!-- Date separator -->
+                            <div class="chat-date-pill">
+                                <span class="lang-en">Today, 4:15 PM</span>
+                                <span class="lang-bn font-bangla">আজ, বিকেল ৪:১৫</span>
+                                <span class="lang-bl">Today, 4:15 PM</span>
+                            </div>
+
+                            <!-- Message 1: Received from Rakib -->
+                            <div class="chat-msg-row received" id="chatMsg1">
+                                <div class="chat-msg-bubble">
+                                    <div class="chat-msg-sender">রাকিব</div>
+                                    <div class="chat-msg-text">
+                                        <span class="lang-en">Bro, what's tomorrow's secret meeting plan? Don't share it normally, Messenger might leak!</span>
+                                        <span class="lang-bn font-bangla">দোস্ত, কালকের গোপন মিটিংয়ের প্ল্যানটা কী? মেসেঞ্জারে কিন্তু সবাই দেখে ফেলবে, সাবধানে বলো!</span>
+                                        <span class="lang-bl">Dosto, kalker secret meeting plan ta ki? Normally bolona, shobai dekhe felbe!</span>
+                                    </div>
+                                    <div class="chat-msg-meta">
+                                        <span class="chat-msg-time">4:16 PM</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Message 2: Sent from You (Secret Stego Message) -->
+                            <div class="chat-msg-row sent hidden-initial" id="chatMsg2">
+                                <div class="chat-msg-bubble secret-bubble">
+                                    <!-- What Outside World Sees (The Carrier Emoji) -->
+                                    <div class="chat-stego-carrier-box" id="carrierDisplayBox">
+                                        <span class="chat-carrier-emoji" id="chatBubbleCarrierEmoji">😎</span>
+                                        <div class="chat-carrier-tag">
+                                            <span class="lang-en">Outside Social View (Just an emoji)</span>
+                                            <span class="lang-bn font-bangla">বাইরের অ্যাপে শুধুই ১টি নিরীহ ইমোজি</span>
+                                            <span class="lang-bl">Outside Social View (Just emoji)</span>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="sim-status-pill" id="simStatusPill1">
-                                    <svg class="icon-svg" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                                    <span>গোপন বার্তা স্বয়ংক্রিয়ভাবে অদৃশ্যভাবে যুক্ত হচ্ছে</span>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- Stage 2: Transmission & Copy -->
-                        <div class="stego-sim-col" id="simCol2">
-                            <div class="sim-col-header">
-                                <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                                <span>২. কপি ও সোশ্যাল চ্যাট প্রিভিউ</span>
-                            </div>
-                            <div class="sim-screen-card">
-                                <div>
-                                    <div class="sim-label">মেসেঞ্জার / হোয়াটসঅ্যাপ প্রিভিউ:</div>
-                                    <div class="sim-chat-bubble-wrap" style="margin-top:6px;">
-                                        <div class="sim-chat-bubble" id="simChatBubble">
-                                            <span class="sim-bubble-emoji" id="simBubbleEmoji">😎</span>
-                                            <span class="sim-bubble-time">10:42 AM &bull; Sent</span>
+                                    <!-- Mukto Keyboard Smart Decode Layer (Reveals Hidden Text) -->
+                                    <div class="chat-stego-revealed-layer" id="chatRevealedLayer">
+                                        <div class="chat-decode-header">
+                                            <div class="chat-decode-status">
+                                                <svg class="icon-svg" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                                <span class="lang-en">Mukto Keyboard Decrypted:</span>
+                                                <span class="lang-bn font-bangla">মুক্ত কিবোর্ডে উদ্ধারকৃত গোপন বার্তা:</span>
+                                                <span class="lang-bl">Mukto Decrypted:</span>
+                                            </div>
+                                            <span class="chat-decode-badge">100% PRIVATE</span>
                                         </div>
+                                        <div class="chat-revealed-content" id="chatRevealedContentText">কাল বিকেল ৪টায় ধানমন্ডি লেকে দেখা করব 🤫</div>
+                                    </div>
+
+                                    <!-- Bubble footer: Time & Double Blue Ticks -->
+                                    <div class="chat-msg-meta">
+                                        <span class="chat-msg-time" id="chatMsg2Time">4:17 PM</span>
+                                        <span class="chat-read-status" title="Seen">
+                                            <svg class="icon-svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L7 17l-5-5"/><path d="M22 10l-7.5 7.5L13 16"/></svg>
+                                        </span>
                                     </div>
                                 </div>
-                                <div class="sim-copy-alert" id="simCopyAlert">
-                                    <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                                    <span>ক্লিপবোর্ডে কপি হয়েছে! বাইরে কেবল ১টি ইমোজি</span>
+                            </div>
+
+                            <!-- Typing dots indicator for Rakib -->
+                            <div class="chat-msg-row received hidden-initial" id="chatTypingIndicatorRow">
+                                <div class="chat-msg-bubble chat-typing-bubble">
+                                    <span class="chat-typing-dot"></span>
+                                    <span class="chat-typing-dot"></span>
+                                    <span class="chat-typing-dot"></span>
+                                </div>
+                            </div>
+
+                            <!-- Message 3: Received reply from Rakib after reading secret -->
+                            <div class="chat-msg-row received hidden-initial" id="chatMsg3">
+                                <div class="chat-msg-bubble">
+                                    <div class="chat-msg-sender">রাকিব</div>
+                                    <div class="chat-msg-text">
+                                        <span class="lang-en">Brilliant! To anyone else it only looks like a cool emoji, nobody has a clue 🔥 I will be at Dhanmondi on time.</span>
+                                        <span class="lang-bn font-bangla">অসাধারণ! মেসেঞ্জারে শুধু একটা ইমোজি দেখাচ্ছে, কেউ টেরই পেল না। আমি ৪টায় ধানমন্ডি চলে আসব 🔥</span>
+                                        <span class="lang-bl">Ashadharon! Shudhu 1 ta emoji dekhasse, keu bujhte parbe na. Ami 4 tay Dhanmondi ashbo 🔥</span>
+                                    </div>
+                                    <div class="chat-msg-meta">
+                                        <span class="chat-msg-time">4:18 PM</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Stage 3: Receiver & Decode -->
-                        <div class="stego-sim-col" id="simCol3">
-                            <div class="sim-col-header">
-                                <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
-                                <span>৩. ১-ট্যাপে ডিকোড (প্রাপক)</span>
+                        <!-- Mukto Keyboard Integrated Bottom Typing Composer -->
+                        <div class="chat-composer-section">
+                            <!-- Secret Mode Top Toolbar Strip -->
+                            <div class="chat-mukto-toolbar-strip">
+                                <div class="chat-mukto-brand-tag">
+                                    <svg class="icon-svg" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                                    <span class="lang-en">Mukto Secret Mode</span>
+                                    <span class="lang-bn font-bangla">মুক্ত কিবোর্ড গোপন মোড</span>
+                                    <span class="lang-bl">Mukto Secret Mode</span>
+                                </div>
+                                <div class="chat-carrier-picker-wrap">
+                                    <span class="chat-picker-label">
+                                        <span class="lang-en">Carrier Emoji:</span>
+                                        <span class="lang-bn font-bangla">বাহক ইমোজি:</span>
+                                        <span class="lang-bl">Carrier Emoji:</span>
+                                    </span>
+                                    <div class="chat-carrier-chips">
+                                        <button class="chat-carrier-chip active" onclick="selectChatCarrier('😎', this)">😎</button>
+                                        <button class="chat-carrier-chip" onclick="selectChatCarrier('🔥', this)">🔥</button>
+                                        <button class="chat-carrier-chip" onclick="selectChatCarrier('🤫', this)">🤫</button>
+                                        <button class="chat-carrier-chip" onclick="selectChatCarrier('❤️', this)">❤️</button>
+                                        <button class="chat-carrier-chip" onclick="selectChatCarrier('🚀', this)">🚀</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="sim-screen-card">
-                                <div>
-                                    <div class="sim-label">মুক্ত কিবোর্ড টুলবারে পেস্ট:</div>
-                                    <div class="sim-paste-row" style="margin:6px 0 10px;">
-                                        <div class="sim-pasted-emoji" id="simPastedEmoji">😎</div>
-                                        <button class="sim-action-decode-btn" id="simDecodeTriggerBtn" onclick="triggerManualDecode()">
-                                            <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-                                            <span>ডিকোড করুন</span>
-                                        </button>
-                                    </div>
-                                    <div class="sim-revealed-box" id="simRevealedBox">
-                                        <div class="sim-reveal-tag">উদ্ধারকৃত গোপন বার্তা:</div>
-                                        <div class="sim-revealed-text" id="simRevealedText">কাল বিকেলে দেখা হবে 🤫</div>
-                                    </div>
+
+                            <!-- Input Row -->
+                            <div class="chat-input-bar">
+                                <div class="chat-input-box-wrapper">
+                                    <input type="text" id="chatCustomSecretInput" class="chat-real-input" value="কাল বিকেল ৪টায় ধানমন্ডি লেকে দেখা করব 🤫" placeholder="গোপন বার্তা লিখুন...">
+                                    <span class="chat-enc-pill" title="Invisible Stego Active">
+                                        <svg class="icon-svg" viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+                                        <span>100% Invisible</span>
+                                    </span>
                                 </div>
-                                <div class="sim-shield-badge">
-                                    <svg class="icon-svg" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                                    <span>১০০% অন-ডিভাইস গোপন • কোনো সার্ভার লগিং নেই</span>
-                                </div>
+                                <button class="chat-send-btn" id="chatSendBtn" onclick="triggerUserSendSecretChat()" title="Send Secret Message">
+                                    <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                                    <span class="lang-en">Send</span>
+                                    <span class="lang-bn font-bangla">পাঠান</span>
+                                    <span class="lang-bl">Send</span>
+                                </button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Animation Controls & Custom Text Tester -->
-                    <div class="stego-sim-toolbar">
-                        <div class="sim-custom-tester">
-                            <input type="text" id="customSimInput" class="sim-test-field" placeholder="নিজের যেকোনো গোপন বার্তা দিয়ে অ্যানিমেশন টেস্ট করুন..." value="কাল বিকেলে দেখা হবে 🤫">
-                            <button class="sim-btn-play" onclick="playCustomStegoAnimation()">
-                                <svg class="icon-svg" viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                                <span>অ্যানিমেশন টেস্ট করুন</span>
-                            </button>
+                    <!-- Outside Controls & Perspective Switcher -->
+                    <div class="chat-sim-controls-bar">
+                        <div class="chat-perspective-toggle">
+                            <span style="font-size:12px; font-weight:700; color:var(--slate-500); text-transform:uppercase; letter-spacing:0.04em;">
+                                <span class="lang-en">View Simulation As:</span>
+                                <span class="lang-bn font-bangla">সিমুলেশন ভিউ দেখুন:</span>
+                                <span class="lang-bl">View As:</span>
+                            </span>
+                            <div class="perspective-btn-group">
+                                <button class="perspective-btn active" id="btnViewMukto" onclick="setChatPerspective('mukto')">
+                                    <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                                    <span class="lang-en">Inside Mukto Keyboard (Decoded)</span>
+                                    <span class="lang-bn font-bangla">মুক্ত কিবোর্ডের ভেতরের দৃশ্য (ডিকোডকৃত)</span>
+                                    <span class="lang-bl">Inside Mukto (Decoded)</span>
+                                </button>
+                                <button class="perspective-btn" id="btnViewOutside" onclick="setChatPerspective('outside')">
+                                    <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+                                    <span class="lang-en">Outside Social Apps (Only Emoji)</span>
+                                    <span class="lang-bn font-bangla">বাইরের ফেসবুক/হোয়াটসঅ্যাপে দৃশ্য (শুধু ইমোজি)</span>
+                                    <span class="lang-bl">Outside Apps (Only Emoji)</span>
+                                </button>
+                            </div>
                         </div>
-                        <button class="sim-btn-replay" onclick="replayStegoFullLoop()" title="Replay Animation">
-                            <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
-                            <span>পুনরায় চালান</span>
+                        <button class="chat-replay-btn" onclick="replayChatConversation()" title="Replay Chat Animation">
+                            <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+                            <span class="lang-en">Replay Conversation</span>
+                            <span class="lang-bn font-bangla">কথোপকথন পুনরায় চালান</span>
+                            <span class="lang-bl">Replay Chat</span>
                         </button>
                     </div>
                 </div>
@@ -2141,32 +2342,56 @@
                     <div class="font-sample-card">
                         <div class="font-sample-header"><span>Bold (Sans Bold)</span></div>
                         <div class="font-sample-preview" id="font-out-bold">𝗠𝘂𝗸𝘁𝗼 𝗞𝗲𝘆𝗯𝗼𝗮𝗿𝗱 𝘃𝟯.𝟭</div>
-                        <button class="chip-copy-action" onclick="copyFontResult('font-out-bold')">Copy</button>
+                        <button class="chip-copy-action" onclick="copyFontResult('font-out-bold')">
+                            <span class="lang-en">Copy</span>
+                            <span class="lang-bn font-bangla">কপি</span>
+                            <span class="lang-bl">Copy</span>
+                        </button>
                     </div>
                     <div class="font-sample-card">
                         <div class="font-sample-header"><span>Bubble Circle</span></div>
                         <div class="font-sample-preview" id="font-out-bubble">Ⓜⓤⓚⓣⓞ Ⓚⓔⓨⓑⓞⓐⓡⓓ ⓥ③.①</div>
-                        <button class="chip-copy-action" onclick="copyFontResult('font-out-bubble')">Copy</button>
+                        <button class="chip-copy-action" onclick="copyFontResult('font-out-bubble')">
+                            <span class="lang-en">Copy</span>
+                            <span class="lang-bn font-bangla">কপি</span>
+                            <span class="lang-bl">Copy</span>
+                        </button>
                     </div>
                     <div class="font-sample-card">
                         <div class="font-sample-header"><span>Gothic (Fraktur)</span></div>
-                        <div class="font-sample-preview" id="font-out-gothic">𝔐𝔲𝔨𝔱𝔬 𝔎𝔢𝔶𝔟𝔬𝔞𝔯𝔡 𝔳3.1</div>
-                        <button class="chip-copy-action" onclick="copyFontResult('font-out-gothic')">Copy</button>
+                        <div class="font-sample-preview" id="font-out-gothic">𝔐𝔲𝔨𝔱𝔬 𝔎𝔢𝔶𝔟ⓞ𝔞𝔯𝔡 𝔳3.1</div>
+                        <button class="chip-copy-action" onclick="copyFontResult('font-out-gothic')">
+                            <span class="lang-en">Copy</span>
+                            <span class="lang-bn font-bangla">কপি</span>
+                            <span class="lang-bl">Copy</span>
+                        </button>
                     </div>
                     <div class="font-sample-card">
                         <div class="font-sample-header"><span>Script (Calligraphy)</span></div>
-                        <div class="font-sample-preview" id="font-out-script">𝓜𝓾𝓴𝓽𝓸 𝓚𝓮𝔂𝓫𝓸𝓪𝓻𝓭 𝓿3.1</div>
-                        <button class="chip-copy-action" onclick="copyFontResult('font-out-script')">Copy</button>
+                        <div class="font-sample-preview" id="font-out-script">𝓜𝓾𝓴𝓽𝓸 𝓚𝓮𝔂𝓫𝓸ⓐⓡⓓ 𝓿3.1</div>
+                        <button class="chip-copy-action" onclick="copyFontResult('font-out-script')">
+                            <span class="lang-en">Copy</span>
+                            <span class="lang-bn font-bangla">কপি</span>
+                            <span class="lang-bl">Copy</span>
+                        </button>
                     </div>
                     <div class="font-sample-card">
                         <div class="font-sample-header"><span>Monospace (Code)</span></div>
                         <div class="font-sample-preview font-mono" id="font-out-mono">𝙼𝚞𝚔𝚝𝚘 𝙺𝚎𝚢𝚋𝚘𝚊𝚛𝚍 𝚟𝟹.𝟷</div>
-                        <button class="chip-copy-action" onclick="copyFontResult('font-out-mono')">Copy</button>
+                        <button class="chip-copy-action" onclick="copyFontResult('font-out-mono')">
+                            <span class="lang-en">Copy</span>
+                            <span class="lang-bn font-bangla">কপি</span>
+                            <span class="lang-bl">Copy</span>
+                        </button>
                     </div>
                     <div class="font-sample-card">
                         <div class="font-sample-header"><span>Inverted / Upside Down</span></div>
                         <div class="font-sample-preview" id="font-out-inverted">Ɩ˙Ɛʌ pɹɐoqʎǝʞ oʇʞnW</div>
-                        <button class="chip-copy-action" onclick="copyFontResult('font-out-inverted')">Copy</button>
+                        <button class="chip-copy-action" onclick="copyFontResult('font-out-inverted')">
+                            <span class="lang-en">Copy</span>
+                            <span class="lang-bn font-bangla">কপি</span>
+                            <span class="lang-bl">Copy</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -2175,7 +2400,9 @@
             <div id="panel-gestures" class="studio-panel">
                 <div class="gestures-studio-box">
                     <div style="font-size:12px; text-transform:uppercase; font-family:'JetBrains Mono', monospace; color:var(--emerald-400); letter-spacing:0.08em; margin-bottom:8px;">
-                        Triple Engine Layout Architecture
+                        <span class="lang-en">Triple Engine Layout Architecture</span>
+                        <span class="lang-bn font-bangla">ট্রিপল ইঞ্জিন কিবোর্ড আর্কিটেকচার</span>
+                        <span class="lang-bl">Triple Engine Layout</span>
                     </div>
                     <h3 style="font-size:1.45rem; font-weight:800; margin-bottom:14px; color:#ffffff;">
                         <span class="lang-en">3 Distinct Engines With Zero Delay Switching</span>
@@ -2201,27 +2428,39 @@
 
                     <!-- Interactive Spacebar Mockup -->
                     <div style="font-size:12px; font-weight:700; color:var(--slate-400); margin-bottom:6px;">
-                        Interactive Spacebar (Try Gestures):
+                        <span class="lang-en">Interactive Spacebar (Try Gestures):</span>
+                        <span class="lang-bn font-bangla">ইন্টারঅ্যাক্টিভ স্পেসবার (জেসচার ট্রাই করুন):</span>
+                        <span class="lang-bl">Interactive Spacebar:</span>
                     </div>
                     <div class="spacebar-interactive-card" id="spacebarCard" onclick="triggerSpacebarTap()">
                         <div style="font-size:18px; color:var(--emerald-400);">&lang;</div>
                         <div style="text-align:center;">
                             <div style="font-size:15px; font-weight:800; color:#ffffff; letter-spacing:0.04em;" id="spacebarDisplayName">অভ্র (Phonetic)</div>
-                            <div style="font-size:10.5px; opacity:0.7; font-family:'JetBrains Mono', monospace;" id="spacebarHintText">Tap for space &bull; Swipe &lang; &rang; to switch</div>
+                            <div style="font-size:10.5px; opacity:0.7; font-family:'JetBrains Mono', monospace;" id="spacebarHintText">
+                                <span class="lang-en">Tap for space &bull; Swipe &lang; &rang; to switch</span>
+                                <span class="lang-bn font-bangla">স্পেস দিতে ট্যাপ &bull; বদলাতে ডানে-বামে সোয়াইপ করুন</span>
+                                <span class="lang-bl">Tap for space &bull; Swipe &lang; &rang; to switch</span>
+                            </div>
                         </div>
                         <div style="font-size:18px; color:var(--emerald-400);">&rang;</div>
                     </div>
 
                     <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin-top:14px;">
                         <button class="chip-copy-action" onclick="cycleLanguageMode(-1)" style="background:rgba(255,255,255,0.1); color:#ffffff; border-color:rgba(255,255,255,0.2);">
-                            &larr; Swipe Left (Prev Mode)
+                            <span class="lang-en">&larr; Swipe Left (Prev Mode)</span>
+                            <span class="lang-bn font-bangla">&larr; বামে সোয়াইপ (আগের মোড)</span>
+                            <span class="lang-bl">&larr; Swipe Left</span>
                         </button>
                         <button class="chip-copy-action" onclick="triggerCursorScrubDemo()" style="background:var(--emerald-600); color:#ffffff;">
                             <svg class="icon-svg" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px;"><path d="M5 9l-3 3 3 3M9 5l3-3 3 3M15 19l-3 3-3-3M19 9l3 3-3 3"/><circle cx="12" cy="12" r="2"/></svg>
-                            <span>Hold 280ms (Cursor Trackpad)</span>
+                            <span class="lang-en">Hold 280ms (Cursor Trackpad)</span>
+                            <span class="lang-bn font-bangla">২৮০মি.সে চেপে রাখুন (মাউস ট্র্যাকপ্যাড)</span>
+                            <span class="lang-bl">Hold 280ms (Trackpad)</span>
                         </button>
                         <button class="chip-copy-action" onclick="cycleLanguageMode(1)" style="background:rgba(255,255,255,0.1); color:#ffffff; border-color:rgba(255,255,255,0.2);">
-                            Swipe Right (Next Mode) &rarr;
+                            <span class="lang-en">Swipe Right (Next Mode) &rarr;</span>
+                            <span class="lang-bn font-bangla">ডানে সোয়াইপ (পরের মোড) &rarr;</span>
+                            <span class="lang-bl">Swipe Right &rarr;</span>
                         </button>
                     </div>
                 </div>
@@ -2242,12 +2481,22 @@
                             <div class="sound-card-icon-wrap">
                                 <svg class="icon-svg" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="3" x2="12" y2="7"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
                             </div>
-                            <h4 style="font-size:15px; font-weight:800; color:var(--slate-900);">Mechanical Switch</h4>
-                            <p style="font-size:12.5px; color:var(--slate-500); margin-top:4px;">Crisp, tactile blue switch acoustic clicks for precision lovers.</p>
+                            <h4 style="font-size:15px; font-weight:800; color:var(--slate-900);">
+                                <span class="lang-en">Mechanical Switch</span>
+                                <span class="lang-bn font-bangla">মেকানিক্যাল সুইচ</span>
+                                <span class="lang-bl">Mechanical Switch</span>
+                            </h4>
+                            <p style="font-size:12.5px; color:var(--slate-500); margin-top:4px;">
+                                <span class="lang-en">Crisp, tactile blue switch acoustic clicks for precision lovers.</span>
+                                <span class="lang-bn font-bangla">আসল ট্যাকটাইল মেকানিক্যাল ব্লু সুইচের স্পষ্ট ক্লিক সাউন্ড।</span>
+                                <span class="lang-bl">Crisp tactile blue switch click sound.</span>
+                            </p>
                         </div>
                         <button class="sound-play-btn" onclick="playMechanicalSound()">
                             <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                            <span>Play Mechanical</span>
+                            <span class="lang-en">Play Mechanical</span>
+                            <span class="lang-bn font-bangla">মেকানিক্যাল শুনুন</span>
+                            <span class="lang-bl">Play Mechanical</span>
                         </button>
                     </div>
 
@@ -2257,12 +2506,22 @@
                             <div class="sound-card-icon-wrap">
                                 <svg class="icon-svg" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
                             </div>
-                            <h4 style="font-size:15px; font-weight:800; color:var(--slate-900);">Soft Tap</h4>
-                            <p style="font-size:12.5px; color:var(--slate-500); margin-top:4px;">Subtle, gentle raindrops tap feedback for quiet settings.</p>
+                            <h4 style="font-size:15px; font-weight:800; color:var(--slate-900);">
+                                <span class="lang-en">Soft Tap</span>
+                                <span class="lang-bn font-bangla">সফট ট্যাপ</span>
+                                <span class="lang-bl">Soft Tap</span>
+                            </h4>
+                            <p style="font-size:12.5px; color:var(--slate-500); margin-top:4px;">
+                                <span class="lang-en">Subtle, gentle raindrops tap feedback for quiet settings.</span>
+                                <span class="lang-bn font-bangla">শান্ত পরিবেশে আরামদায়ক ও মৃদু রেইনড্রপ ট্যাপ সাউন্ড।</span>
+                                <span class="lang-bl">Quiet gentle tap sound feedback.</span>
+                            </p>
                         </div>
                         <button class="sound-play-btn" onclick="playSoftSound()">
                             <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                            <span>Play Soft Tap</span>
+                            <span class="lang-en">Play Soft Tap</span>
+                            <span class="lang-bn font-bangla">সফট ট্যাপ শুনুন</span>
+                            <span class="lang-bl">Play Soft Tap</span>
                         </button>
                     </div>
 
@@ -2272,12 +2531,22 @@
                             <div class="sound-card-icon-wrap">
                                 <svg class="icon-svg" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5"/><circle cx="17" cy="15" r="4"/><circle cx="16" cy="6" r="2"/></svg>
                             </div>
-                            <h4 style="font-size:15px; font-weight:800; color:var(--slate-900);">Bubble Pop</h4>
-                            <p style="font-size:12.5px; color:var(--slate-500); margin-top:4px;">Bouncy, playful bubble acoustic sound with high pitch.</p>
+                            <h4 style="font-size:15px; font-weight:800; color:var(--slate-900);">
+                                <span class="lang-en">Bubble Pop</span>
+                                <span class="lang-bn font-bangla">বাবল পপ</span>
+                                <span class="lang-bl">Bubble Pop</span>
+                            </h4>
+                            <p style="font-size:12.5px; color:var(--slate-500); margin-top:4px;">
+                                <span class="lang-en">Bouncy, playful bubble acoustic sound with high pitch.</span>
+                                <span class="lang-bn font-bangla">আনন্দদায়ক ও প্রাণবন্ত বাবল পপিং সাউন্ড এফেক্ট।</span>
+                                <span class="lang-bl">Playful bouncy bubble sound.</span>
+                            </p>
                         </div>
                         <button class="sound-play-btn" onclick="playPopSound()">
                             <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                            <span>Play Bubble Pop</span>
+                            <span class="lang-en">Play Bubble Pop</span>
+                            <span class="lang-bn font-bangla">বাবল পপ শুনুন</span>
+                            <span class="lang-bl">Play Bubble Pop</span>
                         </button>
                     </div>
 
@@ -2287,11 +2556,21 @@
                             <div class="sound-card-icon-wrap" style="background:rgba(255,255,255,0.12); color:var(--emerald-400); border-color:rgba(255,255,255,0.2);">
                                 <svg class="icon-svg" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
                             </div>
-                            <h4 style="font-size:15px; font-weight:800; color:#ffffff;">Live Video Themes</h4>
-                            <p style="font-size:12.5px; color:rgba(255,255,255,0.75); margin-top:4px;">MP4 / WebM background with video trimmer &amp; boomerang loop mode.</p>
+                            <h4 style="font-size:15px; font-weight:800; color:#ffffff;">
+                                <span class="lang-en">Live Video Themes</span>
+                                <span class="lang-bn font-bangla">লাইভ ভিডিও থিম</span>
+                                <span class="lang-bl">Live Video Themes</span>
+                            </h4>
+                            <p style="font-size:12.5px; color:rgba(255,255,255,0.75); margin-top:4px;">
+                                <span class="lang-en">MP4 / WebM background with video trimmer &amp; boomerang loop mode.</span>
+                                <span class="lang-bn font-bangla">ভিডিও ট্রিমার ও বুমেরাং লুপ সহ MP4/WebM ব্যাকগ্রাউন্ড।</span>
+                                <span class="lang-bl">MP4 / WebM background with video trimmer &amp; boomerang loop.</span>
+                            </p>
                         </div>
                         <div style="font-size:11.5px; font-family:'JetBrains Mono', monospace; background:rgba(255,255,255,0.1); padding:6px; border-radius:6px; border:1px solid rgba(255,255,255,0.15);">
-                            Key Opacity: 0-100% &bull; Dimmer
+                            <span class="lang-en">Key Opacity: 0-100% &bull; Dimmer</span>
+                            <span class="lang-bn font-bangla">কি-স্বচ্ছতা: ০-১০০% &bull; ডিমার</span>
+                            <span class="lang-bl">Key Opacity &bull; Dimmer</span>
                         </div>
                     </div>
                 </div>
@@ -2323,7 +2602,11 @@
                     <div class="feature-icon-box">
                         <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                     </div>
-                    <span class="badge-pill exclusive">Exclusive Steganography</span>
+                    <span class="badge-pill exclusive">
+                        <span class="lang-en">Exclusive Steganography</span>
+                        <span class="lang-bn font-bangla">এক্সক্লুসিভ গোপন বার্তা</span>
+                        <span class="lang-bl">Exclusive Steganography</span>
+                    </span>
                 </div>
                 <h3 class="lang-en">Secret Chat (Emoji Steganography)</h3>
                 <h3 class="lang-bn font-bangla">গোপন চ্যাট ও ইমোজি স্টেগানোগ্রাফি</h3>
@@ -2334,7 +2617,9 @@
             </div>
             <div class="feature-footer-tag">
                 <span class="dot"></span>
-                <span>Unicode Variation Selectors &bull; E2E Concealed</span>
+                <span class="lang-en">Unicode Variation Selectors &bull; E2E Concealed</span>
+                <span class="lang-bn font-bangla">ইউনিকোড ভ্যারিয়েশন সিলেক্টরস &bull; শতভাগ গোপন</span>
+                <span class="lang-bl">Unicode Variation Selectors &bull; E2E Concealed</span>
             </div>
         </div>
 
@@ -2345,7 +2630,11 @@
                     <div class="feature-icon-box">
                         <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg>
                     </div>
-                    <span class="badge-pill new">New in v3.1</span>
+                    <span class="badge-pill new">
+                        <span class="lang-en">New in v3.1</span>
+                        <span class="lang-bn font-bangla">নতুন ফিচার</span>
+                        <span class="lang-bl">New in v3.1</span>
+                    </span>
                 </div>
                 <h3 class="lang-en">Live Video &amp; Photo Themes</h3>
                 <h3 class="lang-bn font-bangla">লাইভ ভিডিও ও ফটো ব্যাকগ্রাউন্ড</h3>
@@ -2356,7 +2645,9 @@
             </div>
             <div class="feature-footer-tag">
                 <span class="dot"></span>
-                <span>MP4/WebM Engine &bull; Boomerang Loop</span>
+                <span class="lang-en">MP4/WebM Engine &bull; Boomerang Loop</span>
+                <span class="lang-bn font-bangla">এমপি৪/ওয়েবএম ইঞ্জিন &bull; বুমেরাং লুপ</span>
+                <span class="lang-bl">MP4/WebM Engine &bull; Boomerang Loop</span>
             </div>
         </div>
 
@@ -2367,7 +2658,11 @@
                     <div class="feature-icon-box">
                         <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
                     </div>
-                    <span class="badge-pill featured">20+ Styles</span>
+                    <span class="badge-pill featured">
+                        <span class="lang-en">20+ Styles</span>
+                        <span class="lang-bn font-bangla">২০+ স্টাইল</span>
+                        <span class="lang-bl">20+ Styles</span>
+                    </span>
                 </div>
                 <h3 class="lang-en">20+ Fancy Unicode Fonts Studio</h3>
                 <h3 class="lang-bn font-bangla">২০+ ফ্যান্সি ইউনিকোড ফন্টস</h3>
@@ -2378,7 +2673,9 @@
             </div>
             <div class="feature-footer-tag">
                 <span class="dot"></span>
-                <span>Bold &bull; Bubble &bull; Gothic &bull; Script</span>
+                <span class="lang-en">Bold &bull; Bubble &bull; Gothic &bull; Script</span>
+                <span class="lang-bn font-bangla">বোল্ড &bull; বাবল &bull; গথিক &bull; স্ক্রিপ্ট</span>
+                <span class="lang-bl">Bold &bull; Bubble &bull; Gothic &bull; Script</span>
             </div>
         </div>
 
@@ -2389,7 +2686,11 @@
                     <div class="feature-icon-box">
                         <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
                     </div>
-                    <span class="badge-pill featured">Customizable</span>
+                    <span class="badge-pill featured">
+                        <span class="lang-en">Customizable</span>
+                        <span class="lang-bn font-bangla">কাস্টমাইজেবল</span>
+                        <span class="lang-bl">Customizable</span>
+                    </span>
                 </div>
                 <h3 class="lang-en">Modular Drag-and-Drop Toolbar</h3>
                 <h3 class="lang-bn font-bangla">ড্র্যাগ-অ্যান্ড-ড্রপ মডুলার টুলবার</h3>
@@ -2400,7 +2701,9 @@
             </div>
             <div class="feature-footer-tag">
                 <span class="dot"></span>
-                <span>10 Modular Actions &bull; Pin Top 6</span>
+                <span class="lang-en">10 Modular Actions &bull; Pin Top 6</span>
+                <span class="lang-bn font-bangla">১০টি মডুলার টুল &bull; সেরা ৬টি পিন করুন</span>
+                <span class="lang-bl">10 Modular Actions &bull; Pin Top 6</span>
             </div>
         </div>
 
@@ -2411,7 +2714,11 @@
                     <div class="feature-icon-box">
                         <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="3"/><line x1="6" y1="12" x2="18" y2="12"/></svg>
                     </div>
-                    <span class="badge-pill featured">Gesture Control</span>
+                    <span class="badge-pill featured">
+                        <span class="lang-en">Gesture Control</span>
+                        <span class="lang-bn font-bangla">জেসচার কন্ট্রোল</span>
+                        <span class="lang-bl">Gesture Control</span>
+                    </span>
                 </div>
                 <h3 class="lang-en">Spacebar Trackpad &amp; Rapid Swipe</h3>
                 <h3 class="lang-bn font-bangla">স্পেসবার ট্র্যাকপ্যাড ও সুইফট জেসচার</h3>
@@ -2422,7 +2729,9 @@
             </div>
             <div class="feature-footer-tag">
                 <span class="dot"></span>
-                <span>280ms Haptic Trigger &bull; Smooth Scrubbing</span>
+                <span class="lang-en">280ms Haptic Trigger &bull; Smooth Scrubbing</span>
+                <span class="lang-bn font-bangla">২৮০মি.সে হ্যাপটিক ট্রিগার &bull; স্মুথ স্ক্রাবিং</span>
+                <span class="lang-bl">280ms Haptic Trigger &bull; Smooth Scrubbing</span>
             </div>
         </div>
 
@@ -2433,7 +2742,11 @@
                     <div class="feature-icon-box">
                         <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
                     </div>
-                    <span class="badge-pill exclusive">Productivity</span>
+                    <span class="badge-pill exclusive">
+                        <span class="lang-en">Productivity</span>
+                        <span class="lang-bn font-bangla">প্রোডাক্টিভিটি</span>
+                        <span class="lang-bl">Productivity</span>
+                    </span>
                 </div>
                 <h3 class="lang-en">Precision Text Editing Panel</h3>
                 <h3 class="lang-bn font-bangla">ডেডিকেটেড টেক্সট এডিটিং কন্ট্রোল</h3>
@@ -2444,7 +2757,9 @@
             </div>
             <div class="feature-footer-tag">
                 <span class="dot"></span>
-                <span>Full D-Pad Arrows &bull; 1-Tap Select All</span>
+                <span class="lang-en">Full D-Pad Arrows &bull; 1-Tap Select All</span>
+                <span class="lang-bn font-bangla">ফুল ডি-প্যাড অ্যারো &bull; ১-ট্যাপে সিলেক্ট অল</span>
+                <span class="lang-bl">Full D-Pad Arrows &bull; 1-Tap Select All</span>
             </div>
         </div>
 
@@ -2455,7 +2770,11 @@
                     <div class="feature-icon-box">
                         <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 18 12 22 16 18"/><polyline points="8 6 12 2 16 6"/><line x1="12" y1="2" x2="12" y2="22"/></svg>
                     </div>
-                    <span class="badge-pill featured">0.7x to 1.3x</span>
+                    <span class="badge-pill featured">
+                        <span class="lang-en">0.7x to 1.3x</span>
+                        <span class="lang-bn font-bangla">০.৭x থেকে ১.৩x</span>
+                        <span class="lang-bl">0.7x to 1.3x</span>
+                    </span>
                 </div>
                 <h3 class="lang-en">1-Touch Keyboard Height Resize Bar</h3>
                 <h3 class="lang-bn font-bangla">১-টাচ অন-স্ক্রিন হাইট রিসাইজ</h3>
@@ -2466,7 +2785,9 @@
             </div>
             <div class="feature-footer-tag">
                 <span class="dot"></span>
-                <span>Live Slider &bull; In-Keyboard Overlay</span>
+                <span class="lang-en">Live Slider &bull; In-Keyboard Overlay</span>
+                <span class="lang-bn font-bangla">লাইভ স্লাইডার &bull; অন-স্ক্রিন ওভারলে</span>
+                <span class="lang-bl">Live Slider &bull; In-Keyboard Overlay</span>
             </div>
         </div>
 
@@ -2477,7 +2798,11 @@
                     <div class="feature-icon-box">
                         <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
                     </div>
-                    <span class="badge-pill featured">3 Sound Profiles</span>
+                    <span class="badge-pill featured">
+                        <span class="lang-en">3 Sound Profiles</span>
+                        <span class="lang-bn font-bangla">৩টি সাউন্ড প্রোফাইল</span>
+                        <span class="lang-bl">3 Sound Profiles</span>
+                    </span>
                 </div>
                 <h3 class="lang-en">Mechanical Sounds &amp; Granular Haptics</h3>
                 <h3 class="lang-bn font-bangla">মেকানিক্যাল সাউন্ড ও ভাইব্রেশন</h3>
@@ -2488,7 +2813,9 @@
             </div>
             <div class="feature-footer-tag">
                 <span class="dot"></span>
-                <span>Mechanical &bull; Soft &bull; Pop &bull; 5-100ms</span>
+                <span class="lang-en">Mechanical &bull; Soft &bull; Pop &bull; 5-100ms</span>
+                <span class="lang-bn font-bangla">মেকানিক্যাল &bull; সফট &bull; পপ &bull; ৫-১০০মি.সে</span>
+                <span class="lang-bl">Mechanical &bull; Soft &bull; Pop &bull; 5-100ms</span>
             </div>
         </div>
 
@@ -2499,7 +2826,11 @@
                     <div class="feature-icon-box">
                         <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
                     </div>
-                    <span class="badge-pill featured">Avro Scheme</span>
+                    <span class="badge-pill featured">
+                        <span class="lang-en">Avro Scheme</span>
+                        <span class="lang-bn font-bangla">অভ্র ফনেটিক</span>
+                        <span class="lang-bl">Avro Scheme</span>
+                    </span>
                 </div>
                 <h3 class="lang-en">Smart Phonetic Engine (Avro Scheme)</h3>
                 <h3 class="lang-bn font-bangla">বুদ্ধিমান ফোনেটিক টাইপিং ইঞ্জিন</h3>
@@ -2510,7 +2841,9 @@
             </div>
             <div class="feature-footer-tag">
                 <span class="dot"></span>
-                <span>Bigram Candidates &bull; Fuzzy Spell Check</span>
+                <span class="lang-en">Bigram Candidates &bull; Fuzzy Spell Check</span>
+                <span class="lang-bn font-bangla">বাইগ্রাম ক্যান্ডিডেটস &bull; স্পেলিং সংশোধন</span>
+                <span class="lang-bl">Bigram Candidates &bull; Fuzzy Spell Check</span>
             </div>
         </div>
 
@@ -2521,7 +2854,11 @@
                     <div class="feature-icon-box">
                         <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
                     </div>
-                    <span class="badge-pill featured">Google ML Kit</span>
+                    <span class="badge-pill featured">
+                        <span class="lang-en">Google ML Kit</span>
+                        <span class="lang-bn font-bangla">গুগল এমএল কিট</span>
+                        <span class="lang-bl">Google ML Kit</span>
+                    </span>
                 </div>
                 <h3 class="lang-en">In-Keyboard Offline Translation</h3>
                 <h3 class="lang-bn font-bangla">ইন-কিবোর্ড অফলাইন অনুবাদ</h3>
@@ -2532,7 +2869,9 @@
             </div>
             <div class="feature-footer-tag">
                 <span class="dot"></span>
-                <span>Google ML Kit 17.0.3 &bull; Zero External App</span>
+                <span class="lang-en">Google ML Kit 17.0.3 &bull; Zero External App</span>
+                <span class="lang-bn font-bangla">গুগল এমএল কিট ১৭.০.৩ &bull; কোনো অতিরিক্ত অ্যাপ ছাড়া</span>
+                <span class="lang-bl">Google ML Kit 17.0.3 &bull; Zero External App</span>
             </div>
         </div>
 
@@ -2543,7 +2882,11 @@
                     <div class="feature-icon-box">
                         <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
                     </div>
-                    <span class="badge-pill featured">50 Clips &bull; Pinning</span>
+                    <span class="badge-pill featured">
+                        <span class="lang-en">50 Clips &bull; Pinning</span>
+                        <span class="lang-bn font-bangla">৫০টি ক্লিপ &bull; পিনিং</span>
+                        <span class="lang-bl">50 Clips &bull; Pinning</span>
+                    </span>
                 </div>
                 <h3 class="lang-en">Smart Clipboard &amp; Screenshot Paste</h3>
                 <h3 class="lang-bn font-bangla">স্মার্ট ক্লিপবোর্ড ও অটো-স্ক্রিনশট</h3>
@@ -2554,7 +2897,9 @@
             </div>
             <div class="feature-footer-tag">
                 <span class="dot"></span>
-                <span>1-Tap Paste &bull; Opt-In Protected</span>
+                <span class="lang-en">1-Tap Paste &bull; Opt-In Protected</span>
+                <span class="lang-bn font-bangla">১-ট্যাপ পেস্ট &bull; অপ্ট-ইন প্রটেকশন</span>
+                <span class="lang-bl">1-Tap Paste &bull; Opt-In Protected</span>
             </div>
         </div>
 
@@ -2565,7 +2910,11 @@
                     <div class="feature-icon-box">
                         <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                     </div>
-                    <span class="badge-pill new">100% Private</span>
+                    <span class="badge-pill new">
+                        <span class="lang-en">100% Private</span>
+                        <span class="lang-bn font-bangla">১০০% প্রাইভেট</span>
+                        <span class="lang-bl">100% Private</span>
+                    </span>
                 </div>
                 <h3 class="lang-en">Zero Keylogging &amp; Password Shield</h3>
                 <h3 class="lang-bn font-bangla">জিরো কি-লগিং ও পাসওয়ার্ড সুরক্ষা</h3>
@@ -2576,7 +2925,9 @@
             </div>
             <div class="feature-footer-tag">
                 <span class="dot"></span>
-                <span>Zero Telemetry &bull; Password Shield Active</span>
+                <span class="lang-en">Zero Telemetry &bull; Password Shield Active</span>
+                <span class="lang-bn font-bangla">জিরো টেলিমেট্রি &bull; পাসওয়ার্ড সুরক্ষা সক্রিয়</span>
+                <span class="lang-bl">Zero Telemetry &bull; Password Shield Active</span>
             </div>
         </div>
     </div>
@@ -2599,34 +2950,65 @@
 
     <div class="specs-grid">
         <div class="spec-item-card">
-            <div class="spec-item-label">Package Name</div>
+            <div class="spec-item-label">
+                <span class="lang-en">Package Name</span>
+                <span class="lang-bn font-bangla">প্যাকেজ নেম</span>
+                <span class="lang-bl">Package Name</span>
+            </div>
             <div class="spec-item-val font-mono">com.mukto.keyboard</div>
-            <div class="spec-item-sub">Production Application ID</div>
+            <div class="spec-item-sub">
+                <span class="lang-en">Production Application ID</span>
+                <span class="lang-bn font-bangla">অফিশিয়াল অ্যাপ আইডি</span>
+                <span class="lang-bl">Production App ID</span>
+            </div>
         </div>
         <div class="spec-item-card">
-            <div class="spec-item-label">App Version</div>
-            <div class="spec-item-val">v3.1 (Build 16)</div>
-            <div class="spec-item-sub">Latest Stable Release</div>
-        </div>
-        <div class="spec-item-card">
-            <div class="spec-item-label">UI Architecture</div>
+            <div class="spec-item-label">
+                <span class="lang-en">UI Architecture</span>
+                <span class="lang-bn font-bangla">ইউআই আর্কিটেকচার</span>
+                <span class="lang-bl">UI Architecture</span>
+            </div>
             <div class="spec-item-val">Jetpack Compose + M3</div>
-            <div class="spec-item-sub">100% Kotlin First</div>
+            <div class="spec-item-sub">
+                <span class="lang-en">100% Kotlin First</span>
+                <span class="lang-bn font-bangla">১০০% আধুনিক কোটলিন</span>
+                <span class="lang-bl">100% Kotlin First</span>
+            </div>
         </div>
         <div class="spec-item-card">
-            <div class="spec-item-label">OS Compatibility</div>
+            <div class="spec-item-label">
+                <span class="lang-en">OS Compatibility</span>
+                <span class="lang-bn font-bangla">ওএস সামঞ্জস্যতা</span>
+                <span class="lang-bl">OS Compatibility</span>
+            </div>
             <div class="spec-item-val">Android 7.0 to 16</div>
             <div class="spec-item-sub">minSdk 24 &bull; compileSdk 37</div>
         </div>
         <div class="spec-item-card">
-            <div class="spec-item-label">Machine Learning</div>
+            <div class="spec-item-label">
+                <span class="lang-en">Machine Learning</span>
+                <span class="lang-bn font-bangla">মেশিন লার্নিং</span>
+                <span class="lang-bl">Machine Learning</span>
+            </div>
             <div class="spec-item-val">Google ML Kit Translate</div>
-            <div class="spec-item-sub">v17.0.3 On-Device Models</div>
+            <div class="spec-item-sub">
+                <span class="lang-en">v17.0.3 On-Device Models</span>
+                <span class="lang-bn font-bangla">অন-ডিভাইস অফলাইন মডেল</span>
+                <span class="lang-bl">On-Device Models</span>
+            </div>
         </div>
         <div class="spec-item-card">
-            <div class="spec-item-label">Emoji Standard</div>
+            <div class="spec-item-label">
+                <span class="lang-en">Emoji Standard</span>
+                <span class="lang-bn font-bangla">ইমোজি স্ট্যান্ডার্ড</span>
+                <span class="lang-bl">Emoji Standard</span>
+            </div>
             <div class="spec-item-val">AndroidX Emoji2</div>
-            <div class="spec-item-sub">v1.7.0 Modern Emoji Palette</div>
+            <div class="spec-item-sub">
+                <span class="lang-en">Modern Unicode Emoji Palette</span>
+                <span class="lang-bn font-bangla">লেটেস্ট ইউনিকোড ইমোজি প্যালেট</span>
+                <span class="lang-bl">Modern Emoji Palette</span>
+            </div>
         </div>
     </div>
 
@@ -2639,132 +3021,211 @@
         <table class="comparison-table">
             <thead>
                 <tr>
-                    <th>Feature</th>
+                    <th>
+                        <span class="lang-en">Feature</span>
+                        <span class="lang-bn font-bangla">বৈশিষ্ট্য ও সুবিধা</span>
+                        <span class="lang-bl">Feature</span>
+                    </th>
                     <th class="highlight-col">
                         <svg class="icon-svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--emerald-700); margin-right:4px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                        Mukto Keyboard v3.1
+                        <span class="lang-en">Mukto Keyboard</span>
+                        <span class="lang-bn font-bangla">মুক্ত কিবোর্ড</span>
+                        <span class="lang-bl">Mukto Keyboard</span>
                     </th>
-                    <th>Typical Keyboards</th>
+                    <th>
+                        <span class="lang-en">Typical Keyboards</span>
+                        <span class="lang-bn font-bangla">অন্যান্য কিবোর্ড</span>
+                        <span class="lang-bl">Other Keyboards</span>
+                    </th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><strong>Zero Keylogging Guarantee</strong></td>
+                    <td>
+                        <strong class="lang-en">Zero Keylogging Guarantee</strong>
+                        <strong class="lang-bn font-bangla">জিরো কি-লগিং গ্যারান্টি</strong>
+                        <strong class="lang-bl">Zero Keylogging Guarantee</strong>
+                    </td>
                     <td class="highlight-col">
                         <span class="status-yes">
                             <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            100% Guaranteed On-Device
+                            <span class="lang-en">100% Guaranteed On-Device</span>
+                            <span class="lang-bn font-bangla">১০০% ডিভাইসে সুরক্ষিত</span>
+                            <span class="lang-bl">100% On-Device Safe</span>
                         </span>
                     </td>
                     <td>
                         <span class="status-no">
                             <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-                            Cloud Telemetry
+                            <span class="lang-en">Cloud Telemetry &amp; Logs</span>
+                            <span class="lang-bn font-bangla">ক্লাউড লগ ও ট্র্যাকিং</span>
+                            <span class="lang-bl">Cloud Telemetry</span>
                         </span>
                     </td>
                 </tr>
                 <tr>
-                    <td><strong>Secret Chat (Emoji Steganography)</strong></td>
+                    <td>
+                        <strong class="lang-en">Secret Chat (Emoji Steganography)</strong>
+                        <strong class="lang-bn font-bangla">গোপন বার্তা (ইমোজি স্টেগানোগ্রাফি)</strong>
+                        <strong class="lang-bl">Secret Chat (Steganography)</strong>
+                    </td>
                     <td class="highlight-col">
                         <span class="status-yes">
                             <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            Built-in (Variation Selectors)
+                            <span class="lang-en">Built-in (1-Tap Decrypt)</span>
+                            <span class="lang-bn font-bangla">১-ট্যাপে ডিকোড সুবিধা</span>
+                            <span class="lang-bl">Built-in 1-Tap Decrypt</span>
                         </span>
                     </td>
                     <td>
                         <span class="status-no">
                             <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-                            Not Available
+                            <span class="lang-en">Not Available</span>
+                            <span class="lang-bn font-bangla">সুবিধাটি নেই</span>
+                            <span class="lang-bl">Not Available</span>
                         </span>
                     </td>
                 </tr>
                 <tr>
-                    <td><strong>Live Video Keyboard Themes</strong></td>
+                    <td>
+                        <strong class="lang-en">Live Video Keyboard Themes</strong>
+                        <strong class="lang-bn font-bangla">লাইভ ভিডিও ব্যাকগ্রাউন্ড থিম</strong>
+                        <strong class="lang-bl">Live Video Keyboard Themes</strong>
+                    </td>
                     <td class="highlight-col">
                         <span class="status-yes">
                             <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            MP4/WebM with Boomerang Trimmer
+                            <span class="lang-en">MP4/WebM with Boomerang Loop</span>
+                            <span class="lang-bn font-bangla">ভিডিও ট্রিম ও বুমেরাং লুপ</span>
+                            <span class="lang-bl">Video &amp; Boomerang Loop</span>
                         </span>
                     </td>
                     <td>
                         <span class="status-no">
                             <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-                            Static Pictures Only
+                            <span class="lang-en">Static Pictures Only</span>
+                            <span class="lang-bn font-bangla">শুধুমাত্র স্থির ছবি</span>
+                            <span class="lang-bl">Static Pictures Only</span>
                         </span>
                     </td>
                 </tr>
                 <tr>
-                    <td><strong>20+ Fancy Unicode Fonts</strong></td>
+                    <td>
+                        <strong class="lang-en">20+ Fancy Unicode Fonts</strong>
+                        <strong class="lang-bn font-bangla">২০+ ফ্যান্সি ইউনিকোড ফন্টস</strong>
+                        <strong class="lang-bl">20+ Fancy Unicode Fonts</strong>
+                    </td>
                     <td class="highlight-col">
                         <span class="status-yes">
                             <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            Built-in (1-Tap Conversion)
+                            <span class="lang-en">Built-in (1-Tap Conversion)</span>
+                            <span class="lang-bn font-bangla">টুলবার থেকে সরাসরি ১-ট্যাপে</span>
+                            <span class="lang-bl">Direct from Toolbar</span>
                         </span>
                     </td>
                     <td>
                         <span class="status-no">
                             <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-                            Requires 3rd-Party App
+                            <span class="lang-en">Requires 3rd-Party App</span>
+                            <span class="lang-bn font-bangla">অন্য অ্যাপের প্রয়োজন হয়</span>
+                            <span class="lang-bl">Requires 3rd-Party App</span>
                         </span>
                     </td>
                 </tr>
                 <tr>
-                    <td><strong>Spacebar Cursor Trackpad</strong></td>
+                    <td>
+                        <strong class="lang-en">Spacebar Cursor Trackpad</strong>
+                        <strong class="lang-bn font-bangla">স্পেসবার কার্সার ট্র্যাকপ্যাড</strong>
+                        <strong class="lang-bl">Spacebar Cursor Trackpad</strong>
+                    </td>
                     <td class="highlight-col">
                         <span class="status-yes">
                             <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            280ms Hold &amp; Scrub Navigation
+                            <span class="lang-en">280ms Hold &amp; Scrub Navigation</span>
+                            <span class="lang-bn font-bangla">২৮০মি.সে চেপে মাউস কন্ট্রোল</span>
+                            <span class="lang-bl">Smooth Cursor Scrub</span>
                         </span>
                     </td>
                     <td>
                         <span class="status-no">
                             <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-                            Clunky or Missing
+                            <span class="lang-en">Clunky or Missing</span>
+                            <span class="lang-bn font-bangla">নেই অথবা ধীরগতির</span>
+                            <span class="lang-bl">Clunky or Missing</span>
                         </span>
                     </td>
                 </tr>
                 <tr>
-                    <td><strong>Modular Drag &amp; Drop Toolbar</strong></td>
+                    <td>
+                        <strong class="lang-en">Modular Drag &amp; Drop Toolbar</strong>
+                        <strong class="lang-bn font-bangla">মডুলার ড্র্যাগ-অ্যান্ড-ড্রপ টুলবার</strong>
+                        <strong class="lang-bl">Modular Drag &amp; Drop Toolbar</strong>
+                    </td>
                     <td class="highlight-col">
                         <span class="status-yes">
                             <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            10 Fully Reorderable Actions
+                            <span class="lang-en">10 Fully Reorderable Actions</span>
+                            <span class="lang-bn font-bangla">১০টি সাজিয়ে নেওয়ার সুবিধা</span>
+                            <span class="lang-bl">10 Reorderable Actions</span>
                         </span>
                     </td>
                     <td>
                         <span class="status-no">
                             <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-                            Fixed &amp; Rigid
+                            <span class="lang-en">Fixed &amp; Rigid</span>
+                            <span class="lang-bn font-bangla">নির্দিষ্ট ও পরিবর্তনহীন</span>
+                            <span class="lang-bl">Fixed &amp; Rigid</span>
                         </span>
                     </td>
                 </tr>
                 <tr>
-                    <td><strong>On-Device Offline Translation</strong></td>
+                    <td>
+                        <strong class="lang-en">On-Device Offline Translation</strong>
+                        <strong class="lang-bn font-bangla">অন-ডিভাইস অফলাইন অনুবাদ</strong>
+                        <strong class="lang-bl">Offline Translation</strong>
+                    </td>
                     <td class="highlight-col">
                         <span class="status-yes">
                             <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            Google ML Kit Integrated
+                            <span class="lang-en">Google ML Kit Integrated</span>
+                            <span class="lang-bn font-bangla">গুগল এমএল কিট ইন্টিগ্রেটেড</span>
+                            <span class="lang-bl">Google ML Kit Integrated</span>
                         </span>
                     </td>
                     <td>
                         <span class="status-no">
                             <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-                            Requires App Switching
+                            <span class="lang-en">Requires App Switching</span>
+                            <span class="lang-bn font-bangla">অন্য অ্যাপে যেতে হয়</span>
+                            <span class="lang-bl">Requires App Switching</span>
                         </span>
                     </td>
                 </tr>
                 <tr>
-                    <td><strong>Ads &amp; Commercial Trackers</strong></td>
+                    <td>
+                        <strong class="lang-en">Ads &amp; Commercial Trackers</strong>
+                        <strong class="lang-bn font-bangla">বিজ্ঞাপন ও কমার্শিয়াল ট্র্যাকার</strong>
+                        <strong class="lang-bl">Ads &amp; Commercial Trackers</strong>
+                    </td>
                     <td class="highlight-col">
                         <span class="status-yes">
                             <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            Zero Ads / Zero Trackers
+                            <span class="lang-en">Zero Ads / Zero Trackers</span>
+                            <span class="lang-bn font-bangla">১০০% বিজ্ঞাপন ও ট্র্যাকারমুক্ত</span>
+                            <span class="lang-bl">Zero Ads / Zero Trackers</span>
                         </span>
                     </td>
                     <td>
                         <span class="status-no">
                             <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-                            Ad-Supported &amp; Analytics
+                            <span class="lang-en">Ad-Supported &amp; Analytics</span>
+                            <span class="lang-bn font-bangla">বিজ্ঞাপন ও অ্যানালিটিক্স</span>
+                            <span class="lang-bl">Ad-Supported &amp; Analytics</span>
+                        </span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
                         </span>
                     </td>
                 </tr>
@@ -2851,7 +3312,11 @@
                     <path fill="#34A853" d="M355.2 159.8L90.2 13.3c-16.1-9.1-30.4-8-39.1 1.2L275.6 239l79.6-79.2z"/>
                 </svg>
                 <div style="text-align:left;">
-                    <div style="font-size:10px; text-transform:uppercase; letter-spacing:0.06em; opacity:0.8; font-family:'JetBrains Mono', monospace;">GET IT ON</div>
+                    <div style="font-size:10px; text-transform:uppercase; letter-spacing:0.06em; opacity:0.8; font-family:'JetBrains Mono', monospace;">
+                        <span class="lang-en">GET IT ON</span>
+                        <span class="lang-bn font-bangla">ডাউনলোড করুন</span>
+                        <span class="lang-bl">GET IT ON</span>
+                    </div>
                     <div style="font-size:17px; font-weight:800; line-height:1.2;">Google Play</div>
                 </div>
             </a>
@@ -2860,8 +3325,16 @@
             <a href="https://github.com/JSOrganizations/Mukto-Keyboard/releases" target="_blank" rel="noopener noreferrer" class="dl-btn">
                 <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" style="color:var(--emerald-600);"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-1.0002 0-.5515.4482-.9998.9993-.9998.5517 0 .9997.4483.9997.9998 0 .5516-.448 1.0002-.9997 1.0002m-11.046 0c-.5511 0-.9993-.4486-.9993-1.0002 0-.5515.4482-.9998.9993-.9998.5516 0 .9996.4483.9996.9998 0 .5516-.448 1.0002-.9996 1.0002m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.4116 13.8533 8.125 12 8.125c-1.8533 0-3.5902.2866-5.1378.8297L4.8399 5.4517a.416.416 0 00-.5676-.1521.416.416 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/></svg>
                 <div style="text-align:left;">
-                    <div style="font-size:10px; text-transform:uppercase; opacity:0.75; font-family:'JetBrains Mono', monospace;">Direct Download &bull; v3.1</div>
-                    <div style="font-size:14px; font-weight:700;">Download APK (Universal)</div>
+                    <div style="font-size:10px; text-transform:uppercase; opacity:0.75; font-family:'JetBrains Mono', monospace;">
+                        <span class="lang-en">Direct Download &bull; v3.1</span>
+                        <span class="lang-bn font-bangla">সরাসরি ডাউনলোড &bull; সংস্করণ ৩.১</span>
+                        <span class="lang-bl">Direct Download &bull; v3.1</span>
+                    </div>
+                    <div style="font-size:14px; font-weight:700;">
+                        <span class="lang-en">Download APK (Universal)</span>
+                        <span class="lang-bn font-bangla">ইউনিভার্সাল এপিকে ডাউনলোড</span>
+                        <span class="lang-bl">Download APK (Universal)</span>
+                    </div>
                 </div>
             </a>
 
@@ -2869,14 +3342,24 @@
             <a href="https://github.com/JSOrganizations/Mukto-Keyboard" target="_blank" rel="noopener noreferrer" class="dl-btn secondary">
                 <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
                 <div style="text-align:left;">
-                    <div style="font-size:10px; text-transform:uppercase; opacity:0.8; font-family:'JetBrains Mono', monospace;">Source &amp; Releases</div>
-                    <div style="font-size:14px; font-weight:700;">GitHub Repository</div>
+                    <div style="font-size:10px; text-transform:uppercase; opacity:0.8; font-family:'JetBrains Mono', monospace;">
+                        <span class="lang-en">Source &amp; Releases</span>
+                        <span class="lang-bn font-bangla">সোর্স কোড ও রিলিজ</span>
+                        <span class="lang-bl">Source &amp; Releases</span>
+                    </div>
+                    <div style="font-size:14px; font-weight:700;">
+                        <span class="lang-en">GitHub Repository</span>
+                        <span class="lang-bn font-bangla">গিটহাব রিপোজিটরি</span>
+                        <span class="lang-bl">GitHub Repository</span>
+                    </div>
                 </div>
             </a>
         </div>
 
         <div style="margin-top:22px; font-size:12.5px; opacity:0.85; font-family:'JetBrains Mono', monospace;">
-            Package: <code>com.mukto.keyboard</code> &middot; Google Play Store &middot; Deep Links: <code>bnkb://settings</code>, <code>bnkb://theme</code>
+            <span class="lang-en">Package: <code>com.mukto.keyboard</code> &middot; Google Play Store &middot; Deep Links: <code>bnkb://settings</code>, <code>bnkb://theme</code></span>
+            <span class="lang-bn font-bangla">প্যাকেজ: <code>com.mukto.keyboard</code> &middot; গুগল প্লে স্টোর &middot; ডিপ লিংকস: <code>bnkb://settings</code>, <code>bnkb://theme</code></span>
+            <span class="lang-bl">Package: <code>com.mukto.keyboard</code> &middot; Google Play Store &middot; Deep Links: <code>bnkb://settings</code>, <code>bnkb://theme</code></span>
         </div>
     </section>
 
@@ -2891,18 +3374,34 @@
 <!-- Footer -->
 <footer class="footer">
     <div class="footer-links">
-        <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
+        <a href="privacy-policy.html" class="footer-link">
+            <span class="lang-en">Privacy Policy</span>
+            <span class="lang-bn font-bangla">গোপনীয়তা নীতি</span>
+            <span class="lang-bl">Privacy Policy</span>
+        </a>
         <span>&middot;</span>
-        <a href="terms-of-use.html" class="footer-link">Terms of Use</a>
+        <a href="terms-of-use.html" class="footer-link">
+            <span class="lang-en">Terms of Use</span>
+            <span class="lang-bn font-bangla">ব্যবহারের শর্তাবলী</span>
+            <span class="lang-bl">Terms of Use</span>
+        </a>
         <span>&middot;</span>
         <a href="https://github.com/JSOrganizations/Mukto-Keyboard" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
         <span>&middot;</span>
         <a href="https://t.me/JSOrganization" target="_blank" rel="noopener noreferrer" class="footer-link">Telegram</a>
         <span>&middot;</span>
-        <a href="mailto:jsorganization.official@gmail.com" class="footer-link">Support</a>
+        <a href="mailto:jsorganization.official@gmail.com" class="footer-link">
+            <span class="lang-en">Support</span>
+            <span class="lang-bn font-bangla">সহায়তা</span>
+            <span class="lang-bl">Support</span>
+        </a>
     </div>
 
-    <p>&copy; 2026 <strong>JS Organization</strong> &middot; Developed by <strong>Md Mobassher Ahmed Sowrov</strong>. All rights reserved.</p>
+    <p>
+        <span class="lang-en">&copy; 2026 <strong>JS Organization</strong> &middot; Developed by <strong>Md Mobassher Ahmed Sowrov</strong>. All rights reserved.</span>
+        <span class="lang-bn font-bangla">&copy; ২০২৬ <strong>জেএস অর্গানাইজেশন</strong> &middot; তৈরিতে <strong>মোঃ মোবাশ্বের আহমেদ সৌরভ</strong>। সর্বস্বত্ব সংরক্ষিত।</span>
+        <span class="lang-bl">&copy; 2026 <strong>JS Organization</strong> &middot; Developed by <strong>Md Mobassher Ahmed Sowrov</strong>.</span>
+    </p>
 </footer>
 
 <!-- Back to top button -->
@@ -2933,129 +3432,128 @@
         if (targetPanel) targetPanel.classList.add('active');
     }
 
-    // 1. Secret Chat (Steganography) Animated Simulation Showcase
+    // 1. Realistic Two-Person Secret Chat Simulation
     // Pure visual interactive demonstration - No proprietary internal algorithms exposed!
-    let simCarrier = '😎';
-    let simSecretMsg = 'কাল বিকেলে দেখা হবে 🤫';
-    let simStage = 1;
-    let simAnimTimeout = null;
-    let simTypingInterval = null;
+    let activeCarrierEmoji = '😎';
+    let activeSecretText = 'কাল বিকেল ৪টায় ধানমন্ডি লেকে দেখা করব 🤫';
+    let currentPerspective = 'mukto';
+    let chatAnimTimeouts = [];
 
-    function setSimCarrier(emoji) {
-        simCarrier = emoji;
-        for (let i = 1; i <= 4; i++) {
-            const chip = document.getElementById('simCarrier' + i);
-            if (chip) chip.classList.toggle('active', chip.innerText.trim() === emoji);
-        }
-        const bEmoji = document.getElementById('simBubbleEmoji');
-        const pEmoji = document.getElementById('simPastedEmoji');
+    function clearChatTimeouts() {
+        chatAnimTimeouts.forEach(t => clearTimeout(t));
+        chatAnimTimeouts = [];
+    }
+
+    function selectChatCarrier(emoji, btn) {
+        activeCarrierEmoji = emoji;
+        const chips = document.querySelectorAll('.chat-carrier-chip');
+        chips.forEach(c => c.classList.remove('active'));
+        if (btn) btn.classList.add('active');
+
+        const bEmoji = document.getElementById('chatBubbleCarrierEmoji');
         if (bEmoji) bEmoji.innerText = emoji;
-        if (pEmoji) pEmoji.innerText = emoji;
-        showToast("বাহক ইমোজি সিলেক্ট করা হয়েছে: " + emoji);
     }
 
-    function jumpStegoStage(stage) {
-        simStage = stage;
-        clearTimeout(simAnimTimeout);
-        clearInterval(simTypingInterval);
+    function setChatPerspective(mode) {
+        currentPerspective = mode;
+        const btnM = document.getElementById('btnViewMukto');
+        const btnO = document.getElementById('btnViewOutside');
+        if (btnM) btnM.classList.toggle('active', mode === 'mukto');
+        if (btnO) btnO.classList.toggle('active', mode === 'outside');
 
-        // Update stage buttons
-        for (let i = 1; i <= 3; i++) {
-            const tab = document.getElementById('stegoTab' + i);
-            const col = document.getElementById('simCol' + i);
-            if (tab) tab.classList.toggle('active', i === stage);
-            if (col) col.classList.toggle('highlighted', i === stage);
-        }
-
-        const simTyping = document.getElementById('simTypingText');
-        const bEmoji = document.getElementById('simBubbleEmoji');
-        const pEmoji = document.getElementById('simPastedEmoji');
-        const revBox = document.getElementById('simRevealedText');
-        const bubble = document.getElementById('simChatBubble');
-        const copyAlert = document.getElementById('simCopyAlert');
-
-        if (stage === 1) {
-            if (simTyping) simTyping.innerText = simSecretMsg;
-            if (revBox) revBox.innerText = "...";
-            if (copyAlert) copyAlert.style.opacity = '0.5';
-        } else if (stage === 2) {
-            if (simTyping) simTyping.innerText = simSecretMsg;
-            if (bEmoji) bEmoji.innerText = simCarrier;
-            if (bubble) {
-                bubble.classList.remove('pulse');
-                void bubble.offsetWidth;
-                bubble.classList.add('pulse');
-            }
-            if (copyAlert) copyAlert.style.opacity = '1';
-            showToast("ক্লিপবোর্ডে কপি হয়েছে! মেসেঞ্জার শুধু " + simCarrier + " দেখবে");
-        } else if (stage === 3) {
-            if (pEmoji) pEmoji.innerText = simCarrier;
-            const btn = document.getElementById('simDecodeTriggerBtn');
-            if (btn) {
-                btn.classList.add('clicked');
-                setTimeout(() => btn.classList.remove('clicked'), 300);
-            }
-            if (revBox) {
-                revBox.innerText = simSecretMsg;
-                revBox.parentElement.style.borderColor = 'var(--emerald-500)';
-            }
-            showToast("গোপন বার্তা উদ্ধার সম্পন্ন: " + simSecretMsg);
+        const revLayer = document.getElementById('chatRevealedLayer');
+        if (revLayer) {
+            revLayer.style.display = (mode === 'mukto') ? 'block' : 'none';
         }
     }
 
-    function playStegoTypingSimulation(text, onComplete) {
-        const simTyping = document.getElementById('simTypingText');
-        if (!simTyping) return;
-        simTyping.innerText = "";
-        let charIdx = 0;
-        clearInterval(simTypingInterval);
-        simTypingInterval = setInterval(() => {
-            charIdx++;
-            simTyping.innerText = text.slice(0, charIdx);
-            if (charIdx >= text.length) {
-                clearInterval(simTypingInterval);
-                if (onComplete) onComplete();
-            }
-        }, 65);
-    }
+    function runTwoPersonChatSequence() {
+        clearChatTimeouts();
 
-    function runStegoFullSequence() {
-        // Step 1: Typing
-        jumpStegoStage(1);
-        playStegoTypingSimulation(simSecretMsg, () => {
-            // After typing finishes, hold 1.2s then advance to step 2 (Copy)
-            simAnimTimeout = setTimeout(() => {
-                jumpStegoStage(2);
+        const msg2 = document.getElementById('chatMsg2');
+        const typingRow = document.getElementById('chatTypingIndicatorRow');
+        const msg3 = document.getElementById('chatMsg3');
+        const revLayer = document.getElementById('chatRevealedLayer');
+        const carrierEl = document.getElementById('chatBubbleCarrierEmoji');
+        const revTextEl = document.getElementById('chatRevealedContentText');
+        const area = document.getElementById('chatMessagesArea');
 
-                // Hold in step 2 for 2.2s then advance to step 3 (Decode)
-                simAnimTimeout = setTimeout(() => {
-                    jumpStegoStage(3);
-
-                    // Hold in step 3 for 3.5s then loop
-                    simAnimTimeout = setTimeout(() => {
-                        runStegoFullSequence();
-                    }, 3800);
-                }, 2200);
-            }, 1200);
-        });
-    }
-
-    function replayStegoFullLoop() {
-        clearTimeout(simAnimTimeout);
-        clearInterval(simTypingInterval);
-        runStegoFullSequence();
-    }
-
-    function playCustomStegoAnimation() {
-        const customInput = document.getElementById('customSimInput');
-        if (customInput && customInput.value.trim()) {
-            simSecretMsg = customInput.value.trim();
+        // Reset all dynamic bubbles to hidden state
+        if (msg2) {
+            msg2.style.display = 'none';
+            msg2.style.opacity = '0';
         }
-        replayStegoFullLoop();
+        if (typingRow) typingRow.style.display = 'none';
+        if (msg3) {
+            msg3.style.display = 'none';
+            msg3.style.opacity = '0';
+        }
+        if (revLayer) {
+            revLayer.style.display = 'none';
+            revLayer.style.opacity = '0';
+        }
+
+        // Set carrier emoji and revealed content to current selections
+        if (carrierEl) carrierEl.innerText = activeCarrierEmoji;
+        if (revTextEl) revTextEl.innerText = activeSecretText;
+
+        // Step 1: User sends Message 2 (Carrier emoji bubble slides in after short typing delay)
+        chatAnimTimeouts.push(setTimeout(() => {
+            if (msg2) {
+                msg2.style.display = 'flex';
+                msg2.style.animation = 'slideInSent 0.4s ease forwards';
+                if (area) area.scrollTop = area.scrollHeight;
+            }
+
+            // Step 2: Inside Mukto perspective, revealed decoded card smoothly appears
+            chatAnimTimeouts.push(setTimeout(() => {
+                if (revLayer && currentPerspective === 'mukto') {
+                    revLayer.style.display = 'block';
+                    revLayer.style.animation = 'fadeInRevealed 0.45s ease forwards';
+                    if (area) area.scrollTop = area.scrollHeight;
+                }
+
+                // Step 3: Rakib reads and typing indicator dots bounce
+                chatAnimTimeouts.push(setTimeout(() => {
+                    if (typingRow) {
+                        typingRow.style.display = 'flex';
+                        if (area) area.scrollTop = area.scrollHeight;
+                    }
+
+                    // Step 4: Rakib finishes typing and sends Message 3
+                    chatAnimTimeouts.push(setTimeout(() => {
+                        if (typingRow) typingRow.style.display = 'none';
+                        if (msg3) {
+                            msg3.style.display = 'flex';
+                            msg3.style.animation = 'slideInReceived 0.4s ease forwards';
+                            if (area) area.scrollTop = area.scrollHeight;
+                        }
+
+                        // Step 5: Keep completed conversation displayed for 8s, then loop seamlessly without any toast
+                        chatAnimTimeouts.push(setTimeout(() => {
+                            runTwoPersonChatSequence();
+                        }, 8000));
+                    }, 2000));
+                }, 1400));
+            }, 900));
+        }, 800));
     }
 
-    function triggerManualDecode() {
-        jumpStegoStage(3);
+    function replayChatConversation() {
+        runTwoPersonChatSequence();
+    }
+
+    function triggerUserSendSecretChat() {
+        const input = document.getElementById('chatCustomSecretInput');
+        if (input && input.value.trim()) {
+            activeSecretText = input.value.trim();
+        }
+        const btn = document.getElementById('chatSendBtn');
+        if (btn) {
+            btn.style.transform = 'scale(0.92)';
+            setTimeout(() => { btn.style.transform = ''; }, 180);
+        }
+        runTwoPersonChatSequence();
     }
 
     // 2. Fancy Font Studio (com.mukto.keyboard.fonts)
@@ -3131,12 +3629,14 @@
 
     function copyFontResult(elemId) {
         const el = document.getElementById(elemId);
+        const isBn = document.body.className.includes('lang-bn');
+        const copiedMsg = isBn ? "ক্লিপবোর্ডে কপি হয়েছে!" : "Copied to clipboard!";
         if (el && navigator.clipboard) {
             navigator.clipboard.writeText(el.innerText).then(() => {
-                showToast("Copied to clipboard!");
+                showToast(copiedMsg);
             });
         } else if (el) {
-            showToast("Copied to clipboard!");
+            showToast(copiedMsg);
         }
     }
 
@@ -3171,15 +3671,19 @@
 
     function cycleLanguageMode(delta) {
         switchModePreview(currentModeIndex + delta);
-        showToast("Switched to " + typingModes[currentModeIndex].name);
+        const isBn = document.body.className.includes('lang-bn');
+        const msg = isBn ? ("লেআউট পরিবর্তিত: " + typingModes[currentModeIndex].name) : ("Switched to " + typingModes[currentModeIndex].name);
+        showToast(msg);
     }
 
     function triggerSpacebarTap() {
-        showToast("Dispatched Space &bull; Tap & Swipe Supported");
+        const isBn = document.body.className.includes('lang-bn');
+        showToast(isBn ? "স্পেস ইনপুট &bull; ট্যাপ এবং সোয়াইপ সমর্থিত" : "Dispatched Space &bull; Tap & Swipe Supported");
     }
 
     function triggerCursorScrubDemo() {
-        showToast("Trackpad Mode Active! Drag cursor smoothly left/right.");
+        const isBn = document.body.className.includes('lang-bn');
+        showToast(isBn ? "ট্র্যাকপ্যাড মোড সক্রিয়! আঙুল ডানে-বামে সরিয়ে কার্সার সরান।" : "Trackpad Mode Active! Drag cursor smoothly left/right.");
     }
 
     // 4. Web Audio Synthesizer (Mechanical, Soft, Pop Sound Profiles)
@@ -3417,7 +3921,7 @@
         // Pre-run fancy font preview, live transliterate typewriter, and stego simulation
         updateFancyFonts();
         runTypewriterTick();
-        runStegoFullSequence();
+        runTwoPersonChatSequence();
 
         window.addEventListener('scroll', function() {
             const btn = document.getElementById('backToTopBtn');
