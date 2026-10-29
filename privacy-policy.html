@@ -1,1008 +1,735 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy — Mukto Keyboard</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --ink: #07150e;
-            --ink-light: #2d4538;
-            --ink-muted: #5e7a6b;
-            --surface: #ffffff;
-            --surface-2: #f4f9f6;
-            --surface-3: #e8f4ed;
-            --accent: #027544;
-            --accent-mint: #10b981;
-            --accent-glow: rgba(2, 117, 68, 0.12);
-            --warn-bg: #fffbeb;
-            --border: #d4e7dc;
-            --border-strong: #b2d5c1;
-            --radius: 16px;
-            --radius-sm: 8px;
-        }
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: 'DM Sans', sans-serif;
-            background: var(--surface-2);
-            color: var(--ink);
-            font-size: 16px;
-            line-height: 1.75;
-            -webkit-font-smoothing: antialiased;
-        }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy — Mukto Keyboard | 100% Private Bangla &amp; English Android Keyboard</title>
+    <meta name="description" content="Official Privacy Policy for Mukto Keyboard (com.mukto.keyboard) by JS Organization. Zero keylogging, offline Avro/Probhat/National/Bangla typing, on-device OCR, BYOK AI, AES-256-GCM encrypted backup, and full GDPR &amp; Google Play Data Safety compliance." />
+    <meta name="keywords" content="Mukto Keyboard Privacy Policy, মুক্ত কিবোর্ড প্রাইভেসি পলিসি, Bangla Keyboard Privacy, Offline Avro Keyboard Android, Zero Keylogging Keyboard, JS Organization, com.mukto.keyboard" />
+    <meta name="author" content="Md Mobassher Ahmed Sowrov — JS Organization" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    <meta name="theme-color" content="#07150e" />
+    <link rel="canonical" href="https://mukto.bd/privacy-policy.html" />
 
-        body:not(.lang-en) .lang-en,
-        body:not(.lang-bn) .lang-bn,
-        body:not(.lang-bl) .lang-bl {
-            display: none !important;
-        }
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Mukto Keyboard" />
+    <meta property="og:title" content="Privacy Policy — Mukto Keyboard (মুক্ত কিবোর্ড)" />
+    <meta property="og:description" content="Zero keylogging, 100% on-device typing &amp; learning, offline Camera OCR, BYOK AI transparency, and AES-256-GCM encrypted backups. Read our complete Privacy Policy." />
+    <meta property="og:url" content="https://mukto.bd/privacy-policy.html" />
+    <meta property="og:image" content="https://mukto.bd/assets/logo.png" />
 
-        /* Top Navigation Bar */
-        .site-nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(7, 21, 14, 0.94);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 10px clamp(12px, 4vw, 36px);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 10px;
-        }
-        .nav-brand {
-            display: flex;
-            align-items: center;
-            gap: 9px;
-            color: #ffffff;
-            font-weight: 700;
-            font-size: 1.08rem;
-            text-decoration: none;
-            letter-spacing: -0.01em;
-            white-space: nowrap;
-            flex-shrink: 0;
-        }
-        .nav-brand-img {
-            width: 32px;
-            height: 32px;
-            aspect-ratio: 1 / 1;
-            object-fit: cover;
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
-            transition: transform 0.2s ease;
-            display: block;
-        }
-        .nav-brand:hover .nav-brand-img {
-            transform: scale(1.05);
-        }
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            flex-shrink: 0;
-        }
-        .nav-link {
-            color: rgba(255, 255, 255, 0.75);
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 500;
-            padding: 6px 12px;
-            border-radius: 6px;
-            transition: all 0.2s ease;
-            white-space: nowrap;
-            border: 1px solid transparent;
-        }
-        .nav-link:hover, .nav-link.active {
-            color: #ffffff;
-            background: rgba(16, 185, 129, 0.18);
-            border: 1px solid rgba(16, 185, 129, 0.35);
-        }
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Privacy Policy — Mukto Keyboard (মুক্ত কিবোর্ড)" />
+    <meta name="twitter:description" content="How Mukto Keyboard protects every keystroke on your Android device with zero keylogging and strict local-first architecture." />
+    <meta name="twitter:image" content="https://mukto.bd/assets/logo.png" />
 
-        /* Hero */
-        .hero {
-            background: linear-gradient(180deg, #07150e 0%, #0d251a 100%);
-            position: relative;
-            overflow: hidden;
-            padding: clamp(40px,7vw,68px) clamp(16px,5vw,40px) clamp(36px,6vw,60px);
-            text-align: center;
-        }
-        .hero::before {
-            content:'';
-            position:absolute; inset:0;
-            background:
-                radial-gradient(ellipse 60% 80% at 20% 40%, rgba(2, 117, 68, 0.35) 0%, transparent 70%),
-                radial-gradient(ellipse 50% 60% at 80% 30%, rgba(16, 185, 129, 0.25) 0%, transparent 70%);
-            pointer-events:none;
-        }
-        .hero-logo-box {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            position: relative;
-        }
-        .hero-logo-box::before {
-            content: '';
-            position: absolute;
-            inset: -12px -16px;
-            background: radial-gradient(ellipse at center, rgba(16, 185, 129, 0.35) 0%, rgba(2, 117, 68, 0.15) 50%, transparent 75%);
-            border-radius: 30px;
-            filter: blur(14px);
-            pointer-events: none;
-        }
-        .hero-logo-card {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 26px;
-            padding: 0;
-            overflow: hidden;
-            box-shadow: 0 14px 36px rgba(0, 0, 0, 0.5), 0 0 28px rgba(16, 185, 129, 0.35);
-            border: 2px solid rgba(255, 255, 255, 0.28);
-            position: relative;
-            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-        .hero-logo-card:hover {
-            transform: translateY(-3px) scale(1.03);
-        }
-        .hero-logo-img {
-            width: clamp(92px, 22vw, 116px);
-            height: clamp(92px, 22vw, 116px);
-            aspect-ratio: 1 / 1;
-            object-fit: cover;
-            display: block;
-            border-radius: 24px;
-        }
-        .hero-badge {
-            display:inline-flex; align-items:center; gap:8px;
-            background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.14);
-            border-radius:100px; padding:6px 16px;
-            font-size:clamp(10px,2.5vw,12px); font-weight:500;
-            letter-spacing:.08em; text-transform:uppercase;
-            color:rgba(255,255,255,.85); margin-bottom:18px; position:relative;
-        }
-        .hero-badge::before {
-            content:''; width:7px; height:7px; border-radius:50%;
-            background:#10b981; box-shadow:0 0 8px #10b981; flex-shrink:0;
-        }
-        
-        /* 3-Language Toggle Button Pill */
-        .lang-switcher-wrap {
-            display: inline-flex;
-            background: rgba(2, 117, 68, 0.35);
-            border: 1px solid rgba(16, 185, 129, 0.35);
-            border-radius: 100px;
-            padding: 3px;
-            margin: 18px 0;
-            position: relative;
-            gap: 3px;
-        }
-        .lang-btn {
-            border: none;
-            background: transparent;
-            color: rgba(255, 255, 255, 0.75);
-            font-family: inherit;
-            font-size: 13px;
-            font-weight: 600;
-            padding: 6px 16px;
-            border-radius: 100px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-        .lang-btn.active {
-            background: #10b981;
-            color: #07150e;
-            box-shadow: 0 2px 10px rgba(16, 185, 129, 0.4);
-        }
-        .lang-btn:hover:not(.active) {
-            color: #ffffff;
-        }
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+    <link rel="apple-touch-icon" href="assets/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=DM+Sans:wght@400;500;600;700&amp;family=Hind+Siliguri:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="legal.css" />
 
-        .hero h1 {
-            font-family:'Playfair Display',Georgia,serif;
-            font-size:clamp(2rem,7vw,3.6rem); font-weight:700; color:#fff;
-            letter-spacing:-.02em; line-height:1.15; position:relative; margin-bottom:12px;
-        }
-        .hero h1 span {
-            background:linear-gradient(135deg,#3ddc84,#10b981);
-            -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
-        }
-        .hero-sub { color:rgba(255,255,255,.7); font-size:clamp(13px,3vw,15.5px); position:relative; max-width:650px; margin:0 auto; }
-        .hero-meta {
-            display:flex; justify-content:center; flex-wrap:wrap;
-            gap:clamp(10px,3vw,22px); position:relative; margin-top:20px;
-        }
-        .hero-meta-item {
-            display:flex; align-items:center; gap:8px;
-            font-size:clamp(11px,2.5vw,13px); color:rgba(255,255,255,.65);
-        }
-        .hero-meta-item i { color: #10b981; }
-
-        .page-wrap {
-            max-width:860px; margin:0 auto;
-            padding:0 clamp(12px,4vw,24px) clamp(48px,8vw,80px);
-        }
-        .toc-card {
-            background:var(--surface); border:1px solid var(--border);
-            border-radius:var(--radius); padding:clamp(18px,4vw,28px);
-            margin:clamp(20px,4vw,34px) 0;
-            box-shadow:0 4px 20px rgba(7, 21, 14, 0.05);
-            animation:fadeUp .4s ease both;
-        }
-        .toc-card h2 {
-            font-family:'Playfair Display',serif;
-            font-size:clamp(10.5px,2.5vw,11.5px); font-weight:700;
-            text-transform:uppercase; letter-spacing:.12em;
-            color:var(--ink-muted); margin-bottom:14px;
-        }
-        .toc-grid {
-            display:grid;
-            grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr));
-            gap:6px;
-        }
-        .toc-link {
-            display:flex; align-items:center; gap:10px;
-            padding:9px 12px; border-radius:var(--radius-sm);
-            text-decoration:none; color:var(--ink-light);
-            font-size:clamp(12px,2.8vw,13.5px); font-weight:500;
-            transition:background .18s,color .18s; border:1px solid transparent;
-        }
-        .toc-link:hover,.toc-link:focus {
-            background:var(--accent-glow); color:var(--accent);
-            border-color:rgba(2, 117, 68, 0.2); outline:none;
-        }
-        .toc-num {
-            font-size:10px; font-weight:700; color:var(--accent);
-            background:var(--accent-glow); width:22px; height:22px;
-            border-radius:6px; display:flex; align-items:center;
-            justify-content:center; flex-shrink:0;
-        }
-        .section-card {
-            background:var(--surface); border:1px solid var(--border);
-            border-radius:var(--radius);
-            padding:clamp(20px,5vw,36px) clamp(18px,5vw,38px);
-            margin-bottom:clamp(14px,3vw,20px);
-            box-shadow:0 4px 16px rgba(7, 21, 14, 0.04);
-            scroll-margin-top:70px;
-            animation:fadeUp .45s ease both;
-        }
-        .section-header {
-            display:flex; align-items:flex-start; gap:clamp(10px,3vw,16px);
-            margin-bottom:clamp(16px,4vw,22px);
-            padding-bottom:clamp(14px,3vw,18px);
-            border-bottom:1px solid var(--border);
-        }
-        .section-num {
-            font-family:'Playfair Display',serif;
-            font-size:clamp(1.4rem,5vw,2rem); font-weight:700;
-            color:var(--border-strong); line-height:1; flex-shrink:0; margin-top:2px;
-        }
-        .section-title {
-            font-family:'Playfair Display',serif;
-            font-size:clamp(1.08rem,3.5vw,1.42rem); font-weight:700;
-            color:var(--ink); line-height:1.3;
-        }
-        .section-subtitle { font-size:clamp(11px,2.5vw,13px); color:var(--ink-muted); margin-top:3px; }
-        .section-body p { color:var(--ink-light); margin-bottom:14px; font-size:clamp(13.5px,3vw,15px); }
-        .section-body p:last-child { margin-bottom:0; }
-        .section-body h3 {
-            font-size:clamp(11px,2.5vw,12.5px); font-weight:700;
-            text-transform:uppercase; letter-spacing:.08em;
-            color:var(--ink-muted); margin:20px 0 10px;
-        }
-        .policy-list { list-style:none; margin:12px 0; }
-        .policy-list li {
-            position: relative;
-            padding: 9px 0 9px 22px;
-            border-bottom: 1px solid var(--surface-3);
-            font-size: clamp(13px,3vw,14.5px); 
-            color: var(--ink-light);
-            line-height: 1.6;
-        }
-        .policy-list li:last-child { border-bottom: none; }
-        .policy-list li::before {
-            content: ''; position: absolute;
-            left: 0; top: 17px;
-            width: 6px; height: 6px; border-radius: 50%;
-            background: var(--accent);
-        }
-        .policy-list li strong { color:var(--ink); font-weight:600; }
-
-        .callout {
-            border-radius:var(--radius-sm);
-            padding:clamp(13px,3vw,18px) clamp(13px,3vw,20px);
-            margin:16px 0; display:flex; gap:12px;
-            align-items:flex-start; font-size:clamp(13px,3vw,14.5px);
-        }
-        .callout i { flex-shrink:0; font-size: 18px; margin-top:2px; }
-        .callout.safe  { background:rgba(2, 117, 68, 0.08); border:1px solid rgba(2, 117, 68, 0.22); color:#025e37; }
-        .callout.info  { background:rgba(16, 185, 129, 0.09); border:1px solid rgba(16, 185, 129, 0.25); color:#065f46; }
-        .callout.warning { background:var(--warn-bg); border:1px solid rgba(245,158,11,.4); color:#92640a; }
-        .callout strong {
-            display:block; font-weight:700; margin-bottom:3px;
-            font-size:11px; text-transform:uppercase; letter-spacing:.06em;
-        }
-
-        .pill-grid { display:flex; flex-wrap:wrap; gap:8px; margin:14px 0; }
-        .pill {
-            display:inline-flex; align-items:center; gap:6px;
-            background:var(--surface-3); border:1px solid var(--border);
-            border-radius:100px; padding:5px 13px;
-            font-size:clamp(11px,2.5vw,13px); font-weight:500; color:var(--ink-light);
-        }
-        .pill.allowed { background:#ecfdf5; border-color:#a7f3d0; color:#027544; }
-        .pill.allowed::before { content:'\f00c'; font-family:"Font Awesome 6 Free"; font-weight:900; font-size:9px; }
-        .pill.blocked { background:#fff1f1; border-color:#fecaca; color:#b91c1c; }
-        .pill.blocked::before { content:'\f00d'; font-family:"Font Awesome 6 Free"; font-weight:900; font-size:9px; }
-
-        .contact-card {
-            background:linear-gradient(135deg,#07150e 0%,#0e2a1e 100%);
-            border-radius:var(--radius);
-            padding:clamp(22px,5vw,36px); color:#fff;
-            margin-bottom:clamp(14px,3vw,22px);
-            animation:fadeUp .45s ease both;
-            box-shadow: 0 10px 30px rgba(7, 21, 14, 0.25);
-            border: 1px solid rgba(16, 185, 129, 0.2);
-        }
-        .contact-card .section-title { color:#fff; }
-        .contact-card .section-subtitle { color:rgba(255,255,255,.5); }
-        .contact-card .section-header { border-bottom-color:rgba(255,255,255,.10); }
-        .contact-card .section-num { color:rgba(255,255,255,.2); }
-        .contact-grid {
-            display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,190px),1fr));
-            gap:clamp(10px,2.5vw,14px); margin-top:clamp(16px,4vw,24px);
-        }
-        .contact-item {
-            background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.10);
-            border-radius:12px; padding:clamp(12px,3vw,15px) clamp(13px,3vw,17px);
-            transition:background .18s,transform .18s; text-decoration:none; display:block;
-        }
-        a.contact-item:hover { background:rgba(16, 185, 129, 0.15); transform:translateY(-2px); border-color: rgba(16, 185, 129, 0.3); }
-        .contact-label {
-            font-size:10px; font-weight:700; letter-spacing:.12em;
-            text-transform:uppercase; color:rgba(255,255,255,.45);
-            margin-bottom:5px; display:flex; align-items:center; gap:6px;
-        }
-        .contact-label i { opacity:.75; flex-shrink:0; font-size: 12px; color: #10b981; }
-        .contact-value { font-size:clamp(12px,2.8vw,13.5px); font-weight:500; color:rgba(255,255,255,.9); word-break:break-word; }
-        .cv-mint { color:#3ddc84; }
-
-        .footer {
-            text-align:center; padding:clamp(24px,4vw,36px) 20px;
-            font-size:clamp(11.5px,2.5vw,13px); color:var(--ink-muted);
-            border-top:1px solid var(--border); max-width:860px; margin:0 auto;
-        }
-        .footer strong { color:var(--ink-light); }
-
-        /* Floating Back to Top */
-        .back-to-top {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            background: #027544;
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 16px rgba(2, 117, 68, 0.4);
-            cursor: pointer;
-            border: none;
-            opacity: 0;
-            pointer-events: none;
-            transition: all 0.25s ease;
-            z-index: 999;
-        }
-        .back-to-top.visible {
-            opacity: 1;
-            pointer-events: auto;
-        }
-        .back-to-top:hover {
-            transform: translateY(-3px);
-            background: #025e37;
-        }
-
-        @keyframes fadeUp {
-            from { opacity:0; transform:translateY(16px); }
-            to   { opacity:1; transform:translateY(0); }
-        }
-
-        @media (max-width:480px) {
-            .toc-link { padding:10px 12px; }
-            .contact-item { padding:12px 14px; }
-            .site-nav { padding: 8px 12px; gap: 6px; }
-            .nav-brand { font-size: 0.94rem; gap: 6px; }
-            .nav-brand-img { width: 26px; height: 26px; border-radius: 6px; }
-            .nav-links { gap: 4px; }
-            .nav-link { font-size: 11.5px; padding: 5px 8px; }
-            .hero-logo-box { margin-bottom: 16px; }
-            .hero-logo-img { width: clamp(80px, 22vw, 98px); height: clamp(80px, 22vw, 98px); border-radius: 20px; }
-        }
-
-        @media (max-width:360px) {
-            .site-nav { padding: 7px 8px; }
-            .nav-brand { font-size: 0.86rem; gap: 5px; }
-            .nav-brand-img { width: 22px; height: 22px; border-radius: 5px; }
-            .nav-link { font-size: 10.5px; padding: 4px 6px; }
-        }
-    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Privacy Policy — Mukto Keyboard",
+      "url": "https://mukto.bd/privacy-policy.html",
+      "dateModified": "2026-10-30",
+      "inLanguage": ["en", "bn"],
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Mukto Keyboard",
+        "url": "https://mukto.bd/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "JS Organization",
+        "founder": {
+          "@type": "Person",
+          "name": "Md Mobassher Ahmed Sowrov"
+        },
+        "email": "jsorganization.official@gmail.com"
+      }
+    }
+    </script>
 </head>
 <body class="lang-en">
 
-<!-- Top Navigation -->
-<nav class="site-nav">
-    <a href="index.html" class="nav-brand">
-        <img src="assets/logo.png" alt="Mukto Keyboard Logo" class="nav-brand-img">
-        <span>Mukto Keyboard</span>
-    </a>
-    <div class="nav-links">
-        <a href="privacy-policy.html" class="nav-link active">
-            <span class="lang-en">Privacy Policy</span>
-            <span class="lang-bn">গোপনীয়তা নীতি</span>
-            <span class="lang-bl">Privacy Policy</span>
+    <nav class="site-nav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-brand">
+            <img src="assets/logo.png" alt="Mukto Keyboard Logo" class="nav-brand-img" />
+            <span class="lang-en">Mukto Keyboard</span>
+            <span class="lang-bn">মুক্ত কিবোর্ড</span>
+            <span class="lang-bl">Mukto Keyboard</span>
         </a>
-        <a href="terms-of-use.html" class="nav-link">
-            <span class="lang-en">Terms of Use</span>
-            <span class="lang-bn">ব্যবহারের শর্তাবলি</span>
-            <span class="lang-bl">Terms of Use</span>
-        </a>
-    </div>
-</nav>
-
-<!-- Hero Section -->
-<div class="hero">
-    <div class="hero-logo-box">
-        <div class="hero-logo-card">
-            <img src="assets/logo.png" alt="Mukto Keyboard" class="hero-logo-img">
-        </div>
-    </div>
-
-    <div>
-        <div class="hero-badge lang-en">Mukto Keyboard &middot; 100% Private &amp; Secure</div>
-        <div class="hero-badge lang-bn">মুক্ত কিবোর্ড &middot; ১০০% প্রাইভেসি সুরক্ষিত</div>
-        <div class="hero-badge lang-bl">Mukto Keyboard &middot; 100% Privacy Shurokkhito</div>
-    </div>
-
-    <h1 class="lang-en">Privacy <span>Policy</span></h1>
-    <h1 class="lang-bn">গোপনীয়তা <span>নীতিমালা</span></h1>
-    <h1 class="lang-bl">Privacy <span>Policy</span></h1>
-
-    <p class="hero-sub lang-en">Mukto Keyboard by JS Organization — Zero keylogging, on-device local intelligence, and complete typing privacy.</p>
-    <p class="hero-sub lang-bn">JS Organization-এর মুক্ত কিবোর্ড — কোনো কি-লগিং নেই, সম্পূর্ণ ডিভাইসে লোকাল প্রসেসিং এবং শতভাগ নিরাপদ টাইপিং।</p>
-    <p class="hero-sub lang-bl">JS Organization er Mukto Keyboard — Kono keylogging nai, device e shob local processing, full safe typing!</p>
-
-    <!-- 3-Way Language Switcher (Default: English) -->
-    <div class="lang-switcher-wrap">
-        <button id="btnEn" class="lang-btn active" onclick="setLanguage('en')">English</button>
-        <button id="btnBn" class="lang-btn" onclick="setLanguage('bn')">বাংলা</button>
-        <button id="btnBl" class="lang-btn" onclick="setLanguage('bl')">Banglish</button>
-    </div>
-
-    <div class="hero-meta">
-        <div class="hero-meta-item">
-            <i class="fa-regular fa-calendar-check"></i>
-            <span class="lang-en">Effective: October 2026</span>
-            <span class="lang-bn">কার্যকরী তারিখ: অক্টোবর ২০২৬</span>
-            <span class="lang-bl">Effective: October 2026</span>
-        </div>
-        <div class="hero-meta-item">
-            <i class="fa-solid fa-shield-halved"></i>
-            <span class="lang-en">Zero Keylogging Guarantee</span>
-            <span class="lang-bn">সম্পূর্ণ কি-লগিং মুক্ত নিশ্চয়তা</span>
-            <span class="lang-bl">Zero Keylogging Guarantee</span>
-        </div>
-        <div class="hero-meta-item">
-            <i class="fa-solid fa-microchip"></i>
-            <span class="lang-en">100% On-Device Processing</span>
-            <span class="lang-bn">১০০% ডিভাইসে লোকাল প্রসেসিং</span>
-            <span class="lang-bl">100% On-Device Local Processing</span>
-        </div>
-    </div>
-</div>
-
-<div class="page-wrap">
-
-    <!-- Table of Contents -->
-    <div class="toc-card">
-        <h2 class="lang-en">Table of Contents</h2>
-        <h2 class="lang-bn">সূচিপত্র</h2>
-        <h2 class="lang-bl">Table of Contents (Suchipotro)</h2>
-
-        <div class="toc-grid">
-            <a href="#p1" class="toc-link"><span class="toc-num">01</span>
-                <span class="lang-en">Introduction</span><span class="lang-bn">ভূমিকা ও পরিচিতি</span><span class="lang-bl">Introduction (Bhumika)</span>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">
+                <span class="lang-en">Home</span>
+                <span class="lang-bn">হোম</span>
+                <span class="lang-bl">Home</span>
             </a>
-            <a href="#p2" class="toc-link"><span class="toc-num">02</span>
-                <span class="lang-en">Zero Keylogging</span><span class="lang-bn">জিরো কি-লগিং নীতি</span><span class="lang-bl">Zero Keylogging Niti</span>
+            <a href="privacy-policy.html" class="nav-link active">
+                <span class="lang-en">Privacy</span>
+                <span class="lang-bn">প্রাইভেসি</span>
+                <span class="lang-bl">Privacy</span>
             </a>
-            <a href="#p3" class="toc-link"><span class="toc-num">03</span>
-                <span class="lang-en">On-Device Local Data</span><span class="lang-bn">লোকাল ডেটা সংরক্ষণ</span><span class="lang-bl">Local Data Shongrokkhon</span>
-            </a>
-            <a href="#p4" class="toc-link"><span class="toc-num">04</span>
-                <span class="lang-en">Voice Typing &amp; Mic</span><span class="lang-bn">ভয়েস টাইপিং ও মাইক্রোফোন</span><span class="lang-bl">Voice Typing o Mic</span>
-            </a>
-            <a href="#p5" class="toc-link"><span class="toc-num">05</span>
-                <span class="lang-en">In-Keyboard Translation</span><span class="lang-bn">অনুবাদ ফিচার</span><span class="lang-bl">In-Keyboard Translation</span>
-            </a>
-            <a href="#p6" class="toc-link"><span class="toc-num">06</span>
-                <span class="lang-en">Clipboard Protection</span><span class="lang-bn">ক্লিপবোর্ড সুরক্ষা</span><span class="lang-bl">Clipboard Shurokkha</span>
-            </a>
-            <a href="#p7" class="toc-link"><span class="toc-num">07</span>
-                <span class="lang-en">Crash Diagnostics</span><span class="lang-bn">ক্র্যাশ ডায়াগনস্টিকস</span><span class="lang-bl">Crash Diagnostics</span>
-            </a>
-            <a href="#p8" class="toc-link"><span class="toc-num">08</span>
-                <span class="lang-en">Permissions Required</span><span class="lang-bn">প্রয়োজনীয় পারমিশন</span><span class="lang-bl">Proyojonio Permissions</span>
-            </a>
-            <a href="#p9" class="toc-link"><span class="toc-num">09</span>
-                <span class="lang-en">Data Deletion &amp; Control</span><span class="lang-bn">ডেটা নিয়ন্ত্রণ ও মুছে ফেলা</span><span class="lang-bl">Data Delete &amp; Control</span>
-            </a>
-            <a href="#p10" class="toc-link"><span class="toc-num">10</span>
-                <span class="lang-en">Children's Privacy</span><span class="lang-bn">শিশুদের গোপনীয়তা</span><span class="lang-bl">Bachader Privacy</span>
-            </a>
-            <a href="#p11" class="toc-link"><span class="toc-num">11</span>
-                <span class="lang-en">Contact &amp; Support</span><span class="lang-bn">যোগাযোগ ও সাপোর্ট</span><span class="lang-bl">Jogajog o Support</span>
-            </a>
-            <a href="#p12" class="toc-link"><span class="toc-num">12</span>
-                <span class="lang-en">Legal Compliance</span><span class="lang-bn">আইনি সম্মতি</span><span class="lang-bl">Legal Compliance</span>
+            <a href="terms-of-use.html" class="nav-link">
+                <span class="lang-en">Terms</span>
+                <span class="lang-bn">শর্তাবলি</span>
+                <span class="lang-bl">Terms</span>
             </a>
         </div>
-    </div>
+    </nav>
 
-    <!-- Section 1: Introduction -->
-    <div class="section-card" id="p1">
-        <div class="section-header">
-            <div class="section-num">01</div>
-            <div>
-                <div class="section-title lang-en">Introduction</div>
-                <div class="section-title lang-bn">ভূমিকা ও পরিচিতি</div>
-                <div class="section-title lang-bl">Introduction (Bhumika)</div>
-                <div class="section-subtitle lang-en">About Mukto Keyboard and our privacy commitment</div>
-                <div class="section-subtitle lang-bn">মুক্ত কিবোর্ড এবং আমাদের গোপনীয়তা প্রতিশ্রুতি</div>
-                <div class="section-subtitle lang-bl">Mukto Keyboard ebong amader privacy commitment</div>
+    <header class="hero">
+        <div class="hero-logo-box">
+            <div class="hero-logo-card">
+                <img src="assets/logo.png" alt="Mukto Keyboard App Icon" class="hero-logo-img" />
             </div>
         </div>
-        <div class="section-body">
-            <p class="lang-en"><strong>Mukto Keyboard</strong> (Package ID: <code>com.mukto.keyboard</code>) is developed by <strong>Md Mobassher Ahmed Sowrov</strong> and published by <strong>JS Organization</strong>. The application is an Android Input Method Editor (IME) built for fast, intuitive Bengali and English typing.</p>
-            <p class="lang-bn"><strong>মুক্ত কিবোর্ড</strong> (প্যাকেজ আইডি: <code>com.mukto.keyboard</code>) অ্যাপটি <strong>Md Mobassher Ahmed Sowrov</strong> দ্বারা তৈরি এবং <strong>JS Organization</strong> কর্তৃক পরিচালিত। এটি একটি আধুনিক অ্যান্ড্রয়েড ইনপুট মেথড (IME) কিবোর্ড অ্যাপ, যা ব্যবহারকারীদের স্বাচ্ছন্দ্যে বাংলা ও ইংরেজিতে টাইপ করার সুবিধা দেয়।</p>
-            <p class="lang-bl"><strong>Mukto Keyboard</strong> (Package ID: <code>com.mukto.keyboard</code>) develop korechen <strong>Md Mobassher Ahmed Sowrov</strong> ebong manage kore <strong>JS Organization</strong>. Eta ekta modern Android keyboard jeta diye fast Bengali &amp; English type kora jay.</p>
-
-            <p class="lang-en">We believe user privacy is an absolute priority. We have engineered Mukto Keyboard under an <strong>Offline-First, Privacy-Centric Architecture</strong> with an uncompromising zero-keylogging policy. We do not track, collect, record, or transmit your personal keystrokes or sensitive typing information to any cloud servers.</p>
-            <p class="lang-bn">আমরা ব্যবহারকারীর তথ্যের গোপনীয়তাকে সর্বোচ্চ অগ্রাধিকার দিই। মুক্ত কিবোর্ড সম্পূর্ণ <strong>অফলাইন-ফার্স্ট এবং প্রাইভেসি-সুরক্ষিত নীতিতে</strong> তৈরি। আপনার টাইপ করা কোনো মেসেজ বা কি-স্ট্রোক আমরা কোনো দূরবর্তী সার্ভারে জমা বা ট্র্যাক করি না।</p>
-            <p class="lang-bl">Amra user privacy ke shobcheye beshi priority dei. Mukto Keyboard fully <strong>Offline-First ebong Privacy-Centric</strong> system e toiri. Apnar type kora kono keystroke, message ba password amader ba onno kono server e kokhono jay na.</p>
+        <div>
+            <span class="hero-badge">
+                <span class="lang-en">Zero Keylogging • Local-First Privacy Architecture</span>
+                <span class="lang-bn">জিরো কী-লগিং • শতভাগ লোকাল-ফার্স্ট প্রাইভেসি</span>
+                <span class="lang-bl">Zero Keylogging • 100% Local-First Privacy</span>
+            </span>
         </div>
-    </div>
 
-    <!-- Section 2: Zero Keylogging -->
-    <div class="section-card" id="p2">
-        <div class="section-header">
-            <div class="section-num">02</div>
-            <div>
-                <div class="section-title lang-en">Zero Keylogging Guarantee</div>
-                <div class="section-title lang-bn">জিরো কি-লগিং গ্যারান্টি</div>
-                <div class="section-title lang-bl">Zero Keylogging Guarantee</div>
+        <h1 class="lang-en">Privacy <span>Policy</span></h1>
+        <h1 class="lang-bn">গোপনীয়তা <span>নীতিমালা</span></h1>
+        <h1 class="lang-bl">Privacy <span>Policy</span></h1>
+
+        <p class="hero-sub lang-en">Complete, transparent disclosure of how Mukto Keyboard handles every layout, tool, permission, local file, and optional cloud feature on your Android device.</p>
+        <p class="hero-sub lang-bn">মুক্ত কিবোর্ডের প্রতিটি লেআউট, টুল, পারমিশন, লোকাল স্টোরেজ এবং ঐচ্ছিক ক্লাউড ফিচার কীভাবে আপনার গোপনীয়তা রক্ষা করে তার সম্পূর্ণ স্বচ্ছ বিবরণ।</p>
+        <p class="hero-sub lang-bl">Mukto Keyboard-er protiti layout, tool, permission, local storage ebong optional cloud feature kibhabe apnar privacy rokkha kore tar shompurno swoccho biboron.</p>
+
+        <div class="lang-switcher-wrap" role="group" aria-label="Language Switcher">
+            <button type="button" id="btnEn" class="lang-btn active" onclick="setLanguage('en')">English</button>
+            <button type="button" id="btnBn" class="lang-btn font-bangla" onclick="setLanguage('bn')">বাংলা</button>
+            <button type="button" id="btnBl" class="lang-btn" onclick="setLanguage('bl')">Banglish</button>
+        </div>
+
+        <div class="hero-meta">
+            <div class="hero-meta-item">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span class="lang-en">Last Updated: October 30, 2026</span>
+                <span class="lang-bn">সর্বশেষ হালনাগাদ: ৩০ অক্টোবর ২০২৬</span>
+                <span class="lang-bl">Last Updated: 30 October 2026</span>
             </div>
-        </div>
-        <div class="section-body">
-            <div class="callout safe">
+            <div class="hero-meta-item">
                 <i class="fa-solid fa-shield-halved"></i>
+                <span class="lang-en">Package: com.mukto.keyboard</span>
+                <span class="lang-bn">প্যাকেজ: com.mukto.keyboard</span>
+                <span class="lang-bl">Package: com.mukto.keyboard</span>
+            </div>
+            <div class="hero-meta-item">
+                <i class="fa-solid fa-building-shield"></i>
+                <span class="lang-en">Developer: JS Organization</span>
+                <span class="lang-bn">ডেভেলপার: JS Organization</span>
+                <span class="lang-bl">Developer: JS Organization</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-wrap">
+
+        <section class="toc-card" aria-label="Table of Contents">
+            <h2 class="lang-en">Contents Overview (16 Sections)</h2>
+            <h2 class="lang-bn">সূচিপত্র (১৬টি অধ্যায়)</h2>
+            <h2 class="lang-bl">Suchipotro (16-ti Oddhay)</h2>
+            <div class="toc-grid">
+                <a href="#sec-01" class="toc-link"><span class="toc-num">01</span><span class="lang-en">Introduction &amp; Pledge</span><span class="lang-bn">ভূমিকা ও অঙ্গীকার</span><span class="lang-bl">Bhumika o Ongikar</span></a>
+                <a href="#sec-02" class="toc-link"><span class="toc-num">02</span><span class="lang-en">Zero Keylogging Shield</span><span class="lang-bn">জিরো কী-লগিং ও পাসওয়ার্ড সুরক্ষা</span><span class="lang-bl">Zero Keylogging o Password</span></a>
+                <a href="#sec-03" class="toc-link"><span class="toc-num">03</span><span class="lang-en">On-Device Local Data</span><span class="lang-bn">ডিভাইসের লোকাল ডেটা</span><span class="lang-bl">Device-er Local Data</span></a>
+                <a href="#sec-04" class="toc-link"><span class="toc-num">04</span><span class="lang-en">Camera OCR Scanner</span><span class="lang-bn">ক্যামেরা ওসিআর স্ক্যানার</span><span class="lang-bl">Camera OCR Scanner</span></a>
+                <a href="#sec-05" class="toc-link"><span class="toc-num">05</span><span class="lang-en">AI Assistant (BYOK)</span><span class="lang-bn">এআই রাইটিং অ্যাসিস্ট্যান্ট</span><span class="lang-bl">AI Writing Assistant</span></a>
+                <a href="#sec-06" class="toc-link"><span class="toc-num">06</span><span class="lang-en">GIF Search (GIPHY)</span><span class="lang-bn">জিআইএফ সার্চ (GIPHY)</span><span class="lang-bl">GIF Search (GIPHY)</span></a>
+                <a href="#sec-07" class="toc-link"><span class="toc-num">07</span><span class="lang-en">Secret Chat Steganography</span><span class="lang-bn">গোপন চ্যাট (স্টেগানোগ্রাফি)</span><span class="lang-bl">Secret Chat Steganography</span></a>
+                <a href="#sec-08" class="toc-link"><span class="toc-num">08</span><span class="lang-en">Voice Typing</span><span class="lang-bn">ভয়েস টাইপিং</span><span class="lang-bl">Voice Typing</span></a>
+                <a href="#sec-09" class="toc-link"><span class="toc-num">09</span><span class="lang-en">In-Keyboard Translation</span><span class="lang-bn">অফলাইন ও অনলাইন অনুবাদ</span><span class="lang-bl">In-Keyboard Translation</span></a>
+                <a href="#sec-10" class="toc-link"><span class="toc-num">10</span><span class="lang-en">Clipboard &amp; Screenshots</span><span class="lang-bn">ক্লিপবোর্ড ও স্ক্রিনশট পেস্ট</span><span class="lang-bl">Clipboard o Screenshot</span></a>
+                <a href="#sec-11" class="toc-link"><span class="toc-num">11</span><span class="lang-en">Encrypted Backup &amp; Sync</span><span class="lang-bn">এনক্রিপ্টেড ব্যাকআপ ও ড্রাইভ</span><span class="lang-bl">Encrypted Backup o Sync</span></a>
+                <a href="#sec-12" class="toc-link"><span class="toc-num">12</span><span class="lang-en">Crash Diagnostics</span><span class="lang-bn">ক্র্যাশ রিপোর্টিং ও ডায়াগনস্টিকস</span><span class="lang-bl">Crash Diagnostics</span></a>
+                <a href="#sec-13" class="toc-link"><span class="toc-num">13</span><span class="lang-en">Android Permissions</span><span class="lang-bn">অ্যান্ড্রয়েড পারমিশন তালিকা</span><span class="lang-bl">Android Permissions</span></a>
+                <a href="#sec-14" class="toc-link"><span class="toc-num">14</span><span class="lang-en">Data Control &amp; Deletion</span><span class="lang-bn">ডেটা নিয়ন্ত্রণ ও মুছে ফেলা</span><span class="lang-bl">Data Control o Deletion</span></a>
+                <a href="#sec-15" class="toc-link"><span class="toc-num">15</span><span class="lang-en">Children &amp; Global Laws</span><span class="lang-bn">শিশু সুরক্ষা ও আন্তর্জাতিক আইন</span><span class="lang-bl">Children o Global Laws</span></a>
+                <a href="#sec-16" class="toc-link"><span class="toc-num">16</span><span class="lang-en">Official Contact</span><span class="lang-bn">যোগাযোগের ঠিকানা</span><span class="lang-bl">Jogajoger Thikana</span></a>
+            </div>
+        </section>
+
+        <article id="sec-01" class="section-card">
+            <div class="section-header">
+                <div class="section-num">01</div>
                 <div>
-                    <div class="lang-en"><strong>Strictly Protected:</strong> Mukto Keyboard does NOT log, store, or transmit your passwords, payment details, chat messages, or keystrokes to external servers. All typing stays strictly within the app you are typing in.</div>
-                    <div class="lang-bn"><strong>সম্পূর্ণ সুরক্ষিত:</strong> মুক্ত কিবোর্ড আপনার পাসওয়ার্ড, পেমেন্ট তথ্য, ব্যক্তিগত মেসেজ বা কোনো কি-স্ট্রোক কখনোই কোনো সার্ভারে পাঠায় না। আপনার লেখা কেবল আপনার নির্দিষ্ট অ্যাপের মধ্যেই থাকে।</div>
-                    <div class="lang-bl"><strong>Full Shurokkhito:</strong> Mukto Keyboard konodino apnar password, card details, personal chat ba keystrokes kono server e pathay na. Apni je app e type korchen, lekha shudhu shei app ei thake.</div>
+                    <h2 class="section-title lang-en">Introduction &amp; Core Privacy Commitment</h2>
+                    <h2 class="section-title lang-bn">ভূমিকা ও আমাদের মূল গোপনীয়তা অঙ্গীকার</h2>
+                    <h2 class="section-title lang-bl">Bhumika o Amader Mul Privacy Ongikar</h2>
+                    <div class="section-subtitle lang-en">Why Mukto Keyboard is engineered without user tracking or remote Mukto servers</div>
+                    <div class="section-subtitle lang-bn">কেন মুক্ত কিবোর্ড কোনো ট্র্যাকিং বা নিজস্ব রিমোট সার্ভার ছাড়াই তৈরি করা হয়েছে</div>
+                    <div class="section-subtitle lang-bl">Keno Mukto Keyboard kono tracking ba remote server charai toiri kora hoyeche</div>
                 </div>
             </div>
+            <div class="section-body">
+                <p class="lang-en"><strong>Mukto Keyboard (মুক্ত কিবোর্ড)</strong> (Android application package <code>com.mukto.keyboard</code>), developed and published by <strong>Md Mobassher Ahmed Sowrov</strong> under <strong>JS Organization</strong>, is a proprietary, privacy-first Bangla and English Android Input Method Editor (IME). Because a mobile keyboard sits between your thoughts and every app you use, we built Mukto Keyboard around one non-negotiable rule: <strong>what you type belongs strictly to you and stays on your device.</strong></p>
+                <p class="lang-bn"><strong>মুক্ত কিবোর্ড (Mukto Keyboard)</strong> (অ্যান্ড্রয়েড প্যাকেজ <code>com.mukto.keyboard</code>), যা <strong>JS Organization</strong>-এর অধীনে <strong>মোঃ মোবাশ্বের আহমেদ সৌরভ</strong> কর্তৃক নির্মিত ও প্রকাশিত একটি প্রাইভেসি-ফার্স্ট বাংলা ও ইংরেজি অ্যান্ড্রয়েড কিবোর্ড অ্যাপ। মোবাইল কিবোর্ড যেহেতু আপনার ব্যক্তিগত কথোপকথন ও প্রতিটি অ্যাপের মাঝখানে কাজ করে, তাই আমাদের মূল নীতি একটাই: <strong>আপনি যা টাইপ করেন তা একান্তই আপনার এবং তা আপনার ফোনেই সীমাবদ্ধ থাকে।</strong></p>
+                <p class="lang-bl"><strong>Mukto Keyboard</strong> (Android package <code>com.mukto.keyboard</code>), ja <strong>JS Organization</strong>-er odhine <strong>Md Mobassher Ahmed Sowrov</strong> toiri o prokash korechen, ekti privacy-first Bangla o English Android keyboard app. Mobile keyboard apnar protiti personal kothopokothoner sathe jukto thake bole amader mul niti holo: <strong>apni ja type koren ta shudhumatro apnar ebong ta apnar phone-ei surakkhito thake.</strong></p>
 
-            <p class="lang-en">When enabling any custom keyboard, Android displays a default system warning stating that input methods can theoretically capture input text. This is a standard operating system warning for all third-party keyboards. Mukto Keyboard has no telemetry servers and collects zero keystroke logs.</p>
-            <p class="lang-bn">অ্যান্ড্রয়েড ফোনে যেকোনো কিবোর্ড সক্রিয় করার সময় সিস্টেম থেকে একটি সাধারণ সতর্কবার্তা আসে যে কিবোর্ড আপনার লেখা দেখতে পারে। এটি গুগলের একটি স্বয়ংক্রিয় সতর্কবার্তা। মুক্ত কিবোর্ডে কোনো কি-লগিং ব্যবস্থা নেই।</p>
-            <p class="lang-bl">Android phone e je kono keyboard enable korar shomoy system theke ekta warning show kore je keyboard text capture korte pare. Eta shob keyboard er jonno Android er default warning. Mukto Keyboard kono keylogger use kore na.</p>
+                <div class="callout safe">
+                    <i class="fa-solid fa-lock"></i>
+                    <div>
+                        <strong class="lang-en">Zero Mukto Cloud Database</strong>
+                        <strong class="lang-bn">নিজস্ব কোনো ক্লাউড ডেটাবেস নেই</strong>
+                        <strong class="lang-bl">Nijossho Kono Cloud Database Nei</strong>
+                        <span class="lang-en">JS Organization does not operate any backend server that collects, stores, profiles, sells, or monetizes your keystrokes, messages, contacts, clipboard items, photos, or personal identity.</span>
+                        <span class="lang-bn">JS Organization এমন কোনো ব্যাকএন্ড সার্ভার পরিচালনা করে না যেখানে আপনার টাইপ করা অক্ষর, মেসেজ, কন্টাক্ট, ক্লিপবোর্ড, ছবি বা ব্যক্তিগত পরিচয় সংগ্রহ, সংরক্ষণ বা বিক্রি করা হয়।</span>
+                        <span class="lang-bl">JS Organization emon kono backend server chalay na jekhane apnar type kora okkhor, message, contact, clipboard, chobi ba porichoy collect, save ba bikri kora hoy.</span>
+                    </div>
+                </div>
 
-            <div class="pill-grid">
-                <span class="pill blocked">No Password Logging</span>
-                <span class="pill blocked">No Keystroke Tracking</span>
-                <span class="pill allowed">100% Local Typing Processing</span>
-                <span class="pill allowed">Protected Sandbox</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Section 3: Locally Stored Data -->
-    <div class="section-card" id="p3">
-        <div class="section-header">
-            <div class="section-num">03</div>
-            <div>
-                <div class="section-title lang-en">On-Device Local Data</div>
-                <div class="section-title lang-bn">ডিভাইসে লোকাল ডেটা সংরক্ষণ</div>
-                <div class="section-title lang-bl">On-Device Local Data</div>
-            </div>
-        </div>
-        <div class="section-body">
-            <p class="lang-en">To provide quick word suggestions and autocorrect, Mukto Keyboard stores minimal operational data <strong>locally on your device</strong>:</p>
-            <p class="lang-bn">সঠিক শব্দ সাজেশন ও দ্রুত টাইপিংয়ের সুবিধার জন্য কিবোর্ড কিছু প্রাথমিক ডেটা <strong>শুধুমাত্র আপনার ফোনের লোকাল মেমোরিতে</strong> সংরক্ষণ করে:</p>
-            <p class="lang-bl">Fast word prediction ebong autocorrect er jonno keyboard shudhu apnar phone er <strong>local memory</strong> te kichu data rakhe:</p>
-
-            <ul class="policy-list lang-en">
-                <li><strong>Word Suggestions &amp; Autocorrect:</strong> Frequently typed words are saved locally on your device to predict your common phrases and speed up typing.</li>
-                <li><strong>Custom User Dictionary:</strong> Words you manually add or accept while typing.</li>
-                <li><strong>Keyboard Preferences:</strong> Selected theme, language mode, and vibration preferences.</li>
-                <li><strong>Password Field Protection:</strong> When typing in password fields, word prediction and learning are automatically disabled.</li>
-            </ul>
-            <ul class="policy-list lang-bn">
-                <li><strong>শব্দ সাজেশন ও ডিকশনারি:</strong> দ্রুত টাইপ করার সুবিধার্থে প্রায় ব্যবহৃত শব্দগুলো শুধুমাত্র আপনার নিজস্ব ডিভাইসে সংরক্ষিত থাকে।</li>
-                <li><strong>ইউজার ডিকশনারি:</strong> টাইপ করার সময় আপনি যেসব নতুন শব্দ কিবোর্ডে যুক্ত করেন।</li>
-                <li><strong>কিবোর্ড সেটিংস:</strong> আপনার পছন্দের থিম, ভাষা মোড ও ভাইব্রেশন পছন্দসমূহ।</li>
-                <li><strong>পাসওয়ার্ড ফিল্ড সুরক্ষা:</strong> যেকোনো পাসওয়ার্ড ফিল্ডে টাইপ করার সময় শব্দ শেখা স্বয়ংক্রিয়ভাবে বন্ধ থাকে।</li>
-            </ul>
-            <ul class="policy-list lang-bl">
-                <li><strong>Word Suggestions &amp; Dictionary:</strong> Fast typing er jonno regular use kora shobdo gulo shudhu apnar phone ei save thake.</li>
-                <li><strong>User Dictionary:</strong> Type korar shomoy apni je notun shobdo gulo add koren.</li>
-                <li><strong>Keyboard Settings:</strong> Apnar pochonder theme, language mode ebong vibration settings.</li>
-                <li><strong>Password Field Protection:</strong> Password field e type korar shomoy word learning automatically off thake.</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Section 4: Voice Typing -->
-    <div class="section-card" id="p4">
-        <div class="section-header">
-            <div class="section-num">04</div>
-            <div>
-                <div class="section-title lang-en">Voice Typing &amp; Microphone Usage</div>
-                <div class="section-title lang-bn">ভয়েস টাইপিং ও মাইক্রোফোন ব্যবহার</div>
-                <div class="section-title lang-bl">Voice Typing o Microphone</div>
-            </div>
-        </div>
-        <div class="section-body">
-            <p class="lang-en">The <code>RECORD_AUDIO</code> permission is used solely when you explicitly tap the microphone button to convert spoken speech to text using Android's platform speech service.</p>
-            <p class="lang-bn">কিবোর্ডের মাইক্রোফোন আইকনে ট্যাপ করে কথা বলে টাইপ করার সুবিধার জন্য <code>RECORD_AUDIO</code> পারমিশন প্রয়োজন হয়।</p>
-            <p class="lang-bl">Keyboard er mic button e tap kore mukhe bole type korar jonno <code>RECORD_AUDIO</code> permission use hoy.</p>
-
-            <div class="callout safe">
-                <i class="fa-solid fa-microphone-slash"></i>
-                <div>
-                    <div class="lang-en"><strong>No Audio Recording Storage:</strong> We do NOT save, store, or archive your voice recordings. The audio stream is converted into text in real-time and immediately discarded. There is no background listening.</div>
-                    <div class="lang-bn"><strong>কোনো অডিও সংরক্ষণ করা হয় না:</strong> আপনার কণ্ঠস্বর কোনো ফাইল আকারে সেভ বা সংরক্ষণ করা হয় না। কথা টেক্সটে রূপান্তরিত হওয়ার পরপরই অডিও মুছে যায়। ব্যাকগ্রাউন্ডে কোনো গোপন অডিও শোনা হয় না।</div>
-                    <div class="lang-bl"><strong>Audio Save Hoy Na:</strong> Apnar kotha shonar por real-time text e convert hoye audio shathe shathe delete hoye jay. Kono audio file save hoy na ebong background e kono listening chole na.</div>
+                <div class="pill-grid">
+                    <span class="pill allowed"><span class="lang-en">100% On-Device Typing Engine</span><span class="lang-bn">১০০% অন-ডিভাইস টাইপিং ইঞ্জিন</span><span class="lang-bl">100% On-Device Typing Engine</span></span>
+                    <span class="pill allowed"><span class="lang-en">No Ad SDKs or Cross-App Trackers</span><span class="lang-bn">কোনো বিজ্ঞাপন বা ট্র্যাকার নেই</span><span class="lang-bl">Kono Ad SDK ba Tracker Nei</span></span>
+                    <span class="pill allowed"><span class="lang-en">No Mandatory Account Sign-Up</span><span class="lang-bn">অ্যাকাউন্ট খোলার বাধ্যবাধকতা নেই</span><span class="lang-bl">Account Kholarorkar Nei</span></span>
+                    <span class="pill blocked"><span class="lang-en">Never Sells User Data</span><span class="lang-bn">কখনোই ইউজার ডেটা বিক্রি করে না</span><span class="lang-bl">Kokhonoi Data Bikri Kore Na</span></span>
                 </div>
             </div>
-        </div>
-    </div>
+        </article>
 
-    <!-- Section 5: Translation -->
-    <div class="section-card" id="p5">
-        <div class="section-header">
-            <div class="section-num">05</div>
-            <div>
-                <div class="section-title lang-en">In-Keyboard Translation</div>
-                <div class="section-title lang-bn">ইন-কিবোর্ড রিয়েল-টাইম অনুবাদ</div>
-                <div class="section-title lang-bl">In-Keyboard Translation</div>
-            </div>
-        </div>
-        <div class="section-body">
-            <p class="lang-en">Mukto Keyboard provides instant translation within the toolbar:</p>
-            <p class="lang-bn">মুক্ত কিবোর্ডের টুলবারে রয়েছে সরাসরি টাইপ করার সময় অনুবাদ করার সুবিধা:</p>
-            <p class="lang-bl">Mukto Keyboard er toolbar e direct type korar shomoy instant translate kora jay:</p>
-
-            <ul class="policy-list lang-en">
-                <li><strong>On-Device Offline Translation:</strong> Uses Google ML Kit models downloaded to your device, functioning 100% locally without sending data across the network.</li>
-                <li><strong>Online Translation:</strong> Only the specific phrase requested for translation is processed via secure connections. No user profile or keyboard history is attached.</li>
-            </ul>
-            <ul class="policy-list lang-bn">
-                <li><strong>অন-ডিভাইস অফলাইন অনুবাদ:</strong> গুগল ML Kit-এর মাধ্যমে ভাষা মডেল ফোনে একবার ডাউনলোড হয়ে গেলে ইন্টারনেট ছাড়াই সম্পূর্ণ লোকালভাবে অনুবাদ সম্পন্ন হয়।</li>
-                <li><strong>অনলাইন অনুবাদ:</strong> ব্যবহারকারী যখন অনুবাদের অনুরোধ করেন, শুধু অনুবাদ করার নির্দিষ্ট বাক্যটি সিকিউর কানেকশনের মাধ্যমে অনুবাদ করা হয়।</li>
-            </ul>
-            <ul class="policy-list lang-bl">
-                <li><strong>Offline Translation (Google ML Kit):</strong> Model ekbar download hole net charai 100% local vabe translate hoy.</li>
-                <li><strong>Online Translation:</strong> Shudhu je sentence ta translate korte chan shetai secure bhabe translate hoy, kono user identity attach thake na.</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Section 6: Clipboard History -->
-    <div class="section-card" id="p6">
-        <div class="section-header">
-            <div class="section-num">06</div>
-            <div>
-                <div class="section-title lang-en">Clipboard History Protection</div>
-                <div class="section-title lang-bn">ক্লিপবোর্ড হিস্ট্রি ও নিরাপত্তা</div>
-                <div class="section-title lang-bl">Clipboard History &amp; Security</div>
-            </div>
-        </div>
-        <div class="section-body">
-            <ul class="policy-list lang-en">
-                <li><strong>Sensitive Clip Protection:</strong> Clips flagged as sensitive by Android 13+ or copied from password fields are ignored and never saved to clipboard history.</li>
-                <li><strong>Local Storage Only:</strong> Clipboard clips reside strictly in local app memory and are never uploaded to any cloud.</li>
-                <li><strong>Auto-Pruning:</strong> Unpinned clips automatically expire and are cleaned up. You can manually delete individual or all clips anytime.</li>
-                <li><strong>Recent Screenshot 1-Tap Pasting (Disabled by Default &amp; Opt-In):</strong> This feature is <strong>turned OFF by default</strong>. Only when you explicitly choose to enable it in Keyboard Settings is the permission requested, allowing the keyboard clipboard to automatically detect newly captured screenshots in the background via <code>ContentObserver</code> for convenient 1-tap pasting from the keyboard toolbar. System photo pickers require manual user selection and cannot observe real-time background screenshot events. Only the single most recent screenshot is momentarily detected on-device; Mukto Keyboard never scans, indexes, stores, or transmits your photo gallery, albums, or camera media. If left disabled, the permission is never requested, and normal typing and clipboard history continue to work flawlessly.</li>
-            </ul>
-            <ul class="policy-list lang-bn">
-                <li><strong>সংবেদনশীল ক্লিপ সুরক্ষা:</strong> অ্যান্ড্রয়েড ১৩+ এ সংবেদনশীল হিসেবে চিহ্নিত ক্লিপ বা পাসওয়ার্ড ফিল্ডের লেখা ক্লিপবোর্ডে সেভ হয় না।</li>
-                <li><strong>লোকাল সংরক্ষণ:</strong> ক্লিপবোর্ডের সমস্ত ডেটা শুধু আপনার ফোনের মেমোরিতে থাকে, কোনো ক্লাউডে পাঠানো হয় না।</li>
-                <li><strong>স্বয়ংক্রিয় প্রুনিং:</strong> আনপিন করা অপ্রয়োজনীয় ক্লিপ নির্দিষ্ট সময় পর নিজে থেকেই মুছে যায় এবং আপনি যেকোনো সময় যেকোনো ক্লিপ ডিলিট করতে পারেন।</li>
-                <li><strong>১-ট্যাপ স্ক্রিনশট পেস্ট সুবিধা (ডিফল্টভাবে বন্ধ ও সম্পূর্ণ ঐচ্ছিক):</strong> এই ফিচারটি <strong>ডিফল্টভাবে বন্ধ (Disabled by Default) থাকে</strong>। ব্যবহারকারী কেবল নিজের ইচ্ছায় কিবোর্ড সেটিংস থেকে এই ফিচারটি চালু (Enable) করলেই কেবল এটি কার্যকর হয় এবং পারমিশনের প্রয়োজন পড়ে। ফোন ব্যবহারের সময় নতুন কোনো স্ক্রিনশট নেওয়া হলে কিবোর্ডের ক্লিপবোর্ড টুলবার অ্যান্ড্রয়েডের <code>ContentObserver</code>-এর মাধ্যমে স্বয়ংক্রিয়ভাবে তা শনাক্ত করে সরাসরি ১-ট্যাপে পেস্ট করার অপশন দেখায়। সিস্টেম ফটো পিকারের মাধ্যমে ব্যাকগ্রাউন্ডে নতুন স্ক্রিনশট রিয়েল-টাইমে পর্যবেক্ষণ করা সম্ভব নয় এবং এতে ম্যানুয়ালি ছবি সিলেক্ট করতে হয় বিধায় এই ফিচারটির প্রয়োজন। কিবোর্ড শুধুমাত্র সর্বশেষ ক্যাপচার করা স্ক্রিনশটটি সাময়িকভাবে ডিভাইসেই দেখে; এটি আপনার ব্যক্তিগত ফটো গ্যালারি, অ্যালবাম বা ক্যামেরার অন্যান্য ছবি কখনোই পড়ে না, সংরক্ষণ করে না বা কোনো সার্ভারে পাঠায় না। এই ফিচারটি বন্ধ রাখলে কোনো পারমিশন চাওয়া হয় না এবং কিবোর্ডের স্বাভাবিক টাইপিং সম্পূর্ণ নির্বিঘ্নে কাজ করে।</li>
-            </ul>
-            <ul class="policy-list lang-bl">
-                <li><strong>Sensitive Clip Bypass:</strong> Password field theke copy kora text ba sensitive clip clipboard history te save hoy na.</li>
-                <li><strong>Local Storage:</strong> Copy kora shob data shudhu apnar phone ei thake, kono cloud e jay na.</li>
-                <li><strong>Auto Clean:</strong> Unpinned clip gulo kichudin por automatically delete hoye jay ebong apni jekono shomoy muche felte paren.</li>
-                <li><strong>1-Tap Screenshot Pasting (Default OFF &amp; Opt-In):</strong> Ei feature ti <strong>default bhabe OFF thake</strong>. User nijer ichhay keyboard settings theke eta ON korlei shudhumatro ei permission er dorkar hoy. Phone e notun screenshot neya hole keyboard clipboard Android er <code>ContentObserver</code> diye real-time e background e sheta detect kore ebong 1-tap paste button show kore. System photo picker background e screenshot detect korte pare na ebong manual selection lage, tai ei feature ti ContentObserver use kore. Sudhumatro shobshesh screenshot ti locally detect hoy; Mukto Keyboard kokhono apnar photo gallery, album ba camera photo scan ba read kore na ebong kono server e pathay na. Eta OFF thakle kono permission e chawa hoy na ebong normal typing 100% kaj kore.</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Section 7: Crash Analytics & Diagnostics -->
-    <div class="section-card" id="p7">
-        <div class="section-header">
-            <div class="section-num">07</div>
-            <div>
-                <div class="section-title lang-en">Crash Analytics &amp; Diagnostics (Firebase Crashlytics)</div>
-                <div class="section-title lang-bn">ক্র্যাশ অ্যানালিটিক্স ও ডায়াগনস্টিকস (ফায়ারবেস ক্র্যাশলিটিক্স)</div>
-                <div class="section-title lang-bl">Crash Analytics &amp; Diagnostics (Firebase Crashlytics)</div>
-                <div class="section-subtitle lang-en">Stability monitoring, automated crash reports, and performance diagnostics</div>
-                <div class="section-subtitle lang-bn">অ্যাপের স্থায়িত্ব পর্যবেক্ষণ, স্বয়ংক্রিয় ক্র্যাশ রিপোর্ট এবং পারফরম্যান্স উন্নয়ন</div>
-                <div class="section-subtitle lang-bl">App stability check, crash report ebong performance improve korar jonno</div>
-            </div>
-        </div>
-        <div class="section-body">
-            <p class="lang-en">To ensure Mukto Keyboard remains stable, bug-free, and responsive across thousands of Android device models, we integrate <strong>Firebase Crashlytics</strong>, a diagnostic service provided by Google LLC.</p>
-            <p class="lang-bn">হাজারো অ্যান্ড্রয়েড ডিভাইসে মুক্ত কিবোর্ড যেন নির্বিঘ্নে, ক্র্যাশ ছাড়া এবং দ্রুত গতিতে চলতে পারে, তা নিশ্চিত করার জন্য আমরা গুগল এলএলসি (Google LLC)-এর ডায়াগনস্টিক সেবা <strong>Firebase Crashlytics</strong> ব্যবহার করি।</p>
-            <p class="lang-bl">Bibhinno Android phone e Mukto Keyboard jeno crash chara smoothly kaj kore, sheta ensure korar jonno amra Google LLC er <strong>Firebase Crashlytics</strong> tool use kori.</p>
-
-            <div class="callout safe">
-                <i class="fa-solid fa-shield-halved"></i>
+        <article id="sec-02" class="section-card">
+            <div class="section-header">
+                <div class="section-num">02</div>
                 <div>
-                    <div class="lang-en"><strong>Zero Typing Data Collected:</strong> Firebase Crashlytics collects strictly technical diagnostic data. It does <strong>NOT</strong> collect, read, or transmit your typed words, keystrokes, personal messages, passwords, or payment info. Your typing remains 100% local and private.</div>
-                    <div class="lang-bn"><strong>কোনো টাইপিং ডেটা সংগ্রহ করা হয় না:</strong> ফায়ারবেস ক্র্যাশলিটিক্স শুধুমাত্র কারিগরি বা টেকনিক্যাল ডেটা সংগ্রহ করে। এটি আপনার টাইপ করা কোনো শব্দ, কি-স্ট্রোক, ব্যক্তিগত মেসেজ বা পাসওয়ার্ড <strong>কখনোই দেখে না বা সংগ্রহ করে না</strong>। আপনার টাইপিং শতভাগ লোকাল ও গোপন থাকে।</div>
-                    <div class="lang-bl"><strong>Kono Typing Data Collect Hoy Na:</strong> Firebase Crashlytics shudhu crash er technical information ney. Eta apnar type kora kono shobdo, keystroke, personal message ba password <strong>kokhono collect kore na</strong>. Apnar typing 100% private thake.</div>
+                    <h2 class="section-title lang-en">Zero Keylogging &amp; Sensitive Input Shield</h2>
+                    <h2 class="section-title lang-bn">জিরো কী-লগিং এবং পাসওয়ার্ড ও ইনকগনিটো সুরক্ষা</h2>
+                    <h2 class="section-title lang-bl">Zero Keylogging ebong Password o Incognito Surokkha</h2>
+                    <div class="section-subtitle lang-en">Protection across all 5 language layouts, Numpad, Symbols, Passwords, OTPs, and Private Tabs</div>
+                    <div class="section-subtitle lang-bn">৫টি ভাষা লেআউট, নামপ্যাড, সিম্বল, পাসওয়ার্ড, ওটিপি এবং প্রাইভেট ব্রাউজিংয়ে পূর্ণ নিরাপত্তা</div>
+                    <div class="section-subtitle lang-bl">5-ti bhasha layout, Numpad, Symbol, Password, OTP ebong Private Tab-e purno nirapotta</div>
                 </div>
             </div>
+            <div class="section-body">
+                <p class="lang-en">Every character you type across <strong>English QWERTY</strong>, <strong>Avro Phonetic (অভ্র ফোনেটিক)</strong>, <strong>Probhat (প্রভাত)</strong>, <strong>Direct Bangla (সরাসরি বাংলা)</strong>, <strong>National / Jatiya (জাতীয়)</strong>, the <strong>Calculator Numpad</strong>, <strong>2-Page Currency &amp; Special Symbols</strong>, <strong>Text Repeater</strong>, and <strong>Fancy Unicode Fonts</strong> is processed strictly inside your phone's volatile memory (RAM) to deliver text to your active app via Android's standard <code>InputConnection</code> API.</p>
+                <p class="lang-bn">আপনি <strong>ইংরেজি (QWERTY)</strong>, <strong>অভ্র ফোনেটিক</strong>, <strong>প্রভাত</strong>, <strong>সরাসরি বাংলা (৫-সারি)</strong>, <strong>জাতীয় (Jatiya)</strong>, <strong>ক্যালকুলেটর নামপ্যাড</strong>, <strong>টাকার প্রতীক ও স্পেশাল সিম্বল প্যানেল</strong>, <strong>টেক্সট রিপিটার</strong> কিংবা <strong>ফ্যান্সি ফন্টস</strong>—যে মোডেই লিখুন না কেন, প্রতিটি অক্ষর শুধুমাত্র আপনার ফোনের র‍্যামে (RAM) তাৎক্ষণিক প্রক্রিয়া হয়ে সরাসরি আপনার ব্যবহৃত অ্যাপে পৌঁছায়।</p>
+                <p class="lang-bl">Apni <strong>English QWERTY</strong>, <strong>Avro Phonetic</strong>, <strong>Probhat</strong>, <strong>Direct Bangla</strong>, <strong>National (Jatiya)</strong>, <strong>Calculator Numpad</strong>, <strong>Symbol Panel</strong>, <strong>Text Repeater</strong> ba <strong>Fancy Fonts</strong>—je mode-ei likhun na keno, protiti okkhor shudhumatro apnar phone-er RAM-e process hoye shorashori active app-e jay.</p>
 
-            <h3 class="lang-en">What Data Is Collected During a Crash?</h3>
-            <h3 class="lang-bn">অ্যাপ ক্র্যাশ করলে কী কী তথ্য সংগ্রহ করা হয়?</h3>
-            <h3 class="lang-bl">App Crash Hole Ki Ki Information Collect Hoy?</h3>
-
-            <ul class="policy-list lang-en">
-                <li><strong>Stack Traces:</strong> The exact code line and internal exception where an error or crash occurred.</li>
-                <li><strong>Device State &amp; Hardware Details:</strong> Device manufacturer, model name, operating system version (e.g., Android 14), orientation, free RAM, and storage space at the moment of the crash.</li>
-                <li><strong>App Installation UUID:</strong> A randomly generated anonymous identifier unique to each app installation to compute crash impact metrics.</li>
-                <li><strong>Crash Timestamps:</strong> The precise date and time when the crash event took place.</li>
-            </ul>
-            <ul class="policy-list lang-bn">
-                <li><strong>স্ট্যাক ট্রেস (Stack Trace):</strong> অ্যাপের কোডের ঠিক কোন লাইনে এরর বা ক্র্যাশটি ঘটেছে।</li>
-                <li><strong>ডিভাইসের অবস্থা ও হার্ডওয়্যার বিবরণ:</strong> ডিভাইসের মডেল, অ্যান্ড্রয়েড অপারেটিং সিস্টেম ভার্সন, ক্র্যাশের মুহূর্তের খালি র‍্যাম ও স্টোরেজ স্পেস।</li>
-                <li><strong>অ্যাপ ইনস্টলেশন UUID:</strong> কতজন ব্যবহারকারী একটি নির্দিষ্ট ক্র্যাশের সম্মুখীন হয়েছেন তা গণনার জন্য একটি বেনামী স্বয়ংক্রিয় আইডি।</li>
-                <li><strong>ক্র্যাশের সময়:</strong> কোন নির্দিষ্ট তারিখ ও সময়ে ক্র্যাশটি ঘটেছে।</li>
-            </ul>
-            <ul class="policy-list lang-bl">
-                <li><strong>Stack Trace:</strong> Code er kon line e error hoyeche tar technical details.</li>
-                <li><strong>Device Model &amp; OS Version:</strong> Phone er model, Android version, crash er shomoy free RAM o storage.</li>
-                <li><strong>Anonymous Installation UUID:</strong> Kotojon user ei crash face korche ta count korar anonymous ID.</li>
-                <li><strong>Crash Time:</strong> Crash ti kon shomoy ghoteche.</li>
-            </ul>
-
-            <h3 class="lang-en">Purpose &amp; Data Retention</h3>
-            <h3 class="lang-bn">ব্যবহারের উদ্দেশ্য ও ডেটা সংরক্ষণ</h3>
-            <h3 class="lang-bl">Byaboharer Uddeshsho o Data Retention</h3>
-
-            <p class="lang-en">Diagnostic data is strictly used for software maintenance, debugging, and preventing future app crashes. Data is securely transmitted over HTTPS and stored on Google's secure Firebase servers, retained for up to 90 days before automatic deletion. For more information, please review the <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer" style="color:var(--accent); font-weight:600; text-decoration:underline;">Google Firebase Privacy &amp; Security Policy</a>.</p>
-            <p class="lang-bn">এই ডায়াগনস্টিক ডেটা শুধুমাত্র সফটওয়্যারের ত্রুটি সংশোধন (debugging), বাগ ফিক্সিং এবং ভবিষ্যতের ক্র্যাশ প্রতিরোধের উদ্দেশ্যে ব্যবহৃত হয়। ডেটা HTTPS এনক্রিপশনের মাধ্যমে সম্পূর্ণ নিরাপদে গুগলের ফায়ারবেস সার্ভারে পৌঁছায় এবং সাধারণত ৯০ দিন পর স্বয়ংক্রিয়ভাবে মুছে যায়। বিস্তারিত জানতে <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer" style="color:var(--accent); font-weight:600; text-decoration:underline;">Google Firebase Privacy Policy</a> দেখুন।</p>
-            <p class="lang-bl">Ei diagnostic data shudhumatro bug fix kora ebong app jeno smoothly chole tar jonno use hoy. HTTPS encrypted bhabe Google Firebase server e jay ebong 90 din por automatically delete hoye jay. Aro jante <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer" style="color:var(--accent); font-weight:600; text-decoration:underline;">Google Firebase Privacy Policy</a> visit korun.</p>
-
-            <div class="pill-grid">
-                <span class="pill allowed">Encrypted via HTTPS</span>
-                <span class="pill allowed">Strictly Non-PII (No Personal Info)</span>
-                <span class="pill allowed">Automatic 90-Day Purge</span>
-                <span class="pill blocked">No Keystroke Capture</span>
+                <ul class="policy-list">
+                    <li>
+                        <span class="lang-en"><strong>Automatic Password, PIN &amp; Financial Field Freeze:</strong> Whenever Android signals a password, visible password, web password, numeric PIN, one-time verification code (OTP), credit/debit card input, URI/URL bar, or email address field, Mukto Keyboard immediately disables word learning, next-word prediction logging, and auto-space interference.</span>
+                        <span class="lang-bn"><strong>পাসওয়ার্ড, পিন ও ব্যাংকিং বক্সে স্বয়ংক্রিয় লার্নিং বন্ধ:</strong> যখনই আপনি কোনো পাসওয়ার্ড, পিন, ওটিপি (OTP), ব্যাংক কার্ড নম্বর, ওয়েবসাইট লিংক (URL) বা ইমেইল ফিল্ডে টাইপ করেন, মুক্ত কিবোর্ড স্বয়ংক্রিয়ভাবে শব্দ শেখা (Word Learning) ও প্রেডিকশন সেভ করা সম্পূর্ণ বন্ধ করে দেয়।</span>
+                        <span class="lang-bl"><strong>Password, PIN o Banking Field-e Auto Freeze:</strong> Jokhoni apni password, PIN, OTP, card number, website URL ba email field-e type koren, Mukto Keyboard sathe sathe word learning o prediction save kora bondho kore dey.</span>
+                    </li>
+                    <li>
+                        <span class="lang-en"><strong>Browser Incognito / Private Mode Respect:</strong> Mukto Keyboard honors Android's <code>IME_FLAG_NO_PERSONALIZED_LEARNING</code> flag requested by Chrome Incognito, Firefox Private Browsing, Brave, DuckDuckGo, and secure messengers—zero words or bigrams are written to local storage during private sessions.</span>
+                        <span class="lang-bn"><strong>ইনকগনিটো ও প্রাইভেট ব্রাউজিং সম্মাননা:</strong> ক্রোম ইনকগনিটো বা যেকোনো ব্রাউজারের প্রাইভেট ট্যাবে (<code>IME_FLAG_NO_PERSONALIZED_LEARNING</code>) টাইপ করার সময় কিবোর্ড ফোনের লোকাল ডিকশনারিতেও কোনো শব্দ সংরক্ষণ করে না।</span>
+                        <span class="lang-bl"><strong>Incognito o Private Mode Sommanona:</strong> Chrome Incognito ba browser-er Private Tab-e (<code>IME_FLAG_NO_PERSONALIZED_LEARNING</code>) type korar somoy keyboard phone-er local dictionary-teo kono shobdo save kore na.</span>
+                    </li>
+                </ul>
             </div>
-        </div>
-    </div>
+        </article>
 
-    <!-- Section 8: Permissions -->
-    <div class="section-card" id="p8">
-        <div class="section-header">
-            <div class="section-num">08</div>
-            <div>
-                <div class="section-title lang-en">Permissions Required</div>
-                <div class="section-title lang-bn">প্রয়োজনীয় পারমিশনসমূহ</div>
-                <div class="section-title lang-bl">Permissions Required</div>
-            </div>
-        </div>
-        <div class="section-body">
-            <ul class="policy-list lang-en">
-                <li><strong>BIND_INPUT_METHOD:</strong> Required by Android to operate as a system keyboard.</li>
-                <li><strong>RECORD_AUDIO:</strong> Used solely for voice typing when tapping the mic icon.</li>
-                <li><strong>READ_MEDIA_IMAGES (Android 13+) / READ_EXTERNAL_STORAGE (Android 12 &amp; below) — [Disabled by Default &amp; Opt-In]:</strong> This permission is <strong>NOT requested upon app installation or normal typing</strong>. The recent screenshot suggestion feature is <strong>turned OFF by default</strong>. This permission is requested <strong>only if the user explicitly turns ON the 'Recent Screenshot Suggestion' feature</strong> in the keyboard settings. When enabled, the keyboard clipboard automatically detects newly captured screenshots in the background via <code>ContentObserver</code> for 1-tap pasting from the keyboard toolbar. System photo pickers require manual user selection and cannot observe real-time background screenshot events. This permission is strictly utilized to detect recent screenshots on-device. Mukto Keyboard does <strong>NOT</strong> access, index, upload, or share your photo albums, private gallery, or other media files. You can turn off this feature or revoke the permission at any time in Android Settings without impacting keyboard functionality.</li>
-                <li><strong>INTERNET:</strong> Used to download offline translation models, perform optional online translation, and submit anonymous crash diagnostics to Firebase Crashlytics.</li>
-            </ul>
-            <ul class="policy-list lang-bn">
-                <li><strong>BIND_INPUT_METHOD:</strong> অ্যান্ড্রয়েড সিস্টেম কিবোর্ড হিসেবে কাজ করার মূল পারমিশন।</li>
-                <li><strong>RECORD_AUDIO:</strong> মাইক্রোফোনে কথা বলে ভয়েস টাইপিং করার জন্য ব্যবহৃত হয়।</li>
-                <li><strong>READ_MEDIA_IMAGES (Android 13+) / READ_EXTERNAL_STORAGE (Android 12 ও পূর্ববর্তী সংস্করণ) — [ডিফল্টভাবে বন্ধ ও সম্পূর্ণ ঐচ্ছিক]:</strong> অ্যাপ ইনস্টল বা সাধারণ টাইপিংয়ের সময় এই পারমিশনটি কখনোই চাওয়া হয় না। এই ফিচারটি <strong>ডিফল্টভাবে বন্ধ (Default OFF) থাকে</strong>। ব্যবহারকারী নিজে কিবোর্ড সেটিংস থেকে <strong>'সাম্প্রতিক স্ক্রিনশট সাজেশন' ফিচারটি চালু (ON) করলেই কেবল</strong> এই পারমিশনটির প্রয়োজন হয় ও পারমিশন চাওয়া হয়। ফিচারটি চালু থাকলে কিবোর্ড ক্লিপবোর্ডে সদ্য তোলা স্ক্রিনশট স্বয়ংক্রিয়ভাবে ব্যাকগ্রাউন্ডে <code>ContentObserver</code>-এর সাহায্যে শনাক্ত করে সরাসরি ১-ট্যাপে পেস্ট করার অপশন প্রদান করে। সাধারণ সিস্টেম ফটো পিকার ব্যাকগ্রাউন্ডের রিয়েল-টাইম স্ক্রিনশট ইভেন্ট পর্যবেক্ষণ করতে পারে না এবং এতে ম্যানুয়াল সিলেকশন লাগে বিধায় এই পারমিশনটি প্রয়োজন। এটি শুধুমাত্র লোকালি সর্বশেষ স্ক্রিনশট শনাক্ত করার কাজে ব্যবহৃত হয়। মুক্ত কিবোর্ড আপনার ফোনের ফটো অ্যালবাম, গ্যালারির ব্যক্তিগত ছবি বা অন্যান্য মিডিয়া কখনোই স্ক্যান, সংগ্রহ বা কোনো দূরবর্তী সার্ভারে আপলোড করে না। ব্যবহারকারী যেকোনো সময় সেটিংস থেকে এই ফিচার বন্ধ বা পারমিশন প্রত্যাহার করতে পারেন।</li>
-                <li><strong>INTERNET:</strong> অফলাইন অনুবাদের ভাষা মডেল ডাউনলোড, অনলাইন অনুবাদ এবং ফায়ারবেস ক্র্যাশলিটিক্সে অজ্ঞাতনামা ক্র্যাশ রিপোর্ট পাঠানোর জন্য প্রয়োজন হয়।</li>
-            </ul>
-            <ul class="policy-list lang-bl">
-                <li><strong>BIND_INPUT_METHOD:</strong> Android phone e keyboard hishebe kaj korar main permission.</li>
-                <li><strong>RECORD_AUDIO:</strong> Mic diye voice typing korar jonno use hoy.</li>
-                <li><strong>READ_MEDIA_IMAGES (Android 13+) / READ_EXTERNAL_STORAGE (Android 12 o er niche) — [Default OFF &amp; Opt-In]:</strong> Ei permission app install ba normal typing er shomoy kokhono chawa hoy na. Ei screenshot suggestion feature ti <strong>default bhabe OFF thake</strong>. User nijer theke keyboard settings e feature ti <strong>ON korlei shudhumatro</strong> ei permission dorkar hoy. Enable thakle keyboard clipboard <code>ContentObserver</code> use kore background e notun screenshot detect kore instant 1-tap paste option dite pare. System photo picker background screenshot observe korte pare na ebong manual user selection dorkar hoy. Ei permission shudhumatro recent screenshot detect korar jonno strictly on-device use hoy; apnar gallery photos ba albums kokhono scan ba upload kora hoy na. Jekono shomoy setting theke eta OFF kora jay.</li>
-                <li><strong>INTERNET:</strong> Offline translation model download, online translate ebong Firebase Crashlytics e anonymous crash report pathanor jonno dorkar.</li>
-            </ul>
-
-            <div class="callout safe" style="margin-top:16px;">
-                <i class="fa-solid fa-images"></i>
+        <article id="sec-03" class="section-card">
+            <div class="section-header">
+                <div class="section-num">03</div>
                 <div>
-                    <div class="lang-en"><strong>Photo &amp; Media Privacy (Default: OFF):</strong> Mukto Keyboard does <strong>NOT</strong> collect, scan, or upload your private photos, camera pictures, or image library. The screenshot suggestion feature is <strong>turned OFF by default</strong> and this permission is only requested when you voluntarily enable the feature in Settings. It is strictly utilized for on-device real-time detection via <code>ContentObserver</code> for 1-tap pasting. All image processing remains 100% local on your device.</div>
-                    <div class="lang-bn"><strong>ছবি ও মিডিয়া সুরক্ষা (ডিফল্টভাবে বন্ধ থাকে):</strong> মুক্ত কিবোর্ড কখনোই আপনার ব্যক্তিগত ছবি, ক্যামেরা রোল বা গ্যালারির কোনো ডেটা সংগ্রহ বা সার্ভারে আপলোড করে না। স্ক্রিনশট সাজেশন ফিচারটি <strong>ডিফল্টভাবে সম্পূর্ণ বন্ধ (OFF) থাকে</strong> এবং ব্যবহারকারী নিজে কিবোর্ড সেটিংস থেকে এটি চালু করলেই কেবল এই পারমিশন চাওয়া হয়। এটি কেবলমাত্র ব্যাকগ্রাউন্ডে <code>ContentObserver</code>-এর সাহায্যে সদ্য তোলা স্ক্রিনশট শনাক্ত করে সরাসরি ১-ট্যাপে পেস্ট করার জন্য ব্যবহৃত হয়। সমস্ত ইমেজ প্রসেসিং শতভাগ আপনার ডিভাইসেই সীমাবদ্ধ থাকে।</div>
-                    <div class="lang-bl"><strong>Photo &amp; Media Privacy (Default OFF):</strong> Mukto Keyboard kokhono apnar private photo ba gallery data collect ba server e upload kore na. Ei feature ti <strong>default bhabe OFF thake</strong> ebong user settings theke ON korlei shudhu permission chawa hoy. <code>ContentObserver</code> diye shudhu notun screenshot detect kore instant 1-tap paste button show kora chara onno kono kaj e eta use hoy na.</div>
+                    <h2 class="section-title lang-en">On-Device Local Data &amp; Personalization Storage</h2>
+                    <h2 class="section-title lang-bn">ডিভাইসের অভ্যন্তরীণ লোকাল ডেটা ও পার্সোনালাইজেশন</h2>
+                    <h2 class="section-title lang-bl">Device-er Local Data o Personalization Storage</h2>
+                    <div class="section-subtitle lang-en">Exact files stored inside your Android app-private sandbox — never uploaded automatically</div>
+                    <div class="section-subtitle lang-bn">আপনার ফোনের প্রাইভেট স্যান্ডবক্সে সংরক্ষিত ডেটা যা কখনোই একা একা ইন্টারনেটে যায় না</div>
+                    <div class="section-subtitle lang-bl">Apnar phone-er private sandbox-e rakha data ja kokhonoi eka internet-e jay na</div>
                 </div>
             </div>
-        </div>
-    </div>
+            <div class="section-body">
+                <p class="lang-en">To provide fast offline word suggestions, custom themes, shortcuts, and handwriting keys, Mukto Keyboard stores the following data strictly inside Android's protected internal app directory (inaccessible to other apps on non-rooted devices):</p>
+                <p class="lang-bn">দ্রুত অফলাইন শব্দ সাজেশন, কাস্টম থিম, শর্টকাট এবং হাতের লেখার ফন্ট সুবিধা দিতে মুক্ত কিবোর্ড শুধুমাত্র অ্যান্ড্রয়েডের সুরক্ষিত প্রাইভেট ফোল্ডারে নিচের তথ্যগুলো সংরক্ষণ করে (যা অন্য কোনো অ্যাপ দেখতে পারে না):</p>
+                <p class="lang-bl">Druto offline suggestion, custom theme, shortcut ebong handwriting key subidha dite Mukto Keyboard shudhumatro Android-er surakkhito private folder-e nicher data-gulo save kore:</p>
 
-    <!-- Section 9: Data Retention & Deletion -->
-    <div class="section-card" id="p9">
-        <div class="section-header">
-            <div class="section-num">09</div>
-            <div>
-                <div class="section-title lang-en">Data Deletion &amp; User Control</div>
-                <div class="section-title lang-bn">ডেটা নিয়ন্ত্রণ ও মুছে ফেলা</div>
-                <div class="section-title lang-bl">Data Delete &amp; User Control</div>
+                <div class="data-matrix-wrap">
+                    <table class="data-matrix-table">
+                        <thead>
+                            <tr>
+                                <th><span class="lang-en">Local Feature / Store</span><span class="lang-bn">লোকাল ফিচার / স্টোর</span><span class="lang-bl">Local Feature / Store</span></th>
+                                <th><span class="lang-en">What Is Stored Locally</span><span class="lang-bn">কী সংরক্ষিত থাকে</span><span class="lang-bl">Ki Save Thake</span></th>
+                                <th><span class="lang-en">Auto-Cleanup &amp; Control</span><span class="lang-bn">স্বয়ংক্রিয় ক্লিনআপ ও নিয়ন্ত্রণ</span><span class="lang-bl">Auto-Cleanup o Control</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Learned Words Engine</strong><br /><code>user_learning.bin</code></td>
+                                <td>
+                                    <span class="lang-en">Non-sensitive Bangla, Banglish &amp; English word frequencies and next-word pairs for offline suggestions and your in-app Learned Words Analytics view.</span>
+                                    <span class="lang-bn">অফলাইন সাজেশন ও অ্যাপের 'লার্নড ওয়ার্ডস অ্যানালিটিক্স' দেখার জন্য সাধারণ বাংলা, বাংলিশ ও ইংরেজি শব্দের ব্যবহার সংখ্যা ও পরের শব্দের জোড়।</span>
+                                    <span class="lang-bl">Offline suggestion o Learned Words Analytics dekhar jonno sadharon Bangla, Banglish o English shobder frequency o next-word pair.</span>
+                                </td>
+                                <td>
+                                    <span class="lang-en">Configurable min count (1–10), active window (30–365d), auto-delete (60–365d), 30-day single-use typo purge, plus 1-tap wipe.</span>
+                                    <span class="lang-bn">ন্যূনতম ব্যবহার (১–১০), অ্যাক্টিভ উইন্ডো (৩০–৩৬৫ দিন), অটো-ডিলিট (৬০–৩৬৫ দিন), ৩০ দিনে ভুল বানান ক্লিনআপ ও ১-ট্যাপ ক্লিয়ার।</span>
+                                    <span class="lang-bl">Min count (1–10), active window (30–365d), auto-delete (60–365d), 30-day typo cleanup ebong 1-tap reset.</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Smart Text Shortcuts</strong></td>
+                                <td>
+                                    <span class="lang-en">Trigger codes and expanded phrases (e.g., <code>slm</code> → <code>আসসালামু আলাইকুম</code>) you create or edit.</span>
+                                    <span class="lang-bn">আপনার তৈরি বা সম্পাদনা করা শর্টকাট কোড ও পূর্ণ বাক্য (যেমন <code>slm</code> → <code>আসসালামু আলাইকুম</code>)।</span>
+                                    <span class="lang-bl">Apnar toiri ba edit kora shortcut code o purno bakko (jemon <code>slm</code> → <code>আসসালামু আলাইকুম</code>).</span>
+                                </td>
+                                <td>
+                                    <span class="lang-en">Edit, toggle, or delete individually anytime in Settings.</span>
+                                    <span class="lang-bn">সেটিংস থেকে যেকোনো সময় এডিট, বন্ধ বা ডিলিট করা যায়।</span>
+                                    <span class="lang-bl">Settings theke jekono somoy edit, off ba delete kora jay.</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Handwriting Key Studio</strong></td>
+                                <td>
+                                    <span class="lang-en">Your drawn vector strokes and pen thickness for the 52 English letters (<code>A–Z</code>, <code>a–z</code>).</span>
+                                    <span class="lang-bn">ইংরেজি ৫২টি বর্ণের (<code>A–Z</code>, <code>a–z</code>) জন্য আপনার হাতে আঁকা ভেক্টর স্ট্রোক ও কলমের পুরুত্ব।</span>
+                                    <span class="lang-bl">English 52-ti borner (<code>A–Z</code>, <code>a–z</code>) jonno apnar hate aka stroke o pen thickness.</span>
+                                </td>
+                                <td>
+                                    <span class="lang-en">Clear individual letters or delete entire handwriting style anytime.</span>
+                                    <span class="lang-bn">যেকোনো অক্ষর বা পুরো হ্যান্ডরাইটিং স্টাইল ১-ট্যাপে মুছে ফেলা যায়।</span>
+                                    <span class="lang-bl">Jekono letter ba puro handwriting style 1-tap-e muche fela jay.</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Custom Themes &amp; Media</strong></td>
+                                <td>
+                                    <span class="lang-en">Living World / ColorWave selections, custom color presets, cropped background photos, and trimmed (up to 25s) loop videos copied into private storage.</span>
+                                    <span class="lang-bn">জীবন্ত থিম, কালার-ওয়েভ ইফেক্ট, কাস্টম কালার প্রিসেট, ক্রপ করা ছবি এবং ২৫ সেকেন্ডের ট্রিম করা ভিডিও থিম (অ্যাপের প্রাইভেট ফোল্ডারে)।</span>
+                                    <span class="lang-bl">Living World theme, ColorWave effect, custom preset, crop kora chobi ebong 25s trim kora video theme.</span>
+                                </td>
+                                <td>
+                                    <span class="lang-en">Deleting a custom theme immediately removes its local image/video asset.</span>
+                                    <span class="lang-bn">কাস্টম থিম ডিলিট করলে সাথে সাথে তার ছবি বা ভিডিও ফাইল মুছে যায়।</span>
+                                    <span class="lang-bl">Custom theme delete korle sathe sathe tar image/video file muche jay.</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>UI &amp; Toolbar Preferences</strong></td>
+                                <td>
+                                    <span class="lang-en">Active layout, keyboard height (70%–130%), sound profile, vibration strength, Floating/One-Handed geometry, and 15-tool toolbar order.</span>
+                                    <span class="lang-bn">সক্রিয় লেআউট, উচ্চতা (৭০%–১৩০%), সাউন্ড প্রোফাইল, ভাইব্রেশন, ফ্লোটিং/ওয়ান-হ্যান্ডেড পজিশন এবং ১৫টি টুলের সাজানো ক্রম।</span>
+                                    <span class="lang-bl">Active layout, height (70%–130%), sound, vibration, Floating/One-Handed position o 15-ti tool-er order.</span>
+                                </td>
+                                <td>
+                                    <span class="lang-en">Reset in Settings or cleared automatically on app uninstall.</span>
+                                    <span class="lang-bn">সেটিংস রিসেট বা অ্যাপ আনইনস্টল করলেই সম্পূর্ণ মুছে যায়।</span>
+                                    <span class="lang-bl">Settings reset ba app uninstall korlei shompurno muche jay.</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </div>
-        <div class="section-body">
-            <p class="lang-en">Because all keyboard data stays locally on your phone, you maintain total control:</p>
-            <p class="lang-bn">যেহেতু কিবোর্ডের সমস্ত ডেটা শুধু আপনার নিজস্ব ফোনে থাকে, তাই ডেটার ওপর আপনার সম্পূর্ণ নিয়ন্ত্রণ থাকে:</p>
-            <p class="lang-bl">Shob data apnar phone ei thakay apnar full control thake:</p>
+        </article>
 
-            <ul class="policy-list lang-en">
-                <li><strong>Clear App Storage:</strong> Android Settings &rarr; Apps &rarr; Mukto Keyboard &rarr; Clear Storage permanently deletes all learned words, dictionary history, and clips.</li>
-                <li><strong>Uninstallation:</strong> Uninstalling the app permanently purges all local data from your device.</li>
-            </ul>
-            <ul class="policy-list lang-bn">
-                <li><strong>অ্যাপ স্টোরেজ ক্লিয়ার করা:</strong> অ্যান্ড্রয়েড Settings &rarr; Apps &rarr; Mukto Keyboard &rarr; Clear Storage করলেই সমস্ত সংরক্ষিত শব্দ এবং ক্লিপবোর্ড ডেটা চিরতরে মুছে যাবে।</li>
-                <li><strong>অ্যাপ আনইনস্টল:</strong> অ্যাপটি আনইনস্টল করলে সাথে সাথে ফোনের প্রাইভেট মেমোরি থেকে সম্পূর্ণ ডেটা স্থায়ীভাবে মুছে যায়।</li>
-            </ul>
-            <ul class="policy-list lang-bl">
-                <li><strong>Clear Storage:</strong> Settings &rarr; Apps &rarr; Mukto Keyboard &rarr; Clear Storage korle shob word history o clipboard data delete hoye jabe.</li>
-                <li><strong>Uninstall:</strong> App uninstall korlei phone theke shob data permanently muche jay.</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Section 10: Children's Privacy -->
-    <div class="section-card" id="p10">
-        <div class="section-header">
-            <div class="section-num">10</div>
-            <div>
-                <div class="section-title lang-en">Children's Privacy (COPPA)</div>
-                <div class="section-title lang-bn">শিশুদের গোপনীয়তা (COPPA)</div>
-                <div class="section-title lang-bl">Bachader Privacy (COPPA)</div>
+        <article id="sec-04" class="section-card">
+            <div class="section-header">
+                <div class="section-num">04</div>
+                <div>
+                    <h2 class="section-title lang-en">On-Device Camera OCR Text Scanner</h2>
+                    <h2 class="section-title lang-bn">অন-ডিভাইস ক্যামেরা ওসিআর (OCR) টেক্সট স্ক্যানার</h2>
+                    <h2 class="section-title lang-bl">On-Device Camera OCR Text Scanner</h2>
+                    <div class="section-subtitle lang-en">100% local optical character recognition — zero photos ever leave your phone</div>
+                    <div class="section-subtitle lang-bn">১০০% লোকাল টেক্সট শনাক্তকরণ — আপনার কোনো ছবিই ফোনের বাইরে যায় না</div>
+                    <div class="section-subtitle lang-bl">100% local text recognition — apnar kono chobi-i phone-er baire jay na</div>
+                </div>
             </div>
-        </div>
-        <div class="section-body">
-            <p class="lang-en">Mukto Keyboard is suitable for users of all ages and does not collect any personal identity data from children under 13, in compliance with COPPA and international standards.</p>
-            <p class="lang-bn">মুক্ত কিবোর্ড যেকোনো বয়সের মানুষের জন্য প্রযোজ্য এবং এটি ১৩ বছরের কম বয়সী শিশুসহ কোনো ব্যক্তির কাছ থেকেই কোনো ব্যক্তিগত তথ্য সংগ্রহ করে না। এটি COPPA মানদণ্ড সম্পূর্ণ মেনে চলে।</p>
-            <p class="lang-bl">Mukto Keyboard je kono boyosher manush er jonno safe ebong 13 bochorer niche bachader theke kono info ney na (COPPA compliant).</p>
-        </div>
-    </div>
-
-    <!-- Section 11: Contact Us -->
-    <div class="contact-card" id="p11">
-        <div class="section-header">
-            <div class="section-num">11</div>
-            <div>
-                <div class="section-title lang-en">Contact Us &amp; Support</div>
-                <div class="section-title lang-bn">যোগাযোগ ও সাপোর্ট</div>
-                <div class="section-title lang-bl">Jogajog &amp; Support</div>
-                <div class="section-subtitle lang-en">Questions about this privacy policy?</div>
-                <div class="section-subtitle lang-bn">এই গোপনীয়তা নীতি সম্পর্কে কোনো প্রশ্ন থাকলে যোগাযোগ করুন</div>
-                <div class="section-subtitle lang-bl">Ei policy niye kono question thakle contact korun</div>
+            <div class="section-body">
+                <p class="lang-en">When you open the <strong>Scan Text (OCR)</strong> tool from the keyboard toolbar, you can either point your camera at printed text (books, receipts, signboards, documents) or pick and crop an image from your gallery. Optical character recognition runs <strong>100% locally on your device</strong> using on-device machine learning.</p>
+                <p class="lang-bn">কিবোর্ডের টুলবার থেকে <strong>স্ক্যান টেক্সট (OCR)</strong> চালু করে আপনি যখন বই, রশিদ, সাইনবোর্ড বা ডকুমেন্টের ছবি তোলেন অথবা গ্যালারি থেকে ছবি ক্রপ করেন, তখন লেখা শনাক্ত করার পুরো কাজটি <strong>১০০% অফলাইনে আপনার ফোনের ভেতরেই</strong> সম্পন্ন হয়।</p>
+                <p class="lang-bl">Keyboard toolbar theke <strong>Scan Text (OCR)</strong> chalu kore apni jokhon boi, receipt, signboard ba document scan koren othoba gallery theke chobi crop koren, tokhon text extract korar puro kajti <strong>100% offline-e apnar phone-er bhetorei</strong> hoy.</p>
+                <ul class="policy-list">
+                    <li>
+                        <span class="lang-en"><strong>No Image Uploads:</strong> Camera frames and cropped gallery images are never uploaded to JS Organization or any external cloud server.</span>
+                        <span class="lang-bn"><strong>কোনো ছবি আপলোড হয় না:</strong> ক্যামেরার ফ্রেম বা গ্যালারি থেকে নেওয়া ক্রপ করা ছবি কখনোই কোনো ক্লাউড সার্ভারে আপলোড করা হয় না।</span>
+                        <span class="lang-bl"><strong>Kono Chobi Upload Hoy Na:</strong> Camera frame ba crop kora gallery image kokhonoi kono server-e upload hoy na.</span>
+                    </li>
+                    <li>
+                        <span class="lang-en"><strong>Immediate Buffer Cleanup:</strong> Any temporary crop frame held in cache memory during scanning is discarded immediately once the recognized text is inserted or the scanner closes.</span>
+                        <span class="lang-bn"><strong>তাৎক্ষণিক ক্যাশ ক্লিনআপ:</strong> স্ক্যান চলাকালীন সাময়িক ইমেজ বাফার লেখা ইনসার্ট করার সাথে সাথে বা স্ক্যানার বন্ধ করলেই স্বয়ংক্রিয়ভাবে মুছে যায়।</span>
+                        <span class="lang-bl"><strong>Tatkhonik Cache Cleanup:</strong> Scan cholakalin temporary image buffer lekha insert howar sathe sathei muche jay.</span>
+                    </li>
+                </ul>
             </div>
-        </div>
+        </article>
 
-        <p class="lang-en" style="color:rgba(255,255,255,.75); font-size:clamp(13px,3vw,14.5px);">Reach out to developer Md Mobassher Ahmed Sowrov or JS Organization:</p>
-        <p class="lang-bn" style="color:rgba(255,255,255,.75); font-size:clamp(13px,3vw,14.5px);">যেকোনো প্রশ্ন, পরামর্শ বা সাপোর্টের জন্য আমাদের সাথে যোগাযোগ করতে পারেন:</p>
-        <p class="lang-bl" style="color:rgba(255,255,255,.75); font-size:clamp(13px,3vw,14.5px);">Jekono question ba support er jonno amader shathe jogajog korun:</p>
-
-        <div class="contact-grid">
-            <a class="contact-item" href="mailto:jsorganization.official@gmail.com">
-                <div class="contact-label"><i class="fa-solid fa-envelope"></i> Email</div>
-                <div class="contact-value cv-mint">jsorganization.official@gmail.com</div>
-            </a>
-
-            <a class="contact-item" href="https://t.me/swrov" target="_blank" rel="noopener noreferrer">
-                <div class="contact-label"><i class="fa-brands fa-telegram"></i> Developer</div>
-                <div class="contact-value">@swrov</div>
-            </a>
-
-            <a class="contact-item" href="https://t.me/JSOrganization" target="_blank" rel="noopener noreferrer">
-                <div class="contact-label"><i class="fa-solid fa-paper-plane"></i> TG Channel</div>
-                <div class="contact-value">@JSOrganization</div>
-            </a>
-
-            <a class="contact-item" href="https://github.com/JSOrganizations" target="_blank" rel="noopener noreferrer">
-                <div class="contact-label"><i class="fa-brands fa-github"></i> GitHub</div>
-                <div class="contact-value cv-mint">JSOrganizations</div>
-            </a>
-
-            <div class="contact-item" style="cursor:default;">
-                <div class="contact-label"><i class="fa-solid fa-box"></i> Package ID</div>
-                <div class="contact-value" style="color:rgba(255,255,255,.6); font-family:monospace; font-size:12px;">com.mukto.keyboard</div>
+        <article id="sec-05" class="section-card">
+            <div class="section-header">
+                <div class="section-num">05</div>
+                <div>
+                    <h2 class="section-title lang-en">In-Keyboard AI Writing Assistant (Bring Your Own Key)</h2>
+                    <h2 class="section-title lang-bn">ইন-কিবোর্ড এআই রাইটিং অ্যাসিস্ট্যান্ট (BYOK আর্কিটেকচার)</h2>
+                    <h2 class="section-title lang-bl">In-Keyboard AI Writing Assistant (BYOK Architecture)</h2>
+                    <div class="section-subtitle lang-en">Direct device-to-provider HTTPS requests only when you explicitly trigger an AI action</div>
+                    <div class="section-subtitle lang-bn">শুধুমাত্র আপনি এআই বাটন চাপলেই আপনার ফোন থেকে সরাসরি নির্বাচিত এআই প্রোভাইডারে সংযোগ</div>
+                    <div class="section-subtitle lang-bl">Shudhumatro apni AI action chaplei phone theke shorashori chosen AI provider-e request jay</div>
+                </div>
             </div>
-        </div>
-    </div>
+            <div class="section-body">
+                <p class="lang-en">Mukto Keyboard includes an optional <strong>AI Actions</strong> studio supporting 9 built-in transformations (<em>Fix Grammar, Rephrase, Make Email, Social Media Post, Make Friendly, Sadhu → Cholito, Bangla → Banglish, Expand, Shorten</em>) plus your own custom prompts. This feature uses a strict <strong>Bring Your Own API Key (BYOK)</strong> model:</p>
+                <p class="lang-bn">মুক্ত কিবোর্ডে রয়েছে ঐচ্ছিক <strong>এআই অ্যাকশন</strong> সুবিধা, যাতে ৯টি রেডিমেড কাজ (<em>ব্যাকরণ সংশোধন, নতুনভাবে সাজানো, প্রফেশনাল ইমেইল, সোশ্যাল মিডিয়া পোস্ট, বন্ধুসুলভ ভাষা, সাধু → চলিত, বাংলা → বাংলিশ, বড় করা, ছোট করা</em>) এবং নিজের কাস্টম প্রম্পট ব্যবহার করা যায়। এটি সম্পূর্ণ <strong>নিজস্ব এপিআই কী (BYOK)</strong> পদ্ধতিতে কাজ করে:</p>
+                <p class="lang-bl">Mukto Keyboard-e royeche optional <strong>AI Actions</strong> tool, jate 9-ti built-in kaj (<em>Fix Grammar, Rephrase, Make Email, Social Media Post, Make Friendly, Sadhu → Cholito, Bangla → Banglish, Expand, Shorten</em>) ebong custom prompt babohar kora jay. Eti <strong>Bring Your Own API Key (BYOK)</strong> model-e kaj kore:</p>
 
-    <!-- Section 12: Legal Compliance -->
-    <div class="section-card" id="p12">
-        <div class="section-header">
-            <div class="section-num">12</div>
-            <div>
-                <div class="section-title lang-en">Legal Compliance &amp; Standards</div>
-                <div class="section-title lang-bn">আন্তর্জাতিক আইনি সম্মতি</div>
-                <div class="section-title lang-bl">Legal Compliance &amp; Standards</div>
+                <ul class="policy-list">
+                    <li>
+                        <span class="lang-en"><strong>Disabled Until You Configure It:</strong> If you do not enter an API key, zero AI network calls are ever made.</span>
+                        <span class="lang-bn"><strong>আপনি চালু না করা পর্যন্ত সম্পূর্ণ নিষ্ক্রিয়:</strong> আপনি নিজস্ব এপিআই কী যুক্ত না করলে কোনো এআই নেটওয়ার্ক কল কখনোই হয় না।</span>
+                        <span class="lang-bl"><strong>Apni Configure Na Korle Bondho:</strong> Apni nijossho API key na dile kono AI network request kokhonoi jay na.</span>
+                    </li>
+                    <li>
+                        <span class="lang-en"><strong>Direct Encrypted Connection (No Middleman):</strong> When you explicitly tap an AI action button, only the selected text (or current input box text you chose to transform) and instruction prompt are sent directly over HTTPS from your phone to the provider you configured—<strong>Google Gemini</strong>, <strong>Groq Cloud</strong>, <strong>OpenRouter</strong>, <strong>OpenAI</strong>, or your <strong>Custom Endpoint</strong>. Your API key and text never pass through any JS Organization server.</span>
+                        <span class="lang-bn"><strong>সরাসরি এনক্রিপ্টেড সংযোগ (কোনো মধ্যস্থতাকারী সার্ভার নেই):</strong> আপনি নিজে কোনো এআই অ্যাকশনে ট্যাপ করলেই কেবল আপনার নির্বাচিত লেখা ও নির্দেশনা সরাসরি HTTPS-এর মাধ্যমে আপনার বেছে নেওয়া প্রোভাইডারে (<strong>Google Gemini</strong>, <strong>Groq Cloud</strong>, <strong>OpenRouter</strong>, <strong>OpenAI</strong> বা <strong>কাস্টম এন্ডপয়েন্ট</strong>) যায়। আপনার এপিআই কী বা লেখা কখনোই JS Organization-এর কাছে আসে না।</span>
+                        <span class="lang-bl"><strong>Shorashori HTTPS Connection (No Middleman):</strong> Apni AI action-e tap korlei kebol selected text o prompt shorashori HTTPS-e apnar chosen provider-e (<strong>Google Gemini</strong>, <strong>Groq Cloud</strong>, <strong>OpenRouter</strong>, <strong>OpenAI</strong> ba <strong>Custom Endpoint</strong>) jay. Apnar API key ba lekha kokhonoi JS Organization-er server-e ashe na.</span>
+                    </li>
+                    <li>
+                        <span class="lang-en"><strong>Provider Privacy Policies Apply:</strong> Data processed by your chosen AI provider is governed by that provider's own terms and API data-retention settings associated with your account.</span>
+                        <span class="lang-bn"><strong>সংশ্লিষ্ট প্রোভাইডারের নীতিমালা প্রযোজ্য:</strong> আপনার নির্বাচিত এআই সার্ভিসে পাঠানো লেখার ক্ষেত্রে উক্ত প্রতিষ্ঠানের নিজস্ব প্রাইভেসি পলিসি ও আপনার অ্যাকাউন্টের সেটিংস প্রযোজ্য হবে।</span>
+                        <span class="lang-bl"><strong>Provider-er Nijossho Policy Projojjo:</strong> Apnar chosen AI provider-e pathano text-er khetre oi provider-er nijossho privacy policy projojjo hobe.</span>
+                    </li>
+                </ul>
             </div>
+        </article>
+
+        <article id="sec-06" class="section-card">
+            <div class="section-header">
+                <div class="section-num">06</div>
+                <div>
+                    <h2 class="section-title lang-en">GIF Search &amp; Picker — GIPHY Integration</h2>
+                    <h2 class="section-title lang-bn">জিআইএফ (GIF) সার্চ ও পিকার — GIPHY ইন্টিগ্রেশন</h2>
+                    <h2 class="section-title lang-bl">GIF Search o Picker — GIPHY Integration</h2>
+                    <div class="section-subtitle lang-en">Family-safe G-rated GIF queries activated strictly inside the GIF panel</div>
+                    <div class="section-subtitle lang-bn">শুধুমাত্র জিআইএফ প্যানেল খুললেই ফ্যামিলি-সেফ (G-rated) সার্চ সংযোগ</div>
+                    <div class="section-subtitle lang-bl">Shudhumatro GIF panel khullei family-safe G-rated search connection</div>
+                </div>
+            </div>
+            <div class="section-body">
+                <p class="lang-en">Mukto Keyboard's built-in GIF panel lets you browse trending reactions, 14 quick emotion categories, and search GIFs in English or Bangla (e.g., <em>হাসি, ভালোবাসা, ধন্যবাদ, পার্টি</em>). Network requests to the <strong>GIPHY API</strong> (<code>api.giphy.com</code>) occur <strong>only when you open the GIF tab or type inside the GIF search box</strong>.</p>
+                <p class="lang-bn">মুক্ত কিবোর্ডের বিল্ট-ইন GIF প্যানেল থেকে ট্রেন্ডিং রিঅ্যাকশন, ১৪টি দ্রুত ক্যাটাগরি এবং বাংলা বা ইংরেজি শব্দে (যেমন <em>হাসি, ভালোবাসা, ধন্যবাদ, পার্টি</em>) জিআইএফ খোঁজা যায়। <strong>GIPHY API</strong> (<code>api.giphy.com</code>)-এর সাথে সংযোগ কেবল তখনই ঘটে <strong>যখন আপনি নিজে GIF ট্যাব খোলেন বা GIF সার্চ বক্সে কিছু লেখেন</strong>।</p>
+                <p class="lang-bl">Mukto Keyboard-er built-in GIF panel theke trending reaction, 14-ti quick category ebong Bangla ba English shobde GIF khoja jay. <strong>GIPHY API</strong> (<code>api.giphy.com</code>)-er sathe connection kebol tokhoni hoy <strong>jokhon apni nije GIF tab kholen ba GIF search box-e likhen</strong>.</p>
+                <ul class="policy-list">
+                    <li>
+                        <span class="lang-en"><strong>Strict Isolation from Normal Typing:</strong> Regular messages typed in your chats are never sent to GIPHY. All requests enforce family-safe <code>rating=g</code> content filtering, cache results in RAM for up to 20 minutes to minimize network requests, and store any shared animation temporarily in <code>cache/shared_gifs/</code> strictly to hand off the file to your messenger app.</span>
+                        <span class="lang-bn"><strong>সাধারণ টাইপিং থেকে সম্পূর্ণ আলাদা:</strong> আপনার চ্যাটের সাধারণ কোনো লেখা কখনোই GIPHY-তে যায় না। প্রতিটি অনুরোধে ফ্যামিলি-সেফ <code>rating=g</code> ফিল্টার ব্যবহৃত হয় এবং মেসেঞ্জারে পাঠানোর জন্য সাময়িক ক্যাশ (<code>cache/shared_gifs/</code>) ব্যবহৃত হয়।</span>
+                        <span class="lang-bl"><strong>Normal Typing Theke Shompurno Alada:</strong> Apnar chat-er sadharon lekha kokhonoi GIPHY-te jay na. Protiti request-e family-safe <code>rating=g</code> filter thake ebong share korar jonno temporary <code>cache/shared_gifs/</code> cache babohar hoy.</span>
+                    </li>
+                </ul>
+            </div>
+        </article>
+
+        <article id="sec-07" class="section-card">
+            <div class="section-header">
+                <div class="section-num">07</div>
+                <div>
+                    <h2 class="section-title lang-en">Secret Chat (Emoji Steganography)</h2>
+                    <h2 class="section-title lang-bn">গোপন চ্যাট (ইমোজি স্টেগানোগ্রাফি)</h2>
+                    <h2 class="section-title lang-bl">Secret Chat (Emoji Steganography)</h2>
+                    <div class="section-subtitle lang-en">100% offline Unicode Variation Selector encoding &amp; decoding in volatile memory</div>
+                    <div class="section-subtitle lang-bn">শতভাগ অফলাইনে ইউনিকোড ভ্যারিয়েশন সিলেক্টর প্রযুক্তিতে অদৃশ্য মেসেজ রূপান্তর</div>
+                    <div class="section-subtitle lang-bl">100% offline-e Unicode Variation Selector diye invisible message encode o decode</div>
+                </div>
+            </div>
+            <div class="section-body">
+                <p class="lang-en">Mukto Keyboard's <strong>Secret Chat</strong> feature converts a message into invisible Unicode Variation Selector codepoints wrapped inside one of 24+ everyday carrier emojis (such as 😎, 🔥, ❤️, ✨, 🎉) and decodes incoming carrier emojis when copied or inspected inside Mukto Keyboard. <strong>Both encoding and decoding happen 100% offline in RAM.</strong> Mukto Keyboard never logs, saves to disk, or transmits any secret message over the network.</p>
+                <p class="lang-bn">মুক্ত কিবোর্ডের <strong>গোপন চ্যাট (Secret Chat)</strong> ফিচার আপনার গোপন বার্তাকে অদৃশ্য ইউনিকোড ক্যারেক্টারে রূপান্তর করে ২৪টিরও বেশি সাধারণ ইমোজির (যেমন 😎, 🔥, ❤️, ✨, 🎉) ভেতরে লুকিয়ে দেয় এবং প্রাপ্ত ইমোজি থেকে মুহূর্তেই আসল বার্তা উদ্ধার করে। <strong>এই এনকোড ও ডিকোড প্রক্রিয়াটি ১০০% অফলাইনে ফোনের র‍্যামে সম্পন্ন হয়।</strong> মুক্ত কিবোর্ড কখনোই কোনো গোপন বার্তা সেভ বা ইন্টারনেটে প্রেরণ করে না।</p>
+                <p class="lang-bl">Mukto Keyboard-er <strong>Secret Chat</strong> feature apnar gopon message-ke invisible Unicode character-e rupantor kore 24+ sadharon emoji-r (jemon 😎, 🔥, ❤️, ✨, 🎉) bhetore lukiye dey ebong prapto emoji theke ashol barta decode kore. <strong>Ei puro kajti 100% offline-e RAM-e hoy</strong>—kono message save ba upload kora hoy na.</p>
+            </div>
+        </article>
+
+        <article id="sec-08" class="section-card">
+            <div class="section-header">
+                <div class="section-num">08</div>
+                <div>
+                    <h2 class="section-title lang-en">Voice Typing &amp; Microphone Access</h2>
+                    <h2 class="section-title lang-bn">ভয়েস টাইপিং ও মাইক্রোফোন ব্যবহার</h2>
+                    <h2 class="section-title lang-bl">Voice Typing o Microphone Access</h2>
+                    <div class="section-subtitle lang-en">On-demand system speech recognition — zero background listening or audio recording</div>
+                    <div class="section-subtitle lang-bn">শুধুমাত্র মাইক্রোফোন আইকনে চাপলেই সক্রিয় — ব্যাকগ্রাউন্ডে কখনোই কথা শোনে না</div>
+                    <div class="section-subtitle lang-bl">Shudhumatro mic icon-e tap korlei active — background-e kokhonoi shune na</div>
+                </div>
+            </div>
+            <div class="section-body">
+                <p class="lang-en">The <code>RECORD_AUDIO</code> permission is requested strictly when you tap the microphone icon for Voice Typing. Mukto Keyboard delegates speech-to-text recognition directly to your Android device's built-in system speech recognizer (such as Google Speech Services). Mukto Keyboard never activates the microphone in the background, never records voice files to storage, and never uploads audio to JS Organization.</p>
+                <p class="lang-bn">আপনি ভয়েস টাইপিংয়ের জন্য মাইক্রোফোন আইকনে ট্যাপ করলেই কেবল <code>RECORD_AUDIO</code> পারমিশন চাওয়া হয়। মুখে বলা কথাকে লেখায় রূপান্তর করতে এটি সরাসরি আপনার ফোনের ডিফল্ট অ্যান্ড্রয়েড স্পিচ সার্ভিস ব্যবহার করে। মুক্ত কিবোর্ড কখনোই ব্যাকগ্রাউন্ডে মাইক্রোফোন চালু রাখে না বা কোনো অডিও ফাইল সংরক্ষণ করে না।</p>
+                <p class="lang-bl">Apni Voice Typing-er jonno microphone icon-e tap korlei kebol <code>RECORD_AUDIO</code> permission chawa hoy. Eti shorashori Android-er system speech recognizer babohar kore; Mukto Keyboard kokhonoi background-e audio record ba save kore na.</p>
+            </div>
+        </article>
+
+        <article id="sec-09" class="section-card">
+            <div class="section-header">
+                <div class="section-num">09</div>
+                <div>
+                    <h2 class="section-title lang-en">In-Keyboard Translation (Offline Model Support)</h2>
+                    <h2 class="section-title lang-bn">ইন-কিবোর্ড অনুবাদ (অফলাইন মডেল সাপোর্ট)</h2>
+                    <h2 class="section-title lang-bl">In-Keyboard Translation (Offline Model Support)</h2>
+                    <div class="section-subtitle lang-en">Instant Bangla ↔ English and multi-language translation right on your phone</div>
+                    <div class="section-subtitle lang-bn">টুলবারেই বাংলা ↔ ইংরেজি ও বহুভাষিক তাৎক্ষণিক অফলাইন অনুবাদ</div>
+                    <div class="section-subtitle lang-bl">Toolbar-ei Bangla ↔ English o multi-language offline translation</div>
+                </div>
+            </div>
+            <div class="section-body">
+                <p class="lang-en">Mukto Keyboard's toolbar Translator downloads compact language packs once to your device so that everyday Bangla ↔ English (and supported multi-language) translations run <strong>directly on your phone offline</strong> without sending your sentences to external translation servers every time you type.</p>
+                <p class="lang-bn">মুক্ত কিবোর্ডের ইন-কিবোর্ড ট্রান্সলেটর একবার ছোট ল্যাঙ্গুয়েজ প্যাক ফোনে ডাউনলোড করে নিলে বাংলা ↔ ইংরেজি ও অন্যান্য ভাষার অনুবাদ <strong>সম্পূর্ণ অফলাইনে আপনার ফোনের ভেতরেই</strong> সম্পন্ন করে—ফলে প্রতিবার আপনার বাক্য কোনো বাইরের সার্ভারে পাঠানোর প্রয়োজন হয় না।</p>
+                <p class="lang-bl">Mukto Keyboard-er toolbar Translator ekbar choto language model phone-e download kore nile Bangla ↔ English o onnanno bhashar translation <strong>shompurno offline-e phone-er bhetorei</strong> kore—protibar bakko kono server-e pathate hoy na.</p>
+            </div>
+        </article>
+
+        <article id="sec-10" class="section-card">
+            <div class="section-header">
+                <div class="section-num">10</div>
+                <div>
+                    <h2 class="section-title lang-en">Smart Clipboard &amp; Opt-In Screenshot Quick-Paste</h2>
+                    <h2 class="section-title lang-bn">স্মার্ট ক্লিপবোর্ড ও ঐচ্ছিক স্ক্রিনশট কুইক-পেস্ট</h2>
+                    <h2 class="section-title lang-bl">Smart Clipboard o Opt-In Screenshot Quick-Paste</h2>
+                    <div class="section-subtitle lang-en">Local-only clipboard history, sensitive password exclusion, and default-OFF screenshot chip</div>
+                    <div class="section-subtitle lang-bn">শতভাগ লোকাল ক্লিপবোর্ড হিস্ট্রি, পাসওয়ার্ড ফিল্টার এবং ডিফল্ট-অফ স্ক্রিনশট পেস্ট চিপ</div>
+                    <div class="section-subtitle lang-bl">Local-only clipboard history, password filter ebong default-OFF screenshot chip</div>
+                </div>
+            </div>
+            <div class="section-body">
+                <ul class="policy-list">
+                    <li>
+                        <span class="lang-en"><strong>Smart Clipboard Manager:</strong> Keeps up to 50 recent copied text clips plus any clips you pin inside local device storage, with configurable auto-expiry. Clips flagged by Android 13+ as sensitive (<code>ClipDescription.EXTRA_IS_SENSITIVE</code>, such as password-manager copies) are automatically excluded from history.</span>
+                        <span class="lang-bn"><strong>স্মার্ট ক্লিপবোর্ড ম্যানেজার:</strong> সাম্প্রতিক সর্বোচ্চ ৫০টি কপি করা টেক্সট এবং আপনার পিন করা ক্লিপগুলো শুধুমাত্র ফোনের লোকাল স্টোরেজে রাখে। অ্যান্ড্রয়েড ১৩+ এ সংবেদনশীল বা পাসওয়ার্ড হিসেবে চিহ্নিত ক্লিপগুলো স্বয়ংক্রিয়ভাবে হিস্ট্রি থেকে বাদ থাকে।</span>
+                        <span class="lang-bl"><strong>Smart Clipboard Manager:</strong> Samprotik sorboccho 50-ti copy kora text ebong apnar pin kora clip-gulo shudhumatro local storage-e thake. Android 13+ sensitive/password clip-gulo auto-skip hoy.</span>
+                    </li>
+                    <li>
+                        <span class="lang-en"><strong>Opt-In Recent Screenshot Paste (OFF by Default):</strong> Mukto Keyboard includes an optional convenience toggle to suggest a 1-tap paste chip right after you take a fresh screenshot while typing. This feature is <strong>strictly OFF by default</strong>. Only if you manually turn it ON in Settings and grant media permission does the keyboard observe new screenshot events while visible—it never scans, indexes, or uploads your photo gallery.</span>
+                        <span class="lang-bn"><strong>ঐচ্ছিক সাম্প্রতিক স্ক্রিনশট পেস্ট (ডিফল্টভাবে বন্ধ থাকে):</strong> টাইপ করার সময় সদ্য তোলা স্ক্রিনশট ১-ট্যাপে পেস্ট করার সুবিধাটি <strong>ডিফল্টভাবে সম্পূর্ণ বন্ধ (OFF) থাকে</strong>। শুধুমাত্র আপনি নিজে সেটিংস থেকে এটি চালু করলে এবং মিডিয়া পারমিশন দিলেই কিবোর্ড খোলা থাকা অবস্থায় নতুন স্ক্রিনশট শনাক্ত করে কুইক-পেস্ট চিপ দেখায়—এটি কখনোই আপনার ফটো গ্যালারি স্ক্যান বা আপলোড করে না।</span>
+                        <span class="lang-bl"><strong>Opt-In Recent Screenshot Paste (Default OFF):</strong> Type korar somoy notun screenshot 1-tap-e paste korar feature-ti <strong>default-bhabe OFF thake</strong>. Shudhumatro apni Settings theke chalu korle ebong permission dilei eti notun screenshot detect kore chip dekhay—kokhonoi apnar photo gallery scan ba upload kore na.</span>
+                    </li>
+                </ul>
+            </div>
+        </article>
+
+        <article id="sec-11" class="section-card">
+            <div class="section-header">
+                <div class="section-num">11</div>
+                <div>
+                    <h2 class="section-title lang-en">Encrypted <code>.mukto</code> Backup &amp; Private Google Drive Sync</h2>
+                    <h2 class="section-title lang-bn">এনক্রিপ্টেড <code>.mukto</code> ব্যাকআপ এবং প্রাইভেট গুগল ড্রাইভ সিঙ্ক</h2>
+                    <h2 class="section-title lang-bl">Encrypted <code>.mukto</code> Backup ebong Private Google Drive Sync</h2>
+                    <div class="section-subtitle lang-en">Military-grade AES-256-GCM encryption and isolated <code>drive.appdata</code> scope</div>
+                    <div class="section-subtitle lang-bn">শক্তিশালী AES-256-GCM এনক্রিপশন এবং সম্পূর্ণ বিচ্ছিন্ন <code>drive.appdata</code> স্কোপ</div>
+                    <div class="section-subtitle lang-bl">AES-256-GCM encryption ebong isolated <code>drive.appdata</code> scope</div>
+                </div>
+            </div>
+            <div class="section-body">
+                <p class="lang-en">Backing up your personalized keyboard setup is 100% optional and user-controlled across <strong>6 granular categories</strong>: <em>Learned Words, Preferences, Text Shortcuts, Handwriting Glyphs, Custom Themes, and Pinned Clips</em>.</p>
+                <p class="lang-bn">আপনার সাজানো কিবোর্ডের ডেটা ব্যাকআপ নেওয়া সম্পূর্ণ ঐচ্ছিক এবং আপনি নিজে <strong>৬টি আলাদা ক্যাটাগরি</strong> বেছে নিতে পারেন: <em>শেখা শব্দভাণ্ডার, সেটিংস প্রিফারেন্স, টেক্সট শর্টকাট, হ্যান্ডরাইটিং বর্ণ, কাস্টম থিম এবং পিন করা ক্লিপবোর্ড</em>।</p>
+                <p class="lang-bl">Apnar keyboard data backup neya 100% optional ebong apni nije <strong>6-ti category</strong> beche nite paren: <em>Learned Words, Preferences, Text Shortcuts, Handwriting Glyphs, Custom Themes, ebong Pinned Clips</em>.</p>
+
+                <ul class="policy-list">
+                    <li>
+                        <span class="lang-en"><strong>Local <code>.mukto</code> Encrypted Archive:</strong> Exported <code>.mukto</code> files are sealed with authenticated <strong>AES-256-GCM</strong> encryption and SHA-256 integrity verification so tampered files are rejected automatically.</span>
+                        <span class="lang-bn"><strong>লোকাল <code>.mukto</code> এনক্রিপ্টেড ফাইল:</strong> এক্সপোর্ট করা প্রতিটি <code>.mukto</code> ফাইল <strong>AES-256-GCM</strong> অ্যালগরিদম ও SHA-256 ইন্টিগ্রিটি চেক দ্বারা সুরক্ষিত থাকে, ফলে বিকৃত বা পরিবর্তিত ফাইল স্বয়ংক্রিয়ভাবে বাতিল হয়।</span>
+                        <span class="lang-bl"><strong>Local <code>.mukto</code> Encrypted File:</strong> Export kora protiti <code>.mukto</code> file <strong>AES-256-GCM</strong> encryption o SHA-256 integrity verification diye surakkhito thake.</span>
+                    </li>
+                    <li>
+                        <span class="lang-en"><strong>Restricted Google Drive <code>appDataFolder</code> Only:</strong> If you sign in with Google for cloud backup, Mukto Keyboard requests <strong>only</strong> the hidden <code>https://www.googleapis.com/auth/drive.appdata</code> scope. Mukto Keyboard <strong>cannot view, list, read, modify, or delete any of your personal Google Drive documents, photos, or folders</strong>. Your encrypted backup goes directly between your device and your own Google account's hidden app folder.</span>
+                        <span class="lang-bn"><strong>শুধুমাত্র গুগল ড্রাইভের গোপন <code>appDataFolder</code> অ্যাক্সেস:</strong> আপনি গুগল ড্রাইভ ব্যাকআপ চালু করলে মুক্ত কিবোর্ড কেবল সীমাবদ্ধ <code>drive.appdata</code> অনুমতি চায়। ফলে মুক্ত কিবোর্ড <strong>আপনার ব্যক্তিগত গুগল ড্রাইভের কোনো ছবি, ফোল্ডার বা ডকুমেন্ট কখনোই দেখতে বা পড়তে পারে না</strong>। এনক্রিপ্টেড ব্যাকআপ সরাসরি আপনার ফোনের সাথে আপনার নিজস্ব গুগল অ্যাকাউন্টের গোপন অ্যাপ ফোল্ডারে আদান-প্রদান হয়।</span>
+                        <span class="lang-bl"><strong>Shudhumatro Google Drive-er Hidden <code>appDataFolder</code>:</strong> Google Drive sync chalu korle Mukto Keyboard kebol <code>drive.appdata</code> scope chay. Tai Mukto Keyboard <strong>apnar Google Drive-er kono personal chobi, file ba folder dekhte ba porte pare na</strong>.</span>
+                    </li>
+                </ul>
+            </div>
+        </article>
+
+        <article id="sec-12" class="section-card">
+            <div class="section-header">
+                <div class="section-num">12</div>
+                <div>
+                    <h2 class="section-title lang-en">Crash Reporting &amp; Stability Diagnostics</h2>
+                    <h2 class="section-title lang-bn">ক্র্যাশ রিপোর্টিং ও অ্যাপ স্থিতিশীলতা ডায়াগনস্টিকস</h2>
+                    <h2 class="section-title lang-bl">Crash Reporting o Stability Diagnostics</h2>
+                    <div class="section-subtitle lang-en">Sanitized technical stack traces via Google Firebase Crashlytics — zero typed content</div>
+                    <div class="section-subtitle lang-bn">গুগল ফায়ারবেস ক্র্যাশলিটিক্সের মাধ্যমে শুধুমাত্র কারিগরি ত্রুটি শনাক্তকরণ — কোনো ব্যক্তিগত লেখা নয়</div>
+                    <div class="section-subtitle lang-bl">Firebase Crashlytics-er madhyome shudhumatro technical crash log — kono personal text noy</div>
+                </div>
+            </div>
+            <div class="section-body">
+                <p class="lang-en">To keep the keyboard fast and crash-free across thousands of Android models, Mukto Keyboard uses <strong>Google Firebase Crashlytics</strong> strictly for technical crash diagnostics. Our internal error sanitizer (<code>AppErrorReporter</code>) filters out routine offline/network timeouts and records <strong>only</strong> code stack traces, Android OS level, device model, and memory state when an unexpected crash occurs. <strong>Typed words, clipboard items, Secret Chat messages, AI API keys, and personal identity are never attached to crash reports.</strong> Diagnostic crash logs are automatically purged by Firebase within 90 days.</p>
+                <p class="lang-bn">হাজারো ভিন্ন মডেলের অ্যান্ড্রয়েড ফোনে কিবোর্ডটিকে ক্র্যাশ-মুক্ত ও দ্রুত রাখতে শুধুমাত্র কারিগরি ত্রুটি বোঝার জন্য <strong>Google Firebase Crashlytics</strong> ব্যবহৃত হয়। অ্যাপের নিজস্ব স্যানিটাইজার সাধারণ অফলাইন এরর বাদ দেয় এবং অপ্রত্যাশিত ক্র্যাশ ঘটলে কেবল কোডের ত্রুটির লাইন (Stack Trace), ফোনের মডেল ও অ্যান্ড্রয়েড ভার্সন পাঠায়। <strong>আপনার টাইপ করা কোনো শব্দ, ক্লিপবোর্ড, গোপন চ্যাট বা এপিআই কী কখনোই ক্র্যাশ রিপোর্টে যুক্ত হয় না।</strong> এসব ডায়াগনস্টিক লগ ৯০ দিনের মধ্যে স্বয়ংক্রিয়ভাবে মুছে যায়।</p>
+                <p class="lang-bl">Keyboard-tike crash-free rakhte shudhumatro technical error bojhar jonno <strong>Google Firebase Crashlytics</strong> babohar hoy. Crash ghotle kebol code stack trace, phone model o Android OS version jay—<strong>apnar type kora kono shobdo, clipboard, Secret Chat ba API key kokhonoi crash report-e jay na.</strong> Crash log 90 diner modhye auto-delete hoy.</p>
+            </div>
+        </article>
+
+        <article id="sec-13" class="section-card">
+            <div class="section-header">
+                <div class="section-num">13</div>
+                <div>
+                    <h2 class="section-title lang-en">Complete Android Permissions Matrix</h2>
+                    <h2 class="section-title lang-bn">অ্যান্ড্রয়েড পারমিশনসমূহের সম্পূর্ণ তালিকা ও কারণ</h2>
+                    <h2 class="section-title lang-bl">Android Permission-somuher Shompurno Talika o Karon</h2>
+                    <div class="section-subtitle lang-en">Every permission declared in <code>AndroidManifest.xml</code> explained plainly</div>
+                    <div class="section-subtitle lang-bn">অ্যাপে ব্যবহৃত প্রতিটি পারমিশনের স্বচ্ছ ও সহজ ব্যাখ্যা</div>
+                    <div class="section-subtitle lang-bl">App-e babohrito protiti permission-er sohoj bakkha</div>
+                </div>
+            </div>
+            <div class="section-body">
+                <div class="data-matrix-wrap">
+                    <table class="data-matrix-table">
+                        <thead>
+                            <tr>
+                                <th><span class="lang-en">Permission</span><span class="lang-bn">পারমিশন</span><span class="lang-bl">Permission</span></th>
+                                <th><span class="lang-en">When Triggered</span><span class="lang-bn">কখন ব্যবহৃত হয়</span><span class="lang-bl">Kokhon Lage</span></th>
+                                <th><span class="lang-en">Exact Purpose</span><span class="lang-bn">সুনির্দিষ্ট কাজ</span><span class="lang-bl">Sunirdishto Kaj</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>BIND_INPUT_METHOD</code></td>
+                                <td><span class="lang-en">System IME activation</span><span class="lang-bn">কিবোর্ড সক্রিয় করার সময়</span><span class="lang-bl">Keyboard chalu korar somoy</span></td>
+                                <td><span class="lang-en">Required by Android OS so Mukto Keyboard can function as your system keyboard.</span><span class="lang-bn">অ্যান্ড্রয়েড সিস্টেমে কিবোর্ড হিসেবে কাজ করার মূল সিস্টেম অনুমতি।</span><span class="lang-bl">Android system keyboard hishebe kaj korar mul onumoti.</span></td>
+                            </tr>
+                            <tr>
+                                <td><code>VIBRATE</code></td>
+                                <td><span class="lang-en">Keypress haptics</span><span class="lang-bn">টাইপিং ভাইব্রেশনে</span><span class="lang-bl">Keypress vibration-e</span></td>
+                                <td><span class="lang-en">Delivers customizable 5ms–100ms tactile haptic feedback on key taps.</span><span class="lang-bn">কী চাপার সময় ৫–১০০ মিলিসেকেন্ডের মৃদু ভাইব্রেশন অনুভূতি দেয়।</span><span class="lang-bl">Key chapar somoy 5ms–100ms haptic feedback dey.</span></td>
+                            </tr>
+                            <tr>
+                                <td><code>INTERNET</code> &amp; <code>ACCESS_NETWORK_STATE</code></td>
+                                <td><span class="lang-en">Optional user actions only</span><span class="lang-bn">শুধুমাত্র ঐচ্ছিক ফিচারে</span><span class="lang-bl">Shudhumatro optional feature-e</span></td>
+                                <td><span class="lang-en">Used strictly for GIPHY GIF search, one-time offline translation model download, user-configured BYOK AI requests, optional Google Drive backup sync, and crash diagnostics. Core typing works 100% offline.</span><span class="lang-bn">শুধুমাত্র GIF সার্চ, অনুবাদের ভাষা প্যাক ডাউনলোড, নিজস্ব কী-এর AI অ্যাকশন, ঐচ্ছিক গুগল ড্রাইভ ব্যাকআপ এবং ক্র্যাশ ডায়াগনস্টিকসের জন্য ব্যবহৃত হয়। সাধারণ টাইপিং ১০০% অফলাইনে চলে।</span><span class="lang-bl">Shudhumatro GIF search, translation pack download, BYOK AI, Google Drive sync o crash report-e babohar hoy. Core typing 100% offline.</span></td>
+                            </tr>
+                            <tr>
+                                <td><code>CAMERA</code> <em>(Optional Runtime)</em></td>
+                                <td><span class="lang-en">Tapping Scan Text (OCR)</span><span class="lang-bn">স্ক্যান টেক্সট (OCR) চাপলে</span><span class="lang-bl">Scan Text (OCR) chaple</span></td>
+                                <td><span class="lang-en">Captures live view frames for 100% offline on-device OCR text extraction. Revocable anytime.</span><span class="lang-bn">বই বা ডকুমেন্ট থেকে অফলাইনে লেখা স্ক্যান করার জন্য ব্যবহৃত হয়। যেকোনো সময় বন্ধ করা যায়।</span><span class="lang-bl">Offline-e chobi theke lekha scan korar jonno. Jekono somoy bondho kora jay.</span></td>
+                            </tr>
+                            <tr>
+                                <td><code>RECORD_AUDIO</code> <em>(Optional Runtime)</em></td>
+                                <td><span class="lang-en">Tapping Mic button</span><span class="lang-bn">মাইক বাটনে চাপলে</span><span class="lang-bl">Mic button-e chaple</span></td>
+                                <td><span class="lang-en">Passes live speech to Android's system SpeechRecognizer for Voice Typing. Revocable anytime.</span><span class="lang-bn">মুখে বলে ভয়েস টাইপিং করার জন্য সিস্টেম স্পিচ সার্ভিসে কথা পাঠায়।</span><span class="lang-bl">Voice Typing-er jonno Android speech recognizer-e kotha pathay.</span></td>
+                            </tr>
+                            <tr>
+                                <td><code>READ_MEDIA_IMAGES</code> / <code>READ_EXTERNAL_STORAGE</code> <em>(Optional Runtime)</em></td>
+                                <td><span class="lang-en">Enabling Screenshot Paste</span><span class="lang-bn">স্ক্রিনশট পেস্ট চালু করলে</span><span class="lang-bl">Screenshot Paste on korle</span></td>
+                                <td><span class="lang-en">Requested only if you manually enable the opt-in Recent Screenshot Quick-Paste toggle. Custom theme photos/videos use Android's permissionless system Photo Picker.</span><span class="lang-bn">কেবল আপনি নিজে 'রিসেন্ট স্ক্রিনশট পেস্ট' অপশন চালু করলেই চাওয়া হয়। কাস্টম থিমের ছবি/ভিডিও নিতে সিস্টেম ফটো পিকার ব্যবহৃত হয়।</span><span class="lang-bl">Shudhumatro Recent Screenshot Paste toggle on korlei chawa hoy. Theme media-r jonno system Photo Picker babohar hoy.</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </article>
+
+        <article id="sec-14" class="section-card">
+            <div class="section-header">
+                <div class="section-num">14</div>
+                <div>
+                    <h2 class="section-title lang-en">Data Control, Reset &amp; Complete Deletion Rights</h2>
+                    <h2 class="section-title lang-bn">আপনার ডেটা নিয়ন্ত্রণ, রিসেট ও সম্পূর্ণ মুছে ফেলার অধিকার</h2>
+                    <h2 class="section-title lang-bl">Apnar Data Control, Reset o Complete Deletion Rights</h2>
+                    <div class="section-subtitle lang-en">Instant self-service deletion right on your device — no support ticket needed</div>
+                    <div class="section-subtitle lang-bn">কোনো আবেদনের অপেক্ষা ছাড়াই সরাসরি অ্যাপ থেকে ১-ট্যাপে সব ডেটা মুছে ফেলার ক্ষমতা</div>
+                    <div class="section-subtitle lang-bl">Kono ticket charai shorashori app theke 1-tap-e data delete korar khomota</div>
+                </div>
+            </div>
+            <div class="section-body">
+                <p class="lang-en">Because JS Organization holds zero personal data on external Mukto servers, you have immediate, absolute control over your data directly on your phone:</p>
+                <p class="lang-bn">যেহেতু JS Organization কোনো সার্ভারে আপনার ব্যক্তিগত তথ্য রাখে না, তাই আপনার সব ডেটার শতভাগ নিয়ন্ত্রণ আপনার নিজের হাতেই রয়েছে:</p>
+                <p class="lang-bl">Jehetu JS Organization kono server-e apnar personal data rakhe na, tai shob data-r purno control apnar hatei:</p>
+                <ul class="policy-list">
+                    <li>
+                        <span class="lang-en"><strong>Granular In-App Reset:</strong> Clear Learned Words, delete individual or unpinned Clipboard clips, remove Text Shortcuts, wipe Handwriting strokes, delete Custom Themes, or remove your saved BYOK AI key anytime inside Mukto Keyboard Settings.</span>
+                        <span class="lang-bn"><strong>অ্যাপের ভেতর থেকে আলাদা আলাদা ক্লিয়ার:</strong> মুক্ত কিবোর্ড সেটিংস থেকে যেকোনো মুহূর্তে শেখা শব্দভাণ্ডার, ক্লিপবোর্ড হিস্ট্রি, টেক্সট শর্টকাট, হাতের লেখার ফন্ট, কাস্টম থিম কিংবা সংরক্ষিত AI কী ১-ট্যাপে মুছে ফেলতে পারেন।</span>
+                        <span class="lang-bl"><strong>In-App Granular Clear:</strong> Settings theke jekono somoy Learned Words, Clipboard, Shortcuts, Handwriting strokes, Custom Themes ba AI key 1-tap-e clear korte paren.</span>
+                    </li>
+                    <li>
+                        <span class="lang-en"><strong>Cloud Backup Removal:</strong> Delete your encrypted Google Drive backup from <em>Mukto Settings → Backup &amp; Sync</em> or revoke Mukto Keyboard directly under <em>Google Account → Drive → Settings → Manage Apps</em>.</span>
+                        <span class="lang-bn"><strong>ক্লাউড ব্যাকআপ ডিলিট:</strong> <em>মুক্ত সেটিংস → ব্যাকআপ ও সিঙ্ক</em> থেকে অথবা আপনার গুগল অ্যাকাউন্টের <em>Drive → Manage Apps</em> থেকে যেকোনো সময় ক্লাউড ব্যাকআপ মুছে দিতে পারেন।</span>
+                        <span class="lang-bl"><strong>Cloud Backup Delete:</strong> <em>Mukto Settings → Backup &amp; Sync</em> theke othoba Google Account-er <em>Drive → Manage Apps</em> theke backup muche dite paren.</span>
+                    </li>
+                    <li>
+                        <span class="lang-en"><strong>Complete Uninstall Wipe:</strong> Clearing app storage in Android Settings or uninstalling Mukto Keyboard permanently destroys 100% of local files on your device.</span>
+                        <span class="lang-bn"><strong>আনইনস্টল করলেই সম্পূর্ণ বিলুপ্তি:</strong> ফোনের সেটিংস থেকে অ্যাপ ডেটা ক্লিয়ার করলে বা মুক্ত কিবোর্ড আনইনস্টল করলে ফোনে থাকা ১০০% লোকাল ফাইল চিরতরে মুছে যায়।</span>
+                        <span class="lang-bl"><strong>Uninstall Wipe:</strong> App data clear korle ba Mukto Keyboard uninstall korle phone-er 100% local data chirotore muche jay.</span>
+                    </li>
+                </ul>
+            </div>
+        </article>
+
+        <article id="sec-15" class="section-card">
+            <div class="section-header">
+                <div class="section-num">15</div>
+                <div>
+                    <h2 class="section-title lang-en">Children's Privacy (COPPA) &amp; Global Regulatory Compliance</h2>
+                    <h2 class="section-title lang-bn">শিশুদের গোপনীয়তা (COPPA) ও আন্তর্জাতিক ডেটা সুরক্ষা আইন</h2>
+                    <h2 class="section-title lang-bl">Children's Privacy (COPPA) o Global Compliance</h2>
+                    <div class="section-subtitle lang-en">Compliant with Google Play Data Safety, GDPR (EU/UK), CCPA/CPRA, and COPPA</div>
+                    <div class="section-subtitle lang-bn">Google Play Data Safety, GDPR, CCPA এবং COPPA নীতিমালার সাথে পূর্ণ সামঞ্জস্যপূর্ণ</div>
+                    <div class="section-subtitle lang-bl">Google Play Data Safety, GDPR, CCPA ebong COPPA nitimalar sathe samonjosshopurno</div>
+                </div>
+            </div>
+            <div class="section-body">
+                <p class="lang-en">Mukto Keyboard is safe for general audiences of all ages. We do not knowingly collect personal information from children under 13 (or the applicable digital consent age in your country), enforce family-safe <code>rating=g</code> filters on GIF searches, include zero behavioral advertising SDKs, and fully satisfy <strong>GDPR</strong>, <strong>CCPA/CPRA</strong>, and <strong>Google Play User Data &amp; Data Safety</strong> standards. If we ever revise this Privacy Policy to reflect new app capabilities, we will update the "Last Updated" date at the top of this page prior to release.</p>
+                <p class="lang-bn">মুক্ত কিবোর্ড সব বয়সের ব্যবহারকারীদের জন্য নিরাপদ। আমরা ১৩ বছরের কম বয়সী শিশু বা কোনো ব্যবহারকারীর কাছ থেকেই কোনো ব্যক্তিগত তথ্য সংগ্রহ করি না, জিআইএফ সার্চে ফ্যামিলি-সেফ <code>rating=g</code> ফিল্টার ব্যবহার করি এবং কোনো বিজ্ঞাপনী ট্র্যাকার রাখি না। এটি <strong>GDPR</strong>, <strong>CCPA</strong> এবং <strong>Google Play Data Safety</strong>-এর সকল মানদণ্ড অনুসরণ করে। ভবিষ্যতে নতুন কোনো ফিচারের কারণে এই নীতিমালা হালনাগাদ করা হলে উপরের 'সর্বশেষ হালনাগাদ' তারিখ পরিবর্তন করে প্রকাশ করা হবে।</p>
+                <p class="lang-bl">Mukto Keyboard shob boyosher user-der jonno nirapod. Amra 13 bochorer kom boyoshi shishu ba kono user-er personal data collect kori na, GIF search-e <code>rating=g</code> filter rakhi ebong <strong>GDPR</strong>, <strong>CCPA</strong> o <strong>Google Play Data Safety</strong> policy mene choli. Bhobishyote policy update hole uporer "Last Updated" tarikh update kora hobe.</p>
+            </div>
+        </article>
+
+        <section id="sec-16" class="contact-card">
+            <div class="section-header">
+                <div class="section-num">16</div>
+                <div>
+                    <h2 class="section-title lang-en">Official Contact &amp; Privacy Inquiries</h2>
+                    <h2 class="section-title lang-bn">যোগাযোগ ও গোপনীয়তা সংক্রান্ত প্রশ্ন</h2>
+                    <h2 class="section-title lang-bl">Official Contact o Privacy Inquiries</h2>
+                    <div class="section-subtitle lang-en">Direct channels to reach the developer and JS Organization</div>
+                    <div class="section-subtitle lang-bn">ডেভেলপার ও JS Organization-এর সাথে সরাসরি যোগাযোগের মাধ্যম</div>
+                    <div class="section-subtitle lang-bl">Developer o JS Organization-er sathe shorashori jogajoger madhyom</div>
+                </div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-label"><i class="fa-solid fa-user-shield"></i> Developer</div>
+                    <div class="contact-value">Md Mobassher Ahmed Sowrov</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-label"><i class="fa-solid fa-building"></i> Organization</div>
+                    <div class="contact-value cv-mint">JS Organization</div>
+                </div>
+                <a href="mailto:jsorganization.official@gmail.com" class="contact-item">
+                    <div class="contact-label"><i class="fa-solid fa-envelope"></i> Official Email</div>
+                    <div class="contact-value cv-mint">jsorganization.official@gmail.com</div>
+                </a>
+                <a href="https://t.me/swrov" target="_blank" rel="noopener noreferrer" class="contact-item">
+                    <div class="contact-label"><i class="fa-brands fa-telegram"></i> Developer Telegram</div>
+                    <div class="contact-value">@swrov</div>
+                </a>
+                <a href="https://t.me/JSOrganization" target="_blank" rel="noopener noreferrer" class="contact-item">
+                    <div class="contact-label"><i class="fa-solid fa-paper-plane"></i> Official Channel</div>
+                    <div class="contact-value">@JSOrganization</div>
+                </a>
+                <a href="https://github.com/JSOrganizations" target="_blank" rel="noopener noreferrer" class="contact-item">
+                    <div class="contact-label"><i class="fa-brands fa-github"></i> GitHub</div>
+                    <div class="contact-value">github.com/JSOrganizations</div>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-nav-links">
+            <a href="index.html"><span class="lang-en">Home</span><span class="lang-bn">হোম</span><span class="lang-bl">Home</span></a>
+            <a href="privacy-policy.html"><span class="lang-en">Privacy Policy</span><span class="lang-bn">প্রাইভেসি পলিসি</span><span class="lang-bl">Privacy Policy</span></a>
+            <a href="terms-of-use.html"><span class="lang-en">Terms of Use</span><span class="lang-bn">ব্যবহারের শর্তাবলি</span><span class="lang-bl">Terms of Use</span></a>
+            <a href="mailto:jsorganization.official@gmail.com"><span class="lang-en">Contact Support</span><span class="lang-bn">সাপোর্ট ইমেইল</span><span class="lang-bl">Contact Support</span></a>
         </div>
-        <div class="section-body">
-            <p class="lang-en">This Privacy Policy is designed in full compliance with the <strong>Google Play Developer Distribution Agreement</strong>, Google Play Keyboard/IME policies, Google Play Data Safety guidelines, <strong>GDPR</strong>, and <strong>CCPA</strong>. Mukto Keyboard does not harvest or sell consumer data.</p>
-            <p class="lang-bn">এই প্রাইভেসি পলিসিটি <strong>Google Play Developer Policy</strong>, গুগল প্লে Data Safety নির্দেশিকা, ইউরোপীয় ইউনিয়নের <strong>GDPR</strong>, এবং <strong>CCPA</strong> মানদণ্ড অনুযায়ী তৈরি করা হয়েছে। কিবোর্ড কোনো ব্যবহারকারীর ডেটা সংগ্রহ বা বিক্রি করে না।</p>
-            <p class="lang-bl">Ei policy ti Google Play Store Policy, Google Play Data Safety guidelines, GDPR ebong CCPA international standards mene toiri kora hoyeche. Kono user data sell ba harvest kora hoy na.</p>
-        </div>
-    </div>
+        <p class="lang-en">&copy; 2026 <strong>JS Organization</strong> &bull; Engineered by <strong>Md Mobassher Ahmed Sowrov</strong>. All rights reserved.</p>
+        <p class="lang-bn">&copy; ২০২৬ <strong>JS Organization</strong> &bull; নির্মাতা: <strong>মোঃ মোবাশ্বের আহমেদ সৌরভ</strong>। সর্বস্বত্ব সংরক্ষিত।</p>
+        <p class="lang-bl">&copy; 2026 <strong>JS Organization</strong> &bull; Engineered by <strong>Md Mobassher Ahmed Sowrov</strong>. All rights reserved.</p>
+    </footer>
 
-</div>
+    <button type="button" id="backToTopBtn" class="back-to-top" onclick="scrollToTop()" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
-<!-- Footer -->
-<div class="footer">
-    <p class="lang-en">This Privacy Policy was last updated on <strong>October 2026</strong>.</p>
-    <p class="lang-bn">এই গোপনীয়তা নীতি সর্বশেষ <strong>অক্টোবর ২০২৬</strong> তারিখে হালনাগাদ করা হয়েছে।</p>
-    <p class="lang-bl">Ei Privacy Policy shoroboshesh <strong>October 2026</strong> e update kora hoyeche.</p>
-
-    <p style="margin-top:6px;">&copy; 2026 <strong>JS Organization</strong> &middot; Developed by <strong>Md Mobassher Ahmed Sowrov</strong>. All rights reserved.</p>
-</div>
-
-<!-- Back to top button -->
-<button id="backToTopBtn" class="back-to-top" title="Back to top" onclick="scrollToTop()">
-    <i class="fa-solid fa-chevron-up"></i>
-</button>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const urlParams = new URLSearchParams(window.location.search);
-        let lang = urlParams.get('language') || 'en'; // default English
-        if (!['en', 'bn', 'bl'].includes(lang)) { lang = 'en'; }
-        setLanguage(lang);
-
-        window.addEventListener('scroll', function() {
-            const btn = document.getElementById('backToTopBtn');
-            if (window.scrollY > 350) {
-                btn.classList.add('visible');
-            } else {
-                btn.classList.remove('visible');
-            }
-        });
-    });
-
-    function setLanguage(lang) {
-        document.body.className = 'lang-' + lang;
-        document.getElementById('btnEn').classList.toggle('active', lang === 'en');
-        document.getElementById('btnBn').classList.toggle('active', lang === 'bn');
-        document.getElementById('btnBl').classList.toggle('active', lang === 'bl');
-
-        const url = new URL(window.location);
-        url.searchParams.set('language', lang);
-        window.history.pushState({}, '', url);
-    }
-
-    function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-</script>
-
+    <script src="legal.js"></script>
 </body>
 </html>
