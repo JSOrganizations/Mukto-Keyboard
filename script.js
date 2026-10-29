@@ -41,9 +41,14 @@ function toggleFaq(btn) {
     const item = btn.closest('.faq-item');
     if (!item) return;
     const isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('open'));
+    document.querySelectorAll('.faq-item').forEach(el => {
+        el.classList.remove('open');
+        const question = el.querySelector('.faq-question');
+        if (question) question.setAttribute('aria-expanded', 'false');
+    });
     if (!isOpen) {
         item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
     }
 }
 
@@ -169,6 +174,10 @@ document.addEventListener("DOMContentLoaded", function() {
         lang = 'bn';
     }
     setLanguage(lang);
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+        btn.addEventListener('click', () => toggleFaq(btn));
+    });
 
     runTypewriterTick();
 
