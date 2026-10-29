@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mukto Keyboard — Fast, Smart &amp; 100% Private Bengali Typing</title>
-    <meta name="description" content="Mukto Keyboard by JS Organization — Zero keylogging, on-device intelligence, instant translation, and fast phonetic typing for Android.">
+    <meta name="description" content="Mukto Keyboard by JS Organization — Camera OCR Scanner, In-Keyboard AI Assistant, Secret Chat Steganography, Avro Phonetics, Video Themes &amp; Zero Keylogging.">
     <link rel="icon" href="assets/logo.png" type="image/png">
     <link rel="apple-touch-icon" href="assets/logo.png">
 
-    <!-- Google Fonts: Hind Siliguri, Plus Jakarta Sans, JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -17,10 +16,8 @@
 </head>
 <body class="lang-en">
 
-<!-- Background Grid Pattern Overlay -->
 <div class="bg-grid-pattern" aria-hidden="true"></div>
 
-<!-- Floating Bangla Glyphs (Background Art) -->
 <div class="glyphs-layer" aria-hidden="true">
     <span class="glyph glyph-1 float-glyph-1">অ</span>
     <span class="glyph glyph-2 float-glyph-2">আ</span>
@@ -31,11 +28,9 @@
     <span class="glyph glyph-7 float-glyph-3">শ</span>
 </div>
 
-<!-- Ambient Glowing Orbs -->
 <div class="ambient-glow-1" aria-hidden="true"></div>
 <div class="ambient-glow-2" aria-hidden="true"></div>
 
-<!-- Top Navigation -->
 <nav class="site-nav">
     <a href="#" class="nav-brand">
         <div class="nav-brand-img-wrap">
@@ -45,7 +40,6 @@
             <div class="nav-brand-title">
                 <span>Mukto Keyboard</span>
                 <span class="status-pulse-dot" title="Active &amp; Ready"></span>
-                
             </div>
             <div class="nav-brand-sub font-bangla">স্বাধীন ও নিরাপদ টাইপিংয়ের নতুন যুগ</div>
         </div>
@@ -71,16 +65,25 @@
             <span class="lang-bn font-bangla">প্রাইভেসি</span>
             <span class="lang-bl">Privacy</span>
         </a>
+        <a href="terms-of-use.html" class="nav-link">
+            <span class="lang-en">Terms</span>
+            <span class="lang-bn font-bangla">শর্তাবলি</span>
+            <span class="lang-bl">Terms</span>
+        </a>
         <a href="#download" class="nav-btn-download">
             <svg class="icon-svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             <span class="lang-en">Get App</span>
             <span class="lang-bn font-bangla">ডাউনলোড</span>
             <span class="lang-bl">Get App</span>
         </a>
+        <div class="lang-toggle-wrap">
+            <button class="btn-lang" id="btnEn" onclick="setLanguage('en')">EN</button>
+            <button class="btn-lang font-bangla" id="btnBn" onclick="setLanguage('bn')">বাং</button>
+            <button class="btn-lang" id="btnBl" onclick="setLanguage('bl')">BL</button>
+        </div>
     </div>
 </nav>
 
-<!-- Hero Section -->
 <header class="hero">
     <div class="hero-center-spotlight" aria-hidden="true"></div>
     <div class="hero-logo-box">
@@ -92,33 +95,32 @@
     <div>
         <div class="hero-pill lang-en">
             <span class="pulse-indicator"><span class="ping"></span><span class="dot"></span></span>
-            <span>100% Private, On-Device &amp; Fast</span>
+            <span>100% Private, On-Device &amp; Native Fast</span>
         </div>
         <div class="hero-pill lang-bn">
             <span class="pulse-indicator"><span class="ping"></span><span class="dot"></span></span>
-            <span class="font-bangla">১০০% প্রাইভেট, নিরাপদ ও আধুনিক</span>
+            <span class="font-bangla">১০০% প্রাইভেট, নিরাপদ ও আধুনিক বাংলা কিবোর্ড</span>
         </div>
         <div class="hero-pill lang-bl">
             <span class="pulse-indicator"><span class="ping"></span><span class="dot"></span></span>
-            <span>100% Safe, Fast &amp; Private</span>
+            <span>100% Safe, Fast &amp; On-Device Private</span>
         </div>
     </div>
 
     <h1 class="hero-title lang-en">Fast, Smart &amp; <span class="gradient-text">100% Private</span> Bengali Keyboard</h1>
     <h1 class="hero-title lang-bn font-bangla">অ্যান্ড্রয়েডের জন্য <span class="gradient-text">দ্রুততম, প্রাইভেট</span> ও আধুনিক বাংলা কিবোর্ড</h1>
-    <h1 class="hero-title lang-bl">Android er Jonno <span class="gradient-text">Fast, Smart</span> o Private Bengali Keyboard</h1>
+    <h1 class="hero-title lang-bl">Android er Jonno <span class="gradient-text">Fast, Smart</span> o 100% Private Bengali Keyboard</h1>
 
-    <p class="hero-sub lang-en">Crafted in Kotlin with Jetpack Compose. Enjoy seamless Avro phonetic transliteration, secret chat with emoji steganography, live video themes, 20+ fancy fonts, on-device translation, and absolute zero telemetry.</p>
-    <p class="hero-sub lang-bn font-bangla">জেটপ্যাক কম্পোজ প্রযুক্তিতে নির্মিত সম্পূর্ণ আধুনিক কিবোর্ড। নিখুঁত অভ্র ফোনেটিক টাইপিং, সাধারণ ইমোজিতে গোপন মেসেজ স্টেগানোগ্রাফি, লাইভ ভিডিও ব্যাকগ্রাউন্ড, ২০+ ফ্যান্সি ফন্টস এবং জিরো কি-লগিং নিরাপত্তা।</p>
-    <p class="hero-sub lang-bl">Jetpack Compose e banano modern keyboard. Easy Avro phonetic typing, emoji steganography secret chat, live video themes, 20+ fancy fonts ebong 100% safe zero-keylogging guarantee!</p>
+    <p class="hero-sub lang-en">Engineered in Kotlin with Jetpack Compose. Features Camera OCR document scanner, in-keyboard AI assistant (BYOK), emoji steganography secret chat, looping video themes, Avro phonetics, and absolute zero keylogging.</p>
+    <p class="hero-sub lang-bn font-bangla">জেটপ্যাক কম্পোজ প্রযুক্তিতে নির্মিত বিশ্বমানের কিবোর্ড। ক্যামেরা দিয়ে সরাসরি টেক্সট স্ক্যান, ইন-কিবোর্ড এআই রাইটিং, সাধারণ ইমোজিতে গোপন মেসেজ, লাইভ ভিডিও থিমস, সহজ অভ্র ফোনেটিক্স এবং শতভাগ জিরো কি-লগিং নিরাপত্তা।</p>
+    <p class="hero-sub lang-bl">Jetpack Compose e banano modern keyboard. Camera OCR text scan, in-keyboard AI assistant, emoji steganography secret chat, live video themes, Avro phonetics ebong 100% safe zero-keylogging security!</p>
 
-    <!-- Platform Badges -->
     <div class="hero-badges-row">
         <span class="pill-feature">
             <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-1.0002 0-.5515.4482-.9998.9993-.9998.5517 0 .9997.4483.9997.9998 0 .5516-.448 1.0002-.9997 1.0002m-11.046 0c-.5511 0-.9993-.4486-.9993-1.0002 0-.5515.4482-.9998.9993-.9998.5516 0 .9996.4483.9996.9998 0 .5516-.448 1.0002-.9996 1.0002m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.4116 13.8533 8.125 12 8.125c-1.8533 0-3.5902.2866-5.1378.8297L4.8399 5.4517a.416.416 0 00-.5676-.1521.416.416 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/></svg>
-            <span class="lang-en">Android 7.0+ (API 24-37)</span>
-            <span class="lang-bn font-bangla">অ্যান্ড্রয়েড ৭.০+ (এপিআই ২৪-৩৭)</span>
-            <span class="lang-bl">Android 7.0+ (API 24-37)</span>
+            <span class="lang-en">Android 7.0 to 16+</span>
+            <span class="lang-bn font-bangla">অ্যান্ড্রয়েড ৭.০ থেকে ১৬+</span>
+            <span class="lang-bl">Android 7.0 to 16+</span>
         </span>
         <span class="pill-feature">
             <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -127,35 +129,27 @@
             <span class="lang-bl">Zero Keylogging Safe</span>
         </span>
         <span class="pill-feature">
-            <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-            <span class="lang-en">Jetpack Compose + M3</span>
-            <span class="lang-bn font-bangla">জেটপ্যাক কম্পোজ + এম৩</span>
-            <span class="lang-bl">Jetpack Compose + M3</span>
-        </span>
-        <span class="pill-feature">
-            <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            <span class="lang-en">On-Device Offline Translation</span>
-            <span class="lang-bn font-bangla">অন-ডিভাইস অফলাইন অনুবাদ</span>
-            <span class="lang-bl">On-Device Offline Translation</span>
+            <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            <span class="lang-en">Camera OCR Scanner</span>
+            <span class="lang-bn font-bangla">ক্যামেরা ওসিআর স্ক্যানার</span>
+            <span class="lang-bl">Camera OCR Scanner</span>
         </span>
         <span class="pill-feature">
             <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-            <span class="lang-en">100% Free &amp; Offline-First</span>
-            <span class="lang-bn font-bangla">১০০% ফ্রি ও অফলাইন-ফার্স্ট</span>
-            <span class="lang-bl">100% Free &amp; Offline</span>
+            <span class="lang-en">AI Writing Assistant (BYOK)</span>
+            <span class="lang-bn font-bangla">এআই রাইটিং অ্যাসিস্ট্যান্ট</span>
+            <span class="lang-bl">AI Writing Assistant</span>
+        </span>
+        <span class="pill-feature">
+            <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+            <span class="lang-en">Private Cloud &amp; .mukto Backup</span>
+            <span class="lang-bn font-bangla">ড্রাইভ ও .mukto ব্যাকআপ</span>
+            <span class="lang-bl">Drive o .mukto Backup</span>
         </span>
     </div>
 
-    <!-- 3-Way Language Switcher -->
-    <div class="lang-switcher-wrap">
-        <button id="btnEn" class="lang-btn active" onclick="setLanguage('en')">English</button>
-        <button id="btnBn" class="lang-btn" onclick="setLanguage('bn')">বাংলা</button>
-        <button id="btnBl" class="lang-btn" onclick="setLanguage('bl')">Banglish</button>
-    </div>
-
-    <!-- Hero CTA Buttons -->
-    <div class="hero-ctas">
-        <a href="https://play.google.com/store/apps/details?id=com.mukto.keyboard" target="_blank" rel="noopener noreferrer" class="btn-primary-play">
+    <div class="hero-actions">
+        <a href="https://play.google.com/store/apps/details?id=com.mukto.keyboard" target="_blank" rel="noopener noreferrer" class="btn-primary-hero">
             <svg class="icon-svg" viewBox="0 0 512 512" width="22" height="22">
                 <path fill="#4285F4" d="M48.7 13.9C39.5 23.8 34.2 38.6 34.2 56.4V455.6c0 17.8 5.3 32.6 14.5 42.5l2.4 2.3L275.6 275.9v-5.8L51.1 11.6l-2.4 2.3z"/>
                 <path fill="#FBBC04" d="M353.4 353.8l-77.8-77.9v-5.8l77.8-77.9 1.8 1 92.1 52.3c26.3 14.9 26.3 39.4 0 54.4l-92.1 52.3-1.8 1.6z"/>
@@ -172,7 +166,7 @@
         <a href="https://github.com/JSOrganizations/Mukto-Keyboard/releases" target="_blank" rel="noopener noreferrer" class="btn-secondary-hero">
             <svg class="icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             <span class="lang-en">Direct APK</span>
-            <span class="lang-bn font-bangla">সরাসরি এপিকে ডাউনলোড</span>
+            <span class="lang-bn font-bangla">সরাসরি এপিকে</span>
             <span class="lang-bl">Direct APK</span>
         </a>
         <a href="https://github.com/JSOrganizations/Mukto-Keyboard" target="_blank" rel="noopener noreferrer" class="btn-secondary-hero" style="color:var(--slate-700);">
@@ -190,7 +184,6 @@
         <span class="lang-bl"><strong>Google Play Protect Verified</strong> &bull; 100% Safe, Ad-Free &bull; 100% Private</span>
     </p>
 
-    <!-- Live Animated Typing Transliterate Ticker (Letter-by-Letter Real Keystroke Typewriter) -->
     <div class="typing-ticker-wrap">
         <span class="ticker-label">
             <span class="lang-en">Live Transliterate</span>
@@ -219,19 +212,24 @@
             <h2 class="lang-en">Experience Mukto Keyboard Features Live</h2>
             <h2 class="lang-bn font-bangla">ব্রাউজারেই পরখ করুন মুক্ত কিবোর্ডের স্পেশাল ফিচার</h2>
             <h2 class="lang-bl">Browser ei Try Korun Mukto Keyboard er Features</h2>
-            <p class="lang-en">Test secret chat emoji steganography, explore 20+ fancy fonts, hear tactile mechanical switch sounds, and see gesture navigation in action.</p>
-            <p class="lang-bn font-bangla">ইমোজিতে গোপন মেসেজ লুকানো, ২০+ ফ্যান্সি ফন্ট জেনারেটর, মেকানিক্যাল সাউন্ড এবং স্পেসবার সোয়াইপ জেসচার সরাসরি টেস্ট করুন।</p>
-            <p class="lang-bl">Emoji te secret message lukano, fancy fonts generate kora, mechanical audio ebong spacebar gestures test korun.</p>
+            <p class="lang-en">Test secret chat emoji steganography, explore Camera OCR text scanning &amp; AI writing tools, generate fancy fonts, and hear tactile mechanical switch sounds.</p>
+            <p class="lang-bn font-bangla">ইমোজিতে গোপন মেসেজ স্টেগানোগ্রাফি, ক্যামেরা ওসিআর স্ক্যানার, এআই রাইটিং অ্যাসিস্ট্যান্ট, ২০+ ফ্যান্সি ফন্টস এবং মেকানিক্যাল সাউন্ড সরাসরি টেস্ট করুন।</p>
+            <p class="lang-bl">Emoji te secret message lukano, camera OCR scan, AI writing, fancy fonts ebong mechanical audio test korun.</p>
         </div>
 
         <div class="studio-card">
-            <!-- Studio Tab Controls (100% SVG Icons - No Emoji Icons) -->
-            <div class="studio-tabs">
+            <div class="studio-tabs-row">
                 <button class="studio-tab-btn active" onclick="switchStudioTab('stego', this)">
-                    <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1.5"/></svg>
+                    <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                     <span class="lang-en">Secret Chat (Steganography)</span>
                     <span class="lang-bn font-bangla">গোপন চ্যাট (স্টেগানোগ্রাফি)</span>
                     <span class="lang-bl">Secret Chat</span>
+                </button>
+                <button class="studio-tab-btn" onclick="switchStudioTab('ocr-ai', this)">
+                    <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                    <span class="lang-en">Camera OCR &amp; AI Writer</span>
+                    <span class="lang-bn font-bangla">ক্যামেরা ওসিআর ও এআই</span>
+                    <span class="lang-bl">Camera OCR &amp; AI</span>
                 </button>
                 <button class="studio-tab-btn" onclick="switchStudioTab('fonts', this)">
                     <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
@@ -240,7 +238,7 @@
                     <span class="lang-bl">Fancy Fonts</span>
                 </button>
                 <button class="studio-tab-btn" onclick="switchStudioTab('gestures', this)">
-                    <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="6" y1="8" x2="6" y2="8"/><line x1="10" y1="8" x2="10" y2="8"/><line x1="14" y1="8" x2="14" y2="8"/><line x1="18" y1="8" x2="18" y2="8"/><line x1="6" y1="12" x2="6" y2="12"/><line x1="10" y1="12" x2="10" y2="12"/><line x1="14" y1="12" x2="14" y2="12"/><line x1="18" y1="12" x2="18" y2="12"/><line x1="7" y1="16" x2="17" y2="16"/></svg>
+                    <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="6" y1="12" x2="18" y2="12"/></svg>
                     <span class="lang-en">Typing Modes &amp; Spacebar</span>
                     <span class="lang-bn font-bangla">টাইপিং মোড ও স্পেসবার</span>
                     <span class="lang-bl">Typing Modes</span>
@@ -253,474 +251,312 @@
                 </button>
             </div>
 
-            <!-- Panel 1: Realistic Two-Person Secret Chat Simulation -->
+            <!-- Panel 1: Steganography -->
             <div id="panel-stego" class="studio-panel active">
-                <div style="margin-bottom:20px; font-size:14px; color:var(--slate-600); line-height:1.65;">
-                    <span class="lang-en">Mukto Keyboard conceals secret messages invisibly inside standard emojis. Outside chat apps (WhatsApp, Messenger, Telegram) see only a single harmless emoji. Inside Mukto Keyboard, 1 tap reveals the confidential message!</span>
-                    <span class="lang-bn font-bangla">মুক্ত কিবোর্ড সাধারণ ইমোজির ভেতরে শতভাগ অদৃশ্যভাবে সিক্রেট মেসেজ লুকিয়ে রাখে। বাইরে থেকে ফেসবুক, হোয়াটসঅ্যাপ বা টেলিগ্রামের মেসেজে শুধুই ১টি নিরীহ ইমোজি দেখায়। কিন্তু মুক্ত কিবোর্ড থাকলে ১ ট্যাপেই উদ্ধার হয় ভেতরের আসল গোপন বার্তা!</span>
-                    <span class="lang-bl">Mukto Keyboard e emojir bhitore invisible bhabe secret text conceal kora jay. Facebook, WhatsApp e shobai shudhu 1 ta emoji dekhbe, ar Mukto Keyboard e 1-tap e decode hoye jabe!</span>
-                </div>
-
-                <!-- Realistic Two-Person Smartphone Chat Frame -->
-                <div class="chat-sim-wrapper">
-                    <div class="chat-phone-frame">
-                        <!-- Chat App Header -->
-                        <div class="chat-header">
-                            <div class="chat-header-user">
-                                <button class="chat-btn-back" title="Back" aria-label="Back">
-                                    <svg class="icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-                                </button>
-                                <div class="chat-user-avatar-wrap">
-                                    <div class="chat-user-avatar">
-                                        <span>সৌ</span>
-                                    </div>
-                                    <span class="chat-online-dot"></span>
-                                </div>
-                                <div class="chat-user-info">
-                                    <div class="chat-user-name">
-                                        <span>সৌরভ আহমেদ</span>
-                                        <span class="chat-verified-badge" title="Verified Contact">
-                                            <svg class="icon-svg" viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                                        </span>
-                                    </div>
-                                    <div class="chat-user-status">
-                                        <span class="lang-en">Online &bull; Secret Chat Mode</span>
-                                        <span class="lang-bn font-bangla">অনলাইন &bull; অ্যান্ড-টু-অ্যান্ড গোপন বার্তা</span>
-                                        <span class="lang-bl">Online &bull; Secret Chat</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="chat-header-actions">
-                                <div class="chat-shield-pill" title="100% Private">
-                                    <svg class="icon-svg" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                                    <span class="lang-en">Private</span>
-                                    <span class="lang-bn font-bangla">সিক্রেট</span>
-                                    <span class="lang-bl">Private</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Chat Messages Timeline -->
-                        <div class="chat-messages-area" id="chatMessagesArea">
-                            <!-- Date separator -->
-                            <div class="chat-date-pill">
-                                <span class="lang-en">Today, 4:15 PM</span>
-                                <span class="lang-bn font-bangla">আজ, বিকেল ৪:১৫</span>
-                                <span class="lang-bl">Today, 4:15 PM</span>
-                            </div>
-
-                            <!-- Message 1: Received from Sourav -->
-                            <div class="chat-msg-row received" id="chatMsg1">
-                                <div class="chat-msg-bubble">
-                                    <div class="chat-msg-sender">সৌরভ</div>
-                                    <div class="chat-msg-text">
-                                        <span class="lang-en">Bro, what's tomorrow's secret meeting plan? Don't share it normally, Messenger might leak!</span>
-                                        <span class="lang-bn font-bangla">দোস্ত, কালকের গোপন মিটিংয়ের প্ল্যানটা কী? মেসেঞ্জারে কিন্তু সবাই দেখে ফেলবে, সাবধানে বলো!</span>
-                                        <span class="lang-bl">Dosto, kalker secret meeting plan ta ki? Normally bolona, shobai dekhe felbe!</span>
-                                    </div>
-                                    <div class="chat-msg-meta">
-                                        <span class="chat-msg-time">4:16 PM</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Message 2: Sent from You (Secret Stego Message) -->
-                            <div class="chat-msg-row sent hidden-initial" id="chatMsg2">
-                                <div class="chat-msg-bubble secret-bubble">
-                                    <!-- What Outside World Sees (The Carrier Emoji) -->
-                                    <div class="chat-stego-carrier-box" id="carrierDisplayBox">
-                                        <span class="chat-carrier-emoji" id="chatBubbleCarrierEmoji">😎</span>
-                                        <div class="chat-carrier-tag">
-                                            <span class="lang-en">Outside Social View (Just an emoji)</span>
-                                            <span class="lang-bn font-bangla">বাইরের অ্যাপে শুধুই ১টি নিরীহ ইমোজি</span>
-                                            <span class="lang-bl">Outside Social View (Just emoji)</span>
-                                        </div>
-                                    </div>
-
-                                    <!-- Mukto Keyboard Smart Decode Layer (Reveals Hidden Text) -->
-                                    <div class="chat-stego-revealed-layer" id="chatRevealedLayer">
-                                        <div class="chat-decode-header">
-                                            <div class="chat-decode-status">
-                                                <svg class="icon-svg" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                                                <span class="lang-en">Mukto Keyboard Decrypted:</span>
-                                                <span class="lang-bn font-bangla">মুক্ত কিবোর্ডে উদ্ধারকৃত গোপন বার্তা:</span>
-                                                <span class="lang-bl">Mukto Decrypted:</span>
-                                            </div>
-                                            <span class="chat-decode-badge">100% PRIVATE</span>
-                                        </div>
-                                        <div class="chat-revealed-content" id="chatRevealedContentText">কাল বিকেল ৪টায় ধানমন্ডি লেকে দেখা করব 🤫</div>
-                                    </div>
-
-                                    <!-- Bubble footer: Time & Double Blue Ticks -->
-                                    <div class="chat-msg-meta">
-                                        <span class="chat-msg-time" id="chatMsg2Time">4:17 PM</span>
-                                        <span class="chat-read-status" title="Seen">
-                                            <svg class="icon-svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L7 17l-5-5"/><path d="M22 10l-7.5 7.5L13 16"/></svg>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Typing dots indicator for Sourav -->
-                            <div class="chat-msg-row received hidden-initial" id="chatTypingIndicatorRow">
-                                <div class="chat-msg-bubble chat-typing-bubble">
-                                    <span class="chat-typing-dot"></span>
-                                    <span class="chat-typing-dot"></span>
-                                    <span class="chat-typing-dot"></span>
-                                </div>
-                            </div>
-
-                            <!-- Message 3: Received reply from Sourav after reading secret -->
-                            <div class="chat-msg-row received hidden-initial" id="chatMsg3">
-                                <div class="chat-msg-bubble">
-                                    <div class="chat-msg-sender">সৌরভ</div>
-                                    <div class="chat-msg-text">
-                                        <span class="lang-en">Brilliant! To anyone else it only looks like a cool emoji, nobody has a clue 🔥 I will be at Dhanmondi on time.</span>
-                                        <span class="lang-bn font-bangla">অসাধারণ! মেসেঞ্জারে শুধু একটা ইমোজি দেখাচ্ছে, কেউ টেরই পেল না। আমি ৪টায় ধানমন্ডি চলে আসব 🔥</span>
-                                        <span class="lang-bl">Ashadharon! Shudhu 1 ta emoji dekhasse, keu bujhte parbe na. Ami 4 tay Dhanmondi ashbo 🔥</span>
-                                    </div>
-                                    <div class="chat-msg-meta">
-                                        <span class="chat-msg-time">4:18 PM</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Mukto Keyboard Integrated Bottom Typing Composer -->
-                        <div class="chat-composer-section">
-                            <!-- Secret Mode Top Toolbar Strip -->
-                            <div class="chat-mukto-toolbar-strip">
-                                <div class="chat-mukto-brand-tag">
-                                    <svg class="icon-svg" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                                    <span class="lang-en">Mukto Secret Mode</span>
-                                    <span class="lang-bn font-bangla">মুক্ত কিবোর্ড গোপন মোড</span>
-                                    <span class="lang-bl">Mukto Secret Mode</span>
-                                </div>
-                                <div class="chat-carrier-picker-wrap">
-                                    <span class="chat-picker-label">
-                                        <span class="lang-en">Carrier Emoji:</span>
-                                        <span class="lang-bn font-bangla">বাহক ইমোজি:</span>
-                                        <span class="lang-bl">Carrier Emoji:</span>
-                                    </span>
-                                    <div class="chat-carrier-chips">
-                                        <button class="chat-carrier-chip active" onclick="selectChatCarrier('😎', this)">😎</button>
-                                        <button class="chat-carrier-chip" onclick="selectChatCarrier('🔥', this)">🔥</button>
-                                        <button class="chat-carrier-chip" onclick="selectChatCarrier('🤫', this)">🤫</button>
-                                        <button class="chat-carrier-chip" onclick="selectChatCarrier('❤️', this)">❤️</button>
-                                        <button class="chat-carrier-chip" onclick="selectChatCarrier('🚀', this)">🚀</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Input Row -->
-                            <div class="chat-input-bar">
-                                <div class="chat-input-box-wrapper">
-                                    <input type="text" id="chatCustomSecretInput" class="chat-real-input" value="কাল বিকেল ৪টায় ধানমন্ডি লেকে দেখা করব 🤫" placeholder="গোপন বার্তা লিখুন...">
-                                    <span class="chat-enc-pill" title="Invisible Stego Active">
-                                        <svg class="icon-svg" viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
-                                        <span>100% Invisible</span>
-                                    </span>
-                                </div>
-                                <button class="chat-send-btn" id="chatSendBtn" onclick="triggerUserSendSecretChat()" title="Send Secret Message">
-                                    <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-                                    <span class="lang-en">Send</span>
-                                    <span class="lang-bn font-bangla">পাঠান</span>
-                                    <span class="lang-bl">Send</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Outside Controls & Perspective Switcher -->
-                    <div class="chat-sim-controls-bar">
-                        <div class="chat-perspective-toggle">
-                            <span style="font-size:12px; font-weight:700; color:var(--slate-500); text-transform:uppercase; letter-spacing:0.04em;">
-                                <span class="lang-en">View Simulation As:</span>
-                                <span class="lang-bn font-bangla">সিমুলেশন ভিউ দেখুন:</span>
-                                <span class="lang-bl">View As:</span>
-                            </span>
+                <div class="chat-demo-container">
+                    <div class="chat-demo-sidebar">
+                        <div class="perspective-toggle-box">
+                            <label class="perspective-label">
+                                <span class="lang-en">Preview Mode:</span>
+                                <span class="lang-bn font-bangla">কে কীভাবে দেখবে:</span>
+                                <span class="lang-bl">Preview Mode:</span>
+                            </label>
                             <div class="perspective-btn-group">
-                                <button class="perspective-btn active" id="btnViewMukto" onclick="setChatPerspective('mukto')">
-                                    <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-                                    <span class="lang-en">Inside Mukto Keyboard (Decoded)</span>
-                                    <span class="lang-bn font-bangla">মুক্ত কিবোর্ডের ভেতরের দৃশ্য (ডিকোডকৃত)</span>
-                                    <span class="lang-bl">Inside Mukto (Decoded)</span>
+                                <button class="btn-persp active" id="btnPerspMukto" onclick="setChatPerspective('mukto', this)">
+                                    <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                                    <span class="lang-en">Mukto User</span>
+                                    <span class="lang-bn font-bangla">মুক্ত ইউজার</span>
+                                    <span class="lang-bl">Mukto User</span>
                                 </button>
-                                <button class="perspective-btn" id="btnViewOutside" onclick="setChatPerspective('outside')">
-                                    <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
-                                    <span class="lang-en">Outside Social Apps (Only Emoji)</span>
-                                    <span class="lang-bn font-bangla">বাইরের ফেসবুক/হোয়াটসঅ্যাপে দৃশ্য (শুধু ইমোজি)</span>
-                                    <span class="lang-bl">Outside Apps (Only Emoji)</span>
+                                <button class="btn-persp" id="btnPerspOthers" onclick="setChatPerspective('others', this)">
+                                    <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+                                    <span class="lang-en">Others / Platform</span>
+                                    <span class="lang-bn font-bangla">অন্যরা বা মেসেঞ্জার</span>
+                                    <span class="lang-bl">Others</span>
                                 </button>
                             </div>
                         </div>
-                        <button class="chat-replay-btn" onclick="replayChatConversation()" title="Replay Chat Animation">
-                            <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+
+                        <div class="carrier-select-box">
+                            <label class="perspective-label">
+                                <span class="lang-en">Select Carrier Emoji:</span>
+                                <span class="lang-bn font-bangla">বাহক ইমোজি নির্বাচন করুন:</span>
+                                <span class="lang-bl">Carrier Emoji:</span>
+                            </label>
+                            <div class="carrier-chips-row">
+                                <button class="chat-carrier-chip active" onclick="selectChatCarrier('😎', this)">😎</button>
+                                <button class="chat-carrier-chip" onclick="selectChatCarrier('🔥', this)">🔥</button>
+                                <button class="chat-carrier-chip" onclick="selectChatCarrier('❤️', this)">❤️</button>
+                                <button class="chat-carrier-chip" onclick="selectChatCarrier('✨', this)">✨</button>
+                                <button class="chat-carrier-chip" onclick="selectChatCarrier('🍕', this)">🍕</button>
+                                <button class="chat-carrier-chip" onclick="selectChatCarrier('🎉', this)">🎉</button>
+                            </div>
+                        </div>
+
+                        <div class="chat-info-callout">
+                            <div style="font-weight:700; color:var(--emerald-800); margin-bottom:4px; font-size:13px;" class="lang-en">How it Works:</div>
+                            <div style="font-weight:700; color:var(--emerald-800); margin-bottom:4px; font-size:13px;" class="lang-bn font-bangla">কীভাবে কাজ করে:</div>
+                            <div style="font-weight:700; color:var(--emerald-800); margin-bottom:4px; font-size:13px;" class="lang-bl">Kivabe kaj kore:</div>
+                            <p style="font-size:12.5px; color:var(--slate-600); line-height:1.5;" class="lang-en">Mukto Keyboard converts secret text into invisible Unicode variation selectors. The receiving user decrypts it instantly with 1 tap.</p>
+                            <p style="font-size:12.5px; color:var(--slate-600); line-height:1.5;" class="lang-bn font-bangla">মুক্ত কিবোর্ড আপনার গোপন কথাকে অদৃশ্য ইউনিকোড ক্যারেক্টারে রূপান্তর করে সাধারণ ইমোজির ভেতরে জড়িয়ে দেয়। প্রাপক ১-ট্যাপেই দেখতে পারেন।</p>
+                            <p style="font-size:12.5px; color:var(--slate-600); line-height:1.5;" class="lang-bl">Mukto Keyboard secret message ke invisible variation selector e convert kore normal emoji te embed kore. 1-tap e decode kora jay.</p>
+                        </div>
+
+                        <button class="chat-replay-btn" onclick="replayChatConversation()">
+                            <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
                             <span class="lang-en">Replay Conversation</span>
-                            <span class="lang-bn font-bangla">কথোপকথন পুনরায় চালান</span>
-                            <span class="lang-bl">Replay Chat</span>
+                            <span class="lang-bn font-bangla">রিপ্লে দেখুন</span>
+                            <span class="lang-bl">Replay</span>
                         </button>
+                    </div>
+
+                    <div class="chat-mockup-phone">
+                        <div class="chat-phone-header">
+                            <div class="chat-avatar-wrap">
+                                <span class="chat-avatar-char">স</span>
+                                <span class="chat-avatar-online"></span>
+                            </div>
+                            <div class="chat-header-meta">
+                                <div class="chat-user-name">সৌরভ (Sourav)</div>
+                                <div class="chat-user-status font-bangla">মুক্ত কিবোর্ড সক্রিয় &bull; অনলাইনে আছেন</div>
+                            </div>
+                        </div>
+
+                        <div class="chat-messages-scroll" id="chatMessagesArea">
+                            <div class="chat-bubble-row incoming" id="chatMsg1">
+                                <div class="chat-bubble">
+                                    <div class="chat-bubble-text font-bangla">দোস্ত, বিকেলের মিটিংয়ের গোপনীয় তথ্যগুলো কীভাবে পাঠাবি? ফেসবুক মেসেঞ্জারে তো সবাই দেখবে!</div>
+                                    <div class="chat-bubble-time">04:15 PM</div>
+                                </div>
+                            </div>
+
+                            <div class="chat-bubble-row outgoing" id="chatMsg2">
+                                <div class="chat-bubble stego-bubble" id="carrierDisplayBox">
+                                    <div class="carrier-emoji-display" id="chatBubbleCarrierEmoji">😎</div>
+                                    <div class="revealed-secret-layer" id="chatRevealedLayer">
+                                        <div class="revealed-secret-badge">
+                                            <svg class="icon-svg" viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                                            <span class="lang-en">Decrypted via Mukto</span>
+                                            <span class="lang-bn font-bangla">মুক্ত ডিক্রিপ্ট</span>
+                                            <span class="lang-bl">Decrypted</span>
+                                        </div>
+                                        <div class="revealed-secret-content font-bangla" id="chatRevealedContentText">কাল বিকেল ৪টায় ধানমন্ডি লেকে দেখা করব 🤫</div>
+                                    </div>
+                                    <div class="chat-bubble-time">04:16 PM &bull; <span style="color:var(--emerald-600); font-weight:700;">✓✓</span></div>
+                                </div>
+                            </div>
+
+                            <div class="chat-bubble-row incoming typing-row" id="chatTypingIndicatorRow" style="display:none;">
+                                <div class="chat-typing-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                            </div>
+
+                            <div class="chat-bubble-row incoming" id="chatMsg3" style="display:none;">
+                                <div class="chat-bubble">
+                                    <div class="chat-bubble-text font-bangla">অসাধারণ! সাধারণ ইমোজির ভেতরে এত বড় মেসেজ লুকিয়ে ফেললি? মেসেঞ্জারের কেউ টেরই পেল না! 🔥</div>
+                                    <div class="chat-bubble-time">04:17 PM</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chat-input-bar">
+                            <input type="text" class="chat-mock-input" id="chatUserCustomInput" value="কাল বিকেল ৪টায় ধানমন্ডি লেকে দেখা করব 🤫" readonly>
+                            <button class="chat-send-btn" onclick="triggerUserSendSecretChat()" title="Send Secret Emoji">
+                                <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Panel 2: Fancy Fonts Studio -->
+            <!-- Panel 2: Camera OCR & AI Writing (NEW) -->
+            <div id="panel-ocr-ai" class="studio-panel">
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(310px, 1fr)); gap:20px;">
+                    <!-- OCR Simulator -->
+                    <div style="background:var(--slate-50); border:1px solid var(--slate-200); border-radius:var(--radius-lg); padding:20px;">
+                        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px;">
+                            <div style="display:flex; align-items:center; gap:8px;">
+                                <div style="width:32px; height:32px; border-radius:8px; background:var(--emerald-100); color:var(--emerald-700); display:flex; align-items:center; justify-content:center;">
+                                    <svg class="icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                                </div>
+                                <div>
+                                    <div style="font-weight:700; font-size:15px; color:var(--slate-900);">Camera OCR Scanner</div>
+                                    <div style="font-size:11.5px; color:var(--slate-500);">100% On-Device ML Kit &bull; No Uploads</div>
+                                </div>
+                            </div>
+                            <span class="badge-pill new">Live Demo</span>
+                        </div>
+
+                        <div style="font-size:13px; color:var(--slate-600); margin-bottom:12px;">Choose a physical document to scan:</div>
+                        <div style="display:flex; gap:8px; margin-bottom:14px; flex-wrap:wrap;">
+                            <button class="btn-persp active" onclick="triggerOcrScanDemo('book')">📖 Book Page</button>
+                            <button class="btn-persp" onclick="triggerOcrScanDemo('receipt')">🧾 Receipt Memo</button>
+                            <button class="btn-persp" onclick="triggerOcrScanDemo('paper')">📄 Printed Doc</button>
+                        </div>
+
+                        <!-- Scanner Viewfinder Box -->
+                        <div style="position:relative; background:#07150e; border:2px dashed var(--emerald-500); border-radius:12px; padding:18px; color:#ffffff; min-height:130px; overflow:hidden; display:flex; flex-direction:column; justify-content:center;">
+                            <div id="ocrScanLaser" style="position:absolute; top:0; left:0; right:0; height:3px; background:var(--emerald-400); box-shadow:0 0 12px var(--emerald-400); display:none;"></div>
+                            <div id="ocrScanStatus" style="font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--emerald-400); margin-bottom:6px; font-family:'JetBrains Mono', monospace;">Ready to scan</div>
+                            <div id="ocrResultText" style="font-size:14px; line-height:1.6; color:#ffffff;" class="font-bangla">আমাদের ছোট নদী চলে বাঁকে বাঁকে,<br>বৈশাখ মাসে তার হাঁটু জল থাকে।</div>
+                        </div>
+
+                        <div style="margin-top:12px; font-size:12px; color:var(--slate-500); display:flex; align-items:center; gap:6px;">
+                            <svg class="icon-svg" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--emerald-600);"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <span>Scanned directly in RAM; image buffers discarded instantly.</span>
+                        </div>
+                    </div>
+
+                    <!-- AI Assistant Simulator -->
+                    <div style="background:var(--slate-50); border:1px solid var(--slate-200); border-radius:var(--radius-lg); padding:20px;">
+                        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px;">
+                            <div style="display:flex; align-items:center; gap:8px;">
+                                <div style="width:32px; height:32px; border-radius:8px; background:rgba(99, 102, 241, 0.15); color:#4f46e5; display:flex; align-items:center; justify-content:center;">
+                                    <svg class="icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                                </div>
+                                <div>
+                                    <div style="font-weight:700; font-size:15px; color:var(--slate-900);">In-Keyboard AI Assistant</div>
+                                    <div style="font-size:11.5px; color:var(--slate-500);">Bring Your Own Key (BYOK) &bull; Zero Relay</div>
+                                </div>
+                            </div>
+                            <span class="badge-pill new">BYOK Engine</span>
+                        </div>
+
+                        <div style="font-size:13px; color:var(--slate-600); margin-bottom:10px;">Select an instant AI action:</div>
+                        <div style="display:flex; gap:6px; margin-bottom:14px; flex-wrap:wrap;">
+                            <button class="btn-persp active" onclick="triggerAiAssistantDemo('grammar')">✨ Fix Grammar</button>
+                            <button class="btn-persp" onclick="triggerAiAssistantDemo('email')">✉️ Make Email</button>
+                            <button class="btn-persp" onclick="triggerAiAssistantDemo('sadhu')">📜 Sadhu to Cholito</button>
+                            <button class="btn-persp" onclick="triggerAiAssistantDemo('banglish')">🇧🇩 Banglish to Bengali</button>
+                        </div>
+
+                        <!-- AI Output Box -->
+                        <div style="background:#ffffff; border:1px solid var(--slate-300); border-radius:12px; padding:16px; min-height:130px; display:flex; flex-direction:column; justify-content:space-between;">
+                            <div>
+                                <div id="aiDemoStatus" style="font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--emerald-600); margin-bottom:6px; font-family:'JetBrains Mono', monospace;">Output Generated</div>
+                                <div id="aiDemoOutput" style="font-size:14px; line-height:1.6; color:var(--slate-800);" class="font-bangla">আমি গতকাল মিটিংয়ে উপস্থিত থাকতে পারিনি, তবে আজকের সমস্ত কাজের আপডেট প্রস্তুত রয়েছে।</div>
+                            </div>
+                        </div>
+
+                        <div style="margin-top:12px; font-size:12px; color:var(--slate-500); display:flex; align-items:center; gap:6px;">
+                            <svg class="icon-svg" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--emerald-600);"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            <span>Encrypted HTTPS straight to provider API; zero Mukto servers.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 3: Fancy Fonts -->
             <div id="panel-fonts" class="studio-panel">
-                <div class="font-studio-input-wrap">
-                    <label style="font-size:13px; font-weight:700; color:var(--slate-700); display:block; margin-bottom:6px;">
-                        <span class="lang-en">Type any text to convert into aesthetic Unicode fonts:</span>
-                        <span class="lang-bn font-bangla">যেকোনো লেখা লিখে বিভিন্ন স্টাইলিশ ইউনিকোড ফন্টে রূপান্তর করুন:</span>
-                        <span class="lang-bl">Text likhun ebong stylish Unicode font e convert korun:</span>
-                    </label>
-                    <input id="fontStudioInput" type="text" class="stego-input-field" value="Mukto Keyboard" placeholder="Type text here..." oninput="updateFancyFonts()">
+                <div style="margin-bottom:16px;">
+                    <label style="font-size:13px; font-weight:700; color:var(--slate-700); margin-bottom:6px; display:block;" class="lang-en">Enter text to convert into 20+ aesthetic Unicode fonts:</label>
+                    <label style="font-size:13px; font-weight:700; color:var(--slate-700); margin-bottom:6px; display:block;" class="lang-bn font-bangla">যে লেখা ফ্যান্সি ফন্টে রূপান্তর করতে চান লিখুন:</label>
+                    <label style="font-size:13px; font-weight:700; color:var(--slate-700); margin-bottom:6px; display:block;" class="lang-bl">Fancy fonts e convert korar jonno text likhun:</label>
+                    <input type="text" id="fancyTextInput" value="Mukto Keyboard" oninput="updateFancyFonts()" style="width:100%; max-width:440px; padding:10px 14px; border:1px solid var(--slate-300); border-radius:var(--radius-sm); font-size:15px; font-family:inherit;">
                 </div>
 
-                <div class="font-studio-grid">
-                    <div class="font-sample-card">
-                        <div class="font-sample-header"><span>Bold (Sans Bold)</span></div>
-                        <div class="font-sample-preview" id="font-out-bold">𝗠𝘂𝗸𝘁𝗼 𝗞𝗲𝘆𝗯𝗼𝗮𝗿𝗱</div>
-                        <button class="chip-copy-action" onclick="copyFontResult('font-out-bold')">
-                            <span class="lang-en">Copy</span>
-                            <span class="lang-bn font-bangla">কপি</span>
-                            <span class="lang-bl">Copy</span>
-                        </button>
+                <div class="fonts-preview-grid">
+                    <div class="font-card" onclick="copyFontResult('bold')">
+                        <div class="font-card-label">Bold Serif</div>
+                        <div class="font-card-text" id="font-out-bold">&#x1D40C;&#x1D42E;&#x1D424;&#x1D42D;&#x1D428; &#x1D40A;&#x1D41E;&#x1D432;&#x1D41B;&#x1D428;&#x1D41A;&#x1D42B;&#x1D41D;</div>
+                        <span class="copy-hint">Tap to copy</span>
                     </div>
-                    <div class="font-sample-card">
-                        <div class="font-sample-header"><span>Bubble Circle</span></div>
-                        <div class="font-sample-preview" id="font-out-bubble">Ⓜⓤⓚⓣⓞ Ⓚⓔⓨⓑⓞⓐⓡⓓ</div>
-                        <button class="chip-copy-action" onclick="copyFontResult('font-out-bubble')">
-                            <span class="lang-en">Copy</span>
-                            <span class="lang-bn font-bangla">কপি</span>
-                            <span class="lang-bl">Copy</span>
-                        </button>
+                    <div class="font-card" onclick="copyFontResult('bubble')">
+                        <div class="font-card-label">Circled Bubbles</div>
+                        <div class="font-card-text" id="font-out-bubble">&#x24C2;&#x24E4;&#x24DA;&#x24E3;&#x24DE; &#x24C0;&#x24D4;&#x24E8;&#x24D1;&#x24DE;&#x24D0;&#x24DB;&#x24D3;</div>
+                        <span class="copy-hint">Tap to copy</span>
                     </div>
-                    <div class="font-sample-card">
-                        <div class="font-sample-header"><span>Gothic (Fraktur)</span></div>
-                        <div class="font-sample-preview" id="font-out-gothic">𝔐𝔲𝔨𝔱𝔬 𝔎𝔢𝔶𝔟ⓞ𝔞𝔯𝔡</div>
-                        <button class="chip-copy-action" onclick="copyFontResult('font-out-gothic')">
-                            <span class="lang-en">Copy</span>
-                            <span class="lang-bn font-bangla">কপি</span>
-                            <span class="lang-bl">Copy</span>
-                        </button>
+                    <div class="font-card" onclick="copyFontResult('gothic')">
+                        <div class="font-card-label">Fraktur Gothic</div>
+                        <div class="font-card-text" id="font-out-gothic">&#x1D510;&#x1D532;&#x1D528;&#x1D531;&#x1D52C; &#x1D50E;&#x1D522;&#x1D536;&#x1D51F;&#x1D52C;&#x1D51E;&#x1D52F;&#x1D521;</div>
+                        <span class="copy-hint">Tap to copy</span>
                     </div>
-                    <div class="font-sample-card">
-                        <div class="font-sample-header"><span>Script (Calligraphy)</span></div>
-                        <div class="font-sample-preview" id="font-out-script">𝓜𝓾𝓴𝓽𝓸 𝓚𝓮𝔂𝓫𝓸ⓐⓡⓓ</div>
-                        <button class="chip-copy-action" onclick="copyFontResult('font-out-script')">
-                            <span class="lang-en">Copy</span>
-                            <span class="lang-bn font-bangla">কপি</span>
-                            <span class="lang-bl">Copy</span>
-                        </button>
+                    <div class="font-card" onclick="copyFontResult('script')">
+                        <div class="font-card-label">Handwritten Script</div>
+                        <div class="font-card-text" id="font-out-script">&#x1D440;&#x1D462;&#x1D458;&#x1D461;&#x1D45C; &#x1D43E;&#x1D452;&#x1D466;&#x1D44F;&#x1D45C;&#x1D44E;&#x1D45F;&#x1D451;</div>
+                        <span class="copy-hint">Tap to copy</span>
                     </div>
-                    <div class="font-sample-card">
-                        <div class="font-sample-header"><span>Monospace (Code)</span></div>
-                        <div class="font-sample-preview font-mono" id="font-out-mono">𝙼𝚞𝚔𝚝𝚘 𝙺𝚎𝚢𝚋𝚘𝚊𝚛𝚍</div>
-                        <button class="chip-copy-action" onclick="copyFontResult('font-out-mono')">
-                            <span class="lang-en">Copy</span>
-                            <span class="lang-bn font-bangla">কপি</span>
-                            <span class="lang-bl">Copy</span>
-                        </button>
+                    <div class="font-card" onclick="copyFontResult('mono')">
+                        <div class="font-card-label">Monospace Code</div>
+                        <div class="font-card-text" id="font-out-mono">&#x1D67C;&#x1D69E;&#x1D694;&#x1D69D;&#x1D698; &#x1D67A;&#x1D68E;&#x1D6A2;&#x1D68B;&#x1D698;&#x1D68A;&#x1D69B;&#x1D68D;</div>
+                        <span class="copy-hint">Tap to copy</span>
                     </div>
-                    <div class="font-sample-card">
-                        <div class="font-sample-header"><span>Inverted / Upside Down</span></div>
-                        <div class="font-sample-preview" id="font-out-inverted">pɹɐoqʎǝʞ oʇʞnW</div>
-                        <button class="chip-copy-action" onclick="copyFontResult('font-out-inverted')">
-                            <span class="lang-en">Copy</span>
-                            <span class="lang-bn font-bangla">কপি</span>
-                            <span class="lang-bl">Copy</span>
-                        </button>
+                    <div class="font-card" onclick="copyFontResult('inverted')">
+                        <div class="font-card-label">Inverted Squares</div>
+                        <div class="font-card-text" id="font-out-inverted">&#x1F17C;&#x1F184;&#x1F17A;&#x1F183;&#x1F17E;</div>
+                        <span class="copy-hint">Tap to copy</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Panel 3: Typing Modes & Spacebar Gestures -->
+            <!-- Panel 4: Gestures & Spacebar -->
             <div id="panel-gestures" class="studio-panel">
-                <div class="gestures-studio-box">
-                    <div style="font-size:12px; text-transform:uppercase; font-family:'JetBrains Mono', monospace; color:var(--emerald-400); letter-spacing:0.08em; margin-bottom:8px;">
-                        <span class="lang-en">Triple Engine Layout Architecture</span>
-                        <span class="lang-bn font-bangla">ট্রিপল ইঞ্জিন কিবোর্ড আর্কিটেকচার</span>
-                        <span class="lang-bl">Triple Engine Layout</span>
-                    </div>
-                    <h3 style="font-size:1.45rem; font-weight:800; margin-bottom:14px; color:#ffffff;">
-                        <span class="lang-en">3 Distinct Engines With Zero Delay Switching</span>
-                        <span class="lang-bn font-bangla">৩টি শক্তিশালী টাইপিং ইঞ্জিন ও দ্রুত পরিবর্তন</span>
-                        <span class="lang-bl">3 Ti Typing Engines &amp; Instant Switch</span>
-                    </h3>
-
-                    <div class="modes-pill-row">
-                        <button class="mode-chip active" id="modeBtn0" onclick="switchModePreview(0)">
-                            <span>1. অভ্র (Avro Phonetic Engine)</span>
-                        </button>
-                        <button class="mode-chip" id="modeBtn1" onclick="switchModePreview(1)">
-                            <span>2. English (Smart QWERTY)</span>
-                        </button>
-                        <button class="mode-chip" id="modeBtn2" onclick="switchModePreview(2)">
-                            <span>3. বাংলা (Direct Bengali Layout)</span>
-                        </button>
+                <div style="max-width:680px; margin:0 auto; text-align:center;">
+                    <div style="display:flex; justify-content:center; gap:8px; margin-bottom:20px; flex-wrap:wrap;">
+                        <button class="btn-persp active" onclick="switchModePreview('bn_avro')">Avro Phonetic (বাংলা)</button>
+                        <button class="btn-persp" onclick="switchModePreview('en')">English (QWERTY)</button>
+                        <button class="btn-persp" onclick="switchModePreview('bn_probhat')">Traditional (জাতীয়/প্রভাত)</button>
                     </div>
 
-                    <div style="max-width:620px; margin:0 auto 20px; font-size:14px; color:rgba(255,255,255,0.85); line-height:1.6;" id="modeDescriptionText">
-                        <strong>অভ্র (Avro Phonetic):</strong> সহজে ইংরেজি অক্ষরে বাংলায় লিখুন (যেমন: <code style="color:var(--emerald-300);">ami</code> &rarr; <strong>আমি</strong>, <code style="color:var(--emerald-300);">k</code> &rarr; <strong>ক</strong>, <code style="color:var(--emerald-300);">kh</code> &rarr; <strong>খ</strong>)। সাথে রয়েছে ব্যাকরণসম্মত সাজেশন ও অটো-কারেকশন।
+                    <div id="modeDescriptionText" style="font-size:14px; color:var(--slate-700); margin-bottom:24px; min-height:42px;" class="font-bangla">
+                        রোমান অক্ষরে স্বাভাবিক উচ্চারণ টাইপ করুন (যেমন <code>tomar</code> লিখলে সরাসরি <strong>তোমার</strong> হয়ে যাবে)।
                     </div>
 
                     <!-- Interactive Spacebar Mockup -->
-                    <div style="font-size:12px; font-weight:700; color:var(--slate-400); margin-bottom:6px;">
-                        <span class="lang-en">Interactive Spacebar (Try Gestures):</span>
-                        <span class="lang-bn font-bangla">ইন্টারঅ্যাক্টিভ স্পেসবার (জেসচার ট্রাই করুন):</span>
-                        <span class="lang-bl">Interactive Spacebar:</span>
-                    </div>
-                    <div class="spacebar-interactive-card" id="spacebarCard" onclick="triggerSpacebarTap()">
-                        <div style="font-size:18px; color:var(--emerald-400);">&lang;</div>
-                        <div style="text-align:center;">
-                            <div style="font-size:15px; font-weight:800; color:#ffffff; letter-spacing:0.04em;" id="spacebarDisplayName">অভ্র (Phonetic)</div>
-                            <div style="font-size:10.5px; opacity:0.7; font-family:'JetBrains Mono', monospace;" id="spacebarHintText">
-                                <span class="lang-en">Tap for space &bull; Swipe &lang; &rang; to switch</span>
-                                <span class="lang-bn font-bangla">স্পেস দিতে ট্যাপ &bull; বদলাতে ডানে-বামে সোয়াইপ করুন</span>
-                                <span class="lang-bl">Tap for space &bull; Swipe &lang; &rang; to switch</span>
-                            </div>
+                    <div class="spacebar-interactive-card" id="spacebarCard">
+                        <div style="font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--slate-400); margin-bottom:8px;">Spacebar Trackpad &bull; Swipe to Move Cursor</div>
+                        <div class="spacebar-bar-mock" id="spacebarDisplayName" onclick="triggerSpacebarTap()">
+                            <span>বাংলা (Avro) &bull; Mukto</span>
                         </div>
-                        <div style="font-size:18px; color:var(--emerald-400);">&rang;</div>
+                        <div id="spacebarHintText" style="font-size:12px; color:var(--emerald-600); margin-top:10px; font-weight:600;">Tap or swipe spacebar to cycle languages or scrub text cursor!</div>
                     </div>
 
-                    <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin-top:14px;">
-                        <button class="chip-copy-action" onclick="cycleLanguageMode(-1)" style="background:rgba(255,255,255,0.1); color:#ffffff; border-color:rgba(255,255,255,0.2);">
-                            <span class="lang-en">&larr; Swipe Left (Prev Mode)</span>
-                            <span class="lang-bn font-bangla">&larr; বামে সোয়াইপ (আগের মোড)</span>
-                            <span class="lang-bl">&larr; Swipe Left</span>
-                        </button>
-                        <button class="chip-copy-action" onclick="triggerCursorScrubDemo()" style="background:var(--emerald-600); color:#ffffff;">
-                            <svg class="icon-svg" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px;"><path d="M5 9l-3 3 3 3M9 5l3-3 3 3M15 19l-3 3-3-3M19 9l3 3-3 3"/><circle cx="12" cy="12" r="2"/></svg>
-                            <span class="lang-en">Hold 280ms (Cursor Trackpad)</span>
-                            <span class="lang-bn font-bangla">২৮০মি.সে চেপে রাখুন (মাউস ট্র্যাকপ্যাড)</span>
-                            <span class="lang-bl">Hold 280ms (Trackpad)</span>
-                        </button>
-                        <button class="chip-copy-action" onclick="cycleLanguageMode(1)" style="background:rgba(255,255,255,0.1); color:#ffffff; border-color:rgba(255,255,255,0.2);">
-                            <span class="lang-en">Swipe Right (Next Mode) &rarr;</span>
-                            <span class="lang-bn font-bangla">ডানে সোয়াইপ (পরের মোড) &rarr;</span>
-                            <span class="lang-bl">Swipe Right &rarr;</span>
+                    <div style="margin-top:16px;">
+                        <button class="chat-replay-btn" onclick="triggerCursorScrubDemo()">
+                            <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                            <span>Simulate Trackpad Cursor Drag</span>
+                            <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
                         </button>
                     </div>
                 </div>
             </div>
 
-            <!-- Panel 4: Audio & Themes -->
+            <!-- Panel 5: Sounds & Themes -->
             <div id="panel-audio" class="studio-panel">
-                <div style="margin-bottom:16px; font-size:13.5px; color:var(--slate-600);">
-                    <span class="lang-en">Mukto Keyboard features 3 acoustic sound profiles generated synthesized dynamically, granular haptic vibration (5ms to 100ms), and animated video backgrounds (MP4/WebM) with boomerang loop control.</span>
-                    <span class="lang-bn font-bangla">মুক্ত কিবোর্ডে রয়েছে ৩টি চমৎকার টাইপিং সাউন্ড প্রোফাইল, ৫ থেকে ১০০ মিলি-সেকেন্ড পর্যন্ত ভাইব্রেশন কন্ট্রোল এবং লাইভ অ্যানিমেটেড ভিডিও ব্যাকগ্রাউন্ড থিম।</span>
-                    <span class="lang-bl">3 ti sound profile, 5ms-100ms vibration control ebong live video theme (MP4/WebM) with boomerang loop!</span>
-                </div>
+                <div style="max-width:680px; margin:0 auto; text-align:center;">
+                    <h3 style="font-size:18px; font-weight:700; color:var(--slate-900); margin-bottom:8px;">Tactile Sound Synthesizer</h3>
+                    <p style="font-size:13.5px; color:var(--slate-600); margin-bottom:24px;">Mukto Keyboard comes with authentic custom keypress audio profiles engineered to give maximum satisfying typing feedback.</p>
 
-                <div class="sound-theme-grid">
-                    <!-- Mechanical Sound Card -->
-                    <div class="sound-card-box">
-                        <div>
-                            <div class="sound-card-icon-wrap">
-                                <svg class="icon-svg" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="3" x2="12" y2="7"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                            </div>
-                            <h4 style="font-size:15px; font-weight:800; color:var(--slate-900);">
-                                <span class="lang-en">Mechanical Switch</span>
-                                <span class="lang-bn font-bangla">মেকানিক্যাল সুইচ</span>
-                                <span class="lang-bl">Mechanical Switch</span>
-                            </h4>
-                            <p style="font-size:12.5px; color:var(--slate-500); margin-top:4px;">
-                                <span class="lang-en">Crisp, tactile blue switch acoustic clicks for precision lovers.</span>
-                                <span class="lang-bn font-bangla">আসল ট্যাকটাইল মেকানিক্যাল ব্লু সুইচের স্পষ্ট ক্লিক সাউন্ড।</span>
-                                <span class="lang-bl">Crisp tactile blue switch click sound.</span>
-                            </p>
-                        </div>
-                        <button class="sound-play-btn" onclick="playMechanicalSound()">
-                            <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                            <span class="lang-en">Play Mechanical</span>
-                            <span class="lang-bn font-bangla">মেকানিক্যাল শুনুন</span>
-                            <span class="lang-bl">Play Mechanical</span>
+                    <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap; margin-bottom:30px;">
+                        <button class="btn-primary-hero" onclick="playMechanicalSound()" style="padding:12px 24px;">
+                            <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+                            <span>Clicky Mechanical Switch</span>
+                        </button>
+                        <button class="btn-secondary-hero" onclick="playSoftSound()" style="padding:12px 24px;">
+                            <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/></svg>
+                            <span>Soft Membrane Bubble</span>
+                        </button>
+                        <button class="btn-secondary-hero" onclick="playPopSound()" style="padding:12px 24px;">
+                            <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                            <span>Modern Pop Sound</span>
                         </button>
                     </div>
 
-                    <!-- Soft Tap Sound Card -->
-                    <div class="sound-card-box">
-                        <div>
-                            <div class="sound-card-icon-wrap">
-                                <svg class="icon-svg" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
-                            </div>
-                            <h4 style="font-size:15px; font-weight:800; color:var(--slate-900);">
-                                <span class="lang-en">Soft Tap</span>
-                                <span class="lang-bn font-bangla">সফট ট্যাপ</span>
-                                <span class="lang-bl">Soft Tap</span>
-                            </h4>
-                            <p style="font-size:12.5px; color:var(--slate-500); margin-top:4px;">
-                                <span class="lang-en">Subtle, gentle raindrops tap feedback for quiet settings.</span>
-                                <span class="lang-bn font-bangla">শান্ত পরিবেশে আরামদায়ক ও মৃদু রেইনড্রপ ট্যাপ সাউন্ড।</span>
-                                <span class="lang-bl">Quiet gentle tap sound feedback.</span>
-                            </p>
-                        </div>
-                        <button class="sound-play-btn" onclick="playSoftSound()">
-                            <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                            <span class="lang-en">Play Soft Tap</span>
-                            <span class="lang-bn font-bangla">সফট ট্যাপ শুনুন</span>
-                            <span class="lang-bl">Play Soft Tap</span>
-                        </button>
-                    </div>
-
-                    <!-- Bubble Pop Sound Card -->
-                    <div class="sound-card-box">
-                        <div>
-                            <div class="sound-card-icon-wrap">
-                                <svg class="icon-svg" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5"/><circle cx="17" cy="15" r="4"/><circle cx="16" cy="6" r="2"/></svg>
-                            </div>
-                            <h4 style="font-size:15px; font-weight:800; color:var(--slate-900);">
-                                <span class="lang-en">Bubble Pop</span>
-                                <span class="lang-bn font-bangla">বাবল পপ</span>
-                                <span class="lang-bl">Bubble Pop</span>
-                            </h4>
-                            <p style="font-size:12.5px; color:var(--slate-500); margin-top:4px;">
-                                <span class="lang-en">Bouncy, playful bubble acoustic sound with high pitch.</span>
-                                <span class="lang-bn font-bangla">আনন্দদায়ক ও প্রাণবন্ত বাবল পপিং সাউন্ড এফেক্ট।</span>
-                                <span class="lang-bl">Playful bouncy bubble sound.</span>
-                            </p>
-                        </div>
-                        <button class="sound-play-btn" onclick="playPopSound()">
-                            <svg class="icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                            <span class="lang-en">Play Bubble Pop</span>
-                            <span class="lang-bn font-bangla">বাবল পপ শুনুন</span>
-                            <span class="lang-bl">Play Bubble Pop</span>
-                        </button>
-                    </div>
-
-                    <!-- Live Video Theme Preview Card -->
-                    <div class="sound-card-box" style="background:linear-gradient(135deg, var(--emerald-900) 0%, var(--slate-900) 100%); color:#ffffff;">
-                        <div>
-                            <div class="sound-card-icon-wrap" style="background:rgba(255,255,255,0.12); color:var(--emerald-400); border-color:rgba(255,255,255,0.2);">
-                                <svg class="icon-svg" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
-                            </div>
-                            <h4 style="font-size:15px; font-weight:800; color:#ffffff;">
-                                <span class="lang-en">Live Video Themes</span>
-                                <span class="lang-bn font-bangla">লাইভ ভিডিও থিম</span>
-                                <span class="lang-bl">Live Video Themes</span>
-                            </h4>
-                            <p style="font-size:12.5px; color:rgba(255,255,255,0.75); margin-top:4px;">
-                                <span class="lang-en">MP4 / WebM background with video trimmer &amp; boomerang loop mode.</span>
-                                <span class="lang-bn font-bangla">ভিডিও ট্রিমার ও বুমেরাং লুপ সহ MP4/WebM ব্যাকগ্রাউন্ড।</span>
-                                <span class="lang-bl">MP4 / WebM background with video trimmer &amp; boomerang loop.</span>
-                            </p>
-                        </div>
-                        <div style="font-size:11.5px; font-family:'JetBrains Mono', monospace; background:rgba(255,255,255,0.1); padding:6px; border-radius:6px; border:1px solid rgba(255,255,255,0.15);">
-                            <span class="lang-en">Key Opacity: 0-100% &bull; Dimmer</span>
-                            <span class="lang-bn font-bangla">কি-স্বচ্ছতা: ০-১০০% &bull; ডিমার</span>
-                            <span class="lang-bl">Key Opacity &bull; Dimmer</span>
-                        </div>
+                    <div style="background:var(--slate-100); border-radius:12px; padding:16px; font-size:13px; color:var(--slate-600);">
+                        <strong>Video &amp; Photo Themes:</strong> Support for looping MP4 videos, custom photo gallery picks, transparency sliders, and AMOLED deep dark themes are fully integrated.
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 12 Feature Showcase -->
+    <!-- 12 Signature Features Grid -->
     <section id="features" class="section-headline">
         <div class="section-tag">
             <svg class="icon-svg" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
             <span class="lang-en">Crafted for Excellence</span>
-            <span class="lang-bn font-bangla">অনন্য ১২টি বৈশিষ্ট্য</span>
+            <span class="lang-bn font-bangla">অনন্য ১২টি স্বাক্ষর বৈশিষ্ট্য</span>
             <span class="lang-bl">12 Signature Features</span>
         </div>
         <h2 class="lang-en">Engineered for Speed, Beauty &amp; Privacy</h2>
@@ -732,7 +568,59 @@
     </section>
 
     <div class="features-grid">
-        <!-- Feature 1: Secret Chat Steganography -->
+        <!-- Feature 1: Camera OCR Scanner -->
+        <div class="feature-card">
+            <div>
+                <div class="card-top-row">
+                    <div class="feature-icon-box">
+                        <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                    </div>
+                    <span class="badge-pill new">
+                        <span class="lang-en">On-Device OCR</span>
+                        <span class="lang-bn font-bangla">অন-ডিভাইস ওসিআর</span>
+                        <span class="lang-bl">On-Device OCR</span>
+                    </span>
+                </div>
+                <h3 class="lang-en">Camera OCR Document Scanner</h3>
+                <h3 class="lang-bn font-bangla">ক্যামেরা ওসিআর টেক্সট স্ক্যানার</h3>
+                <h3 class="lang-bl">Camera OCR Text Scanner</h3>
+                <p class="lang-en">Instantly scan physical books, receipts, documents, or gallery photos directly into your keyboard input box using Google ML Kit. Runs 100% in RAM with zero image uploads.</p>
+                <p class="lang-bn font-bangla">বই, খাতা, সাইনবোর্ড বা গ্যালারির যেকোনো ছবি থেকে সরাসরি কিবোর্ডে টেক্সট স্ক্যান করুন। কোনো ছবি ইন্টারনেটে আপলোড হয় না, মেমোরিতে টেক্সট পড়ে সাথে সাথেই মুছে যায়।</p>
+                <p class="lang-bl">Boi, kagoj ba photo theke direct keyboard e text scan korun. Google ML Kit diye 100% on-device RAM e run hoy, kono photo upload hoy na.</p>
+            </div>
+            <div class="feature-card-footer">
+                <span class="feature-tag">CameraX &bull; ML Kit</span>
+                <span class="feature-tag">100% Private</span>
+            </div>
+        </div>
+
+        <!-- Feature 2: In-Keyboard AI Writing Assistant -->
+        <div class="feature-card">
+            <div>
+                <div class="card-top-row">
+                    <div class="feature-icon-box">
+                        <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    </div>
+                    <span class="badge-pill new">
+                        <span class="lang-en">Multi-Provider BYOK</span>
+                        <span class="lang-bn font-bangla">ইন-কিবোর্ড এআই</span>
+                        <span class="lang-bl">In-Keyboard AI</span>
+                    </span>
+                </div>
+                <h3 class="lang-en">In-Keyboard AI Writing Assistant</h3>
+                <h3 class="lang-bn font-bangla">ইন-কিবোর্ড এআই রাইটিং অ্যাসিস্ট্যান্ট</h3>
+                <h3 class="lang-bl">In-Keyboard AI Writing Assistant</h3>
+                <p class="lang-en">9 built-in AI writing actions (Grammar fix, Rephrase, Make Professional Email, Social Media, Sadhu to Cholito, Banglish transliteration) with your own Gemini, OpenAI, Claude, or Groq API key.</p>
+                <p class="lang-bn font-bangla">ব্যাকরণ সংশোধন, রিফ্রেজ, প্রফেশনাল ইমেইল, সোশ্যাল মিডিয়া পোস্ট বা সাধু থেকে চলিত রূপান্তরের ৯টি শক্তিশালী এআই টুল। নিজস্ব এপিআই কি দিয়ে সরাসরি কানেক্ট করুন মধ্যবর্তী কোনো সার্ভার ছাড়া।</p>
+                <p class="lang-bl">Grammar fix, rephrase, email format, Sadhu to Cholito ebong Banglish রূপান্তরের 9 ti AI tools. Direct provider HTTPS call, kono proxy server ba key logging nei.</p>
+            </div>
+            <div class="feature-card-footer">
+                <span class="feature-tag">Gemini &bull; OpenAI &bull; Claude</span>
+                <span class="feature-tag">BYOK Architecture</span>
+            </div>
+        </div>
+
+        <!-- Feature 3: Secret Chat Steganography -->
         <div class="feature-card">
             <div>
                 <div class="card-top-row">
@@ -748,47 +636,121 @@
                 <h3 class="lang-en">Secret Chat (Emoji Steganography)</h3>
                 <h3 class="lang-bn font-bangla">গোপন চ্যাট ও ইমোজি স্টেগানোগ্রাফি</h3>
                 <h3 class="lang-bl">Secret Chat &amp; Emoji Steganography</h3>
-                <p class="lang-en">Encode invisible secret text inside standard emojis using Unicode Variation Selectors (<code style="font-size:12px;">U+FE00..U+FE0F</code>). Invisible to WhatsApp, Messenger, and Telegram algorithms. Decrypts with 1 tap in Mukto Keyboard.</p>
-                <p class="lang-bn font-bangla">সাধারণ ইমোজির ভেতরে সম্পূর্ণ অদৃশ্যভাবে গোপন বার্তা লুকিয়ে রাখুন। ফেসবুক, হোয়াটসঅ্যাপ বা টেলিগ্রামের কোনো অ্যালগরিদম এটি ধরতে পারবে না; মুক্ত কিবোর্ডে পেস্ট করলেই ১ ট্যাপে বার্তা দৃশ্যমান হবে।</p>
-                <p class="lang-bl">Emojir bhitore invisible bhabe secret text hide korun. WhatsApp, Messenger e shobai shudhu emoji dekhbe, ar Mukto Keyboard e 1-tap e decode hoye jabe!</p>
+                <p class="lang-en">Encode invisible secret text inside standard emojis using Unicode Variation Selectors. To platforms and onlookers, it's just a normal emoji. Mukto Keyboard users decrypt it in 1 tap.</p>
+                <p class="lang-bn font-bangla">সাধারণ ইমোজির ভেতরে জড়িয়ে দিন অদৃশ্য গোপন বার্তা। ফেসবুক, হোয়াটসঅ্যাপ বা যেকোনো অ্যাপে এটি শুধুই সাধারণ ইমোজির মতো দেখাবে। অন্য প্রান্তে মুক্ত কিবোর্ড ব্যবহারকারী ১-ট্যাপেই পড়তে পারবেন।</p>
+                <p class="lang-bl">Unicode Variation Selectors use kore normal emoji er vitore invisible secret text hide korun. Messenger ba WhatsApp e shobar kache normal emoji dekhabe, Mukto user 1-tap e porbe.</p>
             </div>
-            <div class="feature-footer-tag">
-                <span class="dot"></span>
-                <span class="lang-en">Unicode Variation Selectors &bull; E2E Concealed</span>
-                <span class="lang-bn font-bangla">ইউনিকোড ভ্যারিয়েশন সিলেক্টরস &bull; শতভাগ গোপন</span>
-                <span class="lang-bl">Unicode Variation Selectors &bull; E2E Concealed</span>
+            <div class="feature-card-footer">
+                <span class="feature-tag">Unicode Variation Selectors</span>
+                <span class="feature-tag">100% Offline</span>
             </div>
         </div>
 
-        <!-- Feature 2: Live Video Themes -->
+        <!-- Feature 4: Live Video & Photo Themes -->
         <div class="feature-card">
             <div>
                 <div class="card-top-row">
                     <div class="feature-icon-box">
-                        <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg>
+                        <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
                     </div>
-                    <span class="badge-pill new">
-                        <span class="lang-en">New Feature</span>
-                        <span class="lang-bn font-bangla">নতুন ফিচার</span>
-                        <span class="lang-bl">New Feature</span>
+                    <span class="badge-pill featured">
+                        <span class="lang-en">Looping Video</span>
+                        <span class="lang-bn font-bangla">লাইভ ভিডিও থিম</span>
+                        <span class="lang-bl">Looping Video</span>
                     </span>
                 </div>
                 <h3 class="lang-en">Live Video &amp; Photo Themes</h3>
                 <h3 class="lang-bn font-bangla">লাইভ ভিডিও ও ফটো ব্যাকগ্রাউন্ড</h3>
                 <h3 class="lang-bl">Live Video &amp; Photo Themes</h3>
-                <p class="lang-en">Set any MP4/WebM video as an animated keyboard background. Includes video trimming slider, normal and boomerang (ping-pong) reverse looping, key transparency, and AMOLED pitch black mode.</p>
-                <p class="lang-bn font-bangla">কিবোর্ডের ব্যাকগ্রাউন্ডে সেট করুন যেকোনো এনিমেটেড ভিডিও (MP4/WebM)। রয়েছে ভিডিও ট্রিমার, পিং-পং লুপ, কি-ট্রান্সপারেন্সি এবং এমোলেড পিচ ব্ল্যাক থিম।</p>
-                <p class="lang-bl">Keys er pichone custom animated video set korun. Video trim, boomerang loop, key opacity ebong AMOLED dark mode shoho!</p>
+                <p class="lang-en">Bring your keyboard alive with ultra-smooth looping MP4 video backgrounds, custom photo themes, transparency sliders, AMOLED true black mode, and keypress ripple particles.</p>
+                <p class="lang-bn font-bangla">কিবোর্ডের ব্যাকগ্রাউন্ডে সেট করুন নিজের পছন্দের যেকোনো ভিডিও (MP4) যা লুপ আকারে চলবে। সাথে রয়েছে কাস্টম ফটো, অপাসিটি স্লাইডার, ডিপ ডার্ক মোড এবং কি-প্রেস কণা অ্যানিমেশন।</p>
+                <p class="lang-bl">Apnar keyboard background e set korun looping MP4 video ba custom photo. Transparency control, AMOLED dark mode ebong keypress visual effects shob kisu ache.</p>
             </div>
-            <div class="feature-footer-tag">
-                <span class="dot"></span>
-                <span class="lang-en">MP4/WebM Engine &bull; Boomerang Loop</span>
-                <span class="lang-bn font-bangla">এমপি৪/ওয়েবএম ইঞ্জিন &bull; বুমেরাং লুপ</span>
-                <span class="lang-bl">MP4/WebM Engine &bull; Boomerang Loop</span>
+            <div class="feature-card-footer">
+                <span class="feature-tag">MP4 Video Engine</span>
+                <span class="feature-tag">AMOLED True Black</span>
             </div>
         </div>
 
-        <!-- Feature 3: 20+ Fancy Fonts -->
+        <!-- Feature 5: Smart Phonetic Engine (Avro Scheme) -->
+        <div class="feature-card">
+            <div>
+                <div class="card-top-row">
+                    <div class="feature-icon-box">
+                        <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                    </div>
+                    <span class="badge-pill featured">
+                        <span class="lang-en">Avro Scheme</span>
+                        <span class="lang-bn font-bangla">অভ্র ফোনেটিক</span>
+                        <span class="lang-bl">Avro Scheme</span>
+                    </span>
+                </div>
+                <h3 class="lang-en">Smart Dual-Mode Phonetic Engine</h3>
+                <h3 class="lang-bn font-bangla">বুদ্ধিমান ফোনেটিক টাইপিং ইঞ্জিন</h3>
+                <h3 class="lang-bl">Smart Dual-Mode Phonetic Engine</h3>
+                <p class="lang-en">Type Bengali naturally using English letters (e.g. <code>tomar</code> &rarr; <strong>তোমার</strong>, <code>ami</code> &rarr; <strong>আমি</strong>, <code>bangla</code> &rarr; <strong>বাংলা</strong>). High-speed Prefix Trie provides instant dictionary suggestions.</p>
+                <p class="lang-bn font-bangla">স্বাভাবিক উচ্চারণে ইংরেজি অক্ষরে টাইপ করলেই তৈরি হবে নির্ভুল বাংলা (যেমন <code>tomar</code> লিখলেই <strong>তোমার</strong>, <code>kor</code> লিখলে <strong>কর</strong>)। ইন-মেমোরি ট্রাই ইঞ্জিন কোনো ল্যাগ ছাড়াই শব্দ সাজেস্ট করে।</p>
+                <p class="lang-bl">English letters diye natural pronunciation type korun (jemon <code>tomar</code> likhle <strong>তোমার</strong>). High-speed Trie dictionary automatic word suggest kore zero lag e.</p>
+            </div>
+            <div class="feature-card-footer">
+                <span class="feature-tag">Dual-Mode Phonetic</span>
+                <span class="feature-tag">Prefix Trie Memory</span>
+            </div>
+        </div>
+
+        <!-- Feature 6: Cloud & Local Backup (.mukto) -->
+        <div class="feature-card">
+            <div>
+                <div class="card-top-row">
+                    <div class="feature-icon-box">
+                        <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+                    </div>
+                    <span class="badge-pill new">
+                        <span class="lang-en">Drive &amp; .mukto Sync</span>
+                        <span class="lang-bn font-bangla">ক্লাউড ও লোকাল ব্যাকআপ</span>
+                        <span class="lang-bl">Drive &amp; .mukto Sync</span>
+                    </span>
+                </div>
+                <h3 class="lang-en">Cloud Backup &amp; Local .mukto Archive</h3>
+                <h3 class="lang-bn font-bangla">ক্লাউড ব্যাকআপ ও লোকাল আর্কাইভ (.mukto)</h3>
+                <h3 class="lang-bl">Cloud Backup &amp; Local Archive (.mukto)</h3>
+                <p class="lang-en">Safely back up your learned vocabulary, shortcuts, themes, and clipboard favorites to your personal Google Drive AppData folder or export a compressed <code>.mukto</code> file directly to phone storage.</p>
+                <p class="lang-bn font-bangla">আপনার সমস্ত শেখা শব্দ, শর্টকাট, কাস্টম থিম এবং ক্লিপবোর্ড ডেটা সুরক্ষিত রাখতে গুগল ড্রাইভের নিজস্ব অ্যাপ ফোল্ডারে ক্লাউড সিঙ্ক করুন অথবা কমপ্রেসড <code>.mukto</code> ফাইল এক্সপোর্ট করে রাখুন।</p>
+                <p class="lang-bl">Apnar dictionary, custom shortcuts, themes ebong clipboard clips personal Google Drive AppData folder e sync korun ba <code>.mukto</code> file akare export korun.</p>
+            </div>
+            <div class="feature-card-footer">
+                <span class="feature-tag">Google Drive AppData</span>
+                <span class="feature-tag">Compressed .mukto</span>
+            </div>
+        </div>
+
+        <!-- Feature 7: Handwriting Studio & Gesture Canvas -->
+        <div class="feature-card">
+            <div>
+                <div class="card-top-row">
+                    <div class="feature-icon-box">
+                        <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/></svg>
+                    </div>
+                    <span class="badge-pill new">
+                        <span class="lang-en">Gesture Drawing</span>
+                        <span class="lang-bn font-bangla">হ্যান্ডরাইটিং স্টুডিও</span>
+                        <span class="lang-bl">Handwriting Studio</span>
+                    </span>
+                </div>
+                <h3 class="lang-en">Handwriting Studio &amp; Gesture Canvas</h3>
+                <h3 class="lang-bn font-bangla">হ্যান্ডরাইটিং স্টুডিও ও ড্রয়িং ক্যানভাস</h3>
+                <h3 class="lang-bl">Handwriting Studio &amp; Gesture Canvas</h3>
+                <p class="lang-en">Draw custom glyphs, write Bengali letters by finger touch, and define personalized stroke gestures right on the keyboard canvas for fast character insertion.</p>
+                <p class="lang-bn font-bangla">আঙুল দিয়ে কিবোর্ডের ক্যানভাসে বাংলা অক্ষর বা কাস্টম চিহ্ন আঁকুন। হাতের লেখা ও ড্রয়িং জেসচার সরাসরি ডিজিটাল টেক্সটে রূপান্তর করার অনন্য অভিজ্ঞতা।</p>
+                <p class="lang-bl">Finger touch diye Bangla letters ba glyphs draw korun. Handwriting o custom drawing gestures instant digital text e convert hoy.</p>
+            </div>
+            <div class="feature-card-footer">
+                <span class="feature-tag">Custom Stroke Engine</span>
+                <span class="feature-tag">Gesture Shortcuts</span>
+            </div>
+        </div>
+
+        <!-- Feature 8: 20+ Fancy Unicode Fonts -->
         <div class="feature-card">
             <div>
                 <div class="card-top-row">
@@ -796,195 +758,25 @@
                         <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
                     </div>
                     <span class="badge-pill featured">
-                        <span class="lang-en">20+ Styles</span>
-                        <span class="lang-bn font-bangla">২০+ স্টাইল</span>
-                        <span class="lang-bl">20+ Styles</span>
+                        <span class="lang-en">Social Bios</span>
+                        <span class="lang-bn font-bangla">২০+ ফন্ট স্টাইল</span>
+                        <span class="lang-bl">Social Bios</span>
                     </span>
                 </div>
                 <h3 class="lang-en">20+ Fancy Unicode Fonts Studio</h3>
-                <h3 class="lang-bn font-bangla">২০+ ফ্যান্সি ইউনিকোড ফন্টস</h3>
-                <h3 class="lang-bl">20+ Fancy Unicode Fonts</h3>
-                <p class="lang-en">Directly transform your typing into Bold, Bubble, Gothic, Script, Monospace, and UpsideDown Unicode styles directly from the toolbar for bios, usernames, and chat without extra font apps.</p>
-                <p class="lang-bn font-bangla">কিবোর্ড টুলবার থেকেই সরাসরি বোল্ড, বাবল, গথিক, স্ক্রিপ্ট বা উল্টানো (Inverted) সহ ২০টিরও বেশি আকর্ষণীয় ফন্টে রূপান্তর করুন সোশ্যাল মিডিয়া পোস্ট ও বায়োর জন্য।</p>
-                <p class="lang-bl">Toolbar thekei direct Bold, Bubble, Gothic, Monospace ba Inverted font e type korun social media status o bio er jonno!</p>
+                <h3 class="lang-bn font-bangla">২০+ ফ্যান্সি ইউনিকোড ফন্টস স্টুডিও</h3>
+                <h3 class="lang-bl">20+ Fancy Unicode Fonts Studio</h3>
+                <p class="lang-en">Transform standard text into eye-catching Bold Serif, Circled Bubble, Gothic Fraktur, Monospace, or Script with 1 tap. Perfect for Instagram, Facebook bios, captions, and stylish chat nicknames.</p>
+                <p class="lang-bn font-bangla">যেকোনো লেখাকে এক ক্লিকেই বোল্ড, বাবল, গথিক, মনোটাইপ বা কার্সিভ ফন্টে রূপান্তর করুন। ফেসবুক বা ইনস্টাগ্রাম বায়ো, স্টাইলিশ ক্যাপশন ও চ্যাটের জন্য আদর্শ।</p>
+                <p class="lang-bl">Standard text ke instant Bold, Bubble, Gothic, Script ba Monospace e convert korun. Instagram/Facebook bio ebong stylish chat er jonno perfect.</p>
             </div>
-            <div class="feature-footer-tag">
-                <span class="dot"></span>
-                <span class="lang-en">Bold &bull; Bubble &bull; Gothic &bull; Script</span>
-                <span class="lang-bn font-bangla">বোল্ড &bull; বাবল &bull; গথিক &bull; স্ক্রিপ্ট</span>
-                <span class="lang-bl">Bold &bull; Bubble &bull; Gothic &bull; Script</span>
+            <div class="feature-card-footer">
+                <span class="feature-tag">Standard Unicode</span>
+                <span class="feature-tag">1-Tap Conversion</span>
             </div>
         </div>
 
-        <!-- Feature 4: Drag & Drop Modular Toolbar -->
-        <div class="feature-card">
-            <div>
-                <div class="card-top-row">
-                    <div class="feature-icon-box">
-                        <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-                    </div>
-                    <span class="badge-pill featured">
-                        <span class="lang-en">Customizable</span>
-                        <span class="lang-bn font-bangla">কাস্টমাইজেবল</span>
-                        <span class="lang-bl">Customizable</span>
-                    </span>
-                </div>
-                <h3 class="lang-en">Modular Drag-and-Drop Toolbar</h3>
-                <h3 class="lang-bn font-bangla">ড্র্যাগ-অ্যান্ড-ড্রপ মডুলার টুলবার</h3>
-                <h3 class="lang-bl">Modular Drag-and-Drop Toolbar</h3>
-                <p class="lang-en">Rearrange 10 modular actions (Emoji, Clipboard, Text Edit, Numpad 123, Fonts, Translate, Themes, Height Resize, Settings, Secret Chat) by dragging and pinning your top 6 favorites.</p>
-                <p class="lang-bn font-bangla">ইমোজি, ক্লিপবোর্ড, টেক্সট এডিটর, নাম্বারপ্যাড, ফন্টস, অনুবাদ, থিম ও সিক্রেট চ্যাট সহ ১০টি টুল নিজের পছন্দমতো টেনে সাজিয়ে রাখুন।</p>
-                <p class="lang-bl">10 ti modular tools (Emoji, Clipboard, Numpad, Fonts, Translate, Resize, Secret Chat) nijer pochondo moto drag kore top bar e shajay rakhun.</p>
-            </div>
-            <div class="feature-footer-tag">
-                <span class="dot"></span>
-                <span class="lang-en">10 Modular Actions &bull; Pin Top 6</span>
-                <span class="lang-bn font-bangla">১০টি মডুলার টুল &bull; সেরা ৬টি পিন করুন</span>
-                <span class="lang-bl">10 Modular Actions &bull; Pin Top 6</span>
-            </div>
-        </div>
-
-        <!-- Feature 5: Spacebar Gestures & Trackpad -->
-        <div class="feature-card">
-            <div>
-                <div class="card-top-row">
-                    <div class="feature-icon-box">
-                        <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="3"/><line x1="6" y1="12" x2="18" y2="12"/></svg>
-                    </div>
-                    <span class="badge-pill featured">
-                        <span class="lang-en">Gesture Control</span>
-                        <span class="lang-bn font-bangla">জেসচার কন্ট্রোল</span>
-                        <span class="lang-bl">Gesture Control</span>
-                    </span>
-                </div>
-                <h3 class="lang-en">Spacebar Trackpad &amp; Rapid Swipe</h3>
-                <h3 class="lang-bn font-bangla">স্পেসবার ট্র্যাকপ্যাড ও সুইফট জেসচার</h3>
-                <h3 class="lang-bl">Spacebar Trackpad &amp; Rapid Swipe</h3>
-                <p class="lang-en">Tap for space, swipe left or right to switch instantly between Avro Phonetic, Direct Bengali, and English, or hold for 280ms to scrub the cursor smoothly through text like a laptop trackpad.</p>
-                <p class="lang-bn font-bangla">স্পেসবারে দ্রুত সোয়াইপ করে অভ্র, বাংলা ও ইংরেজিতে সুইচ করুন। আর ২৮০ মিলি-সেকেন্ড চেপে রাখলেই চালু হবে মাউসের মতো নিখুঁত কার্সার কন্ট্রোল (স্ক্রাবার)।</p>
-                <p class="lang-bl">Spacebar swipe kore Avro, Bangla o English e switch korun. R 280ms chepe rakhlei mouse trackpad er moto cursor move kora jay!</p>
-            </div>
-            <div class="feature-footer-tag">
-                <span class="dot"></span>
-                <span class="lang-en">280ms Haptic Trigger &bull; Smooth Scrubbing</span>
-                <span class="lang-bn font-bangla">২৮০মি.সে হ্যাপটিক ট্রিগার &bull; স্মুথ স্ক্রাবিং</span>
-                <span class="lang-bl">280ms Haptic Trigger &bull; Smooth Scrubbing</span>
-            </div>
-        </div>
-
-        <!-- Feature 6: Dedicated Text Editing Panel -->
-        <div class="feature-card">
-            <div>
-                <div class="card-top-row">
-                    <div class="feature-icon-box">
-                        <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-                    </div>
-                    <span class="badge-pill exclusive">
-                        <span class="lang-en">Productivity</span>
-                        <span class="lang-bn font-bangla">প্রোডাক্টিভিটি</span>
-                        <span class="lang-bl">Productivity</span>
-                    </span>
-                </div>
-                <h3 class="lang-en">Precision Text Editing Panel</h3>
-                <h3 class="lang-bn font-bangla">ডেডিকেটেড টেক্সট এডিটিং কন্ট্রোল</h3>
-                <h3 class="lang-bl">Precision Text Editing Panel</h3>
-                <p class="lang-en">Dedicated directional arrows (Up, Down, Left, Right), Jump to Line Start/End, Select Mode, Select All, Cut, Copy, and Paste for hassle-free mobile editing and code drafting.</p>
-                <p class="lang-bn font-bangla">তীর চিহ্ন (উপরে, নিচে, ডানে, বামে), লেখার শুরু/শেষে যাওয়ার বাটন, টেক্সট সিলেক্ট মোড, কাট, কপি ও পেস্ট — মোবাইলে বড় লেখা সম্পাদনা এখন অতি সহজ।</p>
-                <p class="lang-bl">Navigation arrows, text select mode, cut, copy, paste shoho mobile e shundor text drafting o editing er full panel.</p>
-            </div>
-            <div class="feature-footer-tag">
-                <span class="dot"></span>
-                <span class="lang-en">Full D-Pad Arrows &bull; 1-Tap Select All</span>
-                <span class="lang-bn font-bangla">ফুল ডি-প্যাড অ্যারো &bull; ১-ট্যাপে সিলেক্ট অল</span>
-                <span class="lang-bl">Full D-Pad Arrows &bull; 1-Tap Select All</span>
-            </div>
-        </div>
-
-        <!-- Feature 7: 1-Touch Height Resize -->
-        <div class="feature-card">
-            <div>
-                <div class="card-top-row">
-                    <div class="feature-icon-box">
-                        <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 18 12 22 16 18"/><polyline points="8 6 12 2 16 6"/><line x1="12" y1="2" x2="12" y2="22"/></svg>
-                    </div>
-                    <span class="badge-pill featured">
-                        <span class="lang-en">0.7x to 1.3x</span>
-                        <span class="lang-bn font-bangla">০.৭x থেকে ১.৩x</span>
-                        <span class="lang-bl">0.7x to 1.3x</span>
-                    </span>
-                </div>
-                <h3 class="lang-en">1-Touch Keyboard Height Resize Bar</h3>
-                <h3 class="lang-bn font-bangla">১-টাচ অন-স্ক্রিন হাইট রিসাইজ</h3>
-                <h3 class="lang-bl">1-Touch Height Resize Bar</h3>
-                <p class="lang-en">Adjust keyboard height dynamically from 0.7x to 1.3x on the fly with a dedicated interactive resize bar and real-time visual preview without opening phone settings.</p>
-                <p class="lang-bn font-bangla">কিবোর্ডের উচ্চতা সরাসরি স্ক্রিন থেকেই ০.৭x থেকে ১.৩x পর্যন্ত নিজের সুবিধা অনুযায়ী বড় বা ছোট করে নিন লাইভ প্রিভিউ সহ।</p>
-                <p class="lang-bl">Keyboard er height direct screen thekei 0.7x theke 1.3x porjonto customize korun live preview shoho.</p>
-            </div>
-            <div class="feature-footer-tag">
-                <span class="dot"></span>
-                <span class="lang-en">Live Slider &bull; In-Keyboard Overlay</span>
-                <span class="lang-bn font-bangla">লাইভ স্লাইডার &bull; অন-স্ক্রিন ওভারলে</span>
-                <span class="lang-bl">Live Slider &bull; In-Keyboard Overlay</span>
-            </div>
-        </div>
-
-        <!-- Feature 8: Mechanical Sound & Haptics -->
-        <div class="feature-card">
-            <div>
-                <div class="card-top-row">
-                    <div class="feature-icon-box">
-                        <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
-                    </div>
-                    <span class="badge-pill featured">
-                        <span class="lang-en">3 Sound Profiles</span>
-                        <span class="lang-bn font-bangla">৩টি সাউন্ড প্রোফাইল</span>
-                        <span class="lang-bl">3 Sound Profiles</span>
-                    </span>
-                </div>
-                <h3 class="lang-en">Mechanical Sounds &amp; Granular Haptics</h3>
-                <h3 class="lang-bn font-bangla">মেকানিক্যাল সাউন্ড ও ভাইব্রেশন</h3>
-                <h3 class="lang-bl">Mechanical Sounds &amp; Haptics</h3>
-                <p class="lang-en">Choose between Mechanical switch (tactile click), Soft tap, and Bubble Pop sound profiles with dedicated volume control, plus a 5ms to 100ms vibration intensity slider.</p>
-                <p class="lang-bn font-bangla">৩টি চমৎকার সাউন্ড প্রোফাইল (মেকানিক্যাল কি-বোর্ড, সফট ট্যাপ ও বাবল পপ) এবং ৫ থেকে ১০০ মিলি-সেকেন্ড পর্যন্ত ভাইব্রেশন অ্যাডজাস্টমেন্ট সুবিধা।</p>
-                <p class="lang-bl">3 ti sound profile (Mechanical, Soft, Bubble Pop) ebong 5ms theke 100ms vibration slider customize korar shubidha.</p>
-            </div>
-            <div class="feature-footer-tag">
-                <span class="dot"></span>
-                <span class="lang-en">Mechanical &bull; Soft &bull; Pop &bull; 5-100ms</span>
-                <span class="lang-bn font-bangla">মেকানিক্যাল &bull; সফট &bull; পপ &bull; ৫-১০০মি.সে</span>
-                <span class="lang-bl">Mechanical &bull; Soft &bull; Pop &bull; 5-100ms</span>
-            </div>
-        </div>
-
-        <!-- Feature 9: Smart Phonetic Engine -->
-        <div class="feature-card">
-            <div>
-                <div class="card-top-row">
-                    <div class="feature-icon-box">
-                        <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-                    </div>
-                    <span class="badge-pill featured">
-                        <span class="lang-en">Avro Scheme</span>
-                        <span class="lang-bn font-bangla">অভ্র ফনেটিক</span>
-                        <span class="lang-bl">Avro Scheme</span>
-                    </span>
-                </div>
-                <h3 class="lang-en">Smart Phonetic Engine (Avro Scheme)</h3>
-                <h3 class="lang-bn font-bangla">বুদ্ধিমান ফোনেটিক টাইপিং ইঞ্জিন</h3>
-                <h3 class="lang-bl">Smart Phonetic Engine</h3>
-                <p class="lang-en">Effortlessly convert Romanized English characters into pristine Bengali script with real-time bigram word suggestions, fuzzy spell corrector, and phonetic accuracy.</p>
-                <p class="lang-bn font-bangla">সহজে ইংরেজিতে টাইপ করলেই মুহূর্তে বিশুদ্ধ বাংলা বানান এবং প্রাসঙ্গিক শব্দ সাজেশন পান। কোনো জটিল নিয়ম ছাড়াই দ্রুত টাইপ করুন।</p>
-                <p class="lang-bl">English letter e type korlei instant accurate Bangla word suggestion paben. Fast ebong easy!</p>
-            </div>
-            <div class="feature-footer-tag">
-                <span class="dot"></span>
-                <span class="lang-en">Bigram Candidates &bull; Fuzzy Spell Check</span>
-                <span class="lang-bn font-bangla">বাইগ্রাম ক্যান্ডিডেটস &bull; স্পেলিং সংশোধন</span>
-                <span class="lang-bl">Bigram Candidates &bull; Fuzzy Spell Check</span>
-            </div>
-        </div>
-
-        <!-- Feature 10: In-Keyboard Offline Translation -->
+        <!-- Feature 9: In-Keyboard Offline Translation -->
         <div class="feature-card">
             <div>
                 <div class="card-top-row">
@@ -992,27 +784,25 @@
                         <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
                     </div>
                     <span class="badge-pill featured">
-                        <span class="lang-en">Instant Translate</span>
+                        <span class="lang-en">100% Offline ML</span>
                         <span class="lang-bn font-bangla">অফলাইন অনুবাদ</span>
-                        <span class="lang-bl">Instant Translate</span>
+                        <span class="lang-bl">100% Offline ML</span>
                     </span>
                 </div>
                 <h3 class="lang-en">In-Keyboard Offline Translation</h3>
                 <h3 class="lang-bn font-bangla">ইন-কিবোর্ড অফলাইন অনুবাদ</h3>
                 <h3 class="lang-bl">In-Keyboard Offline Translation</h3>
-                <p class="lang-en">Translate sentences directly from the keyboard toolbar without leaving your messaging app. Works completely on-device even without internet.</p>
-                <p class="lang-bn font-bangla">অন্য কোনো অ্যাপে না গিয়ে সরাসরি কিবোর্ড টুলবার থেকে যেকোনো বাক্য অনুবাদ করে ফেলুন। ইন্টারনেট ছাড়াই অন-ডিভাইসে অফলাইনে কাজ করে।</p>
-                <p class="lang-bl">Messaging app theke ber na hoye keyboard er toolbar thekei direct instant translation kora jay.</p>
+                <p class="lang-en">Translate on the fly between Bengali, English, and 50+ languages powered by Google ML Kit on-device translation models. No internet needed after download; zero queries sent to external servers.</p>
+                <p class="lang-bn font-bangla">কিবোর্ড থেকে বের না হয়েই বাংলা ও ইংরেজির মধ্যে তাৎক্ষণিক অনুবাদ করুন। অফলাইন এমএল কিট মডেলের সাহায্যে চলে, তাই অনুবাদের সময় কোনো ইন্টারনেট লাগে না এবং লেখা সুরক্ষিত থাকে।</p>
+                <p class="lang-bl">Keyboard theke ber na hoyei Bangla theke English instant translation. On-device Google ML Kit diye 100% offline hoy, kono data server e jay na.</p>
             </div>
-            <div class="feature-footer-tag">
-                <span class="dot"></span>
-                <span class="lang-en">Instant Offline Translation &bull; Zero External App</span>
-                <span class="lang-bn font-bangla">তাত্ক্ষণিক অফলাইন অনুবাদ &bull; কোনো অতিরিক্ত অ্যাপ ছাড়া</span>
-                <span class="lang-bl">Instant Offline Translation &bull; Zero External App</span>
+            <div class="feature-card-footer">
+                <span class="feature-tag">On-Device Neural Model</span>
+                <span class="feature-tag">50+ Languages</span>
             </div>
         </div>
 
-        <!-- Feature 11: Smart Clipboard with Screenshot Paste -->
+        <!-- Feature 10: Smart Clipboard & Screenshot Paste -->
         <div class="feature-card">
             <div>
                 <div class="card-top-row">
@@ -1020,59 +810,81 @@
                         <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
                     </div>
                     <span class="badge-pill featured">
-                        <span class="lang-en">50 Clips &bull; Pinning</span>
-                        <span class="lang-bn font-bangla">৫০টি ক্লিপ &bull; পিনিং</span>
-                        <span class="lang-bl">50 Clips &bull; Pinning</span>
+                        <span class="lang-en">50 Clips History</span>
+                        <span class="lang-bn font-bangla">স্মার্ট ক্লিপবোর্ড</span>
+                        <span class="lang-bl">50 Clips History</span>
                     </span>
                 </div>
                 <h3 class="lang-en">Smart Clipboard &amp; Screenshot Paste</h3>
                 <h3 class="lang-bn font-bangla">স্মার্ট ক্লিপবোর্ড ও অটো-স্ক্রিনশট</h3>
                 <h3 class="lang-bl">Smart Clipboard &amp; Screenshot Paste</h3>
-                <p class="lang-en">Store and pin up to 50 clips with auto-pruning. Optionally detects newly captured screenshots in the background via ContentObserver for 1-tap pasting (opt-in protected).</p>
-                <p class="lang-bn font-bangla">৫০টি পর্যন্ত ক্লিপ সংরক্ষণ ও পিন করে রাখার সুবিধা। সাথে নতুন স্ক্রিনশট স্বয়ংক্রিয়ভাবে শনাক্ত করে সরাসরি ১-ট্যাপে পেস্ট করার অপশন (ডিফল্ট অফ, সম্পূর্ণ অপ্ট-ইন)।</p>
-                <p class="lang-bl">50 clips save, pin, auto-expiry timer ebong new screenshot detect kore 1-tap toolbar paste er feature (opt-in)!</p>
+                <p class="lang-en">Stores up to 50 copied clips with configurable auto-expiry timer, favorite pinning, and 1-tap clipboard wipe. Automatically detects newly taken screenshots for 1-touch pasting.</p>
+                <p class="lang-bn font-bangla">৫০টি সাম্প্রতিক কপি করা লেখা সংরক্ষণ, প্রিয় ক্লিপ পিন করে রাখা এবং নির্দিষ্ট সময় পর অটো-ক্লিন ফিচার। নতুন স্ক্রিনশট তুললে কিবোর্ড বারেই তাৎক্ষণিক পেস্ট চিপ প্রদর্শিত হয়।</p>
+                <p class="lang-bl">50 ti clip history, auto-delete privacy timer ebong pin favorites. New screenshot tule keyboard bar ei instant 1-tap paste chip ashbe.</p>
             </div>
-            <div class="feature-footer-tag">
-                <span class="dot"></span>
-                <span class="lang-en">1-Tap Paste &bull; Opt-In Protected</span>
-                <span class="lang-bn font-bangla">১-ট্যাপ পেস্ট &bull; অপ্ট-ইন প্রটেকশন</span>
-                <span class="lang-bl">1-Tap Paste &bull; Opt-In Protected</span>
+            <div class="feature-card-footer">
+                <span class="feature-tag">Privacy Auto-Expiry</span>
+                <span class="feature-tag">1-Tap Pin &amp; Wipe</span>
             </div>
         </div>
 
-        <!-- Feature 12: Zero Keylogging & Password Shield -->
+        <!-- Feature 11: Modular Drag-and-Drop Toolbar -->
+        <div class="feature-card">
+            <div>
+                <div class="card-top-row">
+                    <div class="feature-icon-box">
+                        <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                    </div>
+                    <span class="badge-pill featured">
+                        <span class="lang-en">100% Customizable</span>
+                        <span class="lang-bn font-bangla">মডুলার টুলবার</span>
+                        <span class="lang-bl">Customizable</span>
+                    </span>
+                </div>
+                <h3 class="lang-en">Modular Drag-and-Drop Toolbar</h3>
+                <h3 class="lang-bn font-bangla">ড্র্যাগ-অ্যান্ড-ড্রপ মডুলার টুলবার</h3>
+                <h3 class="lang-bl">Modular Drag-and-Drop Toolbar</h3>
+                <p class="lang-en">Reorder quick action buttons (OCR, AI, Translate, Steganography, Clipboard, Themes, Audio, Resize, Settings) to suit your natural thumb reach. Includes 1-touch keyboard height resize slider.</p>
+                <p class="lang-bn font-bangla">টুলবারের বাটনগুলো নিজের মতো টেনে টেনে সাজিয়ে নিন। কিবোর্ডের উচ্চতা সহজে বাড়াতে বা কমাতে রয়েছে অন-স্ক্রিন হাইট রিসাইজ বার এবং এক-হাতে টাইপিং মোড।</p>
+                <p class="lang-bl">Toolbar er buttons nijer pochondo moto drag kore shajate paren. 1-touch on-screen height resize ebong one-handed mode shob customize kora jay.</p>
+            </div>
+            <div class="feature-card-footer">
+                <span class="feature-tag">1-Touch Height Resize</span>
+                <span class="feature-tag">One-Handed Mode</span>
+            </div>
+        </div>
+
+        <!-- Feature 12: Zero Keylogging & Privacy Shield -->
         <div class="feature-card">
             <div>
                 <div class="card-top-row">
                     <div class="feature-icon-box">
                         <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                     </div>
-                    <span class="badge-pill new">
-                        <span class="lang-en">100% Private</span>
-                        <span class="lang-bn font-bangla">১০০% প্রাইভেট</span>
-                        <span class="lang-bl">100% Private</span>
+                    <span class="badge-pill exclusive">
+                        <span class="lang-en">100% On-Device</span>
+                        <span class="lang-bn font-bangla">জিরো কি-লগিং</span>
+                        <span class="lang-bl">100% On-Device</span>
                     </span>
                 </div>
-                <h3 class="lang-en">Zero Keylogging &amp; Password Shield</h3>
-                <h3 class="lang-bn font-bangla">জিরো কি-লগিং ও পাসওয়ার্ড সুরক্ষা</h3>
-                <h3 class="lang-bl">Zero Keylogging &amp; Password Shield</h3>
-                <p class="lang-en">Strictly offline-first. Your keystrokes, personal chats, and passwords stay strictly on your device. Passwords automatically bypass clipboard and prediction tracking.</p>
-                <p class="lang-bn font-bangla">সম্পূর্ণ অফলাইন-ফার্স্ট আর্কিটেকচার। আপনার টাইপ করা কোনো মেসেজ বা পাসওয়ার্ড কোনো দূরবর্তী সার্ভারে জমা বা ট্র্যাক করা হয় না। পাসওয়ার্ড ফিল্ড সম্পূর্ণ সুরক্ষিত।</p>
-                <p class="lang-bl">Apnar type kora kono keystroke, message ba password server e jay na. 100% on-device private!</p>
+                <h3 class="lang-en">Zero Keylogging &amp; Privacy Shield</h3>
+                <h3 class="lang-bn font-bangla">জিরো কি-লগিং ও প্রাইভেসি শিল্ড</h3>
+                <h3 class="lang-bl">Zero Keylogging &amp; Privacy Shield</h3>
+                <p class="lang-en">Mukto Keyboard has no central database, no ad trackers, and zero telemetry on your typed words. Learned words are saved solely in an atomic binary file (<code>user_learning.bin</code>) in sandboxed storage.</p>
+                <p class="lang-bn font-bangla">মুক্ত কিবোর্ডের কোনো ক্লাউড ডাটাবেজ নেই এবং এটি কোনো কি-লগিং করে না। শেখা শব্দগুলো আপনার ডিভাইসের প্রাইভেট ফাইলে সুরক্ষিত থাকে। পাসওয়ার্ড ফিল্ড ও ইনকগনিটো মোডে লার্নিং বন্ধ থাকে।</p>
+                <p class="lang-bl">Mukto Keyboard er kono cloud database ba ad tracker nei. Learnt words phone er sandboxed <code>user_learning.bin</code> file e thake. Zero keylogging guarantee.</p>
             </div>
-            <div class="feature-footer-tag">
-                <span class="dot"></span>
-                <span class="lang-en">Zero Telemetry &bull; Password Shield Active</span>
-                <span class="lang-bn font-bangla">জিরো টেলিমেট্রি &bull; পাসওয়ার্ড সুরক্ষা সক্রিয়</span>
-                <span class="lang-bl">Zero Telemetry &bull; Password Shield Active</span>
+            <div class="feature-card-footer">
+                <span class="feature-tag">Zero Telemetry</span>
+                <span class="feature-tag">Sandboxed Local Trie</span>
             </div>
         </div>
     </div>
 
-    <!-- Technical Architecture & Specifications Section -->
+    <!-- Technical Architecture & Comparison -->
     <section id="specs" class="section-headline">
         <div class="section-tag">
-            <svg class="icon-svg" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            <svg class="icon-svg" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0-.33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
             <span class="lang-en">Technical Architecture</span>
             <span class="lang-bn font-bangla">টেকনিক্যাল স্পেসিফিকেশন</span>
             <span class="lang-bl">Technical Specs</span>
@@ -1088,15 +900,15 @@
     <div class="specs-grid">
         <div class="spec-item-card">
             <div class="spec-item-label">
-                <span class="lang-en">Package Name</span>
-                <span class="lang-bn font-bangla">প্যাকেজ নেম</span>
-                <span class="lang-bl">Package Name</span>
+                <span class="lang-en">Package ID</span>
+                <span class="lang-bn font-bangla">প্যাকেজ আইডি</span>
+                <span class="lang-bl">Package ID</span>
             </div>
             <div class="spec-item-val font-mono">com.mukto.keyboard</div>
             <div class="spec-item-sub">
-                <span class="lang-en">Production Application ID</span>
+                <span class="lang-en">Official Production ID</span>
                 <span class="lang-bn font-bangla">অফিশিয়াল অ্যাপ আইডি</span>
-                <span class="lang-bl">Production App ID</span>
+                <span class="lang-bl">Official App ID</span>
             </div>
         </div>
         <div class="spec-item-card">
@@ -1118,8 +930,43 @@
                 <span class="lang-bn font-bangla">ওএস সামঞ্জস্যতা</span>
                 <span class="lang-bl">OS Compatibility</span>
             </div>
-            <div class="spec-item-val">Android 7.0 to 16</div>
+            <div class="spec-item-val">Android 7.0 to 16+</div>
             <div class="spec-item-sub">minSdk 24 &bull; compileSdk 37</div>
+        </div>
+        <div class="spec-item-card">
+            <div class="spec-item-label">
+                <span class="lang-en">Machine Learning</span>
+                <span class="lang-bn font-bangla">অন-ডিভাইস মেশিন লার্নিং</span>
+                <span class="lang-bl">Machine Learning</span>
+            </div>
+            <div class="spec-item-val">Google ML Kit</div>
+            <div class="spec-item-sub">
+                <span class="lang-en">On-Device OCR &amp; Translation</span>
+                <span class="lang-bn font-bangla">অন-ডিভাইস ওসিআর ও অনুবাদ</span>
+                <span class="lang-bl">On-Device OCR &amp; Translation</span>
+            </div>
+        </div>
+        <div class="spec-item-card">
+            <div class="spec-item-label">
+                <span class="lang-en">Local Storage</span>
+                <span class="lang-bn font-bangla">লোকাল স্টোরেজ</span>
+                <span class="lang-bl">Local Storage</span>
+            </div>
+            <div class="spec-item-val">Atomic Binary Trie</div>
+            <div class="spec-item-sub">user_learning.bin &bull; Zero DB Leak</div>
+        </div>
+        <div class="spec-item-card">
+            <div class="spec-item-label">
+                <span class="lang-en">Security Standard</span>
+                <span class="lang-bn font-bangla">নিরাপত্তা মানদণ্ড</span>
+                <span class="lang-bl">Security Standard</span>
+            </div>
+            <div class="spec-item-val">Zero Keylogging</div>
+            <div class="spec-item-sub">
+                <span class="lang-en">Google Play Protect Verified</span>
+                <span class="lang-bn font-bangla">প্লে প্রোটেক্ট ভেরিফাইড</span>
+                <span class="lang-bl">Play Protect Verified</span>
+            </div>
         </div>
     </div>
 
@@ -1176,6 +1023,52 @@
                 </tr>
                 <tr>
                     <td>
+                        <strong class="lang-en">Camera OCR Text Scanner</strong>
+                        <strong class="lang-bn font-bangla">ক্যামেরা ওসিআর টেক্সট স্ক্যানার</strong>
+                        <strong class="lang-bl">Camera OCR Text Scanner</strong>
+                    </td>
+                    <td class="highlight-col">
+                        <span class="status-yes">
+                            <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <span class="lang-en">Built-in (100% in RAM)</span>
+                            <span class="lang-bn font-bangla">কিবোর্ডেই সরাসরি (RAM-এ)</span>
+                            <span class="lang-bl">Built-in (in RAM)</span>
+                        </span>
+                    </td>
+                    <td>
+                        <span class="status-no">
+                            <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                            <span class="lang-en">Not Available</span>
+                            <span class="lang-bn font-bangla">সুবিধা নেই</span>
+                            <span class="lang-bl">Not Available</span>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong class="lang-en">In-Keyboard AI Assistant (BYOK)</strong>
+                        <strong class="lang-bn font-bangla">ইন-কিবোর্ড এআই রাইটিং (BYOK)</strong>
+                        <strong class="lang-bl">In-Keyboard AI (BYOK)</strong>
+                    </td>
+                    <td class="highlight-col">
+                        <span class="status-yes">
+                            <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <span class="lang-en">Direct Encrypted Call</span>
+                            <span class="lang-bn font-bangla">সরাসরি প্রোভাইডারে এনক্রিপ্টেড</span>
+                            <span class="lang-bl">Direct Encrypted Call</span>
+                        </span>
+                    </td>
+                    <td>
+                        <span class="status-no">
+                            <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                            <span class="lang-en">Third-party Cloud Proxy</span>
+                            <span class="lang-bn font-bangla">থার্ড পার্টি প্রক্সি সার্ভার</span>
+                            <span class="lang-bl">Cloud Proxy</span>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                         <strong class="lang-en">Secret Chat (Emoji Steganography)</strong>
                         <strong class="lang-bn font-bangla">গোপন বার্তা (ইমোজি স্টেগানোগ্রাফি)</strong>
                         <strong class="lang-bl">Secret Chat (Steganography)</strong>
@@ -1185,107 +1078,61 @@
                             <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                             <span class="lang-en">Built-in (1-Tap Decrypt)</span>
                             <span class="lang-bn font-bangla">১-ট্যাপে ডিকোড সুবিধা</span>
-                            <span class="lang-bl">Built-in 1-Tap Decrypt</span>
+                            <span class="lang-bl">Built-in (1-Tap Decrypt)</span>
                         </span>
                     </td>
                     <td>
                         <span class="status-no">
                             <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
                             <span class="lang-en">Not Available</span>
-                            <span class="lang-bn font-bangla">সুবিধাটি নেই</span>
+                            <span class="lang-bn font-bangla">নেই</span>
                             <span class="lang-bl">Not Available</span>
                         </span>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <strong class="lang-en">Live Video Keyboard Themes</strong>
-                        <strong class="lang-bn font-bangla">লাইভ ভিডিও ব্যাকগ্রাউন্ড থিম</strong>
-                        <strong class="lang-bl">Live Video Keyboard Themes</strong>
+                        <strong class="lang-en">Cloud &amp; Local Backup</strong>
+                        <strong class="lang-bn font-bangla">ক্লাউড ও লোকাল ব্যাকআপ</strong>
+                        <strong class="lang-bl">Cloud &amp; Local Backup</strong>
                     </td>
                     <td class="highlight-col">
                         <span class="status-yes">
                             <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            <span class="lang-en">MP4/WebM with Boomerang Loop</span>
-                            <span class="lang-bn font-bangla">ভিডিও ট্রিম ও বুমেরাং লুপ</span>
-                            <span class="lang-bl">Video &amp; Boomerang Loop</span>
+                            <span class="lang-en">Private Google Drive AppData</span>
+                            <span class="lang-bn font-bangla">ব্যক্তিগত ড্রাইভ ও .mukto</span>
+                            <span class="lang-bl">Private Drive &amp; .mukto</span>
                         </span>
                     </td>
                     <td>
                         <span class="status-no">
                             <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-                            <span class="lang-en">Static Pictures Only</span>
+                            <span class="lang-en">Company Server / None</span>
+                            <span class="lang-bn font-bangla">কোম্পানির সার্ভার বা নেই</span>
+                            <span class="lang-bl">Company Server</span>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong class="lang-en">Live Looping Video Themes</strong>
+                        <strong class="lang-bn font-bangla">লাইভ লুপিং ভিডিও ব্যাকগ্রাউন্ড</strong>
+                        <strong class="lang-bl">Live Video Themes</strong>
+                    </td>
+                    <td class="highlight-col">
+                        <span class="status-yes">
+                            <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <span class="lang-en">MP4 Video Looper</span>
+                            <span class="lang-bn font-bangla">মসৃণ ভিডিও ব্যাকগ্রাউন্ড</span>
+                            <span class="lang-bl">MP4 Video Looper</span>
+                        </span>
+                    </td>
+                    <td>
+                        <span class="status-no">
+                            <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                            <span class="lang-en">Static Colors Only</span>
                             <span class="lang-bn font-bangla">শুধুমাত্র স্থির ছবি</span>
-                            <span class="lang-bl">Static Pictures Only</span>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <strong class="lang-en">20+ Fancy Unicode Fonts</strong>
-                        <strong class="lang-bn font-bangla">২০+ ফ্যান্সি ইউনিকোড ফন্টস</strong>
-                        <strong class="lang-bl">20+ Fancy Unicode Fonts</strong>
-                    </td>
-                    <td class="highlight-col">
-                        <span class="status-yes">
-                            <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            <span class="lang-en">Built-in (1-Tap Conversion)</span>
-                            <span class="lang-bn font-bangla">টুলবার থেকে সরাসরি ১-ট্যাপে</span>
-                            <span class="lang-bl">Direct from Toolbar</span>
-                        </span>
-                    </td>
-                    <td>
-                        <span class="status-no">
-                            <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-                            <span class="lang-en">Requires 3rd-Party App</span>
-                            <span class="lang-bn font-bangla">অন্য অ্যাপের প্রয়োজন হয়</span>
-                            <span class="lang-bl">Requires 3rd-Party App</span>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <strong class="lang-en">Spacebar Cursor Trackpad</strong>
-                        <strong class="lang-bn font-bangla">স্পেসবার কার্সার ট্র্যাকপ্যাড</strong>
-                        <strong class="lang-bl">Spacebar Cursor Trackpad</strong>
-                    </td>
-                    <td class="highlight-col">
-                        <span class="status-yes">
-                            <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            <span class="lang-en">280ms Hold &amp; Scrub Navigation</span>
-                            <span class="lang-bn font-bangla">২৮০মি.সে চেপে মাউস কন্ট্রোল</span>
-                            <span class="lang-bl">Smooth Cursor Scrub</span>
-                        </span>
-                    </td>
-                    <td>
-                        <span class="status-no">
-                            <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-                            <span class="lang-en">Clunky or Missing</span>
-                            <span class="lang-bn font-bangla">নেই অথবা ধীরগতির</span>
-                            <span class="lang-bl">Clunky or Missing</span>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <strong class="lang-en">Modular Drag &amp; Drop Toolbar</strong>
-                        <strong class="lang-bn font-bangla">মডুলার ড্র্যাগ-অ্যান্ড-ড্রপ টুলবার</strong>
-                        <strong class="lang-bl">Modular Drag &amp; Drop Toolbar</strong>
-                    </td>
-                    <td class="highlight-col">
-                        <span class="status-yes">
-                            <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            <span class="lang-en">10 Fully Reorderable Actions</span>
-                            <span class="lang-bn font-bangla">১০টি সাজিয়ে নেওয়ার সুবিধা</span>
-                            <span class="lang-bl">10 Reorderable Actions</span>
-                        </span>
-                    </td>
-                    <td>
-                        <span class="status-no">
-                            <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-                            <span class="lang-en">Fixed &amp; Rigid</span>
-                            <span class="lang-bn font-bangla">নির্দিষ্ট ও পরিবর্তনহীন</span>
-                            <span class="lang-bl">Fixed &amp; Rigid</span>
+                            <span class="lang-bl">Static Colors Only</span>
                         </span>
                     </td>
                 </tr>
@@ -1337,11 +1184,6 @@
                 </tr>
             </tbody>
         </table>
-                        </span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
     </div>
 
     <!-- 3-Step Quick Setup Guide -->
@@ -1364,14 +1206,14 @@
         <div class="step-item-card">
             <div class="step-num-badge">1</div>
             <h4 style="font-size:16px; font-weight:800; color:var(--slate-900); margin-bottom:8px;">
-                <span class="lang-en">Download APK</span>
-                <span class="lang-bn font-bangla">এপিকে ডাউনলোড করুন</span>
-                <span class="lang-bl">APK Download Korun</span>
+                <span class="lang-en">Download Mukto</span>
+                <span class="lang-bn font-bangla">ডাউনলোড করুন</span>
+                <span class="lang-bl">Download Mukto</span>
             </h4>
             <p style="font-size:14px; color:var(--slate-600); line-height:1.6;">
-                <span class="lang-en">Download the latest universal APK (<code style="font-size:12px;">com.mukto.keyboard</code>) directly from GitHub Releases.</span>
-                <span class="lang-bn font-bangla">গিটহাব বা অফিশিয়াল লিংক থেকে লেটেস্ট ইউনিভার্সাল এপিকে ডাউনলোড করে ফোনে ইনস্টল করুন।</span>
-                <span class="lang-bl">GitHub theke latest universal APK download kore phone e install korun.</span>
+                <span class="lang-en">Install from Google Play Store or get the universal APK directly from official GitHub releases.</span>
+                <span class="lang-bn font-bangla">গুগল প্লে স্টোর থেকে ইনস্টল করুন অথবা গিটহাব অফিশিয়াল রিলিজ থেকে সরাসরি এপিকে ডাউনলোড করুন।</span>
+                <span class="lang-bl">Google Play Store ba official GitHub theke universal APK download kore install korun.</span>
             </p>
         </div>
 
@@ -1414,7 +1256,6 @@
         <p class="lang-bl">Google Play Store theke direct install korun ba universal APK download korun. 100% private o safe.</p>
 
         <div class="download-buttons">
-            <!-- Google Play Store Primary Button -->
             <a href="https://play.google.com/store/apps/details?id=com.mukto.keyboard" target="_blank" rel="noopener noreferrer" class="dl-btn-play">
                 <svg class="icon-svg" viewBox="0 0 512 512" width="28" height="28">
                     <path fill="#4285F4" d="M48.7 13.9C39.5 23.8 34.2 38.6 34.2 56.4V455.6c0 17.8 5.3 32.6 14.5 42.5l2.4 2.3L275.6 275.9v-5.8L51.1 11.6l-2.4 2.3z"/>
@@ -1432,7 +1273,6 @@
                 </div>
             </a>
 
-            <!-- Universal APK Button -->
             <a href="https://github.com/JSOrganizations/Mukto-Keyboard/releases" target="_blank" rel="noopener noreferrer" class="dl-btn">
                 <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" style="color:var(--emerald-600);"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-1.0002 0-.5515.4482-.9998.9993-.9998.5517 0 .9997.4483.9997.9998 0 .5516-.448 1.0002-.9997 1.0002m-11.046 0c-.5511 0-.9993-.4486-.9993-1.0002 0-.5515.4482-.9998.9993-.9998.5516 0 .9996.4483.9996.9998 0 .5516-.448 1.0002-.9996 1.0002m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.4116 13.8533 8.125 12 8.125c-1.8533 0-3.5902.2866-5.1378.8297L4.8399 5.4517a.416.416 0 00-.5676-.1521.416.416 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/></svg>
                 <div style="text-align:left;">
@@ -1449,7 +1289,6 @@
                 </div>
             </a>
 
-            <!-- GitHub Repo Button -->
             <a href="https://github.com/JSOrganizations/Mukto-Keyboard" target="_blank" rel="noopener noreferrer" class="dl-btn secondary">
                 <svg class="icon-svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
                 <div style="text-align:left;">
@@ -1476,13 +1315,11 @@
 
 </div>
 
-<!-- Toast Message element -->
 <div id="toastMsg" class="toast-msg">
     <svg class="icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
     <span>Copied to clipboard!</span>
 </div>
 
-<!-- Footer -->
 <footer class="footer">
     <div class="footer-links">
         <a href="privacy-policy.html" class="footer-link">
@@ -1509,13 +1346,12 @@
     </div>
 
     <p>
-        <span class="lang-en">&copy; 2026 <strong>JS Organization</strong> &middot; Developed by <strong>Md Mobassher Ahmed Sowrov</strong>. All rights reserved.</span>
+        <span class="lang-en">&copy; 2026 <strong>JS Organization</strong> &middot; Developed by <strong>Md Mobassher Ahmed Sourav</strong>. All rights reserved.</span>
         <span class="lang-bn font-bangla">&copy; ২০২৬ <strong>জেএস অর্গানাইজেশন</strong> &middot; তৈরিতে <strong>মোঃ মোবাশ্বের আহমেদ সৌরভ</strong>। সর্বস্বত্ব সংরক্ষিত।</span>
-        <span class="lang-bl">&copy; 2026 <strong>JS Organization</strong> &middot; Developed by <strong>Md Mobassher Ahmed Sowrov</strong>.</span>
+        <span class="lang-bl">&copy; 2026 <strong>JS Organization</strong> &middot; Developed by <strong>Md Mobassher Ahmed Sourav</strong>.</span>
     </p>
 </footer>
 
-<!-- Back to top button -->
 <button id="backToTopBtn" class="back-to-top" title="Back to top" onclick="scrollToTop()">
     <svg class="icon-svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
 </button>

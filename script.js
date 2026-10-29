@@ -374,18 +374,18 @@ function showToast(msg) {
         {
             steps: [
                 { in: "t", out: "ত" },
-                { in: "tO", out: "তো" },
-                { in: "tOm", out: "তোম" },
-                { in: "tOma", out: "তোমা" },
-                { in: "tOmar", out: "তোমার" },
-                { in: "tOmar ", out: "তোমার " },
-                { in: "tOmar n", out: "তোমার ন" },
-                { in: "tOmar na", out: "তোমার না" },
-                { in: "tOmar nam", out: "তোমার নাম" },
-                { in: "tOmar nam ", out: "তোমার নাম " },
-                { in: "tOmar nam k", out: "তোমার নাম ক" },
-                { in: "tOmar nam ki", out: "তোমার নাম কি" },
-                { in: "tOmar nam ki?", out: "তোমার নাম কি?" }
+                { in: "to", out: "তো" },
+                { in: "tom", out: "তোম" },
+                { in: "toma", out: "তোমা" },
+                { in: "tomar", out: "তোমার" },
+                { in: "tomar ", out: "তোমার " },
+                { in: "tomar n", out: "তোমার ন" },
+                { in: "tomar na", out: "তোমার না" },
+                { in: "tomar nam", out: "তোমার নাম" },
+                { in: "tomar nam ", out: "তোমার নাম " },
+                { in: "tomar nam k", out: "তোমার নাম ক" },
+                { in: "tomar nam ki", out: "তোমার নাম কি" },
+                { in: "tomar nam ki?", out: "তোমার নাম কি?" }
             ]
         },
         {
@@ -482,6 +482,77 @@ function showToast(msg) {
                 currentDemoIdx = (currentDemoIdx + 1) % transliterateDemos.length;
                 setTimeout(runTypewriterTick, 400);
             }
+        }
+    }
+
+    
+    let ocrScanning = false;
+    function triggerOcrScanDemo(sampleType) {
+        if (ocrScanning) return;
+        ocrScanning = true;
+        const laser = document.getElementById('ocrScanLaser');
+        const statusText = document.getElementById('ocrScanStatus');
+        const resultBox = document.getElementById('ocrResultText');
+        
+        let targetText = '';
+        if (sampleType === 'book') {
+            targetText = 'আমাদের ছোট নদী চলে বাঁকে বাঁকে,\nবৈশাখ মাসে তার হাঁটু জল থাকে।';
+        } else if (sampleType === 'receipt') {
+            targetText = 'মেমো নং: ৮৪২৯ • প্রদেয়: ১,৪৫০ টাকা\nতারিখ: ১২ অক্টোবর ২০২৬';
+        } else {
+            targetText = 'বাংলা ভাষা ও ডিজিটাল বাংলাদেশ — মুক্ত কিবোর্ড অন-ডিভাইস ওসিআর স্ক্যানার।';
+        }
+
+        if (laser) {
+            laser.style.display = 'block';
+            laser.classList.add('scanning');
+        }
+        if (statusText) statusText.innerText = 'অন-ডিভাইস এমএল কিট টেক্সট পড়ছে...';
+        if (resultBox) resultBox.innerText = 'স্ক্যানিং চলছে...';
+
+        setTimeout(function() {
+            if (laser) {
+                laser.style.display = 'none';
+                laser.classList.remove('scanning');
+            }
+            if (statusText) statusText.innerText = 'স্ক্যানিং সফল! (১০০% অন-ডিভাইস RAM প্রসেসিং)';
+            if (resultBox) resultBox.innerText = targetText;
+            ocrScanning = false;
+        }, 1100);
+    }
+
+    let aiProcessing = false;
+    function triggerAiAssistantDemo(actionType) {
+        if (aiProcessing) return;
+        aiProcessing = true;
+        const outputEl = document.getElementById('aiDemoOutput');
+        const statusEl = document.getElementById('aiDemoStatus');
+
+        let outputText = '';
+        if (actionType === 'grammar') {
+            outputText = 'আমি গতকাল মিটিংয়ে উপস্থিত থাকতে পারিনি, তবে আজকের সমস্ত কাজের আপডেট প্রস্তুত রয়েছে।';
+        } else if (actionType === 'email') {
+            outputText = 'শ্রদ্ধেয় মহোদয়,\nবিনীত নিবেদন এই যে, আজকের নির্ধারিত মিটিংয়ে আমার কিছুটা বিলম্ব হতে পারে। আমি সময়মতো সমস্ত কাজের ফাইল পাঠিয়ে দিচ্ছি।\nবিনীত,\nসৌরভ';
+        } else if (actionType === 'sadhu') {
+            outputText = 'তিনি প্রস্থান করেছিলেন এবং যাওয়ার সময় সকলের কুশল কামনা করেছিলেন।';
+        } else if (actionType === 'banglish') {
+            outputText = 'আমি তোমাকে অনেক ভালোবাসি কিন্তু কাজের চাপে সময় দিতে পারছি না, মন খারাপ করো না।';
+        }
+
+        if (statusEl) statusEl.innerText = 'এআই ট্রান্সফরমেশন চলছে (BYOK ডিরেক্ট কল)...';
+        if (outputEl) {
+            outputEl.innerText = '';
+            let charIdx = 0;
+            let streamer = setInterval(function() {
+                if (charIdx < outputText.length) {
+                    outputEl.innerText += outputText.charAt(charIdx);
+                    charIdx++;
+                } else {
+                    clearInterval(streamer);
+                    if (statusEl) statusEl.innerText = 'সম্পন্ন! (জিরো ক্লাউড লগিং • লোকাল কি সিকিউরিটি)';
+                    aiProcessing = false;
+                }
+            }, 22);
         }
     }
 
