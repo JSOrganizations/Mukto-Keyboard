@@ -58,8 +58,28 @@ body {
     color: var(--emerald-900);
 }
 
-.font-bangla, :lang(bn), .lang-bn {
-    font-family: 'Hind Siliguri', 'Plus Jakarta Sans', sans-serif !important;
+.font-bangla, :lang(bn):not(i):not([class*="fa-"]):not([class^="fa-"]), .lang-bn:not(i):not([class*="fa-"]):not([class^="fa-"]) {
+    font-family: 'Hind Siliguri', 'Plus Jakarta Sans', sans-serif;
+}
+
+i[class*="fa-"], i[class^="fa-"], .fa-solid, .fa-regular, .fa-brands, [class*=" fa-"], [class^="fa-"] {
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+.fa-solid, .fas {
+    font-weight: 900 !important;
+}
+
+.fa-regular, .far {
+    font-weight: 400 !important;
+}
+
+.fa-brands, .fab {
+    font-family: "Font Awesome 6 Brands" !important;
 }
 
 .font-mono {

@@ -8,7 +8,7 @@ function showToast(msg) {
     }, 2200);
 }
 
-function setLanguage(lang) {
+function setLanguage(lang, updateHistory = true) {
     if (!['en', 'bn', 'bl'].includes(lang)) {
         lang = 'bn';
     }
@@ -28,9 +28,17 @@ function setLanguage(lang) {
     if (navBtnBn) navBtnBn.classList.toggle('active', lang === 'bn');
     if (navBtnBl) navBtnBl.classList.toggle('active', lang === 'bl');
 
-    const url = new URL(window.location);
-    url.searchParams.set('language', lang);
-    window.history.replaceState({}, '', url);
+    if (updateHistory) {
+        const url = new URL(window.location);
+        if (lang === 'bn') {
+            url.searchParams.delete('language');
+        } else {
+            url.searchParams.set('language', lang);
+        }
+        const cleanSearch = url.searchParams.toString();
+        const cleanUrl = url.pathname + (cleanSearch ? '?' + cleanSearch : '') + url.hash;
+        window.history.replaceState({}, '', cleanUrl);
+    }
 }
 
 function scrollToTop() {
@@ -173,7 +181,14 @@ document.addEventListener("DOMContentLoaded", function() {
     if (!['en', 'bn', 'bl'].includes(lang)) {
         lang = 'bn';
     }
-    setLanguage(lang);
+    setLanguage(lang, false);
+    if (urlParams.has('language') && lang === 'bn') {
+        const url = new URL(window.location);
+        url.searchParams.delete('language');
+        const cleanSearch = url.searchParams.toString();
+        const cleanUrl = url.pathname + (cleanSearch ? '?' + cleanSearch : '') + url.hash;
+        window.history.replaceState({}, '', cleanUrl);
+    }
 
     document.querySelectorAll('.faq-question').forEach(btn => {
         btn.addEventListener('click', () => toggleFaq(btn));
