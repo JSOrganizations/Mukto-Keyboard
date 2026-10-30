@@ -5,6 +5,8 @@ window.I18N = {
     "nav.features": { en: "Features", bl: "Feature" },
     "nav.privacy": { en: "Privacy", bl: "Privacy" },
     "nav.faq": { en: "FAQ", bl: "Proshnottor" },
+    "nav.privacyPolicy": { en: "Privacy Policy", bl: "Privacy Policy" },
+    "nav.terms": { en: "Terms of Use", bl: "Terms of Use" },
     "nav.get": { en: "Download", bl: "Download" },
     "nav.menu": { en: "Menu", bl: "Menu" },
 
