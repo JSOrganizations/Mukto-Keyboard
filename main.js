@@ -1,9 +1,7 @@
-/* Mukto Keyboard — home page behaviour: mobile menu, FAQ accordion, back-to-top. */
 (function () {
     'use strict';
 
-    /* ---------- mobile menu ---------- */
-    var burger = document.getElementById('navBurger');
+        var burger = document.getElementById('navBurger');
     var links = document.getElementById('navLinks');
     function closeMenu() {
         if (!links) return;
@@ -26,8 +24,7 @@
         });
     }
 
-    /* ---------- FAQ accordion (one open at a time) ---------- */
-    document.querySelectorAll('.faq-q').forEach(function (btn) {
+        document.querySelectorAll('.faq-q').forEach(function (btn) {
         btn.addEventListener('click', function () {
             var item = btn.closest('.faq-item');
             var wasOpen = item.classList.contains('open');
@@ -43,8 +40,7 @@
         });
     });
 
-    /* ---------- back to top ---------- */
-    var toTop = document.getElementById('backToTop');
+        var toTop = document.getElementById('backToTop');
     if (toTop) {
         var onScroll = function () {
             toTop.classList.toggle('visible', window.scrollY > 700);
@@ -56,8 +52,7 @@
         });
     }
 
-    /* ---------- pause heavy SVG demos when off-screen (saves battery) ---------- */
-    if ('IntersectionObserver' in window) {
+        if ('IntersectionObserver' in window) {
         var demos = document.querySelectorAll('.scene');
         var io = new IntersectionObserver(function (entries) {
             entries.forEach(function (en) {
@@ -69,4 +64,22 @@
         }, { rootMargin: '80px' });
         demos.forEach(function (d) { io.observe(d); });
     }
+
+        fetch('download/output-metadata.json?t=' + Date.now(), { cache: 'no-cache' })
+        .then(function (res) { return res.ok ? res.json() : null; })
+        .then(function (data) {
+            if (!data || !Array.isArray(data.elements)) return;
+            var ver = '3.5', code = 20;
+            data.elements.forEach(function (el) {
+                if (el.versionName) ver = el.versionName;
+                if (el.versionCode) code = el.versionCode;
+            });
+            document.querySelectorAll('.app-version').forEach(function (el) {
+                el.textContent = 'v' + ver;
+            });
+            document.querySelectorAll('.app-build').forEach(function (el) {
+                el.textContent = String(code);
+            });
+        })
+        .catch(function () {});
 })();

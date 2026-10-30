@@ -1,15 +1,5 @@
-/*
- * Mukto Keyboard — translations for the home page.
- *
- * The Bangla (bn) text is written directly in index.html (so the page works
- * without JavaScript and search engines see it). This file only needs the
- * English (en) and Banglish (bl) versions, keyed by `data-i18n="..."`.
- *
- * To add or change text:  edit the Bangla in index.html, then update `en` and `bl` here.
- */
 window.I18N = {
-    /* ---------- Navigation ---------- */
-    "nav.skip": { en: "Skip to main content", bl: "Main content-e jan" },
+        "nav.skip": { en: "Skip to main content", bl: "Main content-e jan" },
     "nav.living": { en: "Themes", bl: "Theme" },
     "nav.layouts": { en: "Layouts", bl: "Layout" },
     "nav.features": { en: "Features", bl: "Feature" },
@@ -18,27 +8,24 @@ window.I18N = {
     "nav.get": { en: "Download", bl: "Download" },
     "nav.menu": { en: "Menu", bl: "Menu" },
 
-    /* ---------- Language ---------- */
-    "lang.label": { en: "Language", bl: "Bhasha" },
+        "lang.label": { en: "Language", bl: "Bhasha" },
 
-    /* ---------- Hero ---------- */
-    "hero.badge": { en: "Zero Keylogging • 100% On-Device Bengali Typing", bl: "Zero Keylogging • 100% On-Device Safe Typing" },
+        "hero.badge": { en: "Zero Keylogging • 100% On-Device Bengali Typing", bl: "Zero Keylogging • 100% On-Device Safe Typing" },
     "hero.title": { en: "Fast, Smart &amp; <span class=\"accent\">100% Private</span> Android Keyboard", bl: "Android er Jonno <span class=\"accent\">Fast, Smart</span> o Private Bangla Keyboard" },
     "hero.sub": { en: "Experience pure Bengali typing with 5 full layouts: <strong>Avro Phonetic</strong>, <strong>Bangla Alphabetical</strong>, <strong>Probhat</strong>, <strong>National</strong>, and <strong>Smart English</strong>, plus on-device Camera OCR scanner, secret chat emoji steganography, 19+ fancy fonts, and living world themes.", bl: "Nikhut <strong>Avro Phonetic</strong>, <strong>Bangla Bornonukromik</strong>, <strong>Probhat</strong>, <strong>Jatiya</strong> o <strong>Smart English</strong> layout, on-device Camera OCR, emoji steganography secret chat, 19+ fancy fonts ebong Living World themes shob kichu ekjaygay!" },
-    "hero.pill1": { en: "All Android Devices Supported", bl: "All Android Phones Supported" },
+    "hero.pill1": { en: "Smooth Support on Android 7.0+", bl: "Android 7.0+ shob device-e smooth support" },
     "hero.pill2": { en: "Zero Keylogging Guarantee", bl: "Zero Keylogging Guarantee" },
     "hero.pill3": { en: "5 Core Layouts + Numpad", bl: "5 Full Layouts + Numpad" },
     "hero.play": { en: "Get it on Google Play", bl: "Google Play-te nin" },
+    "hero.apk": { en: "Download APK", bl: "APK Download" },
     "hero.more": { en: "See all features", bl: "Shob feature dekhun" },
 
-    /* ---------- Avro key map ---------- */
-    "km.title": { en: "Avro phonetic key map", bl: "Avro phonetic key-map" },
+        "km.title": { en: "Avro phonetic key map", bl: "Avro phonetic key-map" },
     "km.lead": { en: "The full list of which keys to type for each letter. The ◌ mark is a kar (vowel sign) that attaches to a consonant.", bl: "Kon okkhor-er jonno kon key likhben, tar purno talika. ◌ chinho mane kar (shorchinho), ja benjonborno-r shathe boshe." },
     "km.sens": { en: "Case sensitive (capital and small letters differ)", bl: "Case sensitive (boro o chhoto hater okkhor alada)" },
     "km.insens": { en: "Case insensitive", bl: "Case insensitive" },
 
-    /* ---------- Layouts ---------- */
-    "lay.title": { en: "5 layouts, for the way you love to type", bl: "5-ti layout, apni jebhabe likhte bhalobashen" },
+        "lay.title": { en: "5 layouts, for the way you love to type", bl: "5-ti layout, apni jebhabe likhte bhalobashen" },
     "lay.lead": { en: "From phonetic Avro to Probhat, National or direct Bangla, wherever your habit lies, Mukto has your layout ready.", bl: "Phonetic Avro theke Probhat, Jatiya ba shorashori Bangla, obbhyash jekhanei thak, Mukto-te apnar layout ready." },
     "lay.1.t": { en: "Avro phonetic", bl: "Avro phonetic" },
     "lay.1.d": { en: "Type the way you pronounce it in English. A capital O gives the o-kar. A greedy longest-match engine keeps conjuncts, chandrabindu and hasanta accurate.", bl: "Ingrejite jebhabe uccharon koren, shebhabei likhun. Boro hater O dile o-kar ashe. Greedy longest-match engine-e juktobarno, chandrabindu o hoshonto nirbhul." },
@@ -56,20 +43,17 @@ window.I18N = {
     "lay.5.d": { en: "Auto-capitalization and automatic spacing after punctuation. It stops adding spaces inside email or web addresses. Long-press for symbols.", bl: "Auto-capitalization, birammochinher por auto-space. Email ba web address-e nije theke space deya bondho rakhe. Long-press-e symbol." },
     "lay.5.tag": { en: "Context auto-space", bl: "Context auto-space" },
 
-    /* ---------- Layouts: extra panels ---------- */
-    "pan.1.t": { en: "Calculator numpad", bl: "Calculator numpad" },
+        "pan.1.t": { en: "Calculator numpad", bl: "Calculator numpad" },
     "pan.1.d": { en: "Switch ১২৩⇄123 in one tap, with a column of + − × ÷ operators.", bl: "১২৩⇄123 ek tape bodol, shathe + − × ÷ operator column." },
     "pan.2.t": { en: "৳ and special top row", bl: "৳ o special top row" },
     "pan.2.d": { en: "The taka sign sits on the first row. Plus ☞ ◑ ♥ ✔ ✪ ∞ ➤ ✆ and hundreds of kaomoji.", bl: "Takar chinho prothom sharite. Shathe ☞ ◑ ♥ ✔ ✪ ∞ ➤ ✆ ebong shoto shoto kaomoji." },
     "pan.3.t": { en: "GIF and emoji search", bl: "GIF o emoji search" },
     "pan.3.d": { en: "A safe (G-rated) panel powered by GIPHY. You can search in Bangla too, with 14 quick reactions.", bl: "GIPHY-chalito nirapod (G-rated) panel. Banglay likheo khoja jay, 14-ti quick reaction." },
 
-    /* ---------- Features ---------- */
-    "feat.title": { en: "What ordinary keyboards do not have", bl: "Sadharon keyboard-e ja pawa jay na" },
+        "feat.title": { en: "What ordinary keyboards do not have", bl: "Sadharon keyboard-e ja pawa jay na" },
     "feat.lead": { en: "Mukto Keyboard does a lot beyond typing. Everything runs on your phone.", bl: "Likhar baire-o Mukto Keyboard onek kichu kore. Shob kichu chole apnar phone-ei." },
 
-    /* ---------- Handwriting ---------- */
-    "hw.t": { en: "Make your own handwriting the keyboard font", bl: "Nijer hater lekhai hok keyboard-er font" },
+        "hw.t": { en: "Make your own handwriting the keyboard font", bl: "Nijer hater lekhai hok keyboard-er font" },
     "hw.d": { en: "In the Handwriting Studio, draw all 52 letters A–Z and a–z with your finger. Your handwriting then becomes the font on the keys and in the suggestion bar.", bl: "Handwriting Studio-te anguley A–Z o a–z mot 52-ti borno nije eke nin. Sei lekhai keyboard-er key-te ebong suggestion bar-e font hoye boshe jay." },
     "hw.l1": { en: "Your handwriting on the keys and in suggestions", bl: "Key ar suggestion, dui jaygatei apnar hater lekha" },
     "hw.l2": { en: "52 letters saved as vectors, so they stay sharp", bl: "52-ti borno vector hishebe shongrokkhito, tai jhapsha hoy na" },
@@ -78,11 +62,9 @@ window.I18N = {
     "hw.draw": { en: "You draw", bl: "Apni ankchhen" },
     "hw.keys": { en: "Keyboard keys and suggestion bar", bl: "Keyboard-er key o suggestion bar" },
 
-    /* ---------- More features ---------- */
-    "more.title": { en: "And more", bl: "Aro ja ache" },
+        "more.title": { en: "And more", bl: "Aro ja ache" },
 
-    /* ---------- Themes ---------- */
-    "liv.title": { en: "A theme is more than a picture", bl: "Theme mane shudhu chobi noy" },
+        "liv.title": { en: "A theme is more than a picture", bl: "Theme mane shudhu chobi noy" },
     "liv.lead": { en: "Other keyboards give you one still image. Mukto goes three steps further: video themes, and on top of that a living world that responds to your fingers and to the time of day.", bl: "Onno keyboard-e apni pan ekta sthir chobi. Mukto dey tin dhap egiye thaka theme: video, ar tar upore jibonto jogot ja apnar angul ar ghorir shomoye shara dey." },
     "liv.r1.tag": { en: "Still image", bl: "Sthir chobi" },
     "liv.r1.who": { en: "Other keyboards", bl: "Onno keyboard-e" },
@@ -97,8 +79,7 @@ window.I18N = {
     "liv.r3.t": { en: "Living World theme", bl: "Jibonto theme (Living World)" },
     "liv.r3.d": { en: "Here the theme responds. Every key press affects the scene, and the sky changes with the time on your clock.", bl: "Ekhane theme nijei shara dey. Apnar proti key press poribeshe provab fele, ar ghorir shomoy onujayi akash bodlay." },
 
-    /* ---------- Theme scenes ---------- */
-    "sc.title": { en: "What happens when you press a key", bl: "Key chaple ki ghote" },
+        "sc.title": { en: "What happens when you press a key", bl: "Key chaple ki ghote" },
     "sc.lead": { en: "The three demos below play on their own. Each time the key underneath lights up, you can see its effect on the scene.", bl: "Niche tin-ti demo nijei cholche. Proti-r niche-r key jokhon jole othe, tokhoni poribeshe tar provab dekha jay." },
     "sc.swing.alt": { en: "A child on a swing tied to a tree branch, swinging as keys are pressed", bl: "Gacher daler dolnay boshe thaka shishu, key press-e dol khachche" },
     "sc.leaf.alt": { en: "Tree leaves swaying and falling in the wind of each key press", bl: "Gacher pata, proti key press-e batashe dulche ar jhore porche" },
@@ -110,8 +91,7 @@ window.I18N = {
     "sc.ship.t": { en: "Ship and waves", bl: "Jahaj o dheu" },
     "sc.ship.d": { en: "The ship moves slowly. With each key press the waves below rise and the ship rocks.", bl: "Jahaj dhire chole. Key press-er shathe shathe niche-r dheu uchu hoye othe, jahaj dule othe." },
 
-    /* ---------- Time of day ---------- */
-    "day.title": { en: "The sky follows your clock", bl: "Ghorir shathe akash bodlay" },
+        "day.title": { en: "The sky follows your clock", bl: "Ghorir shathe akash bodlay" },
     "day.lead": { en: "Living themes read the time on your phone. The sun rises at dawn, the light is bright at noon, the sky glows at dusk, and stars and the moon come out at night.", bl: "Jibonto theme apnar phone-er shomoy dekhe ney. Bhore shurjo othe, dupure alo ujjol, godhulite akash ranga hoy ar rate tara o chand jege othe." },
     "day.dawn": { en: "Dawn", bl: "Bhor" },
     "day.dawn.t": { en: "The sun rises", bl: "Shurjo othe" },
@@ -122,8 +102,7 @@ window.I18N = {
     "day.night": { en: "Night", bl: "Rat" },
     "day.night.t": { en: "Stars and moon", bl: "Tara o chand" },
 
-    /* ---------- Privacy ---------- */
-    "pr.title": { en: "What you type stays on your phone", bl: "Apni ja type koren, ta apnar phone-ei thake" },
+        "pr.title": { en: "What you type stays on your phone", bl: "Apni ja type koren, ta apnar phone-ei thake" },
     "pr.lead": { en: "A keyboard is the road for your most personal words. So Mukto Keyboard is built so that nothing ever needs to leave your device.", bl: "Keyboard mane apnar shobchhe byaktigoto kothagulor poth. Tai Mukto Keyboard emon-bhabe banano, jeno kono kichu baire jawar proyojonei na pore." },
     "pr.link": { en: "Read the full privacy policy", bl: "Purno privacy policy porun" },
     "pr.1.t": { en: "Zero keylogging", bl: "Zero keylogging" },
@@ -135,8 +114,7 @@ window.I18N = {
     "pr.4.t": { en: "Backups leave your other files alone", bl: "Backup-e onno file nirapod" },
     "pr.4.d": { en: "Only Google Drive’s hidden drive.appdata is used. Your photos, documents and other files are never touched.", bl: "Shudhu Google Drive-er lukano drive.appdata byabohar hoy. Apnar chobi, document ba onno file chhoya hoy na." },
 
-    /* ---------- Comparison ---------- */
-    "cmp.r8": { en: "Fonts and suggestions", bl: "Font o suggestion" },
+        "cmp.r8": { en: "Fonts and suggestions", bl: "Font o suggestion" },
     "cmp.r8a": { en: "Your own handwriting on the keys and in suggestions", bl: "Nijer hater lekha key o suggestion-e" },
     "cmp.r8b": { en: "Only preset fonts", bl: "Shudhu nirdharito font" },
     "cmp.title": { en: "How it differs from an ordinary keyboard", bl: "Sadharon keyboard-er shathe parthokko ek nojore" },
@@ -166,8 +144,7 @@ window.I18N = {
     "cmp.r7a": { en: "Encrypted .mukto and private Drive", bl: "Encrypted .mukto o private Drive" },
     "cmp.r7b": { en: "Plain unencrypted files", bl: "Shadharon un-encrypted file" },
 
-    /* ---------- Steps ---------- */
-    "st.title": { en: "Get started in 3 steps", bl: "Matro 3 dhape shuru korun" },
+        "st.title": { en: "Get started in 3 steps", bl: "Matro 3 dhape shuru korun" },
     "st.1.t": { en: "Turn the keyboard on", bl: "Keyboard chalu korun" },
     "st.1.d": { en: "Open the app and switch Mukto Keyboard on in Android settings with one tap.", bl: "App khule 1 tape Android settings-e Mukto Keyboard on korun." },
     "st.2.t": { en: "Choose it as default", bl: "Default hishebe bachhun" },
@@ -175,8 +152,7 @@ window.I18N = {
     "st.3.t": { en: "Listen to the guide and start", bl: "Guide shune shuru korun" },
     "st.3.d": { en: "Finish setup with the built-in Bangla audio guide, then type without interruption.", bl: "Built-in Bangla audio guide shune setup shesh korun, tarpor likhun badhahin." },
 
-    /* ---------- FAQ ---------- */
-    "faq.title": { en: "Frequently asked questions", bl: "Sadharon proshnottor" },
+        "faq.title": { en: "Frequently asked questions", bl: "Sadharon proshnottor" },
     "faq.1.q": { en: "What is a Living World theme, and how is it different from a video theme?", bl: "Jibonto theme (Living World) ki, ar video theme theke alada kothay?" },
     "faq.1.a": { en: "A video theme loops a clip you picked. A living theme responds: on key presses the swing swings, leaves rustle and waves rise under the ship, and day and night change with the time on your clock.", bl: "Video theme apnar bachha ekta clip ghuriye chalay. Jibonto theme shara dey: key press-e dolna dole, pata nore, jahajer niche dheu othe, ar ghorir shomoy onujayi din-rat bodlay." },
     "faq.2.q": { en: "How do I make my own video theme?", bl: "Nijer video theme kibhabe banabo?" },
@@ -190,19 +166,17 @@ window.I18N = {
     "faq.6.q": { en: "Does Google Drive backup put my other files at risk?", bl: "Google Drive backup-e ki amar onno file jhukite pore?" },
     "faq.6.a": { en: "No. Mukto Keyboard only uses Google Drive’s hidden drive.appdata scope, so it cannot see or change your personal photos, documents or any other files.", bl: "Na. Mukto Keyboard shudhu Google Drive-er lukano drive.appdata scope byabohar kore. Tai apnar byaktigoto chobi, document ba onno kono file dekha ba bodlano jay na." },
 
-    /* ---------- Download ---------- */
-    "cta.title": { en: "Join free and safe typing", bl: "Shadhin o nirapod typing-e join korun" },
+        "cta.title": { en: "Join free and safe typing", bl: "Shadhin o nirapod typing-e join korun" },
     "cta.lead": { en: "Install straight from Google Play. 100% free, private, and always secure, with no hidden ads or tracking.", bl: "Google Play Store theke shorashori install korun. Shompurno free o private, kono lukano bigyapon ba tracking chhara." },
+    "cta.apk": { en: "Download APK Directly", bl: "Shorashori APK Download" },
 
-    /* ---------- Footer ---------- */
-    "ft.privacy": { en: "Privacy Policy", bl: "Privacy Policy" },
+        "ft.privacy": { en: "Privacy Policy", bl: "Privacy Policy" },
     "ft.terms": { en: "Terms of Use", bl: "Terms of Use" },
     "ft.contact": { en: "Contact support", bl: "Support email" },
     "ft.copy": { en: "© 2026 <strong>JS Organization</strong> • Built by <strong>Md Mobassher Ahmed Sowrov</strong>. All rights reserved.", bl: "© 2026 <strong>JS Organization</strong> • Nirmata <strong>Md Mobassher Ahmed Sowrov</strong>. Shorboshotto shongrokkhito." },
     "ft.top": { en: "Back to top", bl: "Upore jan" },
 
-    /* ---------- Other ---------- */
-    "b1.t": { en: "Secret chat hidden inside an emoji", bl: "Emojir arale gopon chat" },
+        "b1.t": { en: "Secret chat hidden inside an emoji", bl: "Emojir arale gopon chat" },
     "b1.d": { en: "Your message becomes invisible Unicode characters tucked inside an ordinary emoji. On Mukto Keyboard one tap reveals it. No server involved.", bl: "Bartha odrishyo Unicode okkhore ruptantorito hoye ekta sadharon emojir bhetore lukiye jay. Mukto Keyboard-e 1 tape khule pora jay. Kono server nei." },
     "b1.l1": { en: "More than 24 carrier emojis", bl: "24-tir beshi bahok emoji" },
     "b1.l2": { en: "100% offline, zero tracking", bl: "100% offline, zero tracking" },

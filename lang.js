@@ -1,17 +1,3 @@
-/*
- * Mukto Keyboard — shared language system (all pages)
- * Languages: bn (বাংলা, default) · en (English) · bl (Banglish)
- *
- * - Remembers the choice (localStorage) and honours ?language=xx
- * - Keeps the choice when moving between pages
- * - Updates <html lang>, <title>, meta description, and every [data-lang-btn]
- * - Markup patterns supported:
- *     1. <span class="lang-en">..</span><span class="lang-bn">..</span><span class="lang-bl">..</span>
- *        (shown/hidden by CSS through the body.lang-xx class — used on legal pages)
- *     2. data-i18n="key" (text stored in window.I18N, see i18n.js — used on the home page)
- *        The Bangla text lives in the HTML itself and is cached on first run.
- *     3. data-i18n-attr="aria-label:key;title:key2"
- */
 (function () {
     'use strict';
 
@@ -25,7 +11,7 @@
         try { return window.localStorage.getItem(STORE_KEY); } catch (e) { return null; }
     }
     function safeSet(v) {
-        try { window.localStorage.setItem(STORE_KEY, v); } catch (e) { /* private mode */ }
+        try { window.localStorage.setItem(STORE_KEY, v); } catch (e) {  }
     }
     function valid(l) { return LANGS.indexOf(l) !== -1; }
 
@@ -37,10 +23,8 @@
         return DEFAULT;
     }
 
-    /* ---------- i18n dictionary helpers ---------- */
-    function dict() { return window.I18N || {}; }
+        function dict() { return window.I18N || {}; }
 
-    // Translate a key. For bn we fall back to the text cached from the HTML.
     function t(key, vars) {
         var entry = dict()[key];
         var out;
@@ -56,8 +40,8 @@
         return out;
     }
 
-    var baseCache = {};      // key -> original bn innerHTML
-    var attrCache = {};      // key -> original bn attr value
+    var baseCache = {};
+    var attrCache = {};
 
     function cacheBase() {
         document.querySelectorAll('[data-i18n]').forEach(function (el) {
@@ -97,8 +81,7 @@
         });
     }
 
-    /* ---------- page meta (title / description) ---------- */
-    var metaData = null;
+        var metaData = null;
     function readMeta() {
         var el = document.getElementById('page-meta');
         if (!el) return;
@@ -116,8 +99,7 @@
         if (od && m.description) od.setAttribute('content', m.description);
     }
 
-    /* ---------- internal links keep the language ---------- */
-    function syncLinks() {
+        function syncLinks() {
         document.querySelectorAll('a[href]').forEach(function (a) {
             var href = a.getAttribute('href');
             if (!href || /^(https?:|mailto:|tel:|#|javascript:)/i.test(href)) return;
@@ -137,11 +119,10 @@
             if (current === DEFAULT) url.searchParams.delete('language');
             else url.searchParams.set('language', current);
             window.history.replaceState({}, '', url.pathname + url.search + url.hash);
-        } catch (e) { /* file:// or sandbox */ }
+        } catch (e) {  }
     }
 
-    /* ---------- main setter ---------- */
-    function set(lang, opts) {
+        function set(lang, opts) {
         opts = opts || {};
         if (!valid(lang)) lang = DEFAULT;
         current = lang;
@@ -170,7 +151,7 @@
     function init() {
         readMeta();
         cacheBase();
-        // Switcher buttons (works with [data-lang-btn="en"] and legacy onclick calls)
+
         document.addEventListener('click', function (e) {
             var btn = e.target.closest && e.target.closest('[data-lang-btn]');
             if (!btn) return;
@@ -185,7 +166,7 @@
         set: set,
         t: t
     };
-    // Backwards compatible helper used by older inline handlers
+
     window.setLanguage = function (lang) { set(lang); };
 
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);

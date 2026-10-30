@@ -27,7 +27,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=Hind+Siliguri:wght@400;500;600;700&amp;family=Caveat:wght@600&amp;display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20261030g" />
+    <link rel="stylesheet" href="style.css?v=20261030h" />
 
     <script type="application/json" id="page-meta">
     {
@@ -131,7 +131,6 @@
 <div class="ambient-glow-1" aria-hidden="true"></div>
 <div class="ambient-glow-2" aria-hidden="true"></div>
 
-<!-- Icon sprite -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
     <defs>
         <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.6-3 8.4-7 10-4-1.6-7-5.4-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></symbol>
@@ -167,7 +166,6 @@
 
 <a class="skip-link" href="#main" data-i18n="nav.skip">মূল কনটেন্টে যান</a>
 
-<!-- ============ NAV ============ -->
 <header class="nav" id="top">
     <div class="wrap nav-inner">
         <a class="brand" href="#top" aria-label="Mukto Keyboard">
@@ -189,7 +187,7 @@
                 <button type="button" data-lang-btn="en">EN</button>
                 <button type="button" data-lang-btn="bl">BL</button>
             </div>
-            <a class="btn btn-sun nav-cta" href="#download" data-i18n="nav.get">ডাউনলোড</a>
+            <a class="btn btn-sun nav-cta" href="download.html" data-i18n="nav.get">ডাউনলোড</a>
             <button type="button" class="nav-burger" id="navBurger" aria-expanded="false" aria-controls="navLinks" data-i18n-attr="aria-label:nav.menu" aria-label="মেনু">
                 <svg class="ic"><use href="#i-menu"/></svg>
             </button>
@@ -199,7 +197,6 @@
 
 <main id="main">
 
-<!-- ============ HERO ============ -->
 <section class="hero">
     <div class="hero-center-spotlight" aria-hidden="true"></div>
     <div class="wrap hero-inner">
@@ -208,7 +205,7 @@
         <h1 data-i18n="hero.title">অ্যান্ড্রয়েডের জন্য <span class="accent">দ্রুততম, প্রাইভেট</span> ও আধুনিক বাংলা কিবোর্ড</h1>
         <p class="hero-sub" data-i18n="hero.sub">নিখুঁত <strong>অভ্র ফোনেটিক</strong>, <strong>বাংলা বর্ণানুক্রমিক</strong>, <strong>প্রভাত</strong>, <strong>জাতীয়</strong> ও <strong>স্মার্ট ইংলিশ</strong> লেআউট, অন-ডিভাইস ক্যামেরা ওসিআর, ইমোজিতে গোপন মেসেজ স্টেগানোগ্রাফি, ১৯+ ফ্যান্সি ফন্টস এবং জীবন্ত থিম সমৃদ্ধ স্বাধীন কিবোর্ড।</p>
         <ul class="hero-pills">
-            <li><svg class="ic"><use href="#i-android"/></svg><span data-i18n="hero.pill1">সকল অ্যান্ড্রয়েড ডিভাইসে স্মুথ সাপোর্ট</span></li>
+            <li><svg class="ic"><use href="#i-android"/></svg><span data-i18n="hero.pill1">Android ৭.০+ সকল ডিভাইসে স্মুথ সাপোর্ট</span></li>
             <li><svg class="ic"><use href="#i-shield"/></svg><span data-i18n="hero.pill2">জিরো কী-লগিং ১০০% গ্যারান্টি</span></li>
             <li><svg class="ic"><use href="#i-grid"/></svg><span data-i18n="hero.pill3">৫টি কিবোর্ড লেআউট + নামপ্যাড</span></li>
         </ul>
@@ -216,6 +213,10 @@
             <a class="btn btn-dark btn-lg" href="https://play.google.com/store/apps/details?id=com.mukto.keyboard" target="_blank" rel="noopener noreferrer">
                 <svg class="ic ic-fill"><use href="#i-play-store"/></svg>
                 <span data-i18n="hero.play">Google Play-তে নিন</span>
+            </a>
+            <a class="btn btn-sun btn-lg" href="download.html">
+                <svg class="ic"><use href="#i-down"/></svg>
+                <span data-i18n="hero.apk">APK ডাউনলোড</span>
             </a>
             <a class="btn btn-outline btn-lg" href="#features"><span data-i18n="hero.more">সব ফিচার দেখুন</span><svg class="ic"><use href="#i-down"/></svg></a>
         </div>
@@ -233,7 +234,6 @@
     </div>
 </section>
 
-<!-- ============ LAYOUTS ============ -->
 <section class="section" id="layouts">
     <div class="wrap">
         <header class="section-head">
@@ -339,7 +339,6 @@
     </div>
 </section>
 
-<!-- ============ FEATURES ============ -->
 <section class="section section-tint" id="features">
     <div class="wrap">
         <header class="section-head">
@@ -347,7 +346,6 @@
             <p data-i18n="feat.lead">লেখার বাইরেও মুক্ত কিবোর্ড অনেক কিছু করে। সবকিছু চলে আপনার ফোনেই।</p>
         </header>
 
-        <!-- Band 1: Secret chat -->
         <article class="band">
             <div class="band-text">
                 <span class="band-ic"><svg class="ic"><use href="#i-lock"/></svg></span>
@@ -361,19 +359,16 @@
             </div>
             <div class="band-demo demo-chat" role="img" data-i18n-attr="aria-label:b1.alt" aria-label="গোপন চ্যাটের ডেমো: মুক্ত কিবোর্ডে বার্তা পড়া যায়, অন্য অ্যাপে শুধু একটি ইমোজি দেখা যায়">
                 <div class="sc-stage" aria-hidden="true">
-                    <!-- 1: Encode panel -->
                     <div class="sc-pane sc-p1">
                         <div class="sc-tabs"><b data-i18n="sc2.enc">এনকোড</b><i data-i18n="sc2.dec">ডিকোড</i></div>
                         <div class="sc-carriers"><em data-i18n="sc2.carrier">বাহক:</em><span>🙂</span><span class="on">😎</span><span>🥰</span><span>😂</span><span>🤔</span></div>
                         <div class="sc-field"><span class="sc-typed font-bn" data-i18n="sc2.msg">কালকে দেখা হবে</span><span class="sc-caret"></span><span class="sc-send"><svg class="ic" viewBox="0 0 24 24"><path d="M3 11.5 21 3l-8.5 18-2-7.5z"/></svg></span></div>
                     </div>
-                    <!-- 2: Sent into a normal chat -->
                     <div class="sc-pane sc-p2">
                         <p class="sc-app" data-i18n="sc2.app">যেকোনো মেসেজিং অ্যাপ</p>
                         <div class="sc-msg sc-out"><span>😎</span></div>
                         <p class="sc-note" data-i18n="sc2.only">অন্যরা শুধু একটি ইমোজি দেখে</p>
                     </div>
-                    <!-- 3: Decode panel -->
                     <div class="sc-pane sc-p3">
                         <div class="sc-tabs"><i data-i18n="sc2.enc">এনকোড</i><b data-i18n="sc2.dec">ডিকোড</b></div>
                         <div class="sc-found"><span class="sc-found-h"><svg class="ic"><use href="#i-lock"/></svg><span data-i18n="sc2.found">গোপন বার্তা পাওয়া গেছে</span></span>
@@ -389,7 +384,6 @@
             </div>
         </article>
 
-        <!-- Band 2: Handwriting keyboard -->
         <article class="band band-flip" id="handwriting">
             <div class="band-text">
                 <span class="band-ic"><svg class="ic"><use href="#i-pen"/></svg></span>
@@ -419,7 +413,6 @@
             </div>
         </article>
 
-        <!-- Band 3: OCR + translate -->
         <article class="band">
             <div class="band-text">
                 <span class="band-ic"><svg class="ic"><use href="#i-camera"/></svg></span>
@@ -447,7 +440,6 @@
             </div>
         </article>
 
-        <!-- Band 3: AI -->
         <article class="band band-flip">
             <div class="band-text">
                 <span class="band-ic"><svg class="ic"><use href="#i-spark"/></svg></span>
@@ -468,7 +460,6 @@
             </div>
         </article>
 
-        <!-- Band 4: fonts + shortcuts -->
         <article class="band">
             <div class="band-text">
                 <span class="band-ic"><svg class="ic"><use href="#i-pen"/></svg></span>
@@ -512,7 +503,6 @@
     </div>
 </section>
 
-<!-- ============ THEMES ============ -->
 <section class="section" id="themes">
     <div class="wrap">
         <header class="section-head">
@@ -574,7 +564,6 @@
         </div>
 
         <div class="scene-grid">
-            <!-- Swing -->
             <article class="scene-card">
                 <div class="scene-frame">
                     <svg class="scene scene-card-svg" viewBox="0 0 320 210" preserveAspectRatio="xMidYMid slice" role="img" data-i18n-attr="aria-label:sc.swing.alt" aria-label="গাছের ডালে বাঁধা দোলনায় বসে থাকা শিশু, কি-প্রেসে দোল খাচ্ছে">
@@ -610,7 +599,6 @@
                 </div>
             </article>
 
-            <!-- Leaves -->
             <article class="scene-card">
                 <div class="scene-frame">
                     <svg class="scene scene-card-svg" viewBox="0 0 320 210" preserveAspectRatio="xMidYMid slice" role="img" data-i18n-attr="aria-label:sc.leaf.alt" aria-label="গাছের পাতা, কি-প্রেসে বাতাসে দুলছে আর ঝরে পড়ছে">
@@ -644,7 +632,6 @@
                 </div>
             </article>
 
-            <!-- Ship -->
             <article class="scene-card">
                 <div class="scene-frame">
                     <svg class="scene scene-card-svg" viewBox="0 0 320 210" preserveAspectRatio="xMidYMid slice" role="img" data-i18n-attr="aria-label:sc.ship.alt" aria-label="নদীতে চলমান জাহাজ, কি-প্রেসে নিচের ঢেউ উঁচু হয়ে ওঠে">
@@ -697,7 +684,6 @@
     </div>
 </section>
 
-<!-- ============ PRIVACY ============ -->
 <section class="section section-dark" id="privacy">
     <div class="wrap privacy-grid">
         <header class="section-head">
@@ -714,7 +700,6 @@
     </div>
 </section>
 
-<!-- ============ COMPARISON ============ -->
 <section class="section" id="compare">
     <div class="wrap">
         <header class="section-head">
@@ -776,7 +761,6 @@
     </div>
 </section>
 
-<!-- ============ STEPS ============ -->
 <section class="section section-tint" id="start">
     <div class="wrap">
         <header class="section-head">
@@ -790,7 +774,6 @@
     </div>
 </section>
 
-<!-- ============ FAQ ============ -->
 <section class="section" id="faq">
     <div class="wrap faq-wrap">
         <header class="section-head">
@@ -825,7 +808,6 @@
     </div>
 </section>
 
-<!-- ============ DOWNLOAD ============ -->
 <section class="section section-end" id="download">
     <div class="wrap">
         <div class="cta">
@@ -834,10 +816,11 @@
                 <p data-i18n="cta.lead">গুগল প্লে স্টোর থেকে সরাসরি ইনস্টল করুন। সম্পূর্ণ বিনামূল্যে, কোনো লুকানো বিজ্ঞাপন বা ট্র্যাকিং ছাড়া।</p>
             </div>
             <div class="cta-actions">
-                <a class="btn btn-sun btn-lg" href="https://play.google.com/store/apps/details?id=com.mukto.keyboard" target="_blank" rel="noopener noreferrer"><svg class="ic ic-fill"><use href="#i-play-store"/></svg><span data-i18n="hero.play">Google Play-তে নিন</span></a>
+                <a class="btn btn-sun btn-lg" href="download.html"><svg class="ic"><use href="#i-down"/></svg><span data-i18n="cta.apk">সরাসরি APK ডাউনলোড</span></a>
+                <a class="btn btn-ghost-light btn-lg" href="https://play.google.com/store/apps/details?id=com.mukto.keyboard" target="_blank" rel="noopener noreferrer"><svg class="ic ic-fill"><use href="#i-play-store"/></svg><span data-i18n="hero.play">Google Play-তে নিন</span></a>
                 <a class="btn btn-ghost-light btn-lg" href="https://github.com/JSOrganizations/Mukto-Keyboard" target="_blank" rel="noopener noreferrer"><svg class="ic"><use href="#i-gh"/></svg><span>GitHub</span></a>
             </div>
-            <p class="cta-meta">Package: <code>com.mukto.keyboard</code> · <code>mukto.bd</code></p>
+            <p class="cta-meta">Package: <code>com.mukto.keyboard</code> · Version: <code class="app-version">v3.5</code> · <code>mukto.bd</code></p>
         </div>
     </div>
 </section>
@@ -851,6 +834,7 @@
             <span>Mukto Keyboard</span>
         </div>
         <nav class="footer-links" aria-label="Footer">
+            <a href="download.html">APK Download</a>
             <a href="privacy-policy.html" data-i18n="ft.privacy">গোপনীয়তা নীতিমালা</a>
             <a href="terms-of-use.html" data-i18n="ft.terms">ব্যবহারের শর্তাবলি</a>
             <a href="https://github.com/JSOrganizations/Mukto-Keyboard" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -863,7 +847,7 @@
 
 <button id="backToTop" type="button" class="to-top" data-i18n-attr="aria-label:ft.top" aria-label="উপরে যান"><svg class="ic" style="transform:rotate(180deg)"><use href="#i-chev"/></svg></button>
 
-<script src="i18n.js?v=20261030c"></script>
+<script src="i18n.js?v=20261030d"></script>
 <script src="lang.js?v=20261030b"></script>
 <script src="main.js?v=20261030b"></script>
 </body>
