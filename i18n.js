@@ -169,7 +169,7 @@ window.I18N = {
     "faq.6.a": { en: "No. Mukto Keyboard only uses Google Drive’s hidden drive.appdata scope, so it cannot see or change your personal photos, documents or any other files.", bl: "Na. Mukto Keyboard shudhu Google Drive-er lukano drive.appdata scope byabohar kore. Tai apnar byaktigoto chobi, document ba onno kono file dekha ba bodlano jay na." },
 
         "cta.title": { en: "Join free and safe typing", bl: "Shadhin o nirapod typing-e join korun" },
-    "cta.lead": { en: "Install straight from Google Play. 100% free, private, and always secure, with no hidden ads or tracking.", bl: "Google Play Store theke shorashori install korun. Shompurno free o private, kono lukano bigyapon ba tracking chhara." },
+    "cta.lead": { en: "Install now with the direct APK. The public Google Play release is coming soon. 100% free and private, with no hidden ads or tracking.", bl: "Ekhoni shorashori APK download kore install korun, Google Play-te public release ashche shighroi. Shompurno free o private, kono lukano bigyapon ba tracking chhara." },
     "cta.apk": { en: "Download APK Directly", bl: "Shorashori APK Download" },
 
         "ft.privacy": { en: "Privacy Policy", bl: "Privacy Policy" },

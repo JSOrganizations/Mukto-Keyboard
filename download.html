@@ -27,7 +27,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=Hind+Siliguri:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20261030h" />
+    <link rel="stylesheet" href="style.css?v=20261030i" />
 
     <script type="application/json" id="page-meta">
     {
@@ -71,6 +71,7 @@
         <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v12m0 0l-4.5-4.5M12 16l4.5-4.5M5 20h14"/></symbol>
         <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
         <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+        <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="9.5" rx="2.2"/><path d="M8.5 10.5V8a3.5 3.5 0 017 0v2.5"/></symbol>
         <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
         <symbol id="i-gh" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.9.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0022 12c0-5.52-4.48-10-10-10z"/></symbol>
         <symbol id="i-android" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M17.5 15.3a1 1 0 110-2 1 1 0 010 2m-11 0a1 1 0 110-2 1 1 0 010 2m11.4-6l2-3.46a.42.42 0 00-.72-.42l-2.03 3.5a12.4 12.4 0 00-10.3 0L4.82 5.43a.42.42 0 00-.72.42l2 3.46C2.69 11.19.34 14.66 0 18.76h24c-.34-4.1-2.69-7.57-6.1-9.45"/></symbol>
@@ -141,12 +142,16 @@
                 <button type="button" data-lang-btn="en">EN</button>
                 <button type="button" data-lang-btn="bl">BL</button>
             </div>
-            <a class="btn btn-sun nav-cta" href="https://play.google.com/store/apps/details?id=com.mukto.keyboard" target="_blank" rel="noopener noreferrer">
-                <svg class="ic ic-fill" style="width:16px;height:16px;"><use href="#i-play-store"/></svg>
-                <span class="lang-bn">Google Play</span>
-                <span class="lang-en">Google Play</span>
-                <span class="lang-bl">Google Play</span>
-            </a>
+            <span class="play-soon ps-nav" data-release="2026-11-06T00:00:00+06:00">
+                <span class="btn nav-cta nav-cta-soon" aria-disabled="true">
+                    <svg class="ic ic-fill" style="width:16px;height:16px;"><use href="#i-play-store"/></svg>
+                    <span class="lang-bn">Google Play • শীঘ্রই</span><span class="lang-en">Google Play • Soon</span><span class="lang-bl">Google Play • Shighroi</span>
+                </span>
+                <a class="btn btn-sun nav-cta ps-live" href="https://play.google.com/store/apps/details?id=com.mukto.keyboard" target="_blank" rel="noopener noreferrer">
+                    <svg class="ic ic-fill" style="width:16px;height:16px;"><use href="#i-play-store"/></svg>
+                    <span>Google Play</span>
+                </a>
+            </span>
             <button type="button" class="nav-burger" id="navBurger" aria-expanded="false" aria-controls="navLinks" aria-label="মেনু">
                 <svg class="ic"><use href="#i-menu"/></svg>
             </button>
@@ -332,22 +337,37 @@
         <div class="dl-play-banner">
             <div class="dl-play-text">
                 <h3>
-                    <span class="lang-bn">গুগল প্লে স্টোর থেকেও ইনস্টল করতে পারেন</span>
-                    <span class="lang-en">Prefer Google Play Store Installation?</span>
-                    <span class="lang-bl">Google Play Store thekeo install korte paren</span>
+                    <span class="lang-bn">গুগল প্লে স্টোরে আসছে শীঘ্রই</span>
+                    <span class="lang-en">Coming Soon to Google Play</span>
+                    <span class="lang-bl">Google Play Store-e ashche shighroi</span>
                 </h3>
                 <p>
-                    <span class="lang-bn">স্বয়ংক্রিয় আপডেট ও গুগল প্লে প্রটেক্ট সুরক্ষা পেতে চাইলে সরাসরি প্লে স্টোর থেকেও মুক্ত কিবোর্ড ইনস্টল করে নিতে পারেন।</span>
-                    <span class="lang-en">If you prefer automatic background updates and Google Play Protect verification, you can install Mukto Keyboard directly from Google Play.</span>
-                    <span class="lang-bl">Automatic background update ebong Google Play Protect shurokkha pete shorasori Play Store thekeo install korte paren.</span>
+                    <span class="lang-bn">মুক্ত কিবোর্ড এখনো গুগল প্লে স্টোরে সকলের জন্য উন্মুক্ত হয়নি। পাবলিক রিলিজ পর্যন্ত উপরের অফিশিয়াল APK থেকে নিশ্চিন্তে ইনস্টল করুন, রিলিজের পর প্লে স্টোর থেকেও স্বয়ংক্রিয় আপডেট পাবেন।</span>
+                    <span class="lang-en">Mukto Keyboard is not yet publicly available on Google Play. Until the public release, install safely from the official APK above. After launch, you can also get automatic updates from the Play Store.</span>
+                    <span class="lang-bl">Mukto Keyboard ekhono Google Play-te shobar jonno unmukto hoyni. Public release porjonto uporer official APK theke nishchinte install korun, release-er por Play Store thekeo automatic update paben.</span>
                 </p>
             </div>
-            <a class="btn btn-sun btn-lg" href="https://play.google.com/store/apps/details?id=com.mukto.keyboard" target="_blank" rel="noopener noreferrer">
-                <svg class="ic ic-fill"><use href="#i-play-store"/></svg>
-                <span class="lang-bn">Google Play-তে যান</span>
-                <span class="lang-en">Open Google Play</span>
-                <span class="lang-bl">Open Google Play</span>
-            </a>
+            <div class="play-soon ps-dark" data-release="2026-11-06T00:00:00+06:00">
+                <div class="ps-head">
+                    <span class="ps-store" aria-disabled="true" title="Google Play">
+                        <svg class="ic ic-fill" aria-hidden="true"><use href="#i-play-store"/></svg>
+                        <span class="ps-store-txt"><small><span class="lang-bn">শীঘ্রই আসছে</span><span class="lang-en">Coming soon</span><span class="lang-bl">Shighroi ashche</span></small><strong>Google Play</strong></span>
+                        <svg class="ic ps-lock" aria-hidden="true"><use href="#i-lock"/></svg>
+                    </span>
+                    <span class="ps-tag"><span class="ps-dot" aria-hidden="true"></span><span class="lang-bn">পাবলিক রিলিজের অপেক্ষায়</span><span class="lang-en">Awaiting public release</span><span class="lang-bl">Public release-er opekkhay</span></span>
+                </div>
+                <div class="ps-timer" role="timer" aria-live="off">
+                    <div class="ps-unit"><b data-cd="d">00</b><span><span class="lang-bn">দিন</span><span class="lang-en">Days</span><span class="lang-bl">Din</span></span></div>
+                    <i class="ps-sep" aria-hidden="true">:</i>
+                    <div class="ps-unit"><b data-cd="h">00</b><span><span class="lang-bn">ঘণ্টা</span><span class="lang-en">Hours</span><span class="lang-bl">Ghonta</span></span></div>
+                    <i class="ps-sep" aria-hidden="true">:</i>
+                    <div class="ps-unit"><b data-cd="m">00</b><span><span class="lang-bn">মিনিট</span><span class="lang-en">Minutes</span><span class="lang-bl">Minute</span></span></div>
+                    <i class="ps-sep" aria-hidden="true">:</i>
+                    <div class="ps-unit"><b data-cd="s">00</b><span><span class="lang-bn">সেকেন্ড</span><span class="lang-en">Seconds</span><span class="lang-bl">Second</span></span></div>
+                </div>
+                <p class="ps-note"><span class="lang-bn">প্রত্যাশিত পাবলিক রিলিজ: <strong>৬ নভেম্বর ২০২৬</strong></span><span class="lang-en">Expected public release: <strong>6 November 2026</strong></span><span class="lang-bl">Expected public release: <strong>6 November 2026</strong></span></p>
+                <a class="btn btn-sun btn-lg ps-live" href="https://play.google.com/store/apps/details?id=com.mukto.keyboard" target="_blank" rel="noopener noreferrer"><svg class="ic ic-fill"><use href="#i-play-store"/></svg><span class="lang-bn">Google Play-তে নিন</span><span class="lang-en">Get it on Google Play</span><span class="lang-bl">Google Play-te nin</span></a>
+            </div>
         </div>
 
         <div class="dl-guide">
@@ -512,6 +532,7 @@
 <button id="backToTop" type="button" class="to-top" aria-label="উপরে যান"><svg class="ic" style="transform:rotate(180deg)"><use href="#i-chev"/></svg></button>
 
 <script src="lang.js?v=20261030b"></script>
+<script src="countdown.js?v=20261030a"></script>
 <script>
 (function () {
     var burger = document.getElementById('navBurger');
@@ -533,7 +554,7 @@
             if (e.key === 'Escape') closeMenu();
         });
         window.addEventListener('resize', function () {
-            if (window.innerWidth > 980) closeMenu();
+            if (window.innerWidth > 1100) closeMenu();
         });
     }
 
