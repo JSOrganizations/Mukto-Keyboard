@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn" data-lang="bn">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,10 +27,25 @@
     <link rel="apple-touch-icon" href="assets/logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=DM+Sans:wght@400;500;600;700&amp;family=Hind+Siliguri:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=Hind+Siliguri:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" defer></script>
-    <link rel="stylesheet" href="legal.css" />
+    <link rel="stylesheet" href="legal.css?v=20261030b" />
+    <script type="application/json" id="page-meta">
+{
+  "bn": {
+    "title": "গোপনীয়তা নীতিমালা — মুক্ত কিবোর্ড | ১০০% প্রাইভেট বাংলা কিবোর্ড",
+    "description": "মুক্ত কিবোর্ডের (com.mukto.keyboard) অফিশিয়াল গোপনীয়তা নীতিমালা। জিরো কী-লগিং, অন-ডিভাইস ওসিআর, BYOK এআই, এনক্রিপ্টেড ব্যাকআপ এবং GDPR ও Google Play Data Safety সম্মতি।"
+  },
+  "en": {
+    "title": "Privacy Policy — Mukto Keyboard | 100% Private Bangla & English Android Keyboard",
+    "description": "Official Privacy Policy for Mukto Keyboard (com.mukto.keyboard) by JS Organization. Zero keylogging, offline Avro/Probhat/National/Bangla typing, on-device OCR, BYOK AI, strongly encrypted backup, and full GDPR & Google Play Data Safety compliance."
+  },
+  "bl": {
+    "title": "Privacy Policy — Mukto Keyboard | 100% Private Bangla Keyboard",
+    "description": "Mukto Keyboard (com.mukto.keyboard)-er official privacy policy. Zero keylogging, on-device OCR, BYOK AI, encrypted backup ebong Google Play Data Safety shommoti."
+  }
+}
+    </script>
 
     <script type="application/ld+json">
     {
@@ -57,7 +72,7 @@
     }
     </script>
 </head>
-<body class="lang-en">
+<body class="lang-bn">
 
     <nav class="site-nav" aria-label="Primary Navigation">
         <a href="index.html" class="nav-brand">
@@ -83,6 +98,13 @@
                 <span class="lang-bl">Terms</span>
             </a>
         </div>
+            <div class="nav-tools">
+            <div class="nav-lang" role="group" aria-label="Language">
+                <button type="button" data-lang-btn="bn" class="font-bangla">বাংলা</button>
+                <button type="button" data-lang-btn="en">EN</button>
+                <button type="button" data-lang-btn="bl">BL</button>
+            </div>
+        </div>
     </nav>
 
     <header class="hero">
@@ -106,12 +128,6 @@
         <p class="hero-sub lang-en">Complete, transparent disclosure of how Mukto Keyboard handles every layout, tool, permission, local file, and optional cloud feature on your Android device.</p>
         <p class="hero-sub lang-bn">মুক্ত কিবোর্ডের প্রতিটি লেআউট, টুল, পারমিশন, লোকাল স্টোরেজ এবং ঐচ্ছিক ক্লাউড ফিচার কীভাবে আপনার গোপনীয়তা রক্ষা করে তার সম্পূর্ণ স্বচ্ছ বিবরণ।</p>
         <p class="hero-sub lang-bl">Mukto Keyboard-er protiti layout, tool, permission, local storage ebong optional cloud feature kibhabe apnar privacy rokkha kore tar shompurno swoccho biboron.</p>
-
-        <div class="lang-switcher-wrap" role="group" aria-label="Language Switcher">
-            <button type="button" id="btnEn" class="lang-btn active" onclick="setLanguage('en')">English</button>
-            <button type="button" id="btnBn" class="lang-btn font-bangla" onclick="setLanguage('bn')">বাংলা</button>
-            <button type="button" id="btnBl" class="lang-btn" onclick="setLanguage('bl')">Banglish</button>
-        </div>
 
         <div class="hero-meta">
             <div class="hero-meta-item">
@@ -731,6 +747,7 @@
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
-    <script src="legal.js"></script>
+    <script src="lang.js?v=20261030b"></script>
+    <script src="legal.js?v=20261030b"></script>
 </body>
 </html>

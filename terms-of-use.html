@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn" data-lang="bn">
 
 <head>
     <meta charset="UTF-8" />
@@ -32,12 +32,25 @@
     <link rel="apple-touch-icon" href="assets/logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=DM+Sans:wght@400;500;600;700&amp;family=Hind+Siliguri:wght@400;500;600;700&amp;display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=Hind+Siliguri:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" defer></script>
-    <link rel="stylesheet" href="legal.css" />
+    <link rel="stylesheet" href="legal.css?v=20261030b" />
+    <script type="application/json" id="page-meta">
+{
+  "bn": {
+    "title": "ব্যবহারের শর্তাবলি — মুক্ত কিবোর্ড | অফিশিয়াল ব্যবহারকারী চুক্তি ও লাইসেন্স",
+    "description": "মুক্ত কিবোর্ডের (com.mukto.keyboard) অফিশিয়াল ব্যবহারের শর্তাবলি ও লাইসেন্স চুক্তি: ব্যক্তিগত লাইসেন্স, লেআউট ও টুলের ব্যবহার, BYOK এআই, গোপন চ্যাট ও দায়বদ্ধতার সীমা।"
+  },
+  "en": {
+    "title": "Terms of Use — Mukto Keyboard | Official User Agreement & License",
+    "description": "Official Terms of Use and End-User License Agreement for Mukto Keyboard (com.mukto.keyboard) by JS Organization. Covers proprietary license, 5 layouts, Text Repeater conduct, BYOK AI, GIPHY GIFs, Secret Chat, and encrypted backups."
+  },
+  "bl": {
+    "title": "Terms of Use — Mukto Keyboard | Official User Agreement o License",
+    "description": "Mukto Keyboard (com.mukto.keyboard)-er official Terms of Use o license: personal license, layout o tool-er byabohar, BYOK AI, secret chat ebong daybaddhotar shima."
+  }
+}
+    </script>
 
     <script type="application/ld+json">
     {
@@ -65,7 +78,7 @@
     </script>
 </head>
 
-<body class="lang-en">
+<body class="lang-bn">
 
     <nav class="site-nav" aria-label="Primary Navigation">
         <a href="index.html" class="nav-brand">
@@ -90,6 +103,13 @@
                 <span class="lang-bn">শর্তাবলি</span>
                 <span class="lang-bl">Terms</span>
             </a>
+        </div>
+            <div class="nav-tools">
+            <div class="nav-lang" role="group" aria-label="Language">
+                <button type="button" data-lang-btn="bn" class="font-bangla">বাংলা</button>
+                <button type="button" data-lang-btn="en">EN</button>
+                <button type="button" data-lang-btn="bl">BL</button>
+            </div>
         </div>
     </nav>
 
@@ -117,12 +137,6 @@
             ব্যবহারের সুস্পষ্ট ও স্বচ্ছ নিয়মাবলি।</p>
         <p class="hero-sub lang-bl">Mukto Keyboard install ebong er shokol layout, creative studio, AI feature o backup
             tool baboharer susposhto niyomaboli.</p>
-
-        <div class="lang-switcher-wrap" role="group" aria-label="Language Switcher">
-            <button type="button" id="btnEn" class="lang-btn active" onclick="setLanguage('en')">English</button>
-            <button type="button" id="btnBn" class="lang-btn font-bangla" onclick="setLanguage('bn')">বাংলা</button>
-            <button type="button" id="btnBl" class="lang-btn" onclick="setLanguage('bl')">Banglish</button>
-        </div>
 
         <div class="hero-meta">
             <div class="hero-meta-item">
@@ -678,7 +692,8 @@
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
-    <script src="legal.js"></script>
+    <script src="lang.js?v=20261030b"></script>
+    <script src="legal.js?v=20261030b"></script>
 </body>
 
 </html>

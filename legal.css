@@ -26,7 +26,7 @@ html {
 }
 
 body {
-    font-family: 'DM Sans', 'Hind Siliguri', sans-serif;
+    font-family: 'Bricolage Grotesque', 'Hind Siliguri', system-ui, sans-serif;
     background: var(--surface-2);
     color: var(--ink);
     font-size: 16px;
@@ -34,8 +34,8 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-.lang-bn, .font-bangla {
-    font-family: 'Hind Siliguri', 'DM Sans', sans-serif;
+body.lang-bn, .font-bangla {
+    font-family: 'Hind Siliguri', 'Bricolage Grotesque', system-ui, sans-serif;
 }
 
 body:not(.lang-en) .lang-en,
@@ -238,7 +238,7 @@ body:not(.lang-bl) .lang-bl {
 }
 
 .hero h1 {
-    font-family: 'Playfair Display', 'Hind Siliguri', Georgia, serif;
+    font-family: 'Bricolage Grotesque', 'Hind Siliguri', system-ui, sans-serif;
     font-size: clamp(2rem, 7vw, 3.5rem);
     font-weight: 700;
     color: #ffffff;
@@ -301,7 +301,7 @@ body:not(.lang-bl) .lang-bl {
 }
 
 .toc-card h2 {
-    font-family: 'Playfair Display', 'Hind Siliguri', serif;
+    font-family: 'Bricolage Grotesque', 'Hind Siliguri', system-ui, sans-serif;
     font-size: clamp(11px, 2.5vw, 12px);
     font-weight: 700;
     text-transform: uppercase;
@@ -372,7 +372,7 @@ body:not(.lang-bl) .lang-bl {
 }
 
 .section-num {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bricolage Grotesque', 'Hind Siliguri', system-ui, sans-serif;
     font-size: clamp(1.4rem, 5vw, 2rem);
     font-weight: 700;
     color: var(--border-strong);
@@ -382,7 +382,7 @@ body:not(.lang-bl) .lang-bl {
 }
 
 .section-title {
-    font-family: 'Playfair Display', 'Hind Siliguri', serif;
+    font-family: 'Bricolage Grotesque', 'Hind Siliguri', system-ui, sans-serif;
     font-size: clamp(1.08rem, 3.5vw, 1.42rem);
     font-weight: 700;
     color: var(--ink);
@@ -750,4 +750,28 @@ a.contact-item:hover {
     .nav-brand { font-size: 0.86rem; gap: 5px; }
     .nav-brand-img { width: 22px; height: 22px; border-radius: 5px; }
     .nav-link { font-size: 10.5px; padding: 4px 6px; }
+}
+
+
+/* ---------- nav: language switch (shared with home page) ---------- */
+.nav-tools { display: flex; align-items: center; gap: 10px; margin-left: auto; }
+.nav-lang { display: inline-flex; padding: 3px; border-radius: 999px; background: rgba(255, 255, 255, 0.1); }
+.nav-lang button { border: 0; background: transparent; color: rgba(255, 255, 255, 0.75); font: inherit; font-size: 12.5px; font-weight: 600; padding: 6px 12px; min-height: 32px; border-radius: 999px; cursor: pointer; transition: background-color .15s, color .15s; }
+.nav-lang button:hover { color: #fff; }
+.nav-lang button.active { background: #fff; color: #0a3326; }
+.nav-lang button:focus-visible, .nav-link:focus-visible, .nav-brand:focus-visible { outline: 3px solid #f4b13e; outline-offset: 2px; }
+.site-nav { justify-content: flex-start; gap: 14px; }
+.site-nav .nav-links { margin-left: 8px; }
+
+/* Long inline content must never push the page sideways on phones */
+.legal-content code, .content code, main code { overflow-wrap: anywhere; }
+main, section, .data-matrix-wrap { max-width: 100%; }
+@media (max-width: 640px) {
+    .site-nav { flex-wrap: wrap; row-gap: 6px; padding-top: 8px; padding-bottom: 8px; }
+    .site-nav .nav-links { order: 3; width: 100%; margin: 0; justify-content: flex-start; }
+    .nav-tools { margin-left: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
 }
