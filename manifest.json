@@ -1,0 +1,20 @@
+{
+  "name": "Mukto Keyboard (মুক্ত কিবোর্ড)",
+  "short_name": "মুক্ত কিবোর্ড",
+  "description": "মুক্ত কিবোর্ড (Mukto App / mukto.bd) — অ্যান্ড্রয়েডের জন্য দ্রুততম, প্রাইভেট ও আধুনিক বাংলা কিবোর্ড।",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#07150e",
+  "theme_color": "#0a3326",
+  "orientation": "portrait",
+  "lang": "bn",
+  "icons": [
+    {
+      "src": "assets/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
