@@ -1,7 +1,7 @@
 :root {
     --ink: #10231c;
     --ink-2: #3b4f47;
-    --mute: #66796f;
+    --mute: #496356;
     --paper: #ffffff;
     --mist: #f1f5f1;
     --line: #dbe4dd;
@@ -386,7 +386,7 @@ html[data-lang="bn"] .section-head h2 { line-height: 1.32; letter-spacing: 0; fo
     color: var(--green-800);
 }
 .k-o {
-    color: #d97706;
+    color: #b45309;
 }
 .k-g {
     color: var(--green-700);
