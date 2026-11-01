@@ -1,4 +1,3 @@
-/* Legal pages: back-to-top button. Language switching lives in lang.js. */
 (function () {
     'use strict';
     window.scrollToTop = function () { window.scrollTo({ top: 0, behavior: 'smooth' }); };
