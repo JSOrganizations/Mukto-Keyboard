@@ -945,6 +945,15 @@ html[data-lang="bn"] .cta h2 { line-height: 1.32; letter-spacing: 0; }
     padding: 4px 12px;
     border-radius: 999px;
     margin-bottom: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    line-height: 1.4;
+}
+.dl-card-tag .tag-ic {
+    width: 13px;
+    height: 13px;
+    flex-shrink: 0;
 }
 .tag-recommended {
     background: var(--sun);
@@ -1138,6 +1147,19 @@ html[data-lang="bn"] .cta h2 { line-height: 1.32; letter-spacing: 0; }
     margin-bottom: 48px;
     position: relative;
     z-index: 2;
+}
+.dl-verify-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.dl-verify-title .ic {
+    width: 20px;
+    height: 20px;
+    color: var(--green-600);
 }
 .dl-verify-grid {
     display: grid;

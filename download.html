@@ -35,7 +35,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=Hind+Siliguri:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20261031a" />
+    <link rel="stylesheet" href="style.css?v=20261101a" />
 
     <script type="application/json" id="page-meta">
     {
@@ -112,6 +112,9 @@
         <symbol id="i-android" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M17.5 15.3a1 1 0 110-2 1 1 0 010 2m-11 0a1 1 0 110-2 1 1 0 010 2m11.4-6l2-3.46a.42.42 0 00-.72-.42l-2.03 3.5a12.4 12.4 0 00-10.3 0L4.82 5.43a.42.42 0 00-.72.42l2 3.46C2.69 11.19.34 14.66 0 18.76h24c-.34-4.1-2.69-7.57-6.1-9.45"/></symbol>
         <symbol id="i-play-store" viewBox="0 0 512 512"><path fill="#4285F4" d="M48.7 13.9c-9.2 9.9-14.5 24.7-14.5 42.5v399.2c0 17.8 5.3 32.6 14.5 42.5l2.4 2.3L275.6 275.9v-5.8L51.1 11.6l-2.4 2.3z"/><path fill="#FBBC04" d="M353.4 353.8l-77.8-77.9v-5.8l77.8-77.9 1.8 1 92.1 52.3c26.3 14.9 26.3 39.4 0 54.4l-92.1 52.3-1.8 1.6z"/><path fill="#EA4335" d="M355.2 352.2L275.6 273 51.1 497.5c8.7 9.2 23 10.3 39.1 1.2l265-146.5"/><path fill="#34A853" d="M355.2 159.8L90.2 13.3c-16.1-9.1-30.4-8-39.1 1.2L275.6 239l79.6-79.2z"/></symbol>
         <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"/><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8L19 16z"/></symbol>
+        <symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor" stroke="none"/></symbol>
+        <symbol id="i-bolt" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="currentColor" stroke="none"/></symbol>
+        <symbol id="i-feather" viewBox="0 0 24 24"><path d="M20.24 12.24a6 6 0 00-8.49-8.49L5 10.5V19h8.5z"/><line x1="16" y1="8" x2="2" y2="22"/></symbol>
     </defs>
 </svg>
 
@@ -225,9 +228,10 @@
 
             <div class="dl-card featured" data-arch="universal">
                 <span class="dl-card-tag tag-recommended">
-                    <span class="lang-bn">★ সুপারিশকৃত • সকল ডিভাইস</span>
-                    <span class="lang-en">★ Recommended • All Devices</span>
-                    <span class="lang-bl">★ Recommended • Shob Device</span>
+                    <svg class="ic tag-ic" aria-hidden="true"><use href="#i-star"/></svg>
+                    <span class="lang-bn">সুপারিশকৃত • সকল ডিভাইস</span>
+                    <span class="lang-en">Recommended • All Devices</span>
+                    <span class="lang-bl">Recommended • Shob Device</span>
                 </span>
                 <div class="dl-card-header">
                     <h2 class="dl-card-title">Universal Build</h2>
@@ -273,9 +277,10 @@
 
             <div class="dl-card" data-arch="arm64-v8a">
                 <span class="dl-card-tag tag-fast">
-                    <span class="lang-bn">⚡ দ্রুততম • ছোট সাইজ</span>
-                    <span class="lang-en">⚡ Fastest • Compact</span>
-                    <span class="lang-bl">⚡ Fastest • Choto Size</span>
+                    <svg class="ic tag-ic" aria-hidden="true"><use href="#i-bolt"/></svg>
+                    <span class="lang-bn">দ্রুততম • ছোট সাইজ</span>
+                    <span class="lang-en">Fastest • Compact</span>
+                    <span class="lang-bl">Fastest • Choto Size</span>
                 </span>
                 <div class="dl-card-header">
                     <h2 class="dl-card-title">ARM64-v8a Build</h2>
@@ -321,9 +326,10 @@
 
             <div class="dl-card" data-arch="armeabi-v7a">
                 <span class="dl-card-tag tag-light">
-                    <span class="lang-bn">🪶 আল্ট্রা-লাইট • ৩২-বিট</span>
-                    <span class="lang-en">🪶 Ultra-Light • 32-bit</span>
-                    <span class="lang-bl">🪶 Ultra-Light • 32-bit</span>
+                    <svg class="ic tag-ic" aria-hidden="true"><use href="#i-feather"/></svg>
+                    <span class="lang-bn">আল্ট্রা-লাইট • ৩২-বিট</span>
+                    <span class="lang-en">Ultra-Light • 32-bit</span>
+                    <span class="lang-bl">Ultra-Light • 32-bit</span>
                 </span>
                 <div class="dl-card-header">
                     <h2 class="dl-card-title">ARMeabi-v7a Build</h2>
@@ -465,10 +471,11 @@
         </div>
 
         <div class="dl-verify-banner">
-            <h3 style="font-size:1.25rem;font-weight:800;color:var(--ink);">
-                <span class="lang-bn">🔒 নিরাপত্তা ও সততা গ্যারান্টি</span>
-                <span class="lang-en">🔒 Security &amp; Integrity Guarantee</span>
-                <span class="lang-bl">🔒 Security o Shotto Guarantee</span>
+            <h3 class="dl-verify-title">
+                <svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg>
+                <span class="lang-bn">নিরাপত্তা ও সততা গ্যারান্টি</span>
+                <span class="lang-en">Security &amp; Integrity Guarantee</span>
+                <span class="lang-bl">Security o Shotto Guarantee</span>
             </h3>
             <div class="dl-verify-grid">
                 <div class="dl-verify-item">
