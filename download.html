@@ -203,9 +203,9 @@
     <div class="wrap dl-hero-inner">
         <div class="dl-version-badge" id="versionBadge">
             <span class="pulse-dot"></span>
-            <span class="lang-bn">সংস্করণ <span class="val-ver-bn">৩.৫</span> • বিল্ড <span class="val-code-bn">২০</span> • Android <span class="val-sdk-bn">৭.০</span>+ (Nougat এবং পরবর্তী)</span>
-            <span class="lang-en">Version <span class="val-ver-en">3.5</span> • Build <span class="val-code-en">20</span> • Android <span class="val-sdk-en">7.0</span>+ (Nougat &amp; above)</span>
-            <span class="lang-bl">Version <span class="val-ver-bl">3.5</span> • Build <span class="val-code-bl">20</span> • Android <span class="val-sdk-bl">7.0</span>+ (Nougat &amp; above)</span>
+            <span class="lang-bn">সংস্করণ <span class="val-ver-bn">৩.৫</span> • বিল্ড <span class="val-code-bn">২০</span> • Android <span class="val-sdk-bn">৭.০</span>+ (Nougat এবং পরবর্তী)<span class="val-hero-date-wrap" style="display:none"> • <span class="val-hero-date-bn"></span></span></span>
+            <span class="lang-en">Version <span class="val-ver-en">3.5</span> • Build <span class="val-code-en">20</span> • Android <span class="val-sdk-en">7.0</span>+ (Nougat &amp; above)<span class="val-hero-date-wrap" style="display:none"> • <span class="val-hero-date-en"></span></span></span>
+            <span class="lang-bl">Version <span class="val-ver-bl">3.5</span> • Build <span class="val-code-bl">20</span> • Android <span class="val-sdk-bl">7.0</span>+ (Nougat &amp; above)<span class="val-hero-date-wrap" style="display:none"> • <span class="val-hero-date-bl"></span></span></span>
         </div>
 
         <h1>
@@ -258,6 +258,14 @@
                         <span class="dl-spec-val val-size">73.5 MB</span>
                     </div>
                     <div class="dl-spec-row">
+                        <span class="dl-spec-label"><span class="lang-bn">আপলোড</span><span class="lang-en">Uploaded</span><span class="lang-bl">Uploaded</span></span>
+                        <span class="dl-spec-val val-upload-time">
+                            <span class="lang-bn val-time-bn">—</span>
+                            <span class="lang-en val-time-en">—</span>
+                            <span class="lang-bl val-time-bl">—</span>
+                        </span>
+                    </div>
+                    <div class="dl-spec-row">
                         <span class="dl-spec-label"><span class="lang-bn">উপযোগী</span><span class="lang-en">Target</span><span class="lang-bl">Target</span></span>
                         <span class="dl-spec-val"><span class="lang-bn">Android ৭.০+ সকল ফোন</span><span class="lang-en">Android 7.0+ All Phones</span><span class="lang-bl">Android 7.0+ Shob Phone</span></span>
                     </div>
@@ -307,6 +315,14 @@
                         <span class="dl-spec-val val-size">29.2 MB</span>
                     </div>
                     <div class="dl-spec-row">
+                        <span class="dl-spec-label"><span class="lang-bn">আপলোড</span><span class="lang-en">Uploaded</span><span class="lang-bl">Uploaded</span></span>
+                        <span class="dl-spec-val val-upload-time">
+                            <span class="lang-bn val-time-bn">—</span>
+                            <span class="lang-en val-time-en">—</span>
+                            <span class="lang-bl val-time-bl">—</span>
+                        </span>
+                    </div>
+                    <div class="dl-spec-row">
                         <span class="dl-spec-label"><span class="lang-bn">উপযোগী</span><span class="lang-en">Target</span><span class="lang-bl">Target</span></span>
                         <span class="dl-spec-val"><span class="lang-bn">আধুনিক স্মার্টফোন (৬৪-বিট)</span><span class="lang-en">Modern Phones (64-bit)</span><span class="lang-bl">Modern Phones (64-bit)</span></span>
                     </div>
@@ -354,6 +370,14 @@
                     <div class="dl-spec-row">
                         <span class="dl-spec-label"><span class="lang-bn">সাইজ</span><span class="lang-en">Size</span><span class="lang-bl">Size</span></span>
                         <span class="dl-spec-val val-size">24.6 MB</span>
+                    </div>
+                    <div class="dl-spec-row">
+                        <span class="dl-spec-label"><span class="lang-bn">আপলোড</span><span class="lang-en">Uploaded</span><span class="lang-bl">Uploaded</span></span>
+                        <span class="dl-spec-val val-upload-time">
+                            <span class="lang-bn val-time-bn">—</span>
+                            <span class="lang-en val-time-en">—</span>
+                            <span class="lang-bl val-time-bl">—</span>
+                        </span>
                     </div>
                     <div class="dl-spec-row">
                         <span class="dl-spec-label"><span class="lang-bn">উপযোগী</span><span class="lang-en">Target</span><span class="lang-bl">Target</span></span>
@@ -632,13 +656,123 @@
         return map[sdk] || (sdk ? (sdk - 17) + '.0' : '7.0');
     }
 
+    var monthsBn = ['জানুয়ারি', 'ফেব্রুয়ারি', 'মার্চ', 'এপ্রিল', 'মে', 'জুন', 'জুলাই', 'আগস্ট', 'সেপ্টেম্বর', 'অক্টোবর', 'নভেম্বর', 'ডিসেম্বর'];
+    var monthsEn = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+    function formatDateTime(d, lang) {
+        if (!d || isNaN(d.getTime())) return null;
+        var day = d.getDate();
+        var month = d.getMonth();
+        var year = d.getFullYear();
+        var hours = d.getHours();
+        var minutes = d.getMinutes();
+        var ampm = hours >= 12 ? 'PM' : 'AM';
+        var h12 = hours % 12 || 12;
+        var minStr = (minutes < 10 ? '0' : '') + minutes;
+
+        if (lang === 'bn') {
+            var period = '';
+            if (hours >= 4 && hours < 6) period = 'ভোর ';
+            else if (hours >= 6 && hours < 12) period = 'সকাল ';
+            else if (hours >= 12 && hours < 15) period = 'দুপুর ';
+            else if (hours >= 15 && hours < 18) period = 'বিকাল ';
+            else if (hours >= 18 && hours < 20) period = 'সন্ধ্যা ';
+            else period = 'রাত ';
+            return toBnNum(day) + ' ' + monthsBn[month] + ' ' + toBnNum(year) + ', ' + period + toBnNum(h12) + ':' + toBnNum(minStr);
+        } else {
+            var dayStr = (day < 10 ? '0' : '') + day;
+            var hStr = (h12 < 10 ? '0' : '') + h12;
+            return dayStr + ' ' + monthsEn[month] + ' ' + year + ', ' + hStr + ':' + minStr + ' ' + ampm;
+        }
+    }
+
+    function formatDateOnly(d, lang) {
+        if (!d || isNaN(d.getTime())) return null;
+        var day = d.getDate();
+        var month = d.getMonth();
+        var year = d.getFullYear();
+        if (lang === 'bn') {
+            return toBnNum(day) + ' ' + monthsBn[month] + ' ' + toBnNum(year);
+        } else {
+            var dayStr = (day < 10 ? '0' : '') + day;
+            return dayStr + ' ' + monthsEn[month] + ' ' + year;
+        }
+    }
+
+    function getRelativeTime(d, lang) {
+        if (!d || isNaN(d.getTime())) return '';
+        var diffMs = Date.now() - d.getTime();
+        if (diffMs < 0) diffMs = 0;
+        var diffSec = Math.floor(diffMs / 1000);
+        var diffMin = Math.floor(diffSec / 60);
+        var diffHr = Math.floor(diffMin / 60);
+        var diffDay = Math.floor(diffHr / 24);
+
+        if (lang === 'bn') {
+            if (diffDay === 0) {
+                if (diffHr === 0) return (diffMin <= 1 ? 'এইমাত্র' : toBnNum(diffMin) + ' মিনিট আগে');
+                return toBnNum(diffHr) + ' ঘণ্টা আগে';
+            } else if (diffDay === 1) return 'গতকাল';
+            else if (diffDay < 30) return toBnNum(diffDay) + ' দিন আগে';
+            else if (diffDay < 365) return toBnNum(Math.floor(diffDay / 30)) + ' মাস আগে';
+            return toBnNum(Math.floor(diffDay / 365)) + ' বছর আগে';
+        } else {
+            if (diffDay === 0) {
+                if (diffHr === 0) return (diffMin <= 1 ? 'Just now' : diffMin + ' mins ago');
+                return diffHr + ' hours ago';
+            } else if (diffDay === 1) return 'Yesterday';
+            else if (diffDay < 30) return diffDay + ' days ago';
+            else if (diffDay < 365) return Math.floor(diffDay / 30) + ' months ago';
+            return Math.floor(diffDay / 365) + ' years ago';
+        }
+    }
+
+    function updateHeroDate(d) {
+        if (!d || isNaN(d.getTime())) return;
+        var heroBn = document.querySelector('.val-hero-date-bn');
+        var heroEn = document.querySelector('.val-hero-date-en');
+        var heroBl = document.querySelector('.val-hero-date-bl');
+        var dBn = formatDateOnly(d, 'bn');
+        var dEn = formatDateOnly(d, 'en');
+        if (heroBn) heroBn.textContent = dBn;
+        if (heroEn) heroEn.textContent = dEn;
+        if (heroBl) heroBl.textContent = dEn;
+        document.querySelectorAll('.val-hero-date-wrap').forEach(function (el) {
+            el.style.display = 'inline';
+        });
+    }
+
+    function setCardUploadTime(card, dateObj) {
+        if (!card || !dateObj || isNaN(dateObj.getTime())) return;
+        var tBn = formatDateTime(dateObj, 'bn');
+        var tEn = formatDateTime(dateObj, 'en');
+        var relBn = getRelativeTime(dateObj, 'bn');
+        var relEn = getRelativeTime(dateObj, 'en');
+
+        var elBn = card.querySelector('.val-time-bn');
+        var elEn = card.querySelector('.val-time-en');
+        var elBl = card.querySelector('.val-time-bl');
+        if (elBn && tBn) {
+            elBn.textContent = tBn;
+            if (relBn) elBn.setAttribute('title', 'আপলোড: ' + relBn);
+        }
+        if (elEn && tEn) {
+            elEn.textContent = tEn;
+            if (relEn) elEn.setAttribute('title', 'Uploaded: ' + relEn);
+        }
+        if (elBl && tEn) {
+            elBl.textContent = tEn;
+            if (relEn) elBl.setAttribute('title', 'Uploaded: ' + relEn);
+        }
+    }
+
     function formatBytes(bytes) {
         if (!bytes || bytes <= 0) return null;
         var mb = (bytes / (1024 * 1024)).toFixed(1);
         return mb + ' MB';
     }
 
-    function updateCardFileSize(card, fileUrl) {
+    function updateCardFileInfo(card, fileUrl) {
         if (!fileUrl) return;
         fetch(fileUrl, { method: 'HEAD', cache: 'no-cache' })
             .then(function (res) {
@@ -650,6 +784,14 @@
                             card.querySelectorAll('.val-size').forEach(function (el) {
                                 el.textContent = sizeStr;
                             });
+                        }
+                    }
+                    var lastMod = res.headers.get('last-modified');
+                    if (lastMod) {
+                        var dt = new Date(lastMod);
+                        if (!isNaN(dt.getTime())) {
+                            setCardUploadTime(card, dt);
+                            updateHeroDate(dt);
                         }
                     }
                 }
@@ -697,6 +839,16 @@
     fetch('download/output-metadata.json?t=' + Date.now(), { cache: 'no-cache' })
         .then(function (res) {
             if (!res.ok) throw new Error('metadata not found');
+            var metaLastMod = res.headers.get('last-modified');
+            if (metaLastMod) {
+                var metaDt = new Date(metaLastMod);
+                if (!isNaN(metaDt.getTime())) {
+                    updateHeroDate(metaDt);
+                    document.querySelectorAll('.dl-card[data-arch]').forEach(function (card) {
+                        setCardUploadTime(card, metaDt);
+                    });
+                }
+            }
             return res.json();
         })
         .then(function (data) {
@@ -781,7 +933,7 @@
                         fileSpec.textContent = fileName;
                     }
 
-                    updateCardFileSize(card, fileUrl);
+                    updateCardFileInfo(card, fileUrl);
                 }
             });
         })
@@ -791,7 +943,7 @@
                 var btn = card.querySelector('.dl-card-btn');
                 if (btn) {
                     var fileUrl = btn.getAttribute('href');
-                    updateCardFileSize(card, fileUrl);
+                    updateCardFileInfo(card, fileUrl);
                 }
             });
         });
