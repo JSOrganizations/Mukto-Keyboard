@@ -766,6 +766,49 @@
         }
     }
 
+    function applyReleaseDate(d) {
+        if (!d || isNaN(d.getTime())) return;
+        updateHeroDate(d);
+        document.querySelectorAll('.dl-card[data-arch]').forEach(function (card) {
+            setCardUploadTime(card, d);
+        });
+    }
+
+    function fetchApkReleaseDate() {
+        var CACHE_KEY = 'mukto.apk_release_time_v1';
+        try {
+            var cachedRaw = localStorage.getItem(CACHE_KEY);
+            if (cachedRaw) {
+                var cached = JSON.parse(cachedRaw);
+                if (cached && cached.date) {
+                    var cDate = new Date(cached.date);
+                    if (!isNaN(cDate.getTime())) {
+                        applyReleaseDate(cDate);
+                    }
+                }
+            }
+        } catch (e) {}
+
+        fetch('https://api.github.com/repos/JSOrganizations/Mukto-Keyboard/commits?path=download&per_page=1')
+            .then(function (res) {
+                if (!res.ok) throw new Error('API error');
+                return res.json();
+            })
+            .then(function (data) {
+                if (Array.isArray(data) && data[0] && data[0].commit && data[0].commit.committer && data[0].commit.committer.date) {
+                    var dateStr = data[0].commit.committer.date;
+                    var dt = new Date(dateStr);
+                    if (!isNaN(dt.getTime())) {
+                        applyReleaseDate(dt);
+                        try {
+                            localStorage.setItem(CACHE_KEY, JSON.stringify({ date: dateStr, timestamp: Date.now() }));
+                        } catch (e) {}
+                    }
+                }
+            })
+            .catch(function () {});
+    }
+
     function formatBytes(bytes) {
         if (!bytes || bytes <= 0) return null;
         var mb = (bytes / (1024 * 1024)).toFixed(1);
@@ -784,14 +827,6 @@
                             card.querySelectorAll('.val-size').forEach(function (el) {
                                 el.textContent = sizeStr;
                             });
-                        }
-                    }
-                    var lastMod = res.headers.get('last-modified');
-                    if (lastMod) {
-                        var dt = new Date(lastMod);
-                        if (!isNaN(dt.getTime())) {
-                            setCardUploadTime(card, dt);
-                            updateHeroDate(dt);
                         }
                     }
                 }
@@ -836,19 +871,11 @@
         schemaEl.textContent = JSON.stringify(schemaData, null, 2);
     }
 
+    fetchApkReleaseDate();
+
     fetch('download/output-metadata.json?t=' + Date.now(), { cache: 'no-cache' })
         .then(function (res) {
             if (!res.ok) throw new Error('metadata not found');
-            var metaLastMod = res.headers.get('last-modified');
-            if (metaLastMod) {
-                var metaDt = new Date(metaLastMod);
-                if (!isNaN(metaDt.getTime())) {
-                    updateHeroDate(metaDt);
-                    document.querySelectorAll('.dl-card[data-arch]').forEach(function (card) {
-                        setCardUploadTime(card, metaDt);
-                    });
-                }
-            }
             return res.json();
         })
         .then(function (data) {
