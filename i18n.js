@@ -250,6 +250,7 @@ window.I18N = {
     "b6.l2": { en: "Floating screenshot preview card: 1-tap instant share in chat apps", bl: "Floating screenshot preview card: chat-e 1-tape instant send" },
     "b6.l3": { en: "Configurable auto-expiry timer (15 mins to 24 hrs) & password protection", bl: "Auto-expiry timer (15 min theke 24 ghonta) o password shurokkha" },
     "b6.alt": { en: "Demo of smart clipboard history, auto-expiry, and floating screenshot card", bl: "Smart clipboard history, auto-expiry o floating screenshot card-er demo" },
+    "b6.cap": { en: "Live screenshot preview & clipboard demo", bl: "Live screenshot preview o clipboard demo" },
 
     "b7.t": { en: "1,000x text repeater & smart text shortcuts", bl: "1,000x text repeater o smart text shortcut" },
     "b7.d": { en: "Repeat any word, emoji, or message up to 1,000 times in 1 click. Choose newline, space, or comma delimiters with Bengali (১, ২, ৩) or English (1, 2, 3) numbering. Plus smart text shortcuts that expand on pressing the spacebar.", bl: "Jekono shobdo ba bakkho 1 theke 1,000 bar porjonto repeat korun 1-click-e. Newline, space ba comma delimiter ebong Bangla (১, ২, ৩) ba English (1, 2, 3) numbering. Sathe spacebar-e smart shortcut auto-expansion." },

@@ -63,7 +63,42 @@
             });
         }, { rootMargin: '80px' });
         demos.forEach(function (d) { io.observe(d); });
+
+        var vids = document.querySelectorAll('.phone-video');
+        var vidIo = new IntersectionObserver(function (entries) {
+            entries.forEach(function (en) {
+                var v = en.target;
+                var mock = v.closest('.phone-mockup');
+                if (en.isIntersecting) {
+                    if (!mock || !mock.classList.contains('user-paused')) {
+                        v.play().catch(function () {});
+                    }
+                } else {
+                    v.pause();
+                }
+            });
+        }, { threshold: 0.25 });
+        vids.forEach(function (v) { vidIo.observe(v); });
     }
+
+    var phoneMocks = document.querySelectorAll('.phone-mockup');
+    phoneMocks.forEach(function (mock) {
+        var vid = mock.querySelector('video');
+        if (!vid) return;
+        mock.addEventListener('click', function () {
+            if (vid.paused) {
+                vid.play().catch(function () {});
+                mock.classList.remove('paused', 'user-paused');
+            } else {
+                vid.pause();
+                mock.classList.add('paused', 'user-paused');
+            }
+        });
+        vid.addEventListener('play', function () { mock.classList.remove('paused'); });
+        vid.addEventListener('pause', function () {
+            if (mock.classList.contains('user-paused')) mock.classList.add('paused');
+        });
+    });
 
         fetch('download/output-metadata.json?t=' + Date.now(), { cache: 'no-cache' })
         .then(function (res) { return res.ok ? res.json() : null; })
