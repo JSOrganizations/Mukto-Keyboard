@@ -259,12 +259,6 @@ window.I18N = {
     "b7.l3": { en: "Spacebar shortcut auto-expansion & 1-tap instant copy or send", bl: "Spacebar shortcut auto-expansion o 1-tape copy ba send" },
     "b7.alt": { en: "Demo of 1,000x text repeater with numbering and smart shortcuts", bl: "1000x text repeater o smart shortcut-er demo" },
 
-    "b8.t": { en: "Learned words intelligence & privacy dashboard", bl: "Learned words intelligence o privacy dashboard" },
-    "b8.d": { en: "100% on-device Bigram next-word prediction engine tailored to your typing style. View your vocabulary statistics and frequency distribution chart, and clean typo words in 1 click.", bl: "100% on-device Bigram next-word prediction engine. Analytics dashboard-e shobder statistics, frequency chart o 1-click-e typo shobdo clean korar subidha." },
-    "b8.l1": { en: "On-device Bigram next-word predictive engine", bl: "On-device Bigram next-word prediction engine" },
-    "b8.l2": { en: "7 key performance metrics & frequency distribution chart", bl: "7-ti KPI metric o frequency distribution chart" },
-    "b8.l3": { en: "1-click 'Clear <5 Typo Words' & configurable auto-cleanup", bl: "1-click-e 'Clear <5 Typo Words' o auto-delete threshold" },
-    "b8.alt": { en: "Demo of vocabulary analytics dashboard, KPI metrics, and typo cleaner", bl: "Learned words analytics dashboard, KPI metric o typo cleaner demo" },
 
     "m1.t": { en: "20+ drag-and-drop toolbar actions", bl: "20+ drag-and-drop toolbar action" },
     "m1.d": { en: "Drag to arrange: clipboard, D-pad, translator, theme studio, shortcuts, text repeater, OCR, and settings freely.", bl: "Drag kore nijer moto shajan: clipboard, D-pad, translator, theme studio, shortcut, repeater, OCR o settings." },
@@ -300,8 +294,8 @@ window.I18N = {
     "m16.d": { en: "Fine-tune Background, Keys, Suggestions, and Functional Keys colors, corner radii, and opacity individually.", bl: "Background, Keys, Suggestions o Functional Keys—protitir color, corner radius o opacity alada customize korun." },
     "m17.t": { en: "Boomerang video themes & playback control", bl: "Boomerang video theme o playback control" },
     "m17.d": { en: "25-second trimmer, 90° rotation, crop, zoom, reverse loop, and resume vs restart on keyboard open.", bl: "25 second trimmer, 90° rotate, crop, zoom, boomerang loop o keyboard khulle resume/restart control." },
-    "m18.t": { en: "In-app deep-link navigation & privacy", bl: "In-app deep-link navigation o privacy" },
-    "m18.d": { en: "Jump directly to any feature with bnkb://settings, bnkb://theme, etc. 100% private with zero keylogging.", bl: "bnkb://settings, bnkb://theme ityadi deep-link diye 1-click-e feature open. 100% private o zero keylogging." },
+    "m18.t": { en: "100% Offline & Private by Design", bl: "100% Offline o privacy shurokkha" },
+    "m18.d": { en: "Zero cloud tracking or developer servers. Your keystrokes and personal data stay strictly on your device.", bl: "Kono server ba cloud tracking nei. Apnar typing o protiti okkhor kebol apnar phone-ei thake." },
     "s1.n": { en: "5", bl: "5-ti" },
     "s1.t": { en: "Full layouts", bl: "Purnango layout" },
     "s1.d": { en: "Avro, Bangla Alphabetical, Probhat, National & English", bl: "Avro, Bangla Bornonukromik, Probhat, Jatiya o English" },
