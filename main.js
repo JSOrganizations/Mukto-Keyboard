@@ -118,3 +118,49 @@
         })
         .catch(function () {});
 })();
+
+(function () {
+    'use strict';
+    var sec = document.getElementById('showcase');
+    if (!sec) return;
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var vids = [].slice.call(sec.querySelectorAll('.show-video'));
+    function load(v) { if (!v.getAttribute('src') && v.dataset.src) v.src = v.dataset.src; }
+    if ('IntersectionObserver' in window) {
+        var near = new IntersectionObserver(function (es) {
+            es.forEach(function (e) { if (e.isIntersecting) { load(e.target); near.unobserve(e.target); } });
+        }, { rootMargin: '500px 0px' });
+        var act = new IntersectionObserver(function (es) {
+            es.forEach(function (e) {
+                var v = e.target, m = v.closest('.phone-mockup');
+                if (e.isIntersecting) {
+                    if (!reduce && !m.classList.contains('user-paused')) { load(v); v.play().catch(function () {}); }
+                } else { v.pause(); }
+            });
+        }, { threshold: 0.45 });
+        vids.forEach(function (v) { near.observe(v); act.observe(v); });
+    } else if (!reduce) {
+        vids.forEach(function (v) { load(v); v.play().catch(function () {}); });
+    }
+
+    var box = sec.querySelector('.mkc-box');
+    var range = box.querySelector('input');
+    function setPos(v) { box.style.setProperty('--pos', v + '%'); }
+    range.addEventListener('input', function () { box.classList.add('moved'); setPos(range.value); });
+    if ('IntersectionObserver' in window && !reduce) {
+        var sweep = new IntersectionObserver(function (es) {
+            if (!es[0].isIntersecting) return;
+            sweep.disconnect();
+            var t0 = null;
+            (function step(ts) {
+                if (box.classList.contains('moved')) return;
+                if (t0 === null) t0 = ts;
+                var p = Math.min((ts - t0) / 1800, 1), e = 1 - Math.pow(1 - p, 3), v = 100 - 50 * e;
+                range.value = v; setPos(v);
+                if (p < 1) requestAnimationFrame(step);
+            })(performance.now());
+        }, { threshold: 0.6 });
+        range.value = 100; setPos(100);
+        sweep.observe(box);
+    }
+})();
