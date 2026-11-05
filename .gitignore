@@ -5,3 +5,5 @@ Work/
 .DS_Store
 Thumbs.db
 *.tmp
+*.unreleased*
+*.apk.bak
