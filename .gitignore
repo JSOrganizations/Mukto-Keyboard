@@ -6,4 +6,7 @@ Work/
 Thumbs.db
 *.tmp
 *.unreleased*
+# APK files (kept locally as backup, discontinued from repository)
+download/*.apk
+*.apk
 *.apk.bak

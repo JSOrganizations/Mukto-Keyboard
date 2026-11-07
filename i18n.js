@@ -19,7 +19,8 @@ window.I18N = {
     "hero.pill2": { en: "Zero Keylogging Guarantee", bl: "Zero Keylogging Guarantee" },
     "hero.pill3": { en: "5 Core Layouts + Numpad", bl: "5 Full Layouts + Numpad" },
     "hero.play": { en: "Get it on Google Play", bl: "Google Play-te nin" },
-    "hero.apk": { en: "Download APK", bl: "APK Download" },
+    "hero.playBtn": { en: "Install from Google Play", bl: "Google Play theke install korun" },
+    "hero.apk": { en: "Install from Google Play", bl: "Google Play theke install korun" },
     "hero.more": { en: "See all features", bl: "Shob feature dekhun" },
 
         "km.title": { en: "Avro phonetic key map", bl: "Avro phonetic key-map" },
@@ -188,8 +189,8 @@ window.I18N = {
     "faq.11.a": { en: "Repeat any word or message from 1 to 1,000 times with newline, space, or comma separators, and add Bengali (১, ২, ৩) or English (1, 2, 3) numbering with 1-tap copy or direct send.", bl: "Jekono shobdo ba bakkho 1 theke 1,000 bar porjonto repeat kora jay. Newline, space ba comma separator ebong Bangla (১, ২, ৩) ba English (1, 2, 3) numbering jog kore 1-tape copy ba pathano jay." },
 
         "cta.title": { en: "Join free and safe typing", bl: "Shadhin o nirapod typing-e join korun" },
-    "cta.lead": { en: "Install now with the direct APK. The public Google Play release is coming soon. 100% free and private, with no hidden ads or tracking.", bl: "Ekhoni shorashori APK download kore install korun, Google Play-te public release ashche shighroi. Shompurno free o private, kono lukano bigyapon ba tracking chhara." },
-    "cta.apk": { en: "Download APK Directly", bl: "Shorashori APK Download" },
+    "cta.lead": { en: "Install Mukto Keyboard now directly from Google Play Store. 100% free and private, with no hidden ads or tracking.", bl: "Ekhoni Google Play Store theke Mukto Keyboard install korun. Shompurno free o private, kono lukano bigyapon ba tracking chhara." },
+    "cta.apk": { en: "Get it on Google Play", bl: "Google Play theke download korun" },
 
         "ft.privacy": { en: "Privacy Policy", bl: "Privacy Policy" },
     "ft.terms": { en: "Terms of Use", bl: "Terms of Use" },
