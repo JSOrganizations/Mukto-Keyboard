@@ -975,6 +975,16 @@ html[data-lang="bn"] .cta h2 { line-height: 1.32; letter-spacing: 0; }
 }
 
 @media (max-width: 480px) {
+    .btn {
+        white-space: normal;
+        text-align: center;
+        max-width: 100%;
+    }
+    .btn-lg {
+        padding: 11px 16px;
+        font-size: 0.92rem;
+        min-height: 46px;
+    }
     .nav-inner { gap: 8px; }
     .nav-tools { gap: 8px; }
     .brand { gap: 8px; }
@@ -1205,7 +1215,17 @@ html[data-lang="bn"] .cta h2 { line-height: 1.32; letter-spacing: 0; }
 }
 .dl-card-btn {
     width: 100%;
-    margin-bottom: 14px;
+    max-width: 480px;
+    margin: 0 auto;
+    justify-content: center;
+    font-size: 1.04rem;
+    padding: 13px 24px;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.35;
+    box-sizing: border-box;
+    word-break: normal;
+    overflow-wrap: break-word;
 }
 .dl-hash-box {
     position: relative;
@@ -1389,6 +1409,32 @@ html[data-lang="bn"] .cta h2 { line-height: 1.32; letter-spacing: 0; }
         padding: 24px 20px;
         flex-direction: column;
         align-items: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    .dl-card {
+        padding: 24px 16px 30px;
+    }
+    .dl-card-specs {
+        padding: 10px 12px;
+        font-size: 0.8rem;
+        margin-bottom: 20px;
+    }
+    .dl-card-desc {
+        font-size: 0.88rem;
+        margin-bottom: 16px;
+    }
+    .dl-card-btn {
+        padding: 12px 14px;
+        font-size: 0.92rem;
+        gap: 8px;
+        min-height: 48px;
+        border-radius: 999px;
+    }
+    .dl-card-btn .ic {
+        width: 19px;
+        height: 19px;
     }
 }
 
