@@ -26,7 +26,7 @@ html {
 }
 
 body {
-    font-family: 'Bricolage Grotesque', 'Atma', 'Hind Siliguri', system-ui, sans-serif;
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
     background: var(--surface-2);
     color: var(--ink);
     font-size: 16px;
@@ -35,6 +35,34 @@ body {
 }
 
 body.lang-bn, .font-bangla {
+    font-family: 'Hind Siliguri', 'Bricolage Grotesque', system-ui, sans-serif;
+}
+
+body.lang-bn h1,
+body.lang-bn h2,
+body.lang-bn h3,
+body.lang-bn h4,
+body.lang-bn .hero h1,
+body.lang-bn .section-title,
+body.lang-bn .toc-card h2,
+.font-bangla h1,
+.font-bangla h2,
+.font-bangla h3,
+.font-bangla h4,
+.font-bangla .hero h1,
+.font-bangla .section-title,
+.font-bangla .toc-card h2,
+html[data-lang="bn"] h1,
+html[data-lang="bn"] h2,
+html[data-lang="bn"] h3,
+html[data-lang="bn"] h4,
+html[data-lang="bn"] .hero h1,
+html[data-lang="bn"] .section-title,
+html[data-lang="bn"] .toc-card h2,
+h1 .lang-bn,
+h2 .lang-bn,
+h3 .lang-bn,
+h4 .lang-bn {
     font-family: 'Atma', 'Hind Siliguri', 'Bricolage Grotesque', system-ui, sans-serif;
 }
 

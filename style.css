@@ -16,8 +16,9 @@
     --flag: #e5383b;
     --night: #0b1330;
 
-    --font-latin: 'Bricolage Grotesque', 'Atma', 'Hind Siliguri', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-    --font-bn: 'Atma', 'Hind Siliguri', 'Bricolage Grotesque', system-ui, sans-serif;
+    --font-latin: 'Bricolage Grotesque', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    --font-bn: 'Hind Siliguri', 'Bricolage Grotesque', system-ui, sans-serif;
+    --font-title-bn: 'Atma', 'Hind Siliguri', 'Bricolage Grotesque', system-ui, sans-serif;
 
     --r-sm: 10px;
     --r-md: 16px;
@@ -53,7 +54,33 @@ body:not(.lang-bl) .lang-bl {
 img, svg { display: block; max-width: 100%; }
 a { color: inherit; }
 code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .88em; background: var(--green-100); color: var(--green-900); padding: .1em .45em; border-radius: 6px; }
-h1, h2, h3, h4, p, ul, ol { margin: 0; }
+h1, h2, h3, h4, h5, h6, p, ul, ol { margin: 0; }
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-latin); }
+
+/* Titles and large display text for Bengali */
+html[data-lang="bn"] h1,
+html[data-lang="bn"] h2,
+html[data-lang="bn"] h3,
+html[data-lang="bn"] h4,
+html[data-lang="bn"] h5,
+html[data-lang="bn"] h6,
+body.lang-bn h1,
+body.lang-bn h2,
+body.lang-bn h3,
+body.lang-bn h4,
+body.lang-bn h5,
+body.lang-bn h6,
+.font-title-bn,
+h1 .lang-bn,
+h2 .lang-bn,
+h3 .lang-bn,
+h4 .lang-bn,
+html[data-lang="bn"] .stats strong,
+body.lang-bn .stats strong,
+html[data-lang="bn"] .ps-unit b,
+body.lang-bn .ps-unit b {
+    font-family: var(--font-title-bn);
+}
 ul, ol { padding: 0; list-style: none; }
 button { font: inherit; color: inherit; cursor: pointer; }
 
@@ -130,7 +157,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 
 .glyph {
     position: absolute;
-    font-family: var(--font-bn);
+    font-family: var(--font-title-bn);
     font-weight: 700;
     line-height: 1;
     pointer-events: none;
@@ -1379,7 +1406,7 @@ html[data-lang="bn"] .cta h2 { line-height: 1.32; letter-spacing: 0; }
 .ps-timer { display: flex; align-items: stretch; justify-content: center; gap: 6px; }
 .ps-unit { flex: 1 1 0; min-width: 0; display: grid; gap: 6px; padding: 12px 4px 10px; border-radius: 14px; background: var(--green-900); color: #fff; box-shadow: inset 0 -3px 0 rgba(0,0,0,.18); }
 .ps-unit b { font-family: var(--font-latin); font-size: clamp(1.5rem, 5vw, 2rem); font-weight: 800; line-height: 1; font-variant-numeric: tabular-nums; }
-html[data-lang="bn"] .ps-unit b { font-family: var(--font-bn); }
+html[data-lang="bn"] .ps-unit b { font-family: var(--font-title-bn); }
 .ps-unit > span { font-size: .72rem; font-weight: 600; letter-spacing: .02em; color: #a9cbbb; }
 .ps-sep { align-self: center; font-style: normal; font-size: 1.4rem; font-weight: 800; color: var(--green-700); }
 .ps-note { font-size: .85rem; color: var(--mute); }

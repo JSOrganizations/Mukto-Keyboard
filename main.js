@@ -99,24 +99,6 @@
             if (mock.classList.contains('user-paused')) mock.classList.add('paused');
         });
     });
-
-        fetch('download/output-metadata.json?t=' + Date.now(), { cache: 'no-cache' })
-        .then(function (res) { return res.ok ? res.json() : null; })
-        .then(function (data) {
-            if (!data || !Array.isArray(data.elements)) return;
-            var ver = '3.5', code = 20;
-            data.elements.forEach(function (el) {
-                if (el.versionName) ver = el.versionName;
-                if (el.versionCode) code = el.versionCode;
-            });
-            document.querySelectorAll('.app-version').forEach(function (el) {
-                el.textContent = 'v' + ver;
-            });
-            document.querySelectorAll('.app-build').forEach(function (el) {
-                el.textContent = String(code);
-            });
-        })
-        .catch(function () {});
 })();
 
 (function () {
