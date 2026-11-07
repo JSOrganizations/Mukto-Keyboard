@@ -16,8 +16,8 @@
     --flag: #e5383b;
     --night: #0b1330;
 
-    --font-latin: 'Bricolage Grotesque', 'Hind Siliguri', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-    --font-bn: 'Hind Siliguri', 'Bricolage Grotesque', system-ui, sans-serif;
+    --font-latin: 'Bricolage Grotesque', 'Atma', 'Hind Siliguri', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    --font-bn: 'Atma', 'Hind Siliguri', 'Bricolage Grotesque', system-ui, sans-serif;
 
     --r-sm: 10px;
     --r-md: 16px;

@@ -26,7 +26,7 @@ html {
 }
 
 body {
-    font-family: 'Bricolage Grotesque', 'Hind Siliguri', system-ui, sans-serif;
+    font-family: 'Bricolage Grotesque', 'Atma', 'Hind Siliguri', system-ui, sans-serif;
     background: var(--surface-2);
     color: var(--ink);
     font-size: 16px;
@@ -35,7 +35,7 @@ body {
 }
 
 body.lang-bn, .font-bangla {
-    font-family: 'Hind Siliguri', 'Bricolage Grotesque', system-ui, sans-serif;
+    font-family: 'Atma', 'Hind Siliguri', 'Bricolage Grotesque', system-ui, sans-serif;
 }
 
 body:not(.lang-en) .lang-en,
