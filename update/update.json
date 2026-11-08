@@ -4,12 +4,22 @@
     "play_store_url": "https://play.google.com/store/apps/details?id=com.mukto.keyboard",
     "whats_new": {
         "bn": [
-            "কিবোর্ডের টাইপিং স্পিড এবং স্মুথনেস উন্নত করা হয়েছে।",
-            "নতুন ফিচার সংযোজন ও সাধারণ বাগ ফিক্স করা হয়েছে।"
+            "রাউন্ডেড কী থিম: আধুনিক গোল কী-শেপ ও সার্কুলার পপআপ স্টাইল।",
+            "টুলবার রি-অর্ডার: ড্র্যাগ অ্যান্ড ড্রপ করে টুলবারের আইকন সাজানোর সুবিধা।",
+            "ইন-অ্যাপ আপডেট: সরাসরি অ্যাপের ভেতর থেকে আপডেট চেক ও ইনস্টল।",
+            "সাজেশন স্টাইলিং: সাজেশনের রঙ, হাইলাইট কালার ও ফন্ট সাইজ কন্ট্রোল।",
+            "ট্যাবলেট অপটিমাইজেশন: ট্যাবলেটে ফুল-উইডথ ও পারফেক্ট কী-হাইট।",
+            "ইনস্ট্যান্ট ইমোজি প্যানেল: দ্রুততম সময়ে ইমোজি লোডিং ও স্মুথ গ্রিড।",
+            "লং-প্রেস পপআপে নিখুঁত টাচ ট্র্যাকিং ও সাধারণ বাগ ফিক্স।"
         ],
         "en": [
-            "Improved keyboard typing speed and responsiveness.",
-            "General bug fixes and performance optimizations."
+            "Rounded Keys Theme: Circular key styling & popup highlights.",
+            "Toolbar Reordering: Drag-and-drop to reorder toolbar actions.",
+            "In-App Updates: Modern dark-themed update screen & checker.",
+            "Suggestion Styling: Custom colors, highlights & font scale.",
+            "Tablet Optimized: Edge-to-edge layout & key height tuning.",
+            "Instant Emoji Panel: Superfast loading with lazy grid cells.",
+            "Popup Refinements: Accurate touch tracking & general bug fixes."
         ]
     }
 }
