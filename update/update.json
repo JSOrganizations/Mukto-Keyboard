@@ -1,0 +1,15 @@
+{
+    "latest_version_code": 30,
+    "latest_version_name": "4.5",
+    "play_store_url": "https://play.google.com/store/apps/details?id=com.mukto.keyboard",
+    "whats_new": {
+        "bn": [
+            "কিবোর্ডের টাইপিং স্পিড এবং স্মুথনেস উন্নত করা হয়েছে।",
+            "নতুন ফিচার সংযোজন ও সাধারণ বাগ ফিক্স করা হয়েছে।"
+        ],
+        "en": [
+            "Improved keyboard typing speed and responsiveness.",
+            "General bug fixes and performance optimizations."
+        ]
+    }
+}
