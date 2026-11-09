@@ -1,25 +1,23 @@
 {
-    "latest_version_code": 30,
-    "latest_version_name": "4.5",
+    "latest_version_code": 31,
+    "latest_version_name": "4.6",
     "play_store_url": "https://play.google.com/store/apps/details?id=com.mukto.keyboard",
     "whats_new": {
         "bn": [
-            "রাউন্ডেড কী থিম: আধুনিক গোল কী-শেপ ও সার্কুলার পপআপ স্টাইল।",
-            "টুলবার রি-অর্ডার: ড্র্যাগ অ্যান্ড ড্রপ করে টুলবারের আইকন সাজানোর সুবিধা।",
-            "ইন-অ্যাপ আপডেট: সরাসরি অ্যাপের ভেতর থেকে আপডেট চেক ও ইনস্টল।",
-            "সাজেশন স্টাইলিং: সাজেশনের রঙ, হাইলাইট কালার ও ফন্ট সাইজ কন্ট্রোল।",
-            "ট্যাবলেট অপটিমাইজেশন: ট্যাবলেটে ফুল-উইডথ ও পারফেক্ট কী-হাইট।",
-            "ইনস্ট্যান্ট ইমোজি প্যানেল: দ্রুততম সময়ে ইমোজি লোডিং ও স্মুথ গ্রিড।",
-            "লং-প্রেস পপআপে নিখুঁত টাচ ট্র্যাকিং ও সাধারণ বাগ ফিক্স।"
+            "আরবি কিবোর্ড: ডেডিকেটেড আরবি লেআউট ও সম্পূর্ণ হরকত রো সংযোজন।",
+            "এআই ভয়েস অপটিমাইজার: মুখের কথায় স্বয়ংক্রিয় ব্যাকরণ ও বিরামচিহ্ন ঠিক করার সুবিধা।",
+            "স্মার্ট যতিচিহ্ন: শব্দের পর স্পেস দিয়ে যতিচিহ্ন (দাড়ি, কমা ইত্যাদি) দিলেও তা শব্দের সাথে স্বয়ংক্রিয়ভাবে জুড়ে যাওয়ার ব্যবস্থা।",
+            "আরবি প্রেডিকশন: ইসলামিক অভিবাদন ও বহুল ব্যবহৃত আরবি বাক্যসহ সাজেশন।",
+            "এএনআর ওয়াচডগ: কিবোর্ড ল্যাগ ও ক্র্যাশ রোধে উন্নত স্ট্যাবিলিটি ওয়াচডগ।",
+            "প্রভাত ও জাতীয় লেআউটে কাস্টম পপআপ রো এবং ফনেটিক ম্যাপিং উন্নয়ন।"
         ],
         "en": [
-            "Rounded Keys Theme: Circular key styling & popup highlights.",
-            "Toolbar Reordering: Drag-and-drop to reorder toolbar actions.",
-            "In-App Updates: Modern dark-themed update screen & checker.",
-            "Suggestion Styling: Custom colors, highlights & font scale.",
-            "Tablet Optimized: Edge-to-edge layout & key height tuning.",
-            "Instant Emoji Panel: Superfast loading with lazy grid cells.",
-            "Popup Refinements: Accurate touch tracking & general bug fixes."
+            "Arabic Keyboard: Dedicated Arabic layout with full Harakat vowel row.",
+            "AI Voice Optimizer: Auto-corrects grammar & punctuation in voice typing.",
+            "Smart Punctuation: Automatically attaches punctuation marks to the preceding word even if typed after a space.",
+            "Arabic Word Engine: Trie predictions with Islamic greetings & phrases.",
+            "ANR Watchdog: Prevents input freezes with safe memory handling.",
+            "Custom popups for Probhat & National layouts with phonetic updates."
         ]
     }
 }
