@@ -1,23 +1,25 @@
 {
-    "latest_version_code": 31,
-    "latest_version_name": "4.6",
+    "latest_version_code": 33,
+    "latest_version_name": "4.7.1",
     "play_store_url": "https://play.google.com/store/apps/details?id=com.mukto.keyboard",
     "whats_new": {
         "bn": [
-            "আরবি কিবোর্ড: ডেডিকেটেড আরবি লেআউট ও সম্পূর্ণ হরকত রো সংযোজন।",
-            "এআই ভয়েস অপটিমাইজার: মুখের কথায় স্বয়ংক্রিয় ব্যাকরণ ও বিরামচিহ্ন ঠিক করার সুবিধা।",
-            "স্মার্ট যতিচিহ্ন: শব্দের পর স্পেস দিয়ে যতিচিহ্ন (দাড়ি, কমা ইত্যাদি) দিলেও তা শব্দের সাথে স্বয়ংক্রিয়ভাবে জুড়ে যাওয়ার ব্যবস্থা।",
-            "আরবি প্রেডিকশন: ইসলামিক অভিবাদন ও বহুল ব্যবহৃত আরবি বাক্যসহ সাজেশন।",
-            "এএনআর ওয়াচডগ: কিবোর্ড ল্যাগ ও ক্র্যাশ রোধে উন্নত স্ট্যাবিলিটি ওয়াচডগ।",
-            "প্রভাত ও জাতীয় লেআউটে কাস্টম পপআপ রো এবং ফনেটিক ম্যাপিং উন্নয়ন।"
+            "নামপ্যাড ভাষা ইস্যু সমাধান: সক্রিয় কিবোর্ডের ভাষা অনুযায়ী (ইংরেজি, বাংলা, আরবি) নামপ্যাডের সংখ্যা স্বয়ংক্রিয়ভাবে সঠিকভাবে আসার সমাধান।",
+            "আধুনিক ক্লিপবোর্ড: ফ্রস্টেড মিল্কি ব্লার ইফেক্ট, স্প্লিট ভিউ এবং লং-প্রেস কনটেক্সট মেনু।",
+            "স্পেসবার সোয়াইপ: স্পেসবারে সহজে সোয়াইপ করে ভাষা পরিবর্তন ও দ্রুত কার্সর মুভমেন্ট।",
+            "শিফট কেস সাইক্লিং: টেক্সট সিলেক্ট করে শিফট চাপলে Title, UPPER ও lower কেসে রূপান্তর।",
+            "কমা কুইক শর্টকাট: কমা কীতে ২-সারির শর্টকাট (Undo, Redo, Cut, Copy, Paste ও Layout Manager)।",
+            "ড্র্যাগ-টু-ডিলিট: সাজেশন বার থেকে যেকোনো শেখা শব্দ সহজে টেনে উপরে ফেলে ডিলিট সুবিধা।",
+            "ক্যাটাগরাইজড সেটিংস: পরিচ্ছন্ন গ্রুপ ভিউ এবং কমা কী দেখানো বা লুকানোর অপশন।"
         ],
         "en": [
-            "Arabic Keyboard: Dedicated Arabic layout with full Harakat vowel row.",
-            "AI Voice Optimizer: Auto-corrects grammar & punctuation in voice typing.",
-            "Smart Punctuation: Automatically attaches punctuation marks to the preceding word even if typed after a space.",
-            "Arabic Word Engine: Trie predictions with Islamic greetings & phrases.",
-            "ANR Watchdog: Prevents input freezes with safe memory handling.",
-            "Custom popups for Probhat & National layouts with phonetic updates."
+            "Numpad Language Fix: Resolved stale language toggle; numpad digits now seamlessly match the active keyboard language (English, Bengali, Arabic).",
+            "Modern Clipboard: Frosted blur overlay, side-by-side split view & long-press menu.",
+            "Spacebar Swipe: Smooth gesture language switcher & direct space-swipe cursor control.",
+            "Shift Case Cycling: Cycle selected English text between Title Case, UPPERCASE, and lowercase.",
+            "Comma Quick Actions: 2-row shortcuts for Undo, Redo, Cut, Copy, Paste & Quick Layout Manager.",
+            "Drag-to-Delete Words: Swipe learned suggestions upward to easily remove them from dictionary.",
+            "Categorized Settings: Grouped settings layout, comma key visibility toggle & emoji font scale."
         ]
     }
 }
