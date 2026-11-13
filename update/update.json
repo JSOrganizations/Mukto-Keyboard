@@ -1,25 +1,21 @@
 {
-    "latest_version_code": 33,
-    "latest_version_name": "4.7.1",
-    "play_store_url": "https://play.google.com/store/apps/details?id=com.mukto.keyboard",
-    "whats_new": {
-        "bn": [
-            "নামপ্যাড ভাষা ইস্যু সমাধান: সক্রিয় কিবোর্ডের ভাষা অনুযায়ী (ইংরেজি, বাংলা, আরবি) নামপ্যাডের সংখ্যা স্বয়ংক্রিয়ভাবে সঠিকভাবে আসার সমাধান।",
-            "আধুনিক ক্লিপবোর্ড: ফ্রস্টেড মিল্কি ব্লার ইফেক্ট, স্প্লিট ভিউ এবং লং-প্রেস কনটেক্সট মেনু।",
-            "স্পেসবার সোয়াইপ: স্পেসবারে সহজে সোয়াইপ করে ভাষা পরিবর্তন ও দ্রুত কার্সর মুভমেন্ট।",
-            "শিফট কেস সাইক্লিং: টেক্সট সিলেক্ট করে শিফট চাপলে Title, UPPER ও lower কেসে রূপান্তর।",
-            "কমা কুইক শর্টকাট: কমা কীতে ২-সারির শর্টকাট (Undo, Redo, Cut, Copy, Paste ও Layout Manager)।",
-            "ড্র্যাগ-টু-ডিলিট: সাজেশন বার থেকে যেকোনো শেখা শব্দ সহজে টেনে উপরে ফেলে ডিলিট সুবিধা।",
-            "ক্যাটাগরাইজড সেটিংস: পরিচ্ছন্ন গ্রুপ ভিউ এবং কমা কী দেখানো বা লুকানোর অপশন।"
-        ],
-        "en": [
-            "Numpad Language Fix: Resolved stale language toggle; numpad digits now seamlessly match the active keyboard language (English, Bengali, Arabic).",
-            "Modern Clipboard: Frosted blur overlay, side-by-side split view & long-press menu.",
-            "Spacebar Swipe: Smooth gesture language switcher & direct space-swipe cursor control.",
-            "Shift Case Cycling: Cycle selected English text between Title Case, UPPERCASE, and lowercase.",
-            "Comma Quick Actions: 2-row shortcuts for Undo, Redo, Cut, Copy, Paste & Quick Layout Manager.",
-            "Drag-to-Delete Words: Swipe learned suggestions upward to easily remove them from dictionary.",
-            "Categorized Settings: Grouped settings layout, comma key visibility toggle & emoji font scale."
-        ]
-    }
+  "latest_version_code": 35,
+  "latest_version_name": "4.9",
+  "play_store_url": "https://play.google.com/store/apps/details?id=com.mukto.keyboard",
+  "whats_new": {
+    "bn": [
+      "টুলবারের উচ্চতা ও ডকড কিবোর্ডের ওপরের কোণা কাস্টমাইজ করার সুবিধা।",
+      "কাস্টম এডিটরে সাজেশন, লেখা সম্পাদনা ও ব্যাকস্পেস ব্যবহারে উন্নতি।",
+      "ইংরেজি শব্দভান্ডার আপডেট এবং এআই টেক্সট সম্পাদনা আরও পরিমার্জিত।",
+      "কী-প্রেস ইফেক্ট কিবোর্ডের সীমানার মধ্যে রাখার নতুন সেটিং।",
+      "ইমোজি সারির বিন্যাস আরও সহজ করা হয়েছে।"
+    ],
+    "en": [
+      "Customize toolbar height and rounded top corners for the docked keyboard.",
+      "More reliable suggestions, text editing, and backspace in custom editors.",
+      "Updated English dictionary and refined AI text editing.",
+      "New setting to keep key-press effects within keyboard bounds.",
+      "Simplified emoji-row layout."
+    ]
+  }
 }
