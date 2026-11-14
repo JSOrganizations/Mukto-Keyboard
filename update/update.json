@@ -1,21 +1,25 @@
 {
-  "latest_version_code": 35,
-  "latest_version_name": "4.9",
+  "latest_version_code": 36,
+  "latest_version_name": "5.0",
   "play_store_url": "https://play.google.com/store/apps/details?id=com.mukto.keyboard",
   "whats_new": {
     "bn": [
-      "টুলবারের উচ্চতা ও ডকড কিবোর্ডের ওপরের কোণা কাস্টমাইজ করার সুবিধা।",
-      "কাস্টম এডিটরে সাজেশন, লেখা সম্পাদনা ও ব্যাকস্পেস ব্যবহারে উন্নতি।",
-      "ইংরেজি শব্দভান্ডার আপডেট এবং এআই টেক্সট সম্পাদনা আরও পরিমার্জিত।",
-      "কী-প্রেস ইফেক্ট কিবোর্ডের সীমানার মধ্যে রাখার নতুন সেটিং।",
-      "ইমোজি সারির বিন্যাস আরও সহজ করা হয়েছে।"
+      "গ্লাস মরফিজম কী: আধুনিক কাঁচের লুক, অ্যাঙ্গেল শেডার আউটলাইন ও প্রিমিয়াম ভিজ্যুয়াল এফেক্ট।",
+      "পিল টুলবার ও রাউন্ডেড কর্নার: স্টাইলিশ ডকড পিল টুলবার, হাইট স্কেলিং ও রাউন্ডেড কিবোর্ড বডি।",
+      "কাস্টম এডিটর বাফার: বিশেষ অ্যাপগুলোতে আরও নিখুঁত টেক্সট সিঙ্ক, টাইপিং ট্র্যাকিং ও দ্রুত ডিলিট।",
+      "ব্যাকগ্রাউন্ড ব্লার রেডিয়াস: ফটো ও কাস্টম থিমে ব্যাকগ্রাউন্ড ব্লার নিয়ন্ত্রণের পূর্ণ স্বাধীনতা।",
+      "এআই ও ভয়েস হাব: ভয়েস ইনপুটে রিংগার মোড প্রিজার্ভ ও নিরাপদ টেক্সট রিপ্লেসমেন্ট প্রম্পট।",
+      "কি-ম্যাপ ও ডিকশনারি: বাংলা 'w' প্রিফিক্স রুলস আপডেট ও আপডেটেড ইংরেজি শব্দভাণ্ডার।",
+      "থিম কাস্টমাইজেশন: প্রতি ছবির জন্য আলাদা কাস্টম থিম প্রিসেট ও রাউন্ডেড কী টগল সুবিধা।"
     ],
     "en": [
-      "Customize toolbar height and rounded top corners for the docked keyboard.",
-      "More reliable suggestions, text editing, and backspace in custom editors.",
-      "Updated English dictionary and refined AI text editing.",
-      "New setting to keep key-press effects within keyboard bounds.",
-      "Simplified emoji-row layout."
+      "Glassmorphism Keys: Translucent glass key look, angle-based shader outlines & premium visuals.",
+      "Pill Toolbar & Rounded Corners: Modern docked pill toolbar, height scale & rounded keyboard body.",
+      "Custom Editor Buffer: Enhanced text state tracking, buffer resyncing & delete handling in external apps.",
+      "Theme Blur Radius: Fully customizable background blur for photo and color themes.",
+      "AI & Voice Hub: Ringer mode preservation during voice input & safe text replacement prompts.",
+      "Keymap & Dictionary: Refined Bengali 'w' prefix rules & updated bundled English word list.",
+      "Theme Customization: Per-photo custom theme presets & rounded keys toggle on Theme page."
     ]
   }
 }
