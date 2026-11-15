@@ -328,8 +328,6 @@ window.I18N = {
     "m21.d": { en: "Dedicated toolbar button to translate any spoken or typed Bengali or Banglish message directly into fluent English.", bl: "Toolbar-er dedicated AI buttone tap korei Bangla ba Banglish-ke shuddho English-e rupantor korun." },
     "m22.t": { en: "On-device Crash Blackbox diagnostics", bl: "On-device Crash Blackbox diagnostics" },
     "m22.d": { en: "100% offline error tracking on local sandbox storage with zero keystrokes and voluntary export under Settings.", bl: "100% offline error tracking, zero keylogging ebong Settings theke copy ba voluntary share-er shujog." },
-    "m23.t": { en: "Gboard-style middle ellipsis suggestions", bl: "Gboard-style middle ellipsis suggestion" },
-    "m23.d": { en: "Long words and phrases truncate with a clean middle ellipsis (abc...xyz) to keep the suggestion bar balanced.", bl: "Boro shobdo ba bakkho suggestion bar-e majhkhane dot (...) diye nikhutbhabe display hoy." },
     "s1.n": { en: "6", bl: "6-ti" },
     "s1.t": { en: "Full layouts", bl: "Purnango layout" },
     "s1.d": { en: "Avro, Bangla Alphabetical, Probhat, National, Arabic & English", bl: "Avro, Bangla Bornonukromik, Probhat, Jatiya, Arabic o English" },
