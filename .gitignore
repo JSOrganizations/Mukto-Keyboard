@@ -10,3 +10,4 @@ Thumbs.db
 download/*.apk
 *.apk
 *.apk.bak
+voice_models/
