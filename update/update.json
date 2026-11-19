@@ -1,25 +1,25 @@
 {
-  "latest_version_code": 37,
-  "latest_version_name": "5.1",
+  "latest_version_code": 40,
+  "latest_version_name": "5.2.2",
   "play_store_url": "https://play.google.com/store/apps/details?id=com.mukto.keyboard",
   "whats_new": {
     "bn": [
-      "অ্যানিমেটেড টুলবার: স্টার বোতাম ট্যাপে টুলস প্রসারিত ও সংকুচিত হওয়ার চমৎকার অ্যানিমেশন এবং সেটিংসে টগল সুবিধা।",
-      "বাংলা থেকে ইংরেজি এআই: টুলবারে সরাসরি বাংলা থেকে ইংরেজি ভাষায় অনুবাদ করার নতুন এআই অ্যাকশন ও প্রিসেট।",
-      "পিন করা ইমোজি রিঅর্ডার: ড্র্যাগ-অ্যান্ড-ড্রপ করে পিন করা ইমোজিগুলোকে নিজের পছন্দের ক্রমে সহজে সাজানোর সুবিধা।",
-      "মিডল এলিপসিস সাজেশন: দীর্ঘ সাজেশনের ক্ষেত্রে মাঝখানে সুন্দর ও পরিচ্ছন্ন এলিপসিস টেক্সট ট্রাঙ্কেশন।",
-      "বর্ণানুক্রমিক লেআউট ফিক্স: বাংলা বর্ণানুক্রমিক লেআউটে হসন্তের ভারসাম্য ও অক্ষরের উল্লম্ব প্রান্তিককরণ নিখুঁত করা।",
-      "কিবোর্ড বটম অফসেট: স্ক্রিনের নিচের প্রান্ত থেকে কিবোর্ডের ব্যবধান নিজের মতো নির্ধারণ করার সেটিং।",
-      "ডায়াগনস্টিকস ও স্ট্যাবিলিটি: সিস্টেম ক্র্যাশ রিপোর্ট পর্যবেক্ষণ ও সমস্যা দ্রুত শনাক্ত করতে ক্র্যাশ লগ ভিউয়ার।"
+      "২টি নতুন কীবোর্ড লেআউট: নতুন EN-BN বাংলিশ ফনেটিক (AI4Bharat FST ইঞ্জিন) এবং সরাসরি বাংলা হস্তলেখা (ডিজিটাল ইঙ্ক হ্যান্ডরাইটিং)।",
+      "গ্লাইড টাইপিং ফিচার: আঙুল না তুলে অক্ষরের ওপর দিয়ে মসৃণভাবে সোয়াইপ করে অতি দ্রুত লেখার সুবিধা ও আকর্ষণীয় আলোকিত গ্লাইড ট্রেইল।",
+      "নতুন লিভিং থিম (শাপলা ও বর্ষা): জীবন্ত বৃষ্টির ফোঁটা, টিনের চাল, মনোরম শাপলা ফুল ও গ্রামীণ প্রকৃতির দৃশ্যপট।",
+      "নতুন অ্যাড-অন ইফেক্ট থিম: টাইপিংকে চোখ জুড়ানো রূপ দিতে নতুন পার্টিকেল বার্স্ট (Particle Burst) ও কি-ব্লেজ (Key Blaze) টাচ ইফেক্ট।",
+      "ক্যাসকেড প্যানেল অ্যানিমেশন: নামপ্যাড, ক্লিপবোর্ড ও টেক্সট এডিটিং টুলসে আকর্ষণীয় ক্যাসকেডিং ওপেনিং অ্যানিমেশন।",
+      "সরাসরি হেক্স কালার ইনপুট: থিম স্টুডিও ও কালার পিকারে সরাসরি কাস্টম #HEX কালার কোড বসিয়ে ইচ্ছামতো রঙ বাছাই।",
+      "এআই প্রগ্রেস ট্র্যাকিং: এআই প্রসেসিংয়ের সময় জেম গ্রেডিয়েন্ট ও স্পার্কল অ্যানিমেশন সহ রিয়েল-টাইম প্রগ্রেস বার।"
     ],
     "en": [
-      "Animated Toolbar: Fluid expansion & collapse animation for tools with a dedicated toggle in settings.",
-      "Bangla to English AI: Quick Bangla-to-English translation action and prompt preset right on the toolbar.",
-      "Pinned Emoji Reorder: Drag-and-drop to easily reorder your pinned emojis in the exact order you want.",
-      "Middle Ellipsis Suggestions: Intelligent middle text truncation for long suggestion words.",
-      "Alphabetical Layout Fix: Elevated Hasanta diacritic and perfected vertical label centering.",
-      "Keyboard Bottom Offset: Customize bottom spacing between keyboard and screen navigation bar.",
-      "Diagnostics & Stability: Built-in crash blackbox log viewer to diagnose issues and overall stability fixes."
+      "2 Brand New Layouts: High-speed EN-BN Banglish transliteration (FST engine) & on-screen Bengali Handwriting recognition.",
+      "Glide Typing: Glide smoothly across letters without lifting your finger for ultra-fast typing, with glowing gesture trails.",
+      "New Monsoon & Lilies Living Theme: Real-time animated raindrops, serene water lilies, and dynamic nature scenery.",
+      "New Add-on Keypress Effects: Exciting Particle Burst and Key Blaze visual effects with every keystroke.",
+      "Cascade Tool Panels: Fluid cascading entry animations across Numpad, Clipboard, and Text Editing panels.",
+      "Direct Hex Color Input: Type custom #HEX color codes directly across all theme and color pickers.",
+      "AI Progress Tracking: Real-time execution tracking with gem gradient and sparkle animations."
     ]
   }
 }
