@@ -1,0 +1,20 @@
+{
+    "version": 1,
+    "contributors": [
+        {
+            "id": "1",
+            "name": "মোহাম্মদ রায়হান বিশ্বাস",
+            "avatar_url": "https://raw.githubusercontent.com/JSOrganizations/Mukto-Keyboard/main/contributors/mdraihanbiswas.jpg"
+        },
+        {
+            "id": "2",
+            "name": "Shanawaz Shuvo",
+            "avatar_url": "https://raw.githubusercontent.com/JSOrganizations/Mukto-Keyboard/main/contributors/shanawazshuvo.jpg"
+        },
+        {
+            "id": "3",
+            "name": "Dr. Md. Parvez Rahman",
+            "avatar_url": "https://raw.githubusercontent.com/JSOrganizations/Mukto-Keyboard/main/contributors/md.parvezrahman.jpeg"
+        }
+    ]
+}
