@@ -15,6 +15,11 @@
             "id": "3",
             "name": "Dr. Md. Parvez Rahman",
             "avatar_url": "https://raw.githubusercontent.com/JSOrganizations/Mukto-Keyboard/main/contributors/md.parvezrahman.jpeg"
+        },
+        {
+            "id": "4",
+            "name": "SH Humayun Kabir",
+            "avatar_url": "https://raw.githubusercontent.com/JSOrganizations/Mukto-Keyboard/main/contributors/shhumayunkabir.jpg"
         }
     ]
 }
