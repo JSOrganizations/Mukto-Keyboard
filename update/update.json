@@ -1,25 +1,25 @@
 {
-  "latest_version_code": 36,
-  "latest_version_name": "5.0",
+  "latest_version_code": 41,
+  "latest_version_name": "5.2.3",
   "play_store_url": "https://play.google.com/store/apps/details?id=com.mukto.keyboard",
   "whats_new": {
     "bn": [
-      "গ্লাস মরফিজম কী: আধুনিক কাঁচের লুক, অ্যাঙ্গেল শেডার আউটলাইন ও প্রিমিয়াম ভিজ্যুয়াল এফেক্ট।",
-      "পিল টুলবার ও রাউন্ডেড কর্নার: স্টাইলিশ ডকড পিল টুলবার, হাইট স্কেলিং ও রাউন্ডেড কিবোর্ড বডি।",
-      "কাস্টম এডিটর বাফার: বিশেষ অ্যাপগুলোতে আরও নিখুঁত টেক্সট সিঙ্ক, টাইপিং ট্র্যাকিং ও দ্রুত ডিলিট।",
-      "ব্যাকগ্রাউন্ড ব্লার রেডিয়াস: ফটো ও কাস্টম থিমে ব্যাকগ্রাউন্ড ব্লার নিয়ন্ত্রণের পূর্ণ স্বাধীনতা।",
-      "এআই ও ভয়েস হাব: ভয়েস ইনপুটে রিংগার মোড প্রিজার্ভ ও নিরাপদ টেক্সট রিপ্লেসমেন্ট প্রম্পট।",
-      "কি-ম্যাপ ও ডিকশনারি: বাংলা 'w' প্রিফিক্স রুলস আপডেট ও আপডেটেড ইংরেজি শব্দভাণ্ডার।",
-      "থিম কাস্টমাইজেশন: প্রতি ছবির জন্য আলাদা কাস্টম থিম প্রিসেট ও রাউন্ডেড কী টগল সুবিধা।"
+      "জাতীয় ২০১৮ লেআউট সংস্করণ: বাংলাদেশ জাতীয় প্রমিত বাংলা কিবোর্ডের সর্বশেষ ২০১৮ সংস্করণ (BDS 1738:2018) মোড যুক্ত।",
+      "লাইভ থিম এডিটিং এনেবল: জীবন্ত থিমগুলোর (সুইং, টাইটানিক, শাপলা ও বর্ষা) জন্য কাস্টম কি-কালার, ব্যাকগ্রাউন্ড ও স্পেক্স এডিটের পূর্ণ সুবিধা।",
+      "স্পেসবারে সাজেশন ইনসার্ট: টাইপ করার সময় স্পেসবারে চাপলেই হাইলাইট করা সাজেশন স্বয়ংক্রিয়ভাবে ইনপুট বক্সে বসে যাওয়ার সুবিধা।",
+      "ম্যাসিভ পারফরম্যান্স বুস্ট: সাউন্ড ও ইঞ্জিন ব্যাকগ্রাউন্ডে অফলোড করে টাইপিং ল্যাগ, ফ্রিজ এবং শীর্ষ ক্র্যাশ সমাধান।",
+      "ওভারলে টাইপিং সাপোর্ট: ফ্লোটিং ও ইন-অ্যাপ ওভারলে ইনপুট বক্সেও বাংলিশ ট্রান্সলিটারেশন, সোয়াইপ ডিলিট ও কার্সর কন্ট্রোল সক্রিয়।",
+      "ফুল-টেক্সট সাজেশন অপশন: বর্ধিত সাজেশন বারে কোনো এলিপসিস (...) ছাড়া সম্পূর্ণ দীর্ঘ শব্দ দেখার নতুন অপশন।",
+      "পাসওয়ার্ড ফিল্ডে প্রাইভেসী লক: পাসওয়ার্ড ও পিন ফিল্ডে সংবেদনশীল তথ্য সুরক্ষায় স্বয়ংক্রিয় সাজেশন বার ও শব্দ শেখা বন্ধ।"
     ],
     "en": [
-      "Glassmorphism Keys: Translucent glass key look, angle-based shader outlines & premium visuals.",
-      "Pill Toolbar & Rounded Corners: Modern docked pill toolbar, height scale & rounded keyboard body.",
-      "Custom Editor Buffer: Enhanced text state tracking, buffer resyncing & delete handling in external apps.",
-      "Theme Blur Radius: Fully customizable background blur for photo and color themes.",
-      "AI & Voice Hub: Ringer mode preservation during voice input & safe text replacement prompts.",
-      "Keymap & Dictionary: Refined Bengali 'w' prefix rules & updated bundled English word list.",
-      "Theme Customization: Per-photo custom theme presets & rounded keys toggle on Theme page."
+      "National 2018 Edition Layout: Added official support for the revised National Standard (BDS 1738:2018) Bangla layout.",
+      "Live Theme Editing Enabled: Fully customize key colors, background brightness, and specs for all Living Themes.",
+      "Spacebar Suggestion Pick: Option to quickly insert the highlighted word suggestion simply by tapping the spacebar.",
+      "Performance & Stability Boost: Offloaded sound and layout processing to eliminate keystroke lag, ANRs, and top crashes.",
+      "Overlay Typing Support: Enabled full EN->BN transliteration, swipe delete, and cursor control across all overlay boxes.",
+      "Full-Text Suggestions: New option to display complete, unshortened suggestion words without middle ellipsis.",
+      "Password Field Privacy Lock: Automatically hides suggestions and disables word learning on password and sensitive fields."
     ]
   }
 }
