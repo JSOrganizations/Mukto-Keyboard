@@ -1,5 +1,5 @@
 {
-    "version": 3,
+    "version": 4,
     "contributors": [
         {
             "id": "1",
@@ -8,18 +8,33 @@
         },
         {
             "id": "2",
+            "name": "Kamrul Hasan",
+            "avatar_url": "https://raw.githubusercontent.com/JSOrganizations/Mukto-Keyboard/main/contributors/kamrulhasan.jpg"
+        },
+        {
+            "id": "3",
             "name": "Shanawaz Shuvo",
             "avatar_url": "https://raw.githubusercontent.com/JSOrganizations/Mukto-Keyboard/main/contributors/shanawazshuvo.jpg"
         },
         {
-            "id": "3",
+            "id": "4",
             "name": "Dr. Md. Parvez Rahman",
             "avatar_url": "https://raw.githubusercontent.com/JSOrganizations/Mukto-Keyboard/main/contributors/md.parvezrahman.jpeg"
         },
         {
-            "id": "4",
+            "id": "5",
             "name": "SH Humayun Kabir",
             "avatar_url": "https://raw.githubusercontent.com/JSOrganizations/Mukto-Keyboard/main/contributors/shhumayunkabir.jpg"
+        },
+        {
+            "id": "6",
+            "name": "Sharafatullah Fuad",
+            "avatar_url": "https://raw.githubusercontent.com/JSOrganizations/Mukto-Keyboard/main/contributors/sharafatullahfuad.jpg"
+        },
+        {
+            "id": "7",
+            "name": "Abdul Kalam",
+            "avatar_url": "https://raw.githubusercontent.com/JSOrganizations/Mukto-Keyboard/main/contributors/kalam.jpg"
         }
     ]
 }
