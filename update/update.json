@@ -1,25 +1,25 @@
 {
-  "latest_version_code": 40,
-  "latest_version_name": "5.2.2",
+  "latest_version_code": 41,
+  "latest_version_name": "5.2.3",
   "play_store_url": "https://play.google.com/store/apps/details?id=com.mukto.keyboard",
   "whats_new": {
     "bn": [
-      "২টি নতুন কীবোর্ড লেআউট: নতুন EN-BN বাংলিশ ফনেটিক (AI4Bharat FST ইঞ্জিন) এবং সরাসরি বাংলা হস্তলেখা (ডিজিটাল ইঙ্ক হ্যান্ডরাইটিং)।",
-      "গ্লাইড টাইপিং ফিচার: আঙুল না তুলে অক্ষরের ওপর দিয়ে মসৃণভাবে সোয়াইপ করে অতি দ্রুত লেখার সুবিধা ও আকর্ষণীয় আলোকিত গ্লাইড ট্রেইল।",
-      "নতুন লিভিং থিম (শাপলা ও বর্ষা): জীবন্ত বৃষ্টির ফোঁটা, টিনের চাল, মনোরম শাপলা ফুল ও গ্রামীণ প্রকৃতির দৃশ্যপট।",
-      "নতুন অ্যাড-অন ইফেক্ট থিম: টাইপিংকে চোখ জুড়ানো রূপ দিতে নতুন পার্টিকেল বার্স্ট (Particle Burst) ও কি-ব্লেজ (Key Blaze) টাচ ইফেক্ট।",
-      "ক্যাসকেড প্যানেল অ্যানিমেশন: নামপ্যাড, ক্লিপবোর্ড ও টেক্সট এডিটিং টুলসে আকর্ষণীয় ক্যাসকেডিং ওপেনিং অ্যানিমেশন।",
-      "সরাসরি হেক্স কালার ইনপুট: থিম স্টুডিও ও কালার পিকারে সরাসরি কাস্টম #HEX কালার কোড বসিয়ে ইচ্ছামতো রঙ বাছাই।",
-      "এআই প্রগ্রেস ট্র্যাকিং: এআই প্রসেসিংয়ের সময় জেম গ্রেডিয়েন্ট ও স্পার্কল অ্যানিমেশন সহ রিয়েল-টাইম প্রগ্রেস বার।"
+      "জাতীয় ২০১৮ লেআউট সংস্করণ: বাংলাদেশ জাতীয় প্রমিত বাংলা কিবোর্ডের সর্বশেষ ২০১৮ সংস্করণ (BDS 1738:2018) মোড যুক্ত।",
+      "লাইভ থিম এডিটিং এনেবল: জীবন্ত থিমগুলোর (সুইং, টাইটানিক, শাপলা ও বর্ষা) জন্য কাস্টম কি-কালার, ব্যাকগ্রাউন্ড ও স্পেক্স এডিটের পূর্ণ সুবিধা।",
+      "স্পেসবারে সাজেশন ইনসার্ট: টাইপ করার সময় স্পেসবারে চাপলেই হাইলাইট করা সাজেশন স্বয়ংক্রিয়ভাবে ইনপুট বক্সে বসে যাওয়ার সুবিধা।",
+      "ম্যাসিভ পারফরম্যান্স বুস্ট: সাউন্ড ও ইঞ্জিন ব্যাকগ্রাউন্ডে অফলোড করে টাইপিং ল্যাগ, ফ্রিজ এবং শীর্ষ ক্র্যাশ সমাধান।",
+      "ওভারলে টাইপিং সাপোর্ট: ফ্লোটিং ও ইন-অ্যাপ ওভারলে ইনপুট বক্সেও বাংলিশ ট্রান্সলিটারেশন, সোয়াইপ ডিলিট ও কার্সর কন্ট্রোল সক্রিয়।",
+      "ফুল-টেক্সট সাজেশন অপশন: বর্ধিত সাজেশন বারে কোনো এলিপসিস (...) ছাড়া সম্পূর্ণ দীর্ঘ শব্দ দেখার নতুন অপশন।",
+      "পাসওয়ার্ড ফিল্ডে প্রাইভেসী লক: পাসওয়ার্ড ও পিন ফিল্ডে সংবেদনশীল তথ্য সুরক্ষায় স্বয়ংক্রিয় সাজেশন বার ও শব্দ শেখা বন্ধ।"
     ],
     "en": [
-      "2 Brand New Layouts: High-speed EN-BN Banglish transliteration (FST engine) & on-screen Bengali Handwriting recognition.",
-      "Glide Typing: Glide smoothly across letters without lifting your finger for ultra-fast typing, with glowing gesture trails.",
-      "New Monsoon & Lilies Living Theme: Real-time animated raindrops, serene water lilies, and dynamic nature scenery.",
-      "New Add-on Keypress Effects: Exciting Particle Burst and Key Blaze visual effects with every keystroke.",
-      "Cascade Tool Panels: Fluid cascading entry animations across Numpad, Clipboard, and Text Editing panels.",
-      "Direct Hex Color Input: Type custom #HEX color codes directly across all theme and color pickers.",
-      "AI Progress Tracking: Real-time execution tracking with gem gradient and sparkle animations."
+      "National 2018 Edition Layout: Added official support for the revised National Standard (BDS 1738:2018) Bangla layout.",
+      "Live Theme Editing Enabled: Fully customize key colors, background brightness, and specs for all Living Themes.",
+      "Spacebar Suggestion Pick: Option to quickly insert the highlighted word suggestion simply by tapping the spacebar.",
+      "Performance & Stability Boost: Offloaded sound and layout processing to eliminate keystroke lag, ANRs, and top crashes.",
+      "Overlay Typing Support: Enabled full EN->BN transliteration, swipe delete, and cursor control across all overlay boxes.",
+      "Full-Text Suggestions: New option to display complete, unshortened suggestion words without middle ellipsis.",
+      "Password Field Privacy Lock: Automatically hides suggestions and disables word learning on password and sensitive fields."
     ]
   }
 }
