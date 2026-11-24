@@ -35,6 +35,11 @@
             "id": "7",
             "name": "Abdul Kalam",
             "avatar_url": "https://raw.githubusercontent.com/JSOrganizations/Mukto-Keyboard/main/contributors/kalam.jpg"
+        },
+        {
+            "id": "8",
+            "name": "Tamim Ahommed",
+            "avatar_url": "https://raw.githubusercontent.com/JSOrganizations/Mukto-Keyboard/main/contributors/tamimahommed.jpg"
         }
     ]
 }
